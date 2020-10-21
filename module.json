@@ -2,7 +2,7 @@
   "name": "foundry_chn",
   "title": "Translation: 中文 [Core]",
   "description": "为 FVTT 核心系统添加了中文。",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "minimumCoreVersion": "0.6.5",
   "compatibleCoreVersion": "0.7.5",
   "author": "FVTT-CN",
@@ -18,5 +18,5 @@
   ],
   "url": "https://github.com/fvtt-cn/foundry_chn",
   "manifest": "https://raw.githubusercontent.com/fvtt-cn/foundry_chn/main/module.json",
-  "download": "https://github.com/fvtt-cn/foundry_chn/releases/download/0.0.1/foundry_chn.zip"
+  "download": "https://github.com/fvtt-cn/foundry_chn/releases/download/0.0.2/foundry_chn.zip"
 }
