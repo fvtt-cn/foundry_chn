@@ -643,7 +643,7 @@
   "SETTINGS.TokenDragPreviewN": "指示物拖拽视野",
   "SETTINGS.TokenDragPreviewL": "启用后，左键拖拽指示物时会实时预览其视野和光照。此项默认禁用，因为会促使令人讨厌的超游行为发生。",
   "SETUP.CoreVersion": "核心软件版本",
-  "SETUP.CoreVersionHint": "如果有FoundryVTT核心软件的更新，则可以在此处应用。您当前正在使用{coreVersion}版本。",
+  "SETUP.CoreVersionHint": "如果FoundryVTT核心软件有更新，则可以在此处更新。你当前正在使用{coreVersion}版本。",
   "SETUP.DefaultLanguage": "默认语言",
   "SETUP.DefaultLanguageHint": "你可以选择一项提供对应语言翻译文件的MOD，以使FVTT使用其作为默认语言。",
   "SETUP.SettingsHeader": "软件设置",
@@ -652,7 +652,7 @@
   "SETUP.Configuration": "设置",
   "SETUP.ConfigurationWarning": "以下字段用于自定义Foundry Virtual Tabletop软件的行为。重新启动软件才能使这些更改生效。",
   "SETUP.MinifyFiles": "优化静态文件尺寸",
-  "SETUP.MinifyFilesHint": "提供最小化的JavaScript和CSS文件来减少网络带宽占用。对除了MOD开发者外的大多数用户，推荐启用该项。",
+  "SETUP.MinifyFilesHint": "提供最小化的JavaScript和CSS文件来减少网络带宽占用。对于除了MOD开发者外的大多数用户，推荐启用该项。",
   "SETUP.Modules": "MOD",
   "SETUP.Systems": "游戏系统",
   "SETUP.Title": "安装与设置",
@@ -1003,7 +1003,7 @@
   "WEBRTC.ConnectError": "在连接音/视频信号服务器时出错",
   "WEBRTC.ConnectionLostWarning": "与音/视频信号服务器失去连接。试图重新建立连接。",
   "WEBRTC.GenericError": "WebRTC错误：",
-  "WEBRTC.NoSSLError": "无法使用音/视频通信，除非您的Foundry VTT服务器正在使用SSL证书。有关说明，请参阅联机文档。",
+  "WEBRTC.NoSSLError": "无法使用音/视频通信，除非你的Foundry VTT服务器正在使用SSL证书。有关说明，请参阅联机文档。",
   "WEBRTC.WarningCannotEnableVideo": "你没有广播视频流的权限，无法启用摄像头。",
   "WEBRTC.WarningCannotEnableAudio": "你没有广播音频流的权限，无法启用麦克风。"
 }
