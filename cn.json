@@ -434,7 +434,7 @@
   "LIGHT.AnimationEnergyField": "能量场",
   "LIGHT.AnimationHexaDome": "六角穹顶纹",
   "LIGHT.AnimationGhostLight": "幽光",
-  "LIGHT.AnimationRoilingMass": "搅动质体（黑暗）",
+  "LIGHT.AnimationRoilingMass": "搅动质（黑暗）",
   "LIGHT.AnimationBlackHole": "黑洞（黑暗）",
   "LIGHT.ConfigTitle": "光源配置",
   "LIGHT.ConfigHint": "配置该环境光源的位置、半径、角度、颜色以及动画。",
