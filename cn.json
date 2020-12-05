@@ -650,6 +650,8 @@
   "SETTINGS.TabSystem": "系统设定",
   "SETTINGS.TokenDragPreviewN": "指示物拖拽视野",
   "SETTINGS.TokenDragPreviewL": "启用后，左键拖拽指示物时会实时预览其视野和光照。此项默认禁用，因为会促使令人讨厌的超游行为发生。",
+  "SETTINGS.DevicePixN": "高分屏渲染",
+  "SETTINGS.DevicePixL": "为高分屏显示增加游戏画布渲染的分辨率。这会显著增加你的GPU的性能负载。",
   "SETUP.CoreVersion": "核心软件版本",
   "SETUP.CoreVersionHint": "如果FoundryVTT核心软件有更新，则可以在此处更新。你当前正在使用{coreVersion}版本。",
   "SETUP.DefaultLanguage": "默认语言",
