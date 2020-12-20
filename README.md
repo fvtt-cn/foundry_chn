@@ -1,4 +1,6 @@
 # Foundry VTT 核心系统中文化
+![downloads](https://img.shields.io/github/downloads/fvtt-cn/foundry_chn/total)
+
 By FVTT-CN
 
 ## 安装方法
