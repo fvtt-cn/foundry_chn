@@ -15,7 +15,7 @@ jobs:
         
       - name: Build project
         run: |
-          zip foundry_chn.zip module.json cn.json
+          zip foundry_zh-tw.zip module.json zh-tw.json
           
       - name: Create release
         id: create_release
@@ -35,8 +35,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./foundry_chn.zip
-          asset_name: foundry_chn.zip
+          asset_path: ./foundry_zh-tw.zip
+          asset_name: foundry_zh-tw.zip
           asset_content_type: application/zip
           
       - name: Upload manifest
