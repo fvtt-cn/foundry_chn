@@ -2,8 +2,8 @@ name: Create Release
 
 on:
   push:
-    tags:
-      - '*'
+    branches:
+      - main
 
 jobs:
   build:
@@ -11,41 +11,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
+        id: checkout
         uses: actions/checkout@v2
-        
+
       - name: Build project
+        id: build-zip
         run: |
           zip foundry_chn.zip module.json cn.json
-          
-      - name: Create release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: 版本 ${{ github.ref }}
-          draft: false
-          prerelease: false
+      - name: Get Version
+        id: get-version
+        shell: bash
+        run: echo "::set-output name=version::$(node ./.github/workflows/get-version.js)"
 
-      - name: Upload zip
-        id: upload-zip
-        uses: actions/upload-release-asset@v1
+      - name: Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        if: endsWith(github.ref, 'main')
+        with:
+          name: 版本 ${{ steps.get-version.outputs.version }}
+          tag_name: ${{ steps.get-version.outputs.version }}
+          files: |
+            module.json
+            foundry_chn.zip
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./foundry_chn.zip
-          asset_name: foundry_chn.zip
-          asset_content_type: application/zip
-          
-      - name: Upload manifest
-        id: upload-manifest
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./module.json
-          asset_name: module.json
-          asset_content_type: application/json
