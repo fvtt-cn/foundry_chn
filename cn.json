@@ -49,7 +49,7 @@
   "APP.NavigateBackConfirm": "你确定想要退出Foundry Virtual Tabletop游戏吗？",
   "CHAT.Clear": "清除记录",
   "CHAT.Export": "导出记录",
-  "CHAT.FlushTitle": "对齐聊天记录",
+  "CHAT.FlushTitle": "清空聊天记录",
   "CHAT.FlushWarning": "<h3>确定吗？</h3><p>所有聊天记录都会被清除。</p>",
   "CHAT.InvalidCommand": "{command}不是正确的聊天指令。",
   "CHAT.Title": "聊天记录",
