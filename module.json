@@ -5,6 +5,7 @@
   "version": "0.1.5",
   "minimumCoreVersion": "0.6.6",
   "compatibleCoreVersion": "0.8.0",
+  "coreTranslation": true,
   "author": "FVTT-CN",
   "scripts": [],
   "styles": [],
