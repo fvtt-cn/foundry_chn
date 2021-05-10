@@ -34,4 +34,4 @@ jobs:
             module.json
             foundry_chn.zip
         env:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
