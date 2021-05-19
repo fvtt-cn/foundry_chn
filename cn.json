@@ -1130,7 +1130,7 @@
 "SETUP.PackageStatusCheck": "检查更新",
 "SETUP.PackageStatusBlocked": "已屏蔽",
 "SETUP.PackageStatusUpdate": "更新",
-"SETUP.PackageStatusCurrent": "当前",
+"SETUP.PackageStatusCurrent": "最新",
 "SETUP.UpdateDownloadingS": "更新下载中",
 "SETUP.UpdateDownloadingC": "下载完成",
 "SETUP.UpdateExtractingS": "提取更新",
