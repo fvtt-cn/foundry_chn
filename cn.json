@@ -1205,5 +1205,6 @@
 "WORLD.ResetKeys": "重置用户密码",
 "WORLD.LaunchSafeMode": "以安全模式启动",
 "WORLD.SafeModeHint": "禁用全部模组以及激活的场景，且停止播放所有音频。",
-"WORLD.Description": "世界描述"
+"WORLD.Description": "世界描述",
+"SETUP.UpdateNoUpdate": "该 Foundry Virtual Tabletop 实例运行于 Docker 容器内。如需升级，请拉取新的 Docker 镜像并重建容器。"
 }
