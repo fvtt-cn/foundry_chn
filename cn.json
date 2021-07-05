@@ -1,4 +1,6 @@
 {
+    "LIGHT.DarknessThreshold": "黑暗阈值",
+    "LIGHT.DarknessThresholdHint": "如果设置了黑暗阈值，则仅当场景黑暗度超过该阈值时，此光线才可见。",
     "Prototype Token": "指示物模板",
     "SETUP.UpdateNoUpdate": "该 Foundry Virtual Tabletop 实例运行于 Docker 容器内。如需升级，请拉取新的 Docker 镜像并重建容器。",
     "Activate": "激活",
