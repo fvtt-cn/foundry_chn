@@ -1111,7 +1111,7 @@
     "SETUP.PackageDeleteTitle": "删除 {type}: {title}",
     "SETUP.PackageDeleteConfirm": "你确定想要删除 {type} <strong>{title}</strong> 吗？",
     "SETUP.WorldDeleteConfirm1": "<strong>警告：</strong>这将永久删除你的世界内容，并且<strong>无法</strong>撤销。你确定要这样做吗？</strong>.",
-    "SETUP.WorldDeleteConfirm2": "在下方输入框中，输入你要删除的世界名 <strong>{title}</strong> 以继续进行。",
+    "SETUP.WorldDeleteConfirm2": "在下方输入框中，输入完全相同的代码以处理： ",
     "SETUP.PackageDeleteNoUndo": "<strong>警告：</strong>此删除无法撤销。",
     "SETUP.PackageDeleteWorldConfirm": "你必须输入确切的世界名以确认删除请求。",
     "SETUP.PackageStatusCheck": "检查更新",
@@ -1241,5 +1241,7 @@
     "JOIN.ErrorUserDoesNotExist": "请求的用户 \"{user}\" 并不存在！",
     "HUD.ToggleCombatState": "切换战斗状态",
     "HUD.AssignStatusEffects": "切换状态效果",
-    "WEBRTC.PTTKeyWarn": "你的按住说话绑定键在使用旧值，可能无法按预期工作，请重新配置。"
+    "WEBRTC.PTTKeyWarn": "你的按住说话绑定键在使用旧值，可能无法按预期工作，请重新配置。",
+    "AuthorPl": "作者",
+    "CARDS.CardsDeck": ""
 }
