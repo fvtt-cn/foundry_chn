@@ -1243,5 +1243,20 @@
     "HUD.AssignStatusEffects": "切换状态效果",
     "WEBRTC.PTTKeyWarn": "你的按住说话绑定键在使用旧值，可能无法按预期工作，请重新配置。",
     "AuthorPl": "作者",
-    "CARDS.CardsDeck": ""
+    "CARDS.CardsDeck": "",
+    "CARDS.DeckPresetPokerDark": "扑克牌（暗色）",
+    "CARDS.DeckPresetPokerLight": "扑克牌（亮色）",
+    "CARDS.DeckPreset": "预设卡牌",
+    "CARDS.DealTo": "发牌至",
+    "CARDS.Deal": "发牌",
+    "CARDS.DealTitle": "发牌",
+    "CARDS.DealHint": "选择哪些手牌会被分发卡牌。所有被选中的手牌被分发的卡牌数量相同。",
+    "CARDS.DrawModeRandom": "随机",
+    "CARDS.HeaderDetails": "设置",
+    "CARDS.HeaderCards": "卡牌",
+    "CARDS.Image": "默认卡背图片",
+    "CARDS.Number": "数量",
+    "CARDS.NoCards": "当前无卡牌",
+    "CARDS.DealWarnNoTargets": "没有可以发牌的手牌。",
+    "CARDS.DeleteCannot": "无法删除"
 }
