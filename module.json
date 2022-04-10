@@ -1,18 +1,16 @@
 {
   "name": "foundry_chn",
   "title": "Translation: 中文 [Core]",
-  "description": "为 FVTT 核心系统添加了中文。",
-  "minimumCoreVersion": "0.8.5",
+  "description": "本模组为 FVTT 核心系统中文翻译。",
+  "minimumCoreVersion": "9",
   "compatibleCoreVersion": "9.999",
   "coreTranslation": true,
   "author": "FVTT-CN",
-  "languages": [
-    {
+  "languages": [{
       "lang": "cn",
       "name": "中文",
       "path": "cn.json"
-    }
-  ],
+  }],
   "version": "Auto replaced",
   "url": "Auto replaced",
   "manifest": "Auto replaced",
