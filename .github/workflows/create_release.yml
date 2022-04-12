@@ -52,9 +52,10 @@ jobs:
       - name: Publish to Foundry VTT Repo
         id: publish_foundry_repo
         if: ${{ env.PACKAGE_ID }}
-        uses: fvtt-cn/foundry-auto-release@1.3.0
+        uses: Varriount/fvtt-autopublish@latest
         with:
-          manifest-path: './module.json'
-          package-id: ${{ env.PACKAGE_ID }}
-          fvtt-username: ${{ secrets.FVTT_USERNAME }}
-          fvtt-password: ${{ secrets.FVTT_PASSWORD }}
+          manifest-file: 'module.json'
+          manifest-url: https://github.com/${{github.repository}}/releases/download/${{github.event.release.tag_name}}/module.json
+          module-id: ${{ env.PACKAGE_ID }}
+          username: ${{ secrets.FVTT_USERNAME }}
+          password: ${{ secrets.FVTT_PASSWORD }}
