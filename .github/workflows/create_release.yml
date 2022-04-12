@@ -7,6 +7,7 @@ on:
 env:
   ZIP_FILENAME: "foundry_chn"
   PACKAGE_CONTENT: "module.json cn.json"
+  PACKAGE_ID: 612
 
 jobs:
   build:
@@ -46,3 +47,14 @@ jobs:
           artifacts: './module.json, ./${{env.ZIP_FILENAME}}.zip'
           tag: ${{ github.event.release.tag_name }}
           body: ${{ github.event.release.body }}
+          
+      # Publish to Foundry VTT module repo
+      - name: Publish to Foundry VTT Repo
+        id: publish_foundry_repo
+        if: ${{ env.PACKAGE_ID }}
+        uses: eXaminator/foundry-auto-release@1.0.6
+        with:
+          manifest-path: './module.json'
+          package-id: ${{ env.PACKAGE_ID }}
+          fvtt-username: ${{ secrets.FVTT_USERNAME }}
+          fvtt-password: ${{ secrets.FVTT_PASSWORD }}
