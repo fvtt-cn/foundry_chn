@@ -52,7 +52,7 @@ jobs:
       - name: Publish to Foundry VTT Repo
         id: publish_foundry_repo
         if: ${{ env.PACKAGE_ID }}
-        uses: Varriount/fvtt-autopublish@latest
+        uses: Varriount/fvtt-autopublish@v1.0.6
         with:
           manifest-file: 'module.json'
           manifest-url: https://github.com/${{github.repository}}/releases/download/${{github.event.release.tag_name}}/module.json
