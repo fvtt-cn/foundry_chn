@@ -52,7 +52,7 @@ jobs:
       - name: Publish to Foundry VTT Repo
         id: publish_foundry_repo
         if: ${{ env.PACKAGE_ID }}
-        uses: fvtt-cn/foundry-auto-release@1.2.0
+        uses: fvtt-cn/foundry-auto-release@1.3.0
         with:
           manifest-path: './module.json'
           package-id: ${{ env.PACKAGE_ID }}
