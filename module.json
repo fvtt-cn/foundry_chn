@@ -3,7 +3,7 @@
   "title": "Translation: 中文 [Core]",
   "description": "本模组为 FVTT 核心系统中文翻译。",
   "minimumCoreVersion": "9",
-  "compatibleCoreVersion": "9.999",
+  "compatibleCoreVersion": "10.999",
   "coreTranslation": true,
   "author": "FVTT-CN",
   "languages": [{
