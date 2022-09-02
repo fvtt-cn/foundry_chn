@@ -2,10 +2,17 @@
   "name": "foundry_chn",
   "title": "Translation: 中文 [Core]",
   "description": "本模组为 FVTT 核心系统中文翻译。",
-  "minimumCoreVersion": "9",
-  "compatibleCoreVersion": "10.999",
+  "authors": [
+    {
+      "name": "FVTT-CN",
+      "email": "fvtt-cn@dickytwister.org"
+    }
+  ],
+  "compatibility": {
+    "minimum": "10",
+    "verified": "10.282"
+  },
   "coreTranslation": true,
-  "author": "FVTT-CN",
   "languages": [{
       "lang": "cn",
       "name": "中文",
