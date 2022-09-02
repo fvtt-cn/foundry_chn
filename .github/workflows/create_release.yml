@@ -50,13 +50,21 @@ jobs:
           body: ${{ github.event.release.body }}
           
       # Publish to Foundry VTT module repo
+      - name: Setup Node for Publish
+        id: setup_node_for_publish
+        if: ${{ env.PACKAGE_ID }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'npm'
+          cache-dependency-path: '**/.github/workflows/create_release.yml'
+
       - name: Publish to Foundry VTT Repo
         id: publish_foundry_repo
         if: ${{ env.PACKAGE_ID }}
-        uses: Varriount/fvtt-autopublish@v1.0.6
-        with:
-          manifest-file: 'module.json'
-          manifest-url: https://github.com/${{github.repository}}/releases/download/${{github.event.release.tag_name}}/module.json
-          module-id: ${{ env.PACKAGE_ID }}
-          username: ${{ secrets.FVTT_USERNAME }}
-          password: ${{ secrets.FVTT_PASSWORD }}
+        run: npx @ghost-fvtt/foundry-publish
+        env:
+          FVTT_MANIFEST_PATH: 'module.json'
+          FVTT_PACKAGE_ID: ${{ env.PACKAGE_ID }}
+          FVTT_USERNAME: ${{ secrets.FVTT_USERNAME }}
+          FVTT_PASSWORD: ${{ secrets.FVTT_PASSWORD }}
