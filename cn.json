@@ -1107,7 +1107,7 @@
     "SETUP.ConfigSaveRestart": "Foundry Virtual Tabletop 服务器已被终止以应用修改。你必须手动重启。",
     "SETUP.CurrentVersion": "当前版本",
     "SETUP.ForceUpdate": "强制更新？",
-    "SETUP.CompatibilityRiskWithVersion": "兼容性风险——最高适合版本（{version}）",
+    "SETUP.CompatibilityRiskWithVersion": "兼容性风险——最高验证版本（{version}）",
     "SETUP.PackageDeleteTitle": "删除 {type}：{title}",
     "SETUP.PackageDeleteConfirm": "你确定想要删除 {type} <strong>{title}</strong> 吗？",
     "SETUP.WorldDeleteConfirm1": "<strong>警告：</strong>这将永久删除你的世界内容，并且<strong>无法</strong>撤销。你确定要这样做吗？</strong>.",
