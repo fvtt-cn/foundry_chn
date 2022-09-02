@@ -48,16 +48,6 @@ jobs:
           artifacts: './module.json, ./${{env.ZIP_FILENAME}}.zip'
           tag: ${{ github.event.release.tag_name }}
           body: ${{ github.event.release.body }}
-          
-      # Publish to Foundry VTT module repo
-      - name: Setup Node for Publish
-        id: setup_node_for_publish
-        if: ${{ env.PACKAGE_ID }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          cache: 'npm'
-          cache-dependency-path: '**/.github/workflows/create_release.yml'
 
       - name: Publish to Foundry VTT Repo
         id: publish_foundry_repo
