@@ -1589,5 +1589,6 @@
     "TIME.Since": "{since}前",
     "TIME.HoursAbbreviation": "时",
     "TIME.DaysAbbreviation": "天",
-    "GridSpaces": "网格间距"
+    "GridSpaces": "网格间距",
+    "all": "全部"
 }
