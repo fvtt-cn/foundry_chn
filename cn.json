@@ -1621,5 +1621,16 @@
     "WEBRTC.DockPosition": "边栏位置",
     "WEATHER.Rain": "下雨",
     "WEATHER.Snow": "下雪",
-    "WEATHER.AutumnLeaves": "秋叶"
+    "WEATHER.AutumnLeaves": "秋叶",
+    "CHAT.UnknownUser": "未知用户",
+    "COMBAT.NavLabel": "战斗遭遇导航栏",
+    "COMBAT.PingCombatant": "Ping 参战者",
+    "COMBAT.Sounds.Epic": "史诗风格",
+    "COMBAT.Sounds.MC": "战斗播报",
+    "COMBAT.CombatantScene": "解说员场景",
+    "CONTROLS.NavLabel": "画布控制调色板",
+    "CONTROLS.CanvasPing": "Ping 画布位置",
+    "CONTROLS.CanvasPingPull": "平移画布至 Ping 处",
+    "CONTROLS.LongPress": "长按",
+    "DOCUMENT.SkipCreate": "跳过创建"
 }
