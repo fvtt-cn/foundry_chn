@@ -14,7 +14,8 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Update Projects Source Json
-        run: wget https://demo.foundryvtt.com/lang/en.json -O ./.github/en.json || echo "Failed in updating language file from Foundry VTT official demo site"
+        shell: pwsh
+        run: iwr https://demo.foundryvtt.com/lang/en.json | % { if ($_.StatusCode -eq 200) { $_.Content > ./.github/en.json } }
 
       - name: Add & Commit
         uses: EndBug/add-and-commit@v7.2.1
