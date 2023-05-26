@@ -1118,7 +1118,7 @@
     "SETUP.PackageStatusBlocked": "已锁定",
     "SETUP.PackageStatusUpdate": "更新",
     "SETUP.PackageStatusCurrent": "最新",
-    "SETUP.UpdateDownloadingS": "更新下载中",
+    "SETUP.UpdateDownloadingS": "正在下载更新",
     "SETUP.UpdateDownloadingC": "下载完成",
     "SETUP.UpdateExtractingS": "解压更新",
     "SETUP.UpdateExtractingC": "解压完成",
@@ -1971,5 +1971,7 @@
     "Light": "光照",
     "Preview": "预览",
     "Reset": "重置",
-    "Warnings": "警告"
+    "Warnings": "警告",
+    "SETUP.PackageProgressDownload": "正在下载软件包",
+    "PACKAGE.ModuleEdit": "编辑模组"
 }
