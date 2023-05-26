@@ -43,8 +43,8 @@
     "URL": "URL",
     "Warning": "警告",
     "Width": "宽度",
-    "XCoord": "X坐标",
-    "YCoord": "Y坐标",
+    "XCoord": "X-坐标",
+    "YCoord": "Y-坐标",
     "Yes": "是",
     "ACTOR.Title": "角色目录",
     "ACTOR.Create": "创建角色",
@@ -1709,7 +1709,7 @@
     "EDITOR.Markdown": "Markdown",
     "EDITOR.Reveal": "显示",
     "EDITOR.Hide": "隐藏",
-    "EDITOR.TinyMCE": "Tiny MCE",
+    "EDITOR.TinyMCE": "TinyMCE",
     "EDITOR.CollaboratingUsers": "协作用户",
     "FILES.TitleAny": "文件浏览器",
     "FILES.TitleFont": "字体浏览器",
@@ -1967,5 +1967,9 @@
     "Errors": "错误",
     "SETUP.News": "新闻",
     "SETUP.FeaturedContent": "精选内容",
-    "PACKAGE.Favorite": "标为最爱"
+    "PACKAGE.Favorite": "标为最爱",
+    "Light": "光照",
+    "Preview": "预览",
+    "Reset": "重置",
+    "Warnings": "警告"
 }
