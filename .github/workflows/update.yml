@@ -13,9 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Update Projects Source Json
+      - name: Update Language JSON
         shell: pwsh
-        run: iwr https://demo.foundryvtt.com/lang/en.json | % { if ($_.StatusCode -eq 200) { $_.Content > ./.github/en.json } }
+        run: iwr ${{ secrets.CORE_LANG_URL }} | % { if ($_.StatusCode -eq 200) { $_.Content > ./.github/en.json } }
 
       - name: Add & Commit
         uses: EndBug/add-and-commit@v7.2.1
