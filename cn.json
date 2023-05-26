@@ -1964,5 +1964,7 @@
     "JOURNAL.ShowEntry": "展示{name}",
     "JOURNALENTRYPAGE.TypeVideo": "视频",
     "JOURNALENTRYPAGE.DefaultPageSheet": "默认{page}页码",
-    "Errors": "错误"
+    "Errors": "错误",
+    "SETUP.News": "新闻",
+    "SETUP.FeaturedContent": "精选内容"
 }
