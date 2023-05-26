@@ -1,5 +1,5 @@
 {
-  "name": "foundry_chn",
+  "id": "foundry_chn",
   "title": "Translation: 中文 [Core]",
   "description": "本模组为 FVTT 核心系统中文翻译。",
   "authors": [
@@ -10,7 +10,7 @@
   ],
   "compatibility": {
     "minimum": "10",
-    "verified": "10"
+    "verified": "11.299"
   },
   "coreTranslation": true,
   "languages": [{
