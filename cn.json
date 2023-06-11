@@ -1663,7 +1663,7 @@
 "SETUP.PackageDependenciesCouldNotInstallSingular": "一个依赖项需要手动安装。",
 "SETUP.PackageDependenciesCouldInstallPlural": "{number} 个依赖项可以自动安装。",
 "SETUP.PackageDependenciesCouldInstallSingular": "一个依赖项可以自动安装。",
-"SETUP.PackageUpdateCoreUpdateNeeded": "无法安装 {id} 的可用更新。它需要最低软件版本为 {vmin}，你当前使用的版本为 {vcur}。",
+"SETUP.PackageUpdateCoreUpdateNeeded": "{id} 有可用的更新。但是它依赖的最低核心版本为 {vmin}，所以无法进行安装。你当前使用的版本为 {vcur}。",
 "SETUP.WorldMigrationSystemUnavailable": "<p>无法确定游戏系统 <strong>{system}</strong> （<code>{systemVersion}</code>）现版本是否与软件版本兼容，迁移可能会失败。</p>",
 "SETUP.WorldMigrationBackupPrompt": "<p><strong>该过程不可撤销。</strong>建议你在进行迁移前备份你的世界数据，恢复到先前的软件版本需要有备份数据。</p>",
 "SETUP.WorldMigrationBegin": "开始迁移",
@@ -1782,7 +1782,7 @@
 "SETTINGS.ResetInfo": "将所有的设置恢复默认。点击“保存更改”应用设置。",
 "SETTINGS.ResolutionScaleN": "像素比例分辨率缩放",
 "SETTINGS.FontConfigN": "额外字体",
-"SETUP.PackageUpdateCoreUnstable": "可能无法安装 {id} 的更新。它需要软件的最低非稳定版本 {vmin} 。",
+"SETUP.PackageUpdateCoreUnstable": "{id} 有可用的更新。但是它依赖于核心的非稳定版本 {vmin}，可能无法进行安装。",
 "SIDEBAR.NavLabel": "边栏",
 "PERMISSION.TokenDelete": "删除指示物",
 "PERMISSION.TokenDeleteHint": "允许该用户组从游戏画布上删除拥有角色的指示物。",
@@ -2082,5 +2082,8 @@
 "TYPES.JournalEntryPage.pdf": "PDF",
 "TOKEN.Adjectives.fearful": "害怕的",
 "TYPES.JournalEntryPage.text": "文本",
-"TOKEN.Adjectives.grateful": "感激的"
+"TOKEN.Adjectives.grateful": "感激的",
+"SETUP.PackageUpdateCoreInsufficient": "有可用的更新。但是它的功能依赖于旧的核心版本 {vmax}。",
+"SETUP.PackageRequiredDependencies": "软件包需要如下依赖，否则将无法使用：",
+"SETUP.PackageOptionalDependencies": "软件包有如下可选的依赖，安装后可以增加软件包的功能："
 }
