@@ -642,7 +642,6 @@
 "SETUP.UpdateButtonDownload": "下载更新 {display}",
 "SETUP.UpdateInfoAvailable": "Foundry Virtual Tabletop版本{display}更新可用！",
 "SETUP.WorldMigrationRequiredTitle": "需要迁移世界数据",
-"SETUP.WorldMigrationRequired": "<p>启动世界 <strong>{world}</strong> 将把其旧有核心（<code>{oldVersion}</code>）的数据模型迁移到当前安装的<strong>{newVersion}</strong> 上。</p>",
 "SETUP.AdminAccess": "需要管理员权限",
 "SETUP.AdminLogout": "管理员登出",
 "SETUP.AWSLabel": "AWS 配置文件路径",
