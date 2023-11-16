@@ -1861,7 +1861,7 @@
 "CONTROLS.TilePlaceHeading": "放置",
 "CONTROLS.WallBasic": "基础墙壁",
 "CONTROLS.WallTerrainBlocks": "第二堵墙之外的视觉、移动和听觉",
-"CONTROLS.WallInvisibleBlocks": "移动和听觉",
+"CONTROLS.WallInvisibleBlocks": "移动",
 "CONTROLS.WallBasicBlocks": "移动、视觉和听觉",
 "CONTROLS.DoorBlocks": "除非打开，否则移动、视觉和听觉",
 "CONTROLS.WallSecretHidden": "隐藏",
@@ -2128,5 +2128,13 @@
 "SETTINGS.CombatConfigH": "战斗和追踪器相关设置。",
 "SETTINGS.Issues": "问题",
 "SETTINGS.ShowToolclips": "悬停时显示提示",
-"SETTINGS.ShowToolclipsH": "配置当悬停在侧边栏的工具上时是否会出现提示。"
+"SETTINGS.ShowToolclipsH": "配置当悬停在侧边栏的工具上时是否会出现提示。",
+"DeleteSelected": "删除所选",
+"SelectAll": "选择全部",
+"COMPENDIUM.OwnershipInheritBelow": "从下继承",
+"COMPENDIUM.OwnershipReset": "重置为默认",
+"CHAT.RollVisibility": "掷骰透明度",
+"COMPENDIUM.FilterDocuments": "按类型筛选文件",
+"CONTROLS.AltRightClick": "ALT + 右键单击",
+"CONTROLS.CtrlClickDrag": "CTRL + 点击 + 拖"
 }
