@@ -30,6 +30,13 @@ jobs:
           download: https://github.com/${{github.repository}}/releases/download/${{github.event.release.tag_name}}/${{env.ZIP_FILENAME}}.zip
           changelog: https://github.com/${{github.repository}}/releases/tag/${{github.event.release.tag_name}}
 
+      # Compress JSON files
+      - name: Minify JSON files
+        id: minify-json
+        shell: pwsh
+        run: |
+          "${{PACKAGE_CONTENT}}" -Split "\s+" | Where-Object { $_ -Like "*.json" }  | % { Get-Content $_ | Out-String | ConvertFrom-Json | ConvertTo-Json -Compress | Tee-Object $_ }
+
       # Create a zip file with all files required by the module to add to the release
       - name: Create Artifact
         id: build-zip
