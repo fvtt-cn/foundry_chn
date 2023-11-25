@@ -2136,5 +2136,11 @@
 "CHAT.RollVisibility": "掷骰透明度",
 "COMPENDIUM.FilterDocuments": "按类型筛选文件",
 "CONTROLS.AltRightClick": "ALT + 右键单击",
-"CONTROLS.CtrlClickDrag": "CTRL + 点击 + 拖"
+"CONTROLS.CtrlClickDrag": "CTRL + 点击 + 拖",
+"CONTROLS.ShiftOrCtrlScroll": "<span class=\"reference\">SHIFT + 滚轮</span> 或 <span class=\"reference\">CTRL + 滚轮</span>",
+"CONTROLS.AltClick": "ALT + 单击",
+"CONTROLS.ShiftClick": "SHIFT + 单击",
+"CONTROLS.DoubleRightClick": "右键双击",
+"CONTROLS.CommonOpenCloseSilently": "静默开启/关闭",
+"CONTROLS.CommonLockSilently": "静默锁定"
 }
