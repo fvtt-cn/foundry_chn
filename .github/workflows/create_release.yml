@@ -34,8 +34,7 @@ jobs:
       - name: Minify JSON files
         id: minify-json
         shell: pwsh
-        run: |
-          "${{PACKAGE_CONTENT}}" -Split "\s+" | Where-Object { $_ -Like "*.json" }  | % { Get-Content $_ | Out-String | ConvertFrom-Json | ConvertTo-Json -Compress | Tee-Object $_ }
+        run: $env:PACKAGE_CONTENT -Split "\s+" | Where-Object { $_ -Like "*.json" }  | % { Get-Content $_ | Out-String | ConvertFrom-Json | ConvertTo-Json -Compress | Tee-Object $_ }
 
       # Create a zip file with all files required by the module to add to the release
       - name: Create Artifact
