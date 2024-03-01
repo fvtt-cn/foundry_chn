@@ -7,7 +7,7 @@ on:
 env:
   ZIP_FILENAME: "foundry_chn"
   PACKAGE_CONTENT: "module.json cn.json"
-  PACKAGE_ID: 612
+  PACKAGE_ID: "foundry_chn"
 
 jobs:
   build:
