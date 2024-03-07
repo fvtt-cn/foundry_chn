@@ -614,7 +614,7 @@
 "SETUP.RequireSystem": "需要 {system} 系统",
 "SETUP.RequireDep": "需要依赖项：{dependencies}",
 "SETUP.CompatibilityUnknown": "兼容性未知",
-"SETUP.ManifestURL": "在线安装地址（链接）",
+"SETUP.ManifestURL": "清单地址",
 "SETUP.InstallHint": "你可以输入其直链（清单文件链接）来安装任一软件包。",
 "SETUP.InstallModule": "安装模组",
 "SETUP.InstallSystem": "安装系统",
