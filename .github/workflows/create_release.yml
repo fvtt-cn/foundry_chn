@@ -31,10 +31,10 @@ jobs:
           changelog: https://github.com/${{github.repository}}/releases/tag/${{github.event.release.tag_name}}
 
       # Compress JSON files
-      - name: Minify JSON files
-        id: minify-json
-        shell: pwsh
-        run: $env:PACKAGE_CONTENT -Split "\s+" | Where-Object { $_ -Like "*.json" }  | % { Get-Content $_ | Out-String | ConvertFrom-Json | ConvertTo-Json -Compress | Tee-Object $_ }
+      - name: Minify JSON
+        uses: StefanEnsmann/Minify-JSON-Action@1.1.0
+        with:
+          input_file: cn.json
 
       # Create a zip file with all files required by the module to add to the release
       - name: Create Artifact
