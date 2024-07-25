@@ -2308,5 +2308,29 @@
 "SUPPORT.ModuleSubTypesUnavailableNoName": "<strong>{count}</strong> 个 {document} 不可用，因为 ID 为 “{name}” 的模组未激活",
 "TABLE.NoAvailableResults": "从该表中无法抽出任何有效结果。",
 "TOKEN.PrependAdjective": "在非链接指示物名称前添加形容词？",
-"TOKEN.PrependAdjectiveHint": "例如：“愤怒的 {name}”"
+"TOKEN.PrependAdjectiveHint": "例如：“愤怒的 {name}”",
+"AMBIENT_LIGHT": {
+"SECTIONS": {
+"BASIC": "基础配置",
+"ADVANCED": "高级选项"
+},
+"FIELDS": {
+"x": {
+"label": "X"
+},
+"y": {
+"label": "Y"
+}
+}
+},
+"AMBIENT_SOUND": {
+"FIELDS": {
+"x": {
+"label": "X"
+},
+"y": {
+"label": "Y"
+}
+}
+}
 }
