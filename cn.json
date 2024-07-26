@@ -2312,7 +2312,10 @@
 "AMBIENT_LIGHT": {
 "SECTIONS": {
 "BASIC": "基础配置",
-"ADVANCED": "高级选项"
+"ADVANCED": "高级选项",
+"ANIMATION": "光照动画",
+"APPEARANCE": "光照表现",
+"PLACEMENT": "光照放置"
 },
 "FIELDS": {
 "x": {
@@ -2320,7 +2323,31 @@
 },
 "y": {
 "label": "Y"
+},
+"elevation": {
+"label": "高度"
+},
+"rotation": {
+"label": "旋转角"
+},
+"vision": {
+"label": "提供视觉",
+"hint": "启用此选项的光源可作为指示物的额外视觉的点。激活该选项可让指示物始终看到它所照亮的区域，即使该区域位于墙后或指示物的视野之外。"
+},
+"walls": {
+"label": "受墙壁限制",
+"hint": "配置此光源的效果区域是否受到附近墙壁的限制。"
 }
+},
+"ACTIONS": {
+"CREATE": "创建环境光照",
+"UPDATE": "更新环境光照",
+"RESET": "重置高级选项"
+},
+"LABELS": {
+"radius": "光照半径",
+"radiusHint": "配置从此光源发出的光的距离，其中亮光半径包含在暗光半径内。",
+"darknessAdvancedWarning": "高级配置选项仅支持非黑暗源。"
 }
 },
 "AMBIENT_SOUND": {
@@ -2330,7 +2357,206 @@
 },
 "y": {
 "label": "Y"
+},
+"elevation": {
+"label": "高度"
+},
+"path": {
+"label": "源文件路径",
+"hint": "配置环境声音以使指示物在其半径内移动时播放音频文件。"
+},
+"radius": {
+"label": "效果半径"
+},
+"volume": {
+"label": "最大音量",
+"hint": "定义声音在其原点（如果淡入）或区域中任何位置的最大音量。"
+},
+"easing": {
+"label": "音量淡入",
+"hint": "当指示物靠近原点时调整声音的音量级别。"
+},
+"hidden": {
+"label": "隐藏",
+"hint": "切换是否暂时禁用此声音源。"
+},
+"walls": {
+"label": "受墙壁限制",
+"hint": "配置此声源的效果区域是否受到附近墙壁的限制。"
+},
+"darkness": {
+"label": "暗度激活范围",
+"min": {
+"label": "介于"
+},
+"max": {
+"label": "和"
+},
+"hint": "你可以指定可以听到此环境声音的暗度级别范围。"
+},
+"effects": {
+"base": {
+"type": {
+"label": "基础效果"
+},
+"intensity": {
+"label": "基础效果密度"
+},
+"hint": "对声音应用音频效果，以应用滤波器或变形其声音。"
+},
+"muffled": {
+"type": {
+"label": "抑制效果"
+},
+"intensity": {
+"label": "抑制效果密度"
+},
+"hint": "对声音应用音频效果，当声音被中间的墙壁抑制时，该效果将取代基本效果。只有不受墙壁限制，声音才能被抑制。"
 }
 }
+},
+"ACTIONS": {
+"CREATE": "创建环境声音",
+"UPDATE": "更新环境声音"
+},
+"SECTIONS": {
+"SOURCE": "来源",
+"PLACEMENT": "放置",
+"PLACEMENT_HINT": "配置音频源的原点位置、高度和半径。高度尚未被使用，仅供参考。",
+"VOLUME": "音量",
+"ACTIVATION": "激活",
+"EFFECTS": "特殊效果"
 }
+},
+"Confirm": "确认",
+"Coordinates": "坐标",
+"Anchor": "锚点",
+"Deactivate": "停用",
+"Sort": "排序",
+"APPLICATION": {
+"TOOLS": {
+"ControlsMenu": "应用控件",
+"ToggleControls": "切换控件",
+"Close": "关闭窗口"
+}
+},
+"AUDIO": {
+"CHANNELS": {
+"MUSIC": {
+"label": "音乐",
+"tooltip": "控制播放列表和分类为音乐的声音的本地音量。"
+},
+"ENVIRONMENT": {
+"label": "环境",
+"tooltip": "控制播放列表和分类为环境的环境声音的本地音量。"
+},
+"INTERFACE": {
+"label": "界面",
+"tooltip": "控制与用户界面或用户交互相关的声音的本地音量。"
+}
+}
+},
+"COMBAT.PanToCombatant": "平移到参战者",
+"COMBAT.WarnNonVisibleToken": "该参战者对你不可见。",
+"COMBAT.CannotLinkToScene": "如果场景中没有包含所有参战者，则无法将战斗连接到该场景。",
+"DICE.ManualRoll": "手动掷骰",
+"CONTROLS.ObjectConfigured": "配置其他对象时不能执行此操作。",
+"CONTROLS.ObjectIsLocked": "当 {type} 对象被锁定时，无法执行此操作。",
+"CONTROLS.CtrlAbbr": "CTRL",
+"CONTROLS.Alt": "ALT",
+"CONTROLS.AltClickDrag": "{alt} + 点击 + 拖拽",
+"CONTROLS.Ctrl": "Control",
+"CONTROLS.RegionClear": "清空区域",
+"CONTROLS.RegionPolygon": "绘制多边形",
+"CONTROLS.RegionEllipse": "绘制椭圆",
+"CONTROLS.RegionRectangle": "绘制矩形",
+"CONTROLS.RegionHole": "创建空洞",
+"CONTROLS.RegionHoleP": "激活后，使用任何形状工具在区域上绘制的任何形状都会创建一个空洞，区域行为将不再适用。",
+"CONTROLS.RegionSnap": "激活后，使用任何形状工具在区域上绘制的任何形状都将吸附到网格。",
+"CONTROLS.RegionSelect": "选择区域",
+"CONTROLS.RegionSelectP": "在场景中选择一个或多个区域。选中的区域为纯色，未选中的区域为条纹色。",
+"CONTROLS.GroupRegion": "区域控件",
+"CONTROLS.RegionShape": "在选定的区域中添加形状。如果没有选择区域，则将创建一个新区域。同一区域中重叠的形状将合并。同一区域中的所有形状共享相同的颜色。",
+"CONTROLS.DrawingRole": "切换信息绘制",
+"CONTROLS.CommonForceSnap": "强制吸附到网格顶点",
+"DICE.FULFILLMENT": {
+"Manual": "手动输入",
+"Mersenne": "数字掷骰（梅森旋转算法）",
+"Default": "Foundry VTT 数字掷骰"
+},
+"DOCUMENT.Document": "文档",
+"DOCUMENT.Region": "区域",
+"DOCUMENT.Regions": "区域",
+"DOCUMENT.RegionBehavior": "区域行为",
+"DOCUMENT.RegionBehaviors": "区域行为",
+"DICE.CONFIG": {
+"Title": "骰子配置",
+"Label": "配置骰子",
+"Hint": "配置如何执行掷骰。"
+},
+"DICE.SubmitRollPl": "提交掷骰",
+"DICE.SubmitRoll": "提交掷骰",
+"DICE.RollResolution": "掷骰处理",
+"HUD.Elevation": "高度",
+"HUD.OpenConfig": "打开配置",
+"LIGHT.FIELDS": {
+"darkness": {
+"min": {
+"label": "介于"
+},
+"max": {
+"label": "和"
+}
+}
+},
+"SETTINGS.ColorSchemeN": "首选配色方案",
+"SETTINGS.GridDiagonalsIllegal": "无效（∞）",
+"SETTINGS.GridDiagonalsAlternating2": "交替（2/1/2）",
+"SETTINGS.GridDiagonalsAlternating1": "交替（1/2/1）",
+"SETTINGS.GridDiagonalsRectilinear": "直线（2）",
+"SETTINGS.GridDiagonalsApproximate": "近似（1.5）",
+"SETTINGS.GridDiagonalsExact": "精确（√2）",
+"SETTINGS.GridDiagonalsEquidistant": "等距（1）",
+"SETTINGS.GridDiagonalsN": "方形网格对角",
+"SCENES.ENVIRONMENT": {
+"DarknessLock": "暗度级别锁定",
+"DarknessLockHint": "选中此选项后，将无法更改暗度级别。"
+},
+"SETTINGS.ColorSchemeDefault": "浏览器默认",
+"SETTINGS.ColorSchemeDark": "深色",
+"SETTINGS.ColorSchemeLight": "浅色",
+"SETTINGS.ColorSchemeH": "指定你更喜欢使用浅色主题还是深色主题呈现用户界面元素。并非所有 UI 元素都支持此选项。",
+"SETUP.COMPAT.Incompatible": "{count} 不兼容",
+"SETUP.COMPAT.IncompatibleTooltip": "经验证与版本 {version} 不兼容的软件包。",
+"SETUP.COMPAT.Warning": "{count} 兼容性风险",
+"SETUP.COMPAT.WarningTooltip": "验证为与上一代兼容的软件包可能与版本 {version} 不兼容。",
+"SETUP.COMPAT.Unverified": "{count} 未验证",
+"SETUP.COMPAT.UnverifiedTooltip": "验证为与早期版本兼容并且可能仍与版本 {version} 兼容的软件包。",
+"SETUP.COMPAT.LearnMore": "了解有关此工具的更多信息",
+"SETUP.COMPAT.INCOMPATIBLE.Latest": "此软件包的最新版本与 {version} 更新不兼容",
+"SETUP.COMPAT.INCOMPATIBLE.World": "此世界系统没有可用于 {version} 更新的兼容版本",
+"SETUP.COMPAT.COMPATIBLE.Latest": "此软件包的最新版本与 {version} 更新兼容",
+"SETUP.COMPAT.COMPATIBLE.World": "此世界的系统有一个可用于 {version} 更新的兼容版本",
+"SETUP.COMPAT.RISK.Latest": "此软件包的最新版本最后一次验证为核心软件版本 {verified}",
+"SETUP.COMPAT.RISK.World": "此世界的系统最后一次验证了核心软件版本 {verified}",
+"PACKAGE.Type.allPl": "全部",
+"JOIN": {
+"ErrorMustSelectUser": "你必须选择一个用户才能登录。"
+},
+"SHEETS.ConfigureSheet": "配置卡",
+"SHEETS.CopyUuid": "复制文档 UUID",
+"SOUND": {
+"EFFECTS": {
+"REVERB": "混响",
+"HIGHPASS": "高通滤波器",
+"LOWPASS": "低通滤波器"
+}
+},
+"OWNERSHIP.ShowGM": "显示 GM 用户",
+"PERMISSION.ManualRolls": "进行手动掷骰",
+"PERMISSION.PlaylistCreate": "创建播放列表",
+"PERMISSION.PlaylistCreateHint": "允许具有此角色的用户在世界中创建新的播放列表。",
+"PERMISSION.ManualRollsHint": "允许具有此角色的用户选择手动输入掷骰结果。",
+"CONTROLS.RegionPerformance": "<em>性能提示：</em>每幅绘制都有自己的形状。小心不要将多个形状完全放在一起。不要组合简单的形状来创建复杂的形状，而是考虑使用区域多边形工具。",
+"SETTINGS.GridDiagonalsL": "配置如何在方形网格上测量对角线距离。括号中的数字定义每个选项下以网格空间为单位的对角线长度。"
 }
