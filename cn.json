@@ -2558,5 +2558,26 @@
 "PERMISSION.PlaylistCreateHint": "允许具有此角色的用户在世界中创建新的播放列表。",
 "PERMISSION.ManualRollsHint": "允许具有此角色的用户选择手动输入掷骰结果。",
 "CONTROLS.RegionPerformance": "<em>性能提示：</em>每幅绘制都有自己的形状。小心不要将多个形状完全放在一起。不要组合简单的形状来创建复杂的形状，而是考虑使用区域多边形工具。",
-"SETTINGS.GridDiagonalsL": "配置如何在方形网格上测量对角线距离。括号中的数字定义每个选项下以网格空间为单位的对角线长度。"
+"SETTINGS.GridDiagonalsL": "配置如何在方形网格上测量对角线距离。括号中的数字定义每个选项下以网格空间为单位的对角线长度。",
+"COMPENDIUM.ART": {
+"CONFIG": {
+"Hint": "使用箭头调整艺术资源的优先级。当一个角色有多个艺术资源时，将使用优先级最高的艺术资源。",
+"Portraits": "肖像",
+"PriorityDecrease": "降低优先级",
+"PriorityIncrease": "提高优先级",
+"Tokens": "指示物"
+},
+"SETTING": {
+"Hint": "配置应使用哪些系统和模组提供的艺术。",
+"Label": "配置艺术",
+"Title": "艺术合集"
+}
+},
+"CONTROLS.CommonDrawProportional": "按比例绘制",
+"CONTROLS.CopiedObjects": "复制了 {count} {type} 对象",
+"CONTROLS.PastedObjects": "粘贴了 {count} {type} 对象",
+"CONTROLS.DeletedObjects": "删除了 {count} {type} 对象",
+"CONTROLS.UndoCreateObjects": "已撤销 {count} {type} 对象的创建。",
+"CONTROLS.UndoDeleteObjects": "已撤销删除 {count} {type} 对象。",
+"CONTROLS.EmptyUndoHistory": "不再跟踪可撤销的 {type} 对象的历史记录。"
 }
