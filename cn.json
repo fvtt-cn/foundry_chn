@@ -349,7 +349,7 @@
 "FILES.S3Label": "S3 文件桶",
 "FILES.Selected": "已选择",
 "FILES.TileSize": "素材网格尺寸",
-"FILES.TileSizeHint": "指定源图块图稿的像素网格大小，以便在放置到激活的场景中时将自动调整其大小。",
+"FILES.TileSizeHint": "指定源图块图像的像素网格大小，以便在放置到激活的场景中时将自动调整其大小。",
 "FILES.NoResults": "在此位置找不到匹配的结果。",
 "FILES.Upload": "上传",
 "FILES.Search": "搜索",
@@ -2561,24 +2561,24 @@
 "SETTINGS.GridDiagonalsL": "配置如何在方形网格上测量对角线距离。括号中的数字定义每个选项下以网格空间为单位的对角线长度。",
 "COMPENDIUM.ART": {
 "CONFIG": {
-"Hint": "使用箭头调整艺术资源的优先级。当一个角色有多个艺术资源时，将使用优先级最高的艺术资源。",
-"Portraits": "肖像",
+"Hint": "使用箭头调整美术资源的优先级。当一个角色有多个美术资源时，将使用优先级最高的艺术资源。",
+"Portraits": "立绘",
 "PriorityDecrease": "降低优先级",
 "PriorityIncrease": "提高优先级",
 "Tokens": "指示物"
 },
 "SETTING": {
-"Hint": "配置应使用哪些系统和模组提供的艺术。",
-"Label": "配置艺术",
-"Title": "艺术合集"
+"Hint": "配置应使用哪些系统和模组提供的美术。",
+"Label": "配置美术",
+"Title": "美术合集"
 }
 },
 "CONTROLS.CommonDrawProportional": "按比例绘制",
-"CONTROLS.CopiedObjects": "复制了 {count} {type} 对象",
-"CONTROLS.PastedObjects": "粘贴了 {count} {type} 对象",
-"CONTROLS.DeletedObjects": "删除了 {count} {type} 对象",
-"CONTROLS.UndoCreateObjects": "已撤销 {count} {type} 对象的创建。",
-"CONTROLS.UndoDeleteObjects": "已撤销删除 {count} {type} 对象。",
+"CONTROLS.CopiedObjects": "复制了 {count} 个 {type} 对象。",
+"CONTROLS.PastedObjects": "粘贴了 {count} 个 {type} 对象。",
+"CONTROLS.DeletedObjects": "删除了 {count} 个 {type} 对象。",
+"CONTROLS.UndoCreateObjects": "已撤销对 {count} 个 {type} 对象的创建。",
+"CONTROLS.UndoDeleteObjects": "已撤销对 {count} 个 {type} 对象的删除。",
 "CONTROLS.EmptyUndoHistory": "不再跟踪可撤销的 {type} 对象的历史记录。",
 "DRAWING.Role": "绘图模式",
 "DRAWING.RoleHint": "表示“对象”的绘图在主画布组中渲染，并受到战争迷雾和照明影响。表示“信息”的绘图在界面组中呈现，并且对所有玩家可见，除非隐藏。",
@@ -2589,5 +2589,14 @@
 "EFFECT.Image": "效果图像",
 "EFFECT.Tint": "图标颜色",
 "EFFECT.StatusHover": "悬浮",
-"EFFECT.StatusBurrow": "钻地"
+"EFFECT.StatusBurrow": "钻地",
+"TOKEN.FIELDS": {
+"ring": {
+"subject": {
+"texture": {
+"hint": "明确指定放置在动态指示物环上的图像的路径。如果未提供，环将与标准指示物纹理相同。"
+}
+}
+}
+}
 }
