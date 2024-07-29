@@ -371,7 +371,7 @@
 "INVITATIONS.Internet": "互联网",
 "INVITATIONS.Local": "局域网",
 "INVITATIONS.Title": "邀请链接",
-"ITEM.ViewArt": "查看物品图像",
+"ITEM.ViewArt": "查看物品插图",
 "HUD.ToggleVis": "切换可见",
 "HUD.ToggleLock": "切换锁定",
 "HUD.ToFront": "移至前方",
@@ -648,7 +648,7 @@
 "SHEETS.DefaultSheet": "默认卡",
 "SHEETS.TypeSheetHint": "设置用于此文档类型的默认卡模板（仅限 GM）。",
 "SHEETS.Save": "保存设置",
-"SIDEBAR.CharArt": "查看角色图像",
+"SIDEBAR.CharArt": "查看角色插图",
 "SIDEBAR.CollapseToggle": "展开/折叠",
 "SIDEBAR.Delete": "删除",
 "SIDEBAR.Duplicate": "复制",
@@ -721,7 +721,7 @@
 "SIDEBAR.TabCompendium": "合集包",
 "SIDEBAR.TabSettings": "游戏设定",
 "SIDEBAR.TabTables": "随机表",
-"SIDEBAR.TokenArt": "查看指示物图像",
+"SIDEBAR.TokenArt": "查看指示物插图",
 "SIDEBAR.JumpPin": "跳到标记",
 "TABLE.AnimateSetting": "掷骰随机表播放动画",
 "TABLE.AnimateSettingHint": "从随机表获得结果时显示转盘式的动画。",
@@ -2598,5 +2598,11 @@
 }
 }
 }
-}
+},
+"EULA": {
+"AgreeLabel": "我同意这些条款",
+"Declined": "你已拒绝最终用户许可协议并且无法使用该软件。",
+"ErrorAgreeRequired": "你必须选中该框以确认接受本协议才能继续。"
+},
+"WARNING.TilingSpriteDeprecation": "模组或系统正在使用不再受支持的旧版 TilingSprite 类。"
 }
