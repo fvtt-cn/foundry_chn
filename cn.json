@@ -12,7 +12,7 @@
 "Documentation": "文档",
 "Duplicate": "复制",
 "Error": "错误",
-"GridUnits": "单位",
+"GridUnits": "网格单位",
 "Install": "安装",
 "Elevation": "高度",
 "Foundry Virtual Tabletop": "Foundry Virtual Tabletop",
@@ -25,7 +25,7 @@
 "Token": "指示物",
 "Path": "路径",
 "Packs": "包",
-"Permissions": "许可",
+"Permissions": "权限",
 "Pixels": "像素",
 "Ratio": "比率",
 "Rotation": "旋转",
@@ -357,7 +357,7 @@
 "FILES.ErrorSomethingWrong": "你的文件上传请求出了点问题。",
 "FILES.WarnUploadModules": "文件已上传到模组或系统目录中。 这通常是<strong>不安全</strong>的，因为更新系统或模组时将会删除你上传的文件。",
 "FILES.TitleImageVideo": "媒体浏览器",
-"FILES.TitleImage": "图片浏览器",
+"FILES.TitleImage": "图像浏览器",
 "FILES.TitleVideo": "视频浏览器",
 "FILES.TitleAudio": "音频浏览器",
 "FILES.SourceUser": "用户数据",
@@ -377,7 +377,7 @@
 "HUD.ToFront": "移至前方",
 "HUD.ToBack": "移至后方",
 "JOURNAL.ModeText": "文本",
-"JOURNAL.ModeImage": "图片",
+"JOURNAL.ModeImage": "图像",
 "JOURNAL.ActionShow": "展示给玩家",
 "JOURNAL.ActionShowSuccess": "已向 {which} 玩家展示了 {title} 的内容。",
 "JOURNAL.Submit": "保存条目",
@@ -1097,7 +1097,7 @@
 "CARDS.DrawModeRandom": "随机",
 "CARDS.HeaderDetails": "设置",
 "CARDS.HeaderCards": "卡牌",
-"CARDS.Image": "默认卡背图片",
+"CARDS.Image": "默认卡背图像",
 "CARDS.Number": "数量",
 "CARDS.NoCards": "当前无卡牌",
 "CARDS.DealWarnNoTargets": "必须先创建可被发牌的手牌或牌堆。",
@@ -1441,8 +1441,8 @@
 "ADVENTURE.ImportOverwriteWarning": "冒险 {name} 中的一些内容已存在于你的世界中。如果你导入冒险的话这些内容会被覆盖，你要继续吗？",
 "ADVENTURE.Name": "冒险名",
 "ADVENTURE.NameHint": "为这个冒险选取一个在包含此冒险的包中独一无二的名字。",
-"ADVENTURE.Image": "横幅图片",
-"ADVENTURE.ImageHint": "请提供宽度至少为 768 像素、高度至少为 300 像素的横幅图片，该图片将为此次冒险展示。",
+"ADVENTURE.Image": "横幅图像",
+"ADVENTURE.ImageHint": "请提供宽度至少为 768 像素、高度至少为 300 像素的横幅图像，该图片将为此次冒险展示。",
 "ADVENTURE.Caption": "横幅标题",
 "ADVENTURE.CaptionHint": "提供将显示在横幅图像下方的文本标题。此标题可以包含 HTML 或纯文本。",
 "ADVENTURE.Description": "冒险描述",
@@ -1493,12 +1493,12 @@
 "EDITOR.Save": "保存改动",
 "EDITOR.SaveAndClose": "保存并关闭编辑器",
 "EDITOR.DiscardHTML": "取消 HTML 改动",
-"EDITOR.NoUploadPermission": "要插入图片内容你必须要有上传权限。",
+"EDITOR.NoUploadPermission": "要插入图像内容你必须要有上传权限。",
 "EDITOR.Resync": "你的编辑器状态与服务器不同步，必须重置。你的原始编辑器内容已复制到剪贴板。",
 "EDITOR.EditingHTMLWarning": "另一个用户也编辑了同一文档。你对 HTML 所做的任何更改都将删除他们的更改，因此无法保存。",
-"EDITOR.UploadingFile": "上传图片文件。",
+"EDITOR.UploadingFile": "上传图像文件。",
 "EDITOR.UploadComplete": "上传完成。",
-"EDITOR.InsertImage": "插入图片",
+"EDITOR.InsertImage": "插入图像",
 "EDITOR.ImageSource": "源",
 "EDITOR.ImageAlt": "可选描述",
 "EDITOR.ImageInsert": "插入",
@@ -1542,7 +1542,7 @@
 "NOTE.Custom": "自定义",
 "NOTE.CustomIcon": "自定义图标",
 "NOTE.Unknown": "未知",
-"SCENES.FogOverlay": "战争迷雾图片",
+"SCENES.FogOverlay": "战争迷雾图像",
 "SCENES.FogOverlayHint": "可选的战争迷雾图像，会覆盖在场景中未探索的位置上。",
 "SCENES.ForegroundElevation": "前景高度",
 "SCENES.NavLabel": "画布场景导航",
@@ -1757,7 +1757,7 @@
 "KEYBINDINGS.ResetSuccess": "所有快捷键已重置。",
 "LIGHT.AnimationFlame": "火把",
 "LIGHT.AnimationStarLight": "星光",
-"JOURNAL.ImageShowSuccess": "图片展示给 {which} 玩家。",
+"JOURNAL.ImageShowSuccess": "图像展示给 {which} 玩家。",
 "JOURNAL.ShowEntry": "展示 {name}",
 "JOURNALENTRYPAGE.TypeVideo": "视频",
 "JOURNALENTRYPAGE.DefaultPageSheet": "默认 {page} 页码",
@@ -2017,7 +2017,7 @@
 "SETUP.PackageUpdateCoreInsufficient": "有可用的更新。但是它的功能依赖于旧的核心版本 {vmax}。",
 "SETUP.PackageRequiredDependencies": "软件包需要如下依赖，否则将无法使用：",
 "SETUP.PackageOptionalDependencies": "软件包有如下可选的依赖，安装后可以增加软件包的功能：",
-"CONTROLS.SoundPreviewP": "激活时，将你的光标悬停在一个环境音效上，就像你的指示物在那个位置一样听到它。",
+"CONTROLS.SoundPreviewP": "激活时，将你的光标悬停在环境音上就能听到，就像你的指示物在那个位置一样。",
 "CONTROLS.TooltipLock": "锁定提示",
 "CONTROLS.TooltipDismiss": "关闭锁定的提示",
 "CONTROLS.CommonCreate": "创建",
@@ -2314,7 +2314,7 @@
 "BASIC": "基础配置",
 "ADVANCED": "高级选项",
 "ANIMATION": "光照动画",
-"APPEARANCE": "光照表现",
+"APPEARANCE": "光照外观",
 "PLACEMENT": "光照放置"
 },
 "FIELDS": {
@@ -2340,8 +2340,8 @@
 }
 },
 "ACTIONS": {
-"CREATE": "创建环境光照",
-"UPDATE": "更新环境光照",
+"CREATE": "创建环境光",
+"UPDATE": "更新环境光",
 "RESET": "重置高级选项"
 },
 "LABELS": {
@@ -2363,7 +2363,7 @@
 },
 "path": {
 "label": "源文件路径",
-"hint": "配置环境声音以使指示物在其半径内移动时播放音频文件。"
+"hint": "配置环境音以使指示物在其半径内移动时播放音频文件。"
 },
 "radius": {
 "label": "效果半径"
@@ -2392,7 +2392,7 @@
 "max": {
 "label": "和"
 },
-"hint": "你可以指定可以听到此环境声音的暗度级别范围。"
+"hint": "你可以指定可以听到此环境音的暗度级别范围。"
 },
 "effects": {
 "base": {
@@ -2402,7 +2402,7 @@
 "intensity": {
 "label": "基础效果密度"
 },
-"hint": "对声音应用音频效果，以应用滤波器或变形其声音。"
+"hint": "对声音应用音频效果，以添加滤波器或变声。"
 },
 "muffled": {
 "type": {
@@ -2416,8 +2416,8 @@
 }
 },
 "ACTIONS": {
-"CREATE": "创建环境声音",
-"UPDATE": "更新环境声音"
+"CREATE": "创建环境音",
+"UPDATE": "更新环境音"
 },
 "SECTIONS": {
 "SOURCE": "来源",
@@ -2448,7 +2448,7 @@
 },
 "ENVIRONMENT": {
 "label": "环境",
-"tooltip": "控制播放列表和分类为环境的环境声音的本地音量。"
+"tooltip": "控制播放列表和分类为环境的环境音的本地音量。"
 },
 "INTERFACE": {
 "label": "界面",
@@ -2471,8 +2471,8 @@
 "CONTROLS.RegionEllipse": "绘制椭圆",
 "CONTROLS.RegionRectangle": "绘制矩形",
 "CONTROLS.RegionHole": "创建空洞",
-"CONTROLS.RegionHoleP": "激活后，使用任何形状工具在区域上绘制的任何形状都会创建一个空洞，区域行为将不再适用。",
-"CONTROLS.RegionSnap": "激活后，使用任何形状工具在区域上绘制的任何形状都将吸附到网格。",
+"CONTROLS.RegionHoleP": "激活时，使用任何形状工具在区域上绘制的任何形状都会创建一个空洞，区域行为将不再适用。",
+"CONTROLS.RegionSnap": "激活时，使用任何形状工具在区域上绘制的任何形状都将吸附到网格。",
 "CONTROLS.RegionSelect": "选择区域",
 "CONTROLS.RegionSelectP": "在场景中选择一个或多个区域。选中的区域为纯色，未选中的区域为条纹色。",
 "CONTROLS.GroupRegion": "区域控件",
