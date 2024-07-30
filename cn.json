@@ -2507,6 +2507,9 @@
 "max": {
 "label": "和"
 }
+},
+"alpha": {
+"label": "颜色亮度"
 }
 },
 "SETTINGS.ColorSchemeN": "首选配色方案",
