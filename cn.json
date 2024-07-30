@@ -1010,7 +1010,7 @@
 "TILE.AnimationHint": "图块使用动态视频贴图时应用到的额外属性。",
 "TILE.Image": "图块图像或视频",
 "TILE.Opacity": "图块不透明度",
-"TILE.Tint": "色调颜色",
+"TILE.Tint": "着色色调",
 "TILE.OcclusionMode": "遮挡模式",
 "TILE.OcclusionModeNone": "无（总是可见）",
 "TILE.OcclusionModeFade": "渐隐（整块图块）",
