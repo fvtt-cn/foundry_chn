@@ -2642,7 +2642,7 @@
 },
 "FILES.ErrorDisallowedExtension": "文件“{name}”具有无效的扩展名“{ext}”，此 FilePicker类型不允许使用该扩展名。\n允许的扩展名包括：{allowed}。",
 "HUD.ToggleTargetState": "切换“选择目标”状态",
-"HUD.WarningEffectNoActor": "你无法将状态效果分配给「没有关联角色的」指示物。",
+"HUD.WarningEffectNoActor": "你无法将状态效果分配给该指示物（没有关联角色）。",
 "HTMLDocumentTagsElement.PLACEHOLDER": "输入 UUID 或删除 {type}",
 "KEYBINDINGS.SendToBack": "将对象移至后方"
 }
