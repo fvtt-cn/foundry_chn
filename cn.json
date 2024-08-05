@@ -2717,6 +2717,134 @@
 "SCENES.GridThickness": "网格厚度",
 "SCENES.HeaderAmbienceBasic": "基本选项",
 "GRID.STYLES": {
-"SolidLines": "实线"
+"SolidLines": "实线",
+"DashedLines": "方点虚线",
+"DottedLines": "圆点虚线",
+"SquarePoints": "方形点",
+"DiamondPoints": "菱形点",
+"RoundPoints": "圆形点"
+},
+"REGION": {
+"EVENTS": {
+"tokenPreMove": {
+"label": "在指示物移动前"
+},
+"regionBoundary": {
+"label": "已更改区域边界"
+},
+"behaviorStatus": {
+"label": "已更改行为状态"
+},
+"tokenEnter": {
+"label": "指示物进入"
+},
+"tokenExit": {
+"label": "指示物离开"
+},
+"tokenMove": {
+"label": "在指示物移动后"
+},
+"tokenMoveIn": {
+"label": "指示物被移入"
+},
+"tokenMoveOut": {
+"label": "指示物被移出"
+},
+"tokenTurnStart": {
+"label": "指示物开始回合"
+},
+"tokenTurnEnd": {
+"label": "指示物结束回合"
+},
+"tokenRoundEnd": {
+"label": "指示物每轮结束时"
+},
+"tokenRoundStart": {
+"label": "指示物每轮开始时"
 }
+},
+"SECTIONS": {
+"identity": "本体",
+"shapes": "形状",
+"behaviors": "行为"
+},
+"FIELDS": {
+"color": {
+"label": "颜色",
+"hint": "颜色应用于能被看见的区域。"
+},
+"shapes": {
+"label": "形状",
+"hint": "区域的形状。"
+},
+"elevation": {
+"label": "高度",
+"hint": "区域的高度范围。",
+"FIELDS": {
+"bottom": {
+"label": "底部",
+"hint": "高度范围的底部。"
+},
+"top": {
+"label": "顶部",
+"hint": "高度范围的顶部。"
+}
+}
+},
+"behaviors": {
+"label": "行为",
+"hint": "区域的行为。"
+},
+"visibility": {
+"label": "可见性",
+"hint": "配置区域的可见性。"
+}
+},
+"ACTIONS": {
+"create": "创建区域",
+"update": "更新区域",
+"delete": "删除区域",
+"shapeCreateFromWalls": "根据控制的墙创建形状",
+"shapeMakeHole": "挖坑",
+"shapeFillHole": "填坑",
+"shapeMoveUp": "上移形状",
+"shapeMoveDown": "下移形状",
+"shapeRemove": "移除形状",
+"behaviorCreate": "创建行为",
+"behaviorEdit": "编辑行为",
+"behaviorDelete": "删除行为",
+"behaviorEnable": "启用行为",
+"behaviorDisable": "禁用行为"
+},
+"VISIBILITY": {
+"LAYER": {
+"label": "仅在区域层显示"
+},
+"GAMEMASTER": {
+"label": "始终向 GM 显示"
+},
+"ALWAYS": {
+"label": "始终向所有人显示"
+}
+}
+},
+"SETUP.UpdatePreviewCompatibilityHint": "使用下面的“预览兼容性”按钮，你可以检查你的所有世界、系统和模组是否支持 {version} 版本的FVTT。",
+"SETUP.PreviewCompatibility": "预览兼容性",
+"SETUP.PreviewCompatibilityVersion": "预览与 {version} 版本的兼容性",
+"SETUP.PreviewingCompatibility": "预览兼容性",
+"SETUP.UpdatePerformIfAvailable": "进行更新（如果可用）",
+"SETUP.IncompatibleSystems": "不兼容的系统：{系统}",
+"SETUP.NoSupportedSystem": "未安装支持的系统",
+"SETUP.PackageVisCompatible": "兼容",
+"SETUP.PackageVisIncompatible": "不兼容",
+"SETUP.PackageVisUnverified": "未验证",
+"SETUP.ViewPackagePage": "查看软件包页面",
+"SETUP.ViewPackageChangelog": "查看更新日志",
+"SETUP.PackageIncompatibleSystemsPrompt": "此模组更新与下列已安装的系统不兼容，是否要继续？",
+"SETUP.PackageIncompatibleSystemsBulkPrompt": "以下模组未更新，因为这样做会使它们与一个或多个已安装的系统不兼容。无论如何你都想更新它们吗？",
+"SETUP.PackageIncompatibleWithSystems": "{module} <em>不兼容</em> {systems}",
+"SETUP.WorldLaunchMigrate": "迁移世界数据",
+"SETUP.WorldLaunchMigratePackage": "迁移软件包数据",
+"SETUP.COMPAT.Compatible": "{count} 兼容",
+"SETUP.COMPAT.CompatibleTooltip": "经验证与版本 {version} 兼容的软件包。"
 }
