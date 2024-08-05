@@ -2585,7 +2585,23 @@
 "SETTINGS.GridDiagonalsN": "方形网格对角",
 "SCENES.ENVIRONMENT": {
 "DarknessLock": "暗度级别锁定",
-"DarknessLockHint": "选中此选项后，将无法更改暗度级别。"
+"DarknessLockHint": "选中此选项后，将无法更改暗度级别。",
+"HeaderLabel": "环境光照",
+"Luminosity": "亮度",
+"LuminosityHint": "控制场景的亮度。较高的亮度使场景像晴天一样亮，而较低的亮度则会显得更暗、更阴沉。",
+"Saturation": "饱和度",
+"SaturationHint": "调整场景中颜色的纯度。设置为高于 0 的数值会使颜色更加饱和（强烈且鲜艳），而设置为负数则让颜色变得暗淡而柔和。",
+"Shadows": "阴影",
+"ShadowsHint": "提高此滑块会导致场景的阴影和较暗的元素变得更暗和更深。",
+"Hue": "色相",
+"HueHint": "选择一种色相（颜色）将其融入整个场景中。要激活颜色滑块，色相强度必须大于 0。",
+"Intensity": "色相强度",
+"IntensityHint": "调整所选色相融入场景的强度。高色相强度会使场景的颜色变得饱和，可能压倒已有的颜色。选择较低的色相强度可以使所选颜色更巧妙地融入其中。",
+"ResetEnvironment": "重置为默认选项",
+"BlendAmbience": "混合环境",
+"BlendAmbienceHint": "勾选此选项后，根据暗度级别，将基础环境值与暗度环境值合并。",
+"BaseAmbience": "基础环境",
+"DarkAmbience": "黑暗环境"
 },
 "SETTINGS.ColorSchemeDefault": "浏览器默认",
 "SETTINGS.ColorSchemeDark": "深色",
@@ -2688,5 +2704,19 @@
 "HUD.ToggleTargetState": "切换“选择目标”状态",
 "HUD.WarningEffectNoActor": "你无法将状态效果分配给该指示物（没有关联角色）。",
 "HTMLDocumentTagsElement.PLACEHOLDER": "输入 UUID 或删除 {type}",
-"KEYBINDINGS.SendToBack": "将对象移至后方"
+"KEYBINDINGS.SendToBack": "将对象移至后方",
+"LIGHT.AnimationMagicalGloom": "魔法黑暗",
+"MODMANAGE.RequiredDepError": "无法禁用此模组，因为以下内容需要它：{dependents}",
+"PLAYLIST.Channel": "音频通道",
+"PLAYLIST.VOLUME": {
+"CONTROLS": "用户音量控件",
+"TOOLTIP": "音量：{volume}%"
+},
+"SCENES.CaptureInitialViewPosition": "已将捕获的画布位置设为场景配置表单中的初始视图。",
+"SCENES.GridStyle": "网格样式",
+"SCENES.GridThickness": "网格厚度",
+"SCENES.HeaderAmbienceBasic": "基本选项",
+"GRID.STYLES": {
+"SolidLines": "实线"
+}
 }
