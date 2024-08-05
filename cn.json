@@ -2730,10 +2730,10 @@
 "label": "在指示物移动前"
 },
 "regionBoundary": {
-"label": "已更改区域边界"
+"label": "区域边界更改后"
 },
 "behaviorStatus": {
-"label": "已更改行为状态"
+"label": "行为状态更改后"
 },
 "tokenEnter": {
 "label": "指示物进入"
@@ -2826,6 +2826,36 @@
 "ALWAYS": {
 "label": "始终向所有人显示"
 }
+},
+"SHAPES": {
+"rectangle": "矩形",
+"circle": "圆形",
+"ellipse": "椭圆",
+"polygon": "多边形"
+},
+"Behavior": "行为",
+"Shape": "形状",
+"LEGEND": {
+"control": "控制区域",
+"config": "配置区域",
+"create": "创建区域",
+"delete": "删除区域",
+"empty": "空的",
+"filter": "筛选区域",
+"lock": "锁定区域",
+"title": "区域图例",
+"unlock": "解锁区域",
+"elevationBottom": "高度（底部）",
+"elevationTop": "高度（顶部）"
+},
+"SHEET": {
+"title": "配置区域"
+},
+"NOTIFICATIONS": {
+"ControlWalls": "控制一组墙壁来确定你想要的形状的边。",
+"DrawingMultipleRegionsControlled": "绘制形状时必须仅控制一个区域或不控制任何区域！",
+"EmptyEnclosedArea": "被控制的墙包围的区域是空的！确保外墙形成闭环并且端点与端点相连。",
+"NoControlledWalls": "你没有控制任何墙！"
 }
 },
 "SETUP.UpdatePreviewCompatibilityHint": "使用下面的“预览兼容性”按钮，你可以检查你的所有世界、系统和模组是否支持 {version} 版本的FVTT。",
@@ -2846,5 +2876,52 @@
 "SETUP.WorldLaunchMigrate": "迁移世界数据",
 "SETUP.WorldLaunchMigratePackage": "迁移软件包数据",
 "SETUP.COMPAT.Compatible": "{count} 兼容",
-"SETUP.COMPAT.CompatibleTooltip": "经验证与版本 {version} 兼容的软件包。"
+"SETUP.COMPAT.CompatibleTooltip": "经验证与版本 {version} 兼容的软件包。",
+"BEHAVIOR": {
+"TYPES": {
+"base": {
+"FIELDS": {
+"events": {
+"hint": "此行为订阅的事件。",
+"label": "事件"
+},
+"once": {
+"label": "一次",
+"hint": "第一次触发后禁用该行为。"
+}
+},
+"SECTIONS": {
+"events": "订阅事件"
+}
+},
+"adjustDarknessLevel": {
+"FIELDS": {
+"mode": {
+"label": "模式"
+}
+}
+}
+},
+"SECTIONS": {
+"identity": "行为本体",
+"status": "行为状态"
+},
+"FIELDS": {
+"disabled": {
+"label": "禁用",
+"hint": "切换是否暂时禁用此行为。"
+}
+},
+"ACTIONS": {
+"create": "创建区域行为",
+"update": "更新区域行为",
+"delete": "删除区域行为"
+}
+},
+"TOKEN.HEXAGONAL_SHAPE_ELLIPSE_1": "椭圆（变体 1）",
+"TOKEN.HEXAGONAL_SHAPE_ELLIPSE_2": "椭圆（变体 2）",
+"TOKEN.HEXAGONAL_SHAPE_TRAPEZOID_1": "梯形（变体 1）",
+"TOKEN.HEXAGONAL_SHAPE_TRAPEZOID_2": "梯形（变体 2）",
+"TOKEN.HEXAGONAL_SHAPE_RECTANGLE_1": "矩形（变体 1）",
+"TOKEN.HEXAGONAL_SHAPE_RECTANGLE_2": "矩形（变体 2）"
 }
