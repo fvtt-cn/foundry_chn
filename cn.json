@@ -2584,7 +2584,7 @@
 "SETTINGS.GridDiagonalsEquidistant": "等距（1）",
 "SETTINGS.GridDiagonalsN": "方形网格对角",
 "SCENES.ENVIRONMENT": {
-"DarknessLock": "暗度级别锁定",
+"DarknessLock": "锁定暗度级别",
 "DarknessLockHint": "选中此选项后，将无法更改暗度级别。",
 "HeaderLabel": "环境光照",
 "Luminosity": "亮度",
