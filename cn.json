@@ -2920,6 +2920,79 @@
 "label": "变暗"
 }
 }
+},
+"teleportToken": {
+"FIELDS": {
+"destination": {
+"hint": "指示物移入区域后将被传送到的目标区域。",
+"label": "目的地"
+},
+"choice": {
+"label": "允许选择",
+"hint": "允许移动指示物的用户选择是否传送它。"
+}
+},
+"Confirm": "你想传送 {token} 吗？",
+"ConfirmGM": "你想将 {token} 传送到 {scene} 中的 {region} 吗？"
+},
+"displayScrollingText": {
+"FIELDS": {
+"color": {
+"label": "颜色",
+"hint": "滚动文本的颜色。"
+},
+"text": {
+"label": "文本",
+"hint": "触发行为时显示的文本。"
+},
+"visibility": {
+"label": "可见性",
+"hint": "根据权限级别配置哪些用户将看到滚动文本。"
+}
+},
+"VISIBILITY_MODES": {
+"GAMEMASTER": {
+"label": "GM"
+},
+"OBSERVER": {
+"label": "查看权限"
+},
+"ANYONE": {
+"label": "所有人"
+}
+}
+},
+"executeMacro": {
+"FIELDS": {
+"uuid": {
+"label": "宏",
+"hint": "当某一事件发生时执行的宏。"
+},
+"everyone": {
+"label": "所有人",
+"hint": "配置宏是否由所有连接的用户执行，而不是由具有足够权限的单个用户执行。"
+}
+}
+},
+"executeScript": {
+"FIELDS": {
+"source": {
+"label": "脚本",
+"hint": "当某一事件发生时执行的脚本。"
+}
+}
+},
+"toggleBehavior": {
+"FIELDS": {
+"enable": {
+"label": "启用行为",
+"hint": "当某一事件发生时启用的行为。"
+},
+"disable": {
+"label": "禁用行为",
+"hint": "当某一事件发生时禁用的行为。"
+}
+}
 }
 },
 "SECTIONS": {
@@ -2943,5 +3016,30 @@
 "TOKEN.HEXAGONAL_SHAPE_TRAPEZOID_1": "梯形（变体 1）",
 "TOKEN.HEXAGONAL_SHAPE_TRAPEZOID_2": "梯形（变体 2）",
 "TOKEN.HEXAGONAL_SHAPE_RECTANGLE_1": "矩形（变体 1）",
-"TOKEN.HEXAGONAL_SHAPE_RECTANGLE_2": "矩形（变体 2）"
+"TOKEN.HEXAGONAL_SHAPE_RECTANGLE_2": "矩形（变体 2）",
+"RULER.MovementLocked": "该指示物无法被移动，因为它已被锁定。",
+"RULER.MovementNoPermission": "你没有移动此指示物的权限。",
+"SUPPORT.LargestTexture": "最大纹理",
+"SUPPORT.WorldScripts": "世界脚本",
+"SUPPORT.GenerateFullReport": "生成完整报告",
+"SUPPORT.GenerateFullReportHint": "完整的报告包含有关你安装的模组和合集包的更多详细信息，可能需要一些时间才能生成。",
+"SUPPORT.WorldData": "世界数据",
+"SUPPORT.CompendiumData": "合集包数据",
+"SUPPORT.ActiveModules": "启用模组",
+"TABLE.Result": "结果",
+"TABLE.RESULT_TYPES.TEXT.label": "文本",
+"TABLE.RESULT_TYPES.DOCUMENT.label": "文档",
+"TABLE.RESULT_TYPES.COMPENDIUM.label": "合集包",
+"TEMPLATE.GridTemplatesSetting": "基于网格的测量板形状",
+"TEMPLATE.GridTemplatesSettingHint": "配置测量板的效果区域是否应该基于网格而不是欧几里得几何。",
+"TILE.RestrictsLight": "限制光照",
+"TILE.RestrictsWeather": "限制天气",
+"TILE.RestrictsLightHint": "是否基于光源与该图块的相对高度来决定光照是否被阻挡？",
+"TILE.RestrictsWeatherHint": "是否基于天气效果与该图块的相对高度来决定天气效果是否被阻挡？",
+"TOKEN.HexagonalShape": "六边形",
+"TOKEN.HexagonalShapeHint": "六边形网格中指示物的形状。",
+"TOKEN.AnchorHint": "默认锚点 (0.5, 0.5) 是指示物图像的中心。",
+"TOKEN.ImageFitMode": "图像匹配模式",
+"TOKEN.ImageFitModeHint": "调整图像如何适配指示物的大小。",
+"TOKEN.OcclusionRadius": "遮挡半径"
 }
