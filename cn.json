@@ -2675,8 +2675,29 @@
 "ring": {
 "subject": {
 "texture": {
-"hint": "明确指定放置在动态指示物环上的图像的路径。如果未提供，环将与标准指示物纹理相同。"
+"hint": "明确指定放置在动态指示物环上的图像的路径。如果未提供，环将与标准指示物纹理相同。",
+"label": "主体纹理"
+},
+"scale": {
+"hint": "调整主体纹理与环的相对大小。增加该值将使主体纹理比环更大。如果主体纹理显得过于占主导地位，使用较低的值来减小主体纹理的大小。",
+"label": "主体比例校正"
 }
+},
+"colors": {
+"ring": {
+"label": "环的颜色",
+"hint": "应用于环边框的颜色。"
+},
+"background": {
+"label": "背景颜色",
+"hint": "应用于环的背景的颜色。"
+}
+},
+"effects": {
+"label": "环的效果"
+},
+"enabled": {
+"label": "启用环"
 }
 }
 },
@@ -3041,5 +3062,74 @@
 "TOKEN.AnchorHint": "默认锚点 (0.5, 0.5) 是指示物图像的中心。",
 "TOKEN.ImageFitMode": "图像匹配模式",
 "TOKEN.ImageFitModeHint": "调整图像如何适配指示物的大小。",
-"TOKEN.OcclusionRadius": "遮挡半径"
+"TOKEN.OcclusionRadius": "遮挡半径",
+"USER": {
+"FIELDS": {
+"name": {
+"hint": "玩家名称必须由 GM 配置，可以在用户管理界面中更改。",
+"label": "玩家名称"
+},
+"character": {
+"hint": "从你的至少有查看权限的角色中，选择角色作为该用户的主要角色。",
+"label": "玩家角色"
+},
+"avatar": {
+"label": "玩家形象",
+"hint": "玩家形象在使用内置音频/视频聊天时显示，也可以通过模组显示。"
+},
+"color": {
+"label": "玩家颜色",
+"hint": "玩家颜色用于光标、标尺、测量板和其他元素，用于区分用户。"
+},
+"pronouns": {
+"label": "玩家代词",
+"hint": "代词用于告知他人要如何以第三人称提及该玩家。"
+}
+},
+"SHEET": {
+"HEADERS": {
+"INFO": "玩家信息",
+"CHAR": "玩家角色"
+},
+"BUTTONS": {
+"SAVE": "保存玩家配置",
+"RELEASE": "释放角色"
+}
+}
+},
+"TOKEN.OcclusionRadiusHint": "当此指示物位于使用辐射遮挡模式的图块下方时，此值控制在图块中切割出的孔的大小，以允许通过这个孔来看到指示物。",
+"TOKEN.RING": {
+"EFFECTS": {
+"BKG_WAVE": "背景波动",
+"RING_GRADIENT": "环渐变",
+"RING_PULSE": "环脉动",
+"INVISIBILITY": "光谱脉冲"
+},
+"SHEET": {
+"legend": "动态指示物环"
+},
+"SETTINGS": {
+"label": "动态指示物环",
+"hint": "选择可用的动态指示物环可视化。更改它需要重新加载。",
+"coreBronze": "Foundry VTT 青铜环",
+"coreSteel": "Foundry VTT 钢环"
+}
+},
+"TYPES.Base": "基础",
+"TYPES.RegionBehavior.adjustDarknessLevel": "调整暗度级别",
+"TYPES.RegionBehavior.displayScrollingText": "显示滚动文本",
+"TYPES.RegionBehavior.executeMacro": "执行宏",
+"TYPES.RegionBehavior.executeScript": "执行脚本",
+"TYPES.RegionBehavior.pauseGame": "暂停游戏",
+"TYPES.RegionBehavior.suppressWeather": "抑制天气",
+"TYPES.RegionBehavior.teleportToken": "传送指示物",
+"TYPES.RegionBehavior.toggleBehavior": "切换行为",
+"DETECTION.LightPerception": "感知光照",
+"TEXTURE_DATA.FIT.fill": "填满",
+"TEXTURE_DATA.FIT.contain": "内含",
+"TEXTURE_DATA.FIT.cover": "覆盖",
+"TEXTURE_DATA.FIT.width": "完整宽度",
+"TEXTURE_DATA.FIT.height": "完整高度",
+"WALLS.DoorSound.MagicDoor": "魔法门",
+"WALLS.DoorSound.MagicWall": "魔法墙"
 }
