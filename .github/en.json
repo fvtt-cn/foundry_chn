@@ -2971,7 +2971,13 @@
     "label": "Dynamic Token Rings",
     "hint": "Choose an available dynamic token ring visualization. Changing it requires a reload.",
     "coreSteel": "Foundry VTT Steel Ring",
-    "coreBronze": "Foundry VTT Bronze Ring"
+    "coreBronze": "Foundry VTT Bronze Ring",
+    "FIT_MODES": {
+      "label": "Dynamic Token Rings Fit Modes",
+      "hint": "Choose the fit mode for the Dynamic Rings.",
+      "subject": "Standard",
+      "grid": "Grid"
+    }
   }
 },
 
