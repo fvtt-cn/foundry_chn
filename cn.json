@@ -3109,7 +3109,13 @@
 "label": "动态指示物环",
 "hint": "选择可用的动态指示物环可视化。更改它需要重新加载。",
 "coreBronze": "Foundry VTT 青铜环",
-"coreSteel": "Foundry VTT 钢环"
+"coreSteel": "Foundry VTT 钢环",
+"FIT_MODES": {
+"label": "动态指示物环适应模式",
+"subject": "标准",
+"grid": "填充方格",
+"hint": "为动态环选择适应的模式。"
+}
 }
 },
 "TYPES.Base": "基础",
