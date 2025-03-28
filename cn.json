@@ -2618,7 +2618,9 @@
 "REVERB": "混响",
 "HIGHPASS": "高通滤波器",
 "LOWPASS": "低通滤波器"
-}
+},
+"ConfigTitle": "环境音配置",
+"New": "新音效"
 },
 "OWNERSHIP.ShowGM": "显示 GM 用户",
 "PERMISSION.ManualRolls": "进行手动掷骰",
