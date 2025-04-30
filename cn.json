@@ -2544,5 +2544,9 @@
 "TEXTURE_DATA.FIT.contain": "内含",
 "TEXTURE_DATA.FIT.cover": "覆盖",
 "TEXTURE_DATA.FIT.width": "完整宽度",
-"TEXTURE_DATA.FIT.height": "完整高度"
+"TEXTURE_DATA.FIT.height": "完整高度",
+"Information": "信息",
+"ADVENTURE": {
+"ImportHeaderOptions": "选项"
+}
 }
