@@ -3231,7 +3231,11 @@
 "label": "AWS 配置文件路径",
 "hint": "你可以提供一个用于集成 S3 的 AWS 配置文件。该路径可以是绝对路径，或者是用户数据目录中 Config 子目录的相对路径。"
 },
-"sslKey.label": "密钥"
+"sslKey.label": "密钥",
+"fullscreen": {
+"label": "全屏模式",
+"hint": "以全屏模式启动应用程序，并隐藏工具栏及其他用户界面元素。"
+}
 },
 "Warning": "以下字段用于自定义 Foundry Virtual Tabletop 软件的行为。重新启动软件才能使这些更改生效。"
 },
@@ -3282,5 +3286,26 @@
 "SCENE.GridConfigToolHint": "通过鼠标滚轮和方向键，或手动设置以下字段，以调整网格与背景图像的位置。",
 "SCENE.View": "查看场景",
 "SCENE.GridPositionHint": "使用方向键来移动背景图像的偏移量。",
-"SCENE.InvalidDimension": "所提供的尺寸可能导致另一尺寸的值为非整数。建议尝试调整为其他数值，或解除尺寸间的关联设置。"
+"SCENE.InvalidDimension": "所提供的尺寸可能导致另一尺寸的值为非整数。建议尝试调整为其他数值，或解除尺寸间的关联设置。",
+"SETTINGS.TokenAutoRotateN": "自动指示物旋转",
+"SETTINGS.PrototypeTokenOverrides": {
+"Name": "原型指示物覆盖",
+"Label": "配置原型覆盖",
+"Hint": "为所有角色配置原型指示物的数据覆盖。",
+"Reset": {
+"Label": "重置默认设置",
+"Warning": "此操作将移除所有已配置的覆盖。"
+},
+"Disabled": "不启用",
+"Submit": "保存覆盖",
+"TABS": {
+"AllTypes": {
+"Hint": "这些覆盖设置适用于所有原型指示物，与其所属的父级角色类型无关。在后续选项卡中，可针对每种角色类型单独重新定义这些设置。若字段留空，则表示不启用覆盖功能。",
+"Label": "[所有类型]"
+},
+"Basics": "基础",
+"Marker": "回合标记"
+}
+},
+"SETTINGS.TokenAutoRotateL": "启用该功能后，在默认设置下，指示物将依据移动方向自动进行旋转。但无论如何设置此全局设置，单个指示物的“锁定旋转”属性仍会确保其图像不会发生视觉上的旋转。"
 }
