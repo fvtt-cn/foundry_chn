@@ -3246,6 +3246,16 @@
 "FIELDS": {
 "fontScale": {
 "label": "字体大小"
+},
+"colorScheme": {
+"choices": {
+"default": "浏览器默认",
+"dark": "深色",
+"light": "浅色"
+},
+"interface": {
+"label": "界面"
+}
 }
 }
 },
@@ -3360,6 +3370,23 @@
 },
 "background.label": "背景图像",
 "description.label": "世界描述"
+}
+},
+"PACKAGE": {
+"ConfigTitle": "模组：{module}",
+"ACTIONS": {
+"AddAuthor": "添加作者",
+"AddPack": "添加合集包",
+"RemovePack": "移除合集包",
+"AddRelationship": "添加关系",
+"RemoveRelationship": "移除关系",
+"RemoveAuthor": "移除作者"
+},
+"TABS": {
+"basics": "基础细节",
+"authors": "作者",
+"packs": "合集包",
+"relationships": "关系"
 }
 }
 }
