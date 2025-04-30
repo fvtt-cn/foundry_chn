@@ -531,9 +531,9 @@
 "PERMISSION.Permissions": "用户组权限",
 "PERMISSION.Reset": "默认值",
 "PERMISSION.Submit": "保存设置",
-"PERMISSION.BroadcastAudio": "允许公频语音",
+"PERMISSION.BroadcastAudio": "公频语音",
 "PERMISSION.BroadcastAudioHint": "在音/视频聊天中，允许该用户组进行公频语音。",
-"PERMISSION.BroadcastVideo": "允许公频视频",
+"PERMISSION.BroadcastVideo": "公频视频",
 "PERMISSION.BroadcastVideoHint": "在音/视频聊天中，允许该用户组进行公频视频。",
 "PERMISSION.ActorCreate": "创建角色",
 "PERMISSION.ActorCreateHint": "允许该用户组在世界中创建新角色。",
@@ -816,7 +816,7 @@
 "JOIN.ErrorUserDoesNotExist": "请求的用户 “{user}” 不存在！",
 "HUD.ToggleCombatState": "切换战斗状态",
 "HUD.AssignStatusEffects": "切换状态效果",
-"WEBRTC.PTTKeyWarn": "你的按住说话绑定键在使用旧值，可能无法按预期工作，请重新配置。",
+"WEBRTC.PTTKeyWarn": "你的按住说话绑定键在使用旧值，可能无法按预期工作：请重新配置。",
 "AuthorPl": "作者",
 "CARDS.CardsDeck": "牌组",
 "CARDS.DeckPresetPokerDark": "扑克牌（暗色）",
@@ -1222,7 +1222,7 @@
 "SETUP.PackageDependenciesCouldNotInstallSingular": "一个依赖项需要手动安装。",
 "SETUP.PackageDependenciesCouldInstallPlural": "{number} 个依赖项可以自动安装。",
 "SETUP.PackageDependenciesCouldInstallSingular": "一个依赖项可以自动安装。",
-"SETUP.PackageUpdateCoreUpdateNeeded": "{id} 有可用的更新。但是它依赖的最低核心版本为 {vmin}，所以无法进行安装。你当前使用的版本为 {vcur}。",
+"SETUP.PackageUpdateCoreUpdateNeeded": "{title} 有可用的更新。但是它依赖的最低核心版本为 {vmin}，所以无法进行安装。你当前使用的版本为 {vcur}。",
 "SETUP.WorldMigrationSystemUnavailable": "<p>无法确定游戏系统 <strong>{system}</strong> （<code>{systemVersion}</code>）现版本是否与软件版本兼容，迁移可能会失败。</p>",
 "SETUP.WorldMigrationBackupPrompt": "<p><strong>该过程不可撤销。</strong>建议你在进行迁移前备份你的世界数据，恢复到先前的版本需要有备份数据。</p>",
 "SETUP.WorldMigrationBegin": "开始迁移",
@@ -1237,7 +1237,7 @@
 "PACKAGECONFIG.Core": "核心",
 "PACKAGECONFIG.Unmapped": "未映射",
 "SHEETS.FormNavLabel": "表格栏导航",
-"OWNERSHIP.Title": "权限配置",
+"OWNERSHIP.Title": "权限配置：{object}",
 "OWNERSHIP.NONE": "无",
 "OWNERSHIP.LIMITED": "限制",
 "OWNERSHIP.OBSERVER": "查看",
@@ -1305,7 +1305,7 @@
 "SETTINGS.ResetInfo": "将所有的设置恢复默认。点击“保存更改”应用设置。",
 "SETTINGS.ResolutionScaleN": "像素比例分辨率缩放",
 "SETTINGS.FontConfigN": "额外字体",
-"SETUP.PackageUpdateCoreUnstable": "{id} 有可用的更新。但是它依赖于核心的非稳定版本 {vmin}，可能无法进行安装。",
+"SETUP.PackageUpdateCoreUnstable": "{title} 有可用的更新。但是它依赖于核心的非稳定版本 {vmin}，可能无法进行安装。",
 "SIDEBAR.NavLabel": "边栏",
 "PERMISSION.TokenDelete": "删除指示物",
 "PERMISSION.TokenDeleteHint": "允许该用户组从游戏画布上删除拥有角色的指示物。",
@@ -1565,7 +1565,7 @@
 "TOKEN.Adjectives.fearful": "害怕的",
 "TYPES.JournalEntryPage.text": "文本",
 "TOKEN.Adjectives.grateful": "感激的",
-"SETUP.PackageUpdateCoreInsufficient": "有可用的更新。但是它的功能依赖于旧的核心版本 {vmax}。",
+"SETUP.PackageUpdateCoreInsufficient": "{title} 有可用的更新。但是它的功能依赖于旧的核心版本 {vmax}。你当前使用的版本为 {vcur}。",
 "SETUP.PackageRequiredDependencies": "软件包需要如下依赖，否则将无法使用：",
 "SETUP.PackageOptionalDependencies": "软件包有如下可选的依赖，安装后可以增加软件包的功能：",
 "CONTROLS.SoundPreviewP": "激活时，将你的光标悬停在环境音上就能听到，就像你的指示物在那个位置一样。",
@@ -2062,7 +2062,7 @@
 "SETTINGS.GridDiagonalsApproximate": "近似（1.5）",
 "SETTINGS.GridDiagonalsExact": "精确（√2）",
 "SETTINGS.GridDiagonalsEquidistant": "等距（1）",
-"SETTINGS.GridDiagonalsN": "方形网格对角",
+"SETTINGS.GridDiagonalsN": "网格对角",
 "SETUP.COMPAT.Incompatible": "{count} 不兼容",
 "SETUP.COMPAT.IncompatibleTooltip": "经验证与版本 {version} 不兼容的软件包。",
 "SETUP.COMPAT.Warning": "{count} 兼容性风险",
@@ -2105,7 +2105,7 @@
 "PERMISSION.PlaylistCreateHint": "允许具有此角色的用户在世界中创建新的播放列表。",
 "PERMISSION.ManualRollsHint": "允许具有此角色的用户选择手动输入掷骰结果。",
 "CONTROLS.RegionPerformance": "<em>性能提示：</em>每幅绘制都有自己的形状。小心不要将多个形状完全放在一起。不要组合简单的形状来创建复杂的形状，而是考虑使用区域多边形工具。",
-"SETTINGS.GridDiagonalsL": "配置如何在方形网格上测量对角线距离。括号中的数字定义每个选项下以网格空间为单位的对角线长度。",
+"SETTINGS.GridDiagonalsL": "配置如何在方形或六边形网格上测量对角线距离。括号中的数字定义每个选项下以网格空间为单位的对角线长度。",
 "COMPENDIUM.ART": {
 "CONFIG": {
 "Hint": "使用箭头调整美术资源的优先级。当一个角色有多个美术资源时，将使用优先级最高的艺术资源。",
@@ -2997,12 +2997,112 @@
 "SCENE.GenerateThumbProgress": "正在为场景 {name} 生成缩略图。",
 "SCENE.FIELDS": {
 "weather": {
-"hint": "声控脉动"
+"hint": "显示该场景内的天气效果。"
+},
+"journal": {
+"label": "日志条目"
+},
+"playlist": {
+"label": "场景播放列表"
 }
 },
 "JOURNALENTRYPAGE.Category": "页面类别",
 "HUD.SelectMovementAction": "选择移动动作",
 "JOURNAL.ConfigureCategories": "配置类别",
 "SCENE.CaptureInitialViewPosition": "在场景配置表单中，将已捕获的画布位置设为初始视图。",
-"SCENE.DimensionLinked": "当前场景尺寸已关联，修改其中一个尺寸时，系统将自动调整另一个尺寸以保持纵横比不变。如需解除此关联，请点击“取消关联”按钮。"
+"SCENE.DimensionLinked": "当前场景尺寸已关联，修改其中一个尺寸时，系统将自动调整另一个尺寸以保持纵横比不变。如需解除此关联，请点击“取消关联”按钮。",
+"SCENE.TABS": {
+"SHEET": {
+"lighting": "光照",
+"ambience": "环境",
+"grid": "网格"
+},
+"AMBIENCE": {
+"basic": "基本选项",
+"environment": "环境光照"
+}
+},
+"SERVER_SETTINGS": {
+"Title": "应用配置",
+"Save": {
+"label": "保存应用设置",
+"warning": "修改这些配置选项将需要你重新启动你的服务器，以使其生效。你想继续吗？",
+"restart": "Foundry Virtual Tabletop 服务器的配置已被修改。你必须重启你的服务器以使修改生效。"
+},
+"SSLCert": "SSL 证书",
+"Telemetry": {
+"request2": "此提示只会显示一次，你可以随时在应用程序配置菜单中单击此屏幕右上方的 <i class=\"fas fa-cogs\"></i> 图标更改有关共享使用数据的首选项。",
+"yes": "允许分享",
+"no": "拒绝分享",
+"request1": "如果你允许，Foundry Virtual Tabletop 将与 foundryvtt.com 网站共享少量的匿名使用数据，以便我们的团队更好地了解 Foundry VTT 的使用情况，并帮助我们改进软件。"
+},
+"SECTIONS": {
+"OtherSettings": "其他设置"
+},
+"FIELDS": {
+"adminPassword": {
+"label": "管理员密码",
+"hint": "管理员密码用于保护对 Foundry Virtual Tabletop 的此设置页面和配置区的访问。强烈建议为你的服务器设置管理员密码。"
+},
+"dataPath": {
+"label": "用户数据路径",
+"hint": "配置存储用户数据（包括世界、系统和MOD）的位置。"
+},
+"telemetry": {
+"label": "允许分享使用数据",
+"hint": "允许与我们共享使用数据，以帮助我们改善 Foundry Virtual Tabletop。 收集的数据种类记录于我们的<a href=\"https://foundryvtt.com/article/privacy-policy/\" target=\"_blank\">隐私政策</a>，并不包含任何可识别到个人的信息，也不会与任何第三方分享。分享使用数据有助于我们回答“哪些 Foundry Virtual Tabletop 软件版本的使用率最高”、“哪些游戏系统的使用率最高”以及“哪些模组版本的安装频率最高”等问题。我们利用这些数据帮助我们改进软件兼容性，提供更好的客户支持，并与我们的社区分享聚合见解。如果禁用此选项，则不会共享任何数据。"
+},
+"cssTheme": {
+"label": "设置主题",
+"hint": "从多个视觉主题中进行选择，配置设置界面的外观。"
+},
+"world": {
+"label": "默认世界",
+"hint": "你可以选择在软件启动时自动启动一个可用的世界。"
+},
+"language": {
+"label": "默认语言",
+"hint": "你可以选择一项提供对应语言翻译文件的MOD，以使FVTT使用其作为默认语言。"
+},
+"port": {
+"label": "端口",
+"hint": "你可以选择 Foundry Virtual Tabletop 用于 TCP 连接通信的端口，并启用或禁用通用即插即用（UPnP）。"
+},
+"compressStatic": {
+"label": "压缩静态文件",
+"hint": "在 Foundry Virtual Tabletop 服务器发送文件到客户端前进行压缩，以减少数据传输量。"
+},
+"compressSocket": {
+"label": "压缩 Web Socket 数据",
+"hint": "对 Websocket 从服务器发送到客户端的数据启用压缩。 建议开启以提高网络性能。"
+},
+"deleteNEDB": {
+"label": "删除迁移后的 NEDB 文件",
+"hint": "在 v11 中，我们的软件从旧的数据库技术（NEDB）升级到了新的数据库技术（LevelDB）。我们会自动将你的旧数据库文件迁移到新格式，并保留旧的 NEDB 文件，以防你需要回滚或诊断某些问题。此安全措施增加了 Foundry Virtual Tabletop 在硬盘上的占用空间。启用此功能后，NEDB 文件将在迁移后自动删除。这将成为 v12 的默认行为。"
+},
+"hotReload": {
+"label": "热重载软件包文件",
+"hint": "允许软件包热重载某些资产，如 CSS、HTML 和本地化的文件，而无需完全刷新。仅建议开发人员使用此设置。"
+},
+"sslCert": {
+"label": "证书",
+"hint": "你可以提供证书和密钥文件的路径来使用安全套接字层（SSL）加密来运行服务器。该路径可以是绝对路径，或者是用户数据目录中 Config 子目录的相对路径。"
+},
+"awsConfig": {
+"label": "AWS 配置文件路径",
+"hint": "你可以提供一个用于集成 S3 的 AWS 配置文件。该路径可以是绝对路径，或者是用户数据目录中 Config 子目录的相对路径。"
+}
+},
+"Warning": "以下字段用于自定义 Foundry Virtual Tabletop 软件的行为。重新启动软件才能使这些更改生效。"
+},
+"SETTINGS.UI": {
+"HEADERS": {
+"other": "其他设置"
+},
+"FIELDS": {
+"fontScale": {
+"label": "字体大小"
+}
+}
+}
 }
