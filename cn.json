@@ -2102,8 +2102,8 @@
 },
 "OWNERSHIP.ShowGM": "显示 GM 用户",
 "PERMISSION.ManualRolls": "进行手动掷骰",
-"PERMISSION.PlaylistCreate": "创建播放列表",
-"PERMISSION.PlaylistCreateHint": "允许具有此角色的用户在世界中创建新的播放列表。",
+"PERMISSION.PlaylistCreate": "创建与控制播放列表",
+"PERMISSION.PlaylistCreateHint": "允许具有此角色的用户在世界中创建新的播放列表、控制拥有的播放列表。",
 "PERMISSION.ManualRollsHint": "允许具有此角色的用户选择手动输入掷骰结果。",
 "CONTROLS.RegionPerformance": "<em>性能提示：</em>每幅绘制都有自己的形状。小心不要将多个形状完全放在一起。不要组合简单的形状来创建复杂的形状，而是考虑使用区域多边形工具。",
 "SETTINGS.GridDiagonalsL": "配置如何在方形或六边形网格上测量对角线距离。括号中的数字定义每个选项下以网格空间为单位的对角线长度。",
@@ -2297,6 +2297,18 @@
 },
 "tokenRoundStart": {
 "label": "指示物每轮开始时"
+},
+"behaviorDeactivated": {
+"label": "行为被结束"
+},
+"behaviorViewed": {
+"label": "行为可见"
+},
+"behaviorUnviewed": {
+"label": "行为不可见"
+},
+"behaviorActivated": {
+"label": "行为被激活"
 }
 },
 "FIELDS": {
@@ -3302,11 +3314,15 @@
 },
 "SETTINGS.UI": {
 "HEADERS": {
-"other": "其他设置"
+"other": "其他设置",
+"theme": "主题和色彩方案",
+"size": "界面尺寸",
+"fade": "界面淡出"
 },
 "FIELDS": {
 "fontScale": {
-"label": "字体大小"
+"label": "字体大小",
+"hint": "增大或缩小应用默认字体大小。"
 },
 "colorScheme": {
 "choices": {
@@ -3316,8 +3332,19 @@
 },
 "interface": {
 "label": "界面"
+},
+"applications": {
+"label": "应用"
 }
+},
+"uiScale": {
+"label": "界面缩放比例"
 }
+},
+"MENU": {
+"name": "用户界面配置",
+"label": "配置界面",
+"hint": "影响 FVTT 用户界面显示或表现的相关设定。"
 }
 },
 "SCENE.GenerateThumbSuccess": "正在为场景 {name} 生成缩略图图像。",
@@ -3455,7 +3482,8 @@
 },
 "FIELDS": {
 "id": {
-"hint": "标识符必须是唯一的字母数字字符串，除连字符外不包含其他特殊字符。"
+"hint": "标识符必须是唯一的字母数字字符串，除连字符外不包含其他特殊字符。",
+"label": "软件包标识符"
 },
 "title": {
 "label": "软件包标题",
@@ -3498,6 +3526,10 @@
 "label": "软件包描述",
 "hint": "纯文本或 HTML 的说明，解释此软件包的作用和内容。"
 }
+},
+"Compatibility": {
+"Label": "兼容性",
+"Hint": "你可以声明此软件包仅与某范围中的 Foundry VTT 软件版本兼容。兼容性要求可以是特定的构建版本，如“13.339”；或更大范围的版本，如“13”。"
 }
 },
 "PACKAGECONFIG": {
@@ -3511,7 +3543,8 @@
 "FOLDER.DeleteName": "删除全部内容：{name}",
 "FOLDER.RemoveName": "移除文件夹：{name}",
 "FOLDER.CreateTableConfirm": {
-"Title": "创建随机表：{folder}"
+"Title": "创建随机表：{folder}",
+"Question": "使用该文件夹的内容创建一个新随机表吗？"
 },
 "FOLDER.FIELDS": {
 "name.label": "文件夹名",
@@ -3519,7 +3552,8 @@
 "sorting.label": "排序方式"
 },
 "OWNERSHIP": {
-"Save": "保存更改"
+"Save": "保存更改",
+"Legend": "权限"
 },
 "SIDEBAR.ACTIONS.CREATE": {
 "Actor": "创建角色",
@@ -3689,6 +3723,30 @@
 "direction.label": "方向",
 "angle.label": "角度",
 "distance.label": "距离",
-"borderColor.label": "边框颜色"
+"borderColor.label": "边框颜色",
+"fillColor.label": "填充颜色",
+"texture.label": "填充纹理"
+},
+"SETUP": {
+"PackageRequiresDowngradeHint": "要安装此软件包，你必须将 Foundry VTT 降级到 {vmax} 版本。",
+"PackageRequiresDowngradeLabel": "需要降级",
+"PackageRequiresUpgradeHint": "要安装此软件包，你必须将 Foundry VTT 升级到 {vmin} 版本。",
+"PackageRequiresUpgradeLabel": "需要升级",
+"ViewPackageWebsite": "查看软件包网站",
+"WorldLaunchCleanWorld": "清理世界数据",
+"WorldLaunchExtractDemo": "提取 Demo 数据",
+"COMPAT": {
+"Previewing": "正在加载预览",
+"Title": "预览兼容性：{release}"
+},
+"UPDATE_NOTES": {
+"Title": "发布说明：{release}",
+"FullList": "查看发布说明的<a href=\"{url}\" target=\"_blank\">全部内容</a>。",
+"BeginDownload": "开始下载",
+"PreviewCompatibilityHint": "使用下面的“预览兼容性”按钮，你可以检查你的所有世界、系统和模组是否支持 {version} 版本的FVTT。",
+"NewGenerationHint": "考虑在更新前对所有已安装的软件包进行快照，以防需要回滚。"
 }
+},
+"SHEETS.ConfigureTitle": "{prefix}：卡配置",
+"SHEETS.ThemeHint": "某些主题不适用部分表。"
 }
