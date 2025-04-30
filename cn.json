@@ -3539,7 +3539,9 @@
 },
 "SIDEBAR.SETTINGS": {
 "LABELS": {
-"Build": "构建版本"
+"Build": "构建版本",
+"Demo": "Demo 模式",
+"Modules": "已启用模组"
 },
 "ACTIONS": {
 "Tours": "导览指引",
@@ -3549,7 +3551,15 @@
 "ManageModules": "管理模组",
 "Players": "玩家设置",
 "Support": "支持与问题",
-"Wiki": "社区百科"
+"Wiki": "社区百科",
+"Configure": "配置设定",
+"Docs": "查看文档",
+"Invite": "邀请链接"
+},
+"HEADERS": {
+"Settings": "游戏设定",
+"Docs": "帮助文档",
+"Access": "游戏访问权限"
 }
 },
 "WALL.SenseTypes.LIMITED": "限制",
@@ -3586,7 +3596,22 @@
 "WALL.SenseTypes.NONE": "无",
 "WALL.DoorStates.OPEN": "打开",
 "SUPPORT": {
-"Dimensions": "{width} × {height}"
+"Dimensions": "{width} × {height}",
+"Screen": "屏幕尺寸",
+"Viewport": "视口尺寸",
+"NoDocumentIssues": "未发现文档问题。",
+"NoClientIssues": "未发现客户端问题。",
+"NoModuleIssues": "未发现模组问题。",
+"UnavailableDocuments": {
+"one": "1 个不可用的{document}文档",
+"other": "{count} 个不可用的{document}文档"
+},
+"TABS": {
+"support": "支持细节",
+"documents": "文档问题",
+"client": "客户端问题",
+"modules": "模组问题"
+}
 },
 "WALL.FIELDS": {
 "ds.label": "门状态",
@@ -3594,6 +3619,76 @@
 "threshold.attenuation": {
 "hint": "相对于观察者的距离和激活阈值，感知可以穿透这堵墙的距离是自适应的。仅适用于已定义阈值的情况。",
 "label": "接近阈值衰减"
+},
+"light.label": "光照",
+"move.label": "移动",
+"sight.label": "视野",
+"sound.label": "声音",
+"dir.label": "限制方向",
+"door.label": "门类型",
+"c.label": "墙体坐标"
+},
+"TABLE": {
+"ACTIONS": {
+"ChangeMode": {
+"Edit": "编辑",
+"View": "查看"
+},
+"OpenResultConfig": "打开结果配置",
+"DrawResult": "抽取结果",
+"DrawSpecificResult": "抽取此结果",
+"NormalizeResults": "规范化结果范围",
+"ResetResults": "重置结果",
+"CreateResult": "新增结果",
+"DeleteResult": "删除结果",
+"ToggleDrawn": "切换获取状态",
+"Submit": "更新随机表"
+},
+"SHEETS": {
+"Config": "配置随机表",
+"View": "查看随机表"
+},
+"TABS": {
+"summary": "总结",
+"results": "结果"
+},
+"FIELDS": {
+"description.label": "随机表描述",
+"formula.label": "掷骰公式",
+"replacement.label": "重复抽取",
+"displayRoll.label": "聊天框显示掷骰公式"
 }
+},
+"TABLE_RESULT": {
+"Details": "详情",
+"ACTIONS": {
+"Submit": "更新随机表结果"
+},
+"TYPES": {
+"text": "文本",
+"document": "文档"
+},
+"FIELDS": {
+"name.label": "结果名称",
+"type.label": "结果类型",
+"img.label": "结果图标",
+"documentUuid.label": "关联文档",
+"weight.label": "权重",
+"range.label": "范围"
+}
+},
+"TEMPLATE.TYPES": {
+"circle": "圆形",
+"cone": "锥形",
+"rect": "矩形",
+"ray": "线形"
+},
+"TEMPLATE.FIELDS": {
+"sort.label": "排序",
+"t.label": "类型",
+"direction.label": "方向",
+"angle.label": "角度",
+"distance.label": "距离",
+"borderColor.label": "边框颜色"
 }
 }
