@@ -550,11 +550,11 @@
 "PERMISSION.MacroScript": "使用脚本宏和执行脚本区域行为",
 "PERMISSION.MacroScriptHint": "允许该用户组使用可访问 API 的 JavaScript 宏和执行脚本区域行为。",
 "PERMISSION.MessageWhisper": "私信",
-"PERMISSION.MessageWhisperHint": "允许该用户组发送 GM 无法查看的私信。",
+"PERMISSION.MessageWhisperHint": "允许该用户组使用聊天指令 /whisper 发送私信。",
 "PERMISSION.SettingsModify": "修改配置设定",
 "PERMISSION.SettingsModifyHint": "允许该用户组修改游戏设定和激活/关闭模组。",
 "PERMISSION.ShowCursor": "显示鼠标光标",
-"PERMISSION.ShowCursorHint": "显示玩家鼠标光标的位置，该位置说明了用户在画布上的观看位置。",
+"PERMISSION.ShowCursorHint": "向其他在线用户显示玩家鼠标光标的位置。",
 "PERMISSION.ShowRuler": "显示标尺",
 "PERMISSION.ShowRulerHint": "使用标尺工具向其他连接的玩家显示测量的距离。",
 "PERMISSION.TemplateCreate": "创建测量模板",
@@ -2097,7 +2097,8 @@
 "LOWPASS": "低通滤波器"
 },
 "ConfigTitle": "环境音配置",
-"New": "新音效"
+"New": "新音效",
+"PathPlaceholder": "path/to/audio.mp3"
 },
 "OWNERSHIP.ShowGM": "显示 GM 用户",
 "PERMISSION.ManualRolls": "进行手动掷骰",
@@ -2440,7 +2441,7 @@
 },
 "everyone": {
 "label": "所有人",
-"hint": "配置宏是否由所有连接的用户执行，而不是由具有足够权限的单个用户执行。"
+"hint": "配置宏是否由所有在线用户执行，而不是由具有足够权限的单个用户执行。"
 }
 }
 },
@@ -3349,6 +3350,10 @@
 "hint": "选择你想要用来捕获音频的设备（如有）。"
 }
 }
+},
+"DevicesSubsections": {
+"Video": "视频",
+"Audio": "音频"
 }
 },
 "WORLD": {
@@ -3387,6 +3392,127 @@
 "authors": "作者",
 "packs": "合集包",
 "relationships": "关系"
+},
+"FIELDS": {
+"id": {
+"hint": "标识符必须是唯一的字母数字字符串，除连字符外不包含其他特殊字符。"
+},
+"title": {
+"label": "软件包标题",
+"hint": "用户所见的标题，可以包含特殊字符。"
+},
+"version": {
+"label": "软件包版本",
+"hint": "版本字段标识此软件包的特定迭代。支持的版本格式允许使用以句号分隔的字符串或数字。"
+},
+"url": {
+"label": "软件包 URL",
+"hint": "可查询该软件包详细信息的网站 URL。"
+},
+"authors": {
+"name.label": "作者名称",
+"discord.label": "Discord 用户名",
+"email.label": "邮箱地址",
+"url.label": "网站 URL"
+},
+"packs": {
+"name": {
+"label": "名称",
+"disabledHint": "你不能更改为此合集包名称，因为其已存在。",
+"hint": "用于标识合集包的唯一字母数字字符串，不含特殊字符。"
+},
+"label.label": "标签",
+"type.label": "文档类型",
+"system": {
+"label": "需求系统",
+"hint": "角色、物品或冒险的合集包（包含角色或物品）必须声明是为哪个特定游戏系统设计的。"
+}
+},
+"compatibility": {
+"minimum.label": "最低版本",
+"verified.label": "验证版本",
+"maximum.label": "最高版本"
+},
+"dataPath.label": "数据路径",
+"description": {
+"label": "软件包描述",
+"hint": "纯文本或 HTML 的说明，解释此软件包的作用和内容。"
 }
 }
+},
+"PACKAGECONFIG": {
+"TABS": {
+"core": "核心",
+"unmapped": "未映射"
+}
+},
+"SHEETS.Defaults": "默认",
+"SHEETS.Theme": "主题",
+"FOLDER.DeleteName": "删除全部内容：{name}",
+"FOLDER.RemoveName": "移除文件夹：{name}",
+"FOLDER.CreateTableConfirm": {
+"Title": "创建随机表：{folder}"
+},
+"FOLDER.FIELDS": {
+"name.label": "文件夹名",
+"color.label": "文件夹颜色",
+"sorting.label": "排序方式"
+},
+"OWNERSHIP": {
+"Save": "保存更改"
+},
+"SIDEBAR.ACTIONS.CREATE": {
+"Actor": "创建角色",
+"Adventure": "创建冒险",
+"Cards": "创建牌堆",
+"Folder": "创建文件夹",
+"Item": "创建物品",
+"JournalEntry": "创建日志",
+"Macro": "创建宏",
+"Playlist": "创建播放列表",
+"RollTable": "创建随机表",
+"Scene": "创建场景",
+"Compendium": "创建合集"
+},
+"SIDEBAR.COMPENDIUM.LABELS": {
+"Locked": "已锁定"
+},
+"SIDEBAR.SETTINGS": {
+"LABELS": {
+"Build": "构建版本"
+}
+},
+"WALL.SenseTypes.LIMITED": "限制",
+"WALL.SenseTypes.NORMAL": "普通",
+"WALL.SenseTypes.PROXIMITY": "接近",
+"WALL.SenseTypes.DISTANCE": "远离",
+"WALL.Directions.BOTH": "两侧",
+"WALL.Directions.LEFT": "左侧",
+"WALL.Directions.RIGHT": "右侧",
+"WALL.DoorTypes.NONE": "无",
+"WALL.DoorTypes.DOOR": "门",
+"WALL.DoorTypes.SECRET": "密门",
+"WALL.DoorStates.CLOSED": "关闭",
+"WALL.DoorStates.LOCKED": "上锁",
+"WALL.DoorSounds.FuturisticFast": "科幻，快速",
+"WALL.DoorSounds.FuturisticHydraulic": "科幻，液压",
+"WALL.DoorSounds.FuturisticForcefield": "科幻，力场",
+"WALL.DoorSounds.Industrial": "工业",
+"WALL.DoorSounds.IndustrialCreaky": "工业，吱嘎响",
+"WALL.DoorSounds.Jail": "监牢",
+"WALL.DoorSounds.MagicDoor": "魔法门",
+"WALL.DoorSounds.MagicWall": "魔法墙",
+"WALL.DoorSounds.Metal": "金属",
+"WALL.DoorSounds.SlidingMetal": "滑动，金属（轻）",
+"WALL.DoorSounds.SlidingMetalHeavy": "滑动，金属（重）",
+"WALL.DoorSounds.SlidingModern": "滑动，现代",
+"WALL.DoorSounds.SlidingWood": "滑动，木制",
+"WALL.DoorSounds.StoneBasic": "石制",
+"WALL.DoorSounds.StoneRocky": "石制，坠石",
+"WALL.DoorSounds.StoneSandy": "石制，坠沙",
+"WALL.DoorSounds.WoodBasic": "木制，基本",
+"WALL.DoorSounds.WoodCreaky": "木制，吱嘎声",
+"WALL.DoorSounds.WoodHeavy": "木制，沉重",
+"WALL.SenseTypes.NONE": "无",
+"WALL.DoorStates.OPEN": "打开"
 }
