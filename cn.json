@@ -236,7 +236,7 @@
 "DRAWING.Rotation": "角度",
 "DRAWING.ZIndex": "Z 轴层叠次序",
 "DRAWING.LineWidth": "线条宽度",
-"DRAWING.StrokeColor": "描边色",
+"DRAWING.StrokeColor": "线条颜色",
 "DRAWING.LineOpacity": "线条不透明度",
 "DRAWING.SmoothingFactor": "平滑系数",
 "DRAWING.SmoothingFactorHint": "平滑系数控制自由绘制中样条的平滑度。",
@@ -262,7 +262,7 @@
 "EFFECT.StartTurns": "效果起始轮数",
 "EFFECT.ChangeKey": "属性名",
 "EFFECT.ChangeMode": "改变方式",
-"EFFECT.ChangeValue": "属性值",
+"EFFECT.ChangeValue": "数值",
 "EFFECT.Submit": "提交变更",
 "EFFECT.StatusAsleep": "睡眠",
 "EFFECT.StatusDead": "死亡",
@@ -673,7 +673,7 @@
 "CONTROLS.GroupToken": "指示物控件",
 "CONTROLS.TileForeground": "前景层",
 "CONTROLS.SoundPreview": "预览环境音",
-"DOCUMENT.Create": "创建新 {type}",
+"DOCUMENT.Create": "创建 {type}",
 "DOCUMENT.Delete": "删除 {type}",
 "DOCUMENT.New": "新 {type}",
 "DOCUMENT.Update": "更新 {type}",
@@ -925,7 +925,7 @@
 "KEYBINDINGS.Restricted": "仅限 GM",
 "KEYBINDINGS.ReservedModifiers": "特殊修饰键：{modifiers}",
 "KEYBINDINGS.HowToEdit": "使用 {icon} 或者鼠标双击绑定的键位来进行更改。",
-"KEYBINDINGS.CycleView": "循环画布视角",
+"KEYBINDINGS.CycleView": "循环画布视角或移动动作",
 "KEYBINDINGS.Dismiss": "切出菜单/关闭所有窗口",
 "KEYBINDINGS.Pause": "暂停游戏",
 "KEYBINDINGS.Delete": "删除对象",
@@ -945,13 +945,13 @@
 "KEYBINDINGS.PanUpRight": "向右上移动对象或者视角",
 "KEYBINDINGS.PanDownLeft": "向左下移动对象或者视角",
 "KEYBINDINGS.PanDownRight": "向右下移动对象或者视角",
-"KEYBINDINGS.ZoomIn": "画布放大",
-"KEYBINDINGS.ZoomOut": "画布缩小",
+"KEYBINDINGS.ZoomIn": "垂直上升或放大画布",
+"KEYBINDINGS.ZoomOut": "垂直下降或缩小画布",
 "KEYBINDINGS.ExecuteMacro": "使用热键栏 {number}",
-"KEYBINDINGS.ErrorProtectedKey": "无法绑定至被保护的键位 “{key}”",
-"KEYBINDINGS.ErrorReservedModifier": "无法绑定至 “{key}”，因为它是键盘绑定动作保留的修饰键",
-"KEYBINDINGS.MustBeArray": "必须传入一个数值数组",
-"KEYBINDINGS.ErrorIllegalModifier": "请求的修饰键 “{key}” 在 KeyboardManager.MODIFIER_KEYS 中不是有效值",
+"KEYBINDINGS.ErrorProtectedKey": "无法绑定至被保护的键位 “{key}”。",
+"KEYBINDINGS.ErrorReservedModifier": "无法绑定至 “{key}”，因为它是键盘绑定动作保留的修饰键。",
+"KEYBINDINGS.MustBeArray": "必须传入一个数值数组。",
+"KEYBINDINGS.ErrorIllegalModifier": "请求的修饰键 “{key}” 在 KeyboardManager.MODIFIER_KEYS 中不是有效值。",
 "LIGHT.LegacyColoration": "传统着色",
 "LIGHT.AdaptiveLuminance": "自适应亮度",
 "LIGHT.InternalHalo": "内部光晕",
@@ -1203,7 +1203,7 @@
 "SETUP.SaveConfiguration": "保存配置",
 "SETUP.PackageHasDependenciesSingular": "{title} 有一个尚未安装的依赖项。",
 "SETUP.WorldMigrationDisableModules": "<p>请在迁移你的世界前先更新游戏系统和模组。作为向新版软件迁移的一部分，所有模组都将会被禁用。你可以在迁移后重新手动开启这些模组。</p>",
-"FONTS.TypeHint": "“文件”类型字体由你的数据文件夹加载并由你的玩家下载。“系统”类型字体是从你的操作系统加载的，每名玩家都需要在他们的操作系统中安装该字体。",
+"FONTS.TypeHint": "“文件”类型的字体将从你的数据文件夹中加载，并由玩家设备进行下载。“系统”类型的字体则依赖于每位用户的操作系统。由于安全原因，浏览器无法枚举系统字体列表，因此你需要准确输入所需的字体名称。若用户设备未安装指定字体，系统将自动使用备用字体进行替代。",
 "SETUP.NueWorldDescription": "<p>想要了解更多关于设定世界的信息，请浏览 <a href='https://foundryvtt.com/article/game-worlds/' target='_blank'>世界</a> 文档。</p>",
 "SETUP.WorldUnavailable": "不可用",
 "SETUP.RequireCoreUpgrade": "需要更新核心",
@@ -1940,7 +1940,7 @@
 "CONTROLS.ObjectConfigured": "配置其他对象时不能执行此操作。",
 "CONTROLS.ObjectIsLocked": "当 {type} 对象被锁定时，无法执行此操作。",
 "CONTROLS.CtrlAbbr": "CTRL",
-"CONTROLS.Alt": "ALT",
+"CONTROLS.Alt": "alt",
 "CONTROLS.AltClickDrag": "{alt} + 点击 + 拖拽",
 "CONTROLS.Ctrl": "Control",
 "CONTROLS.RegionClear": "清空区域",
@@ -2049,6 +2049,10 @@
 "shadows": {
 "label": "阴影",
 "hint": "增强或该光源照射暗色的强度。标准光源的默认值为 0。"
+},
+"priority": {
+"label": "优先",
+"hint": "决定光源与黑暗源如何相互作用。优先级高的光源会覆盖优先级低的黑暗源，但如果优先级相同，则黑暗源覆盖光源。"
 }
 },
 "SETTINGS.GridDiagonalsIllegal": "无效（∞）",
@@ -2569,7 +2573,7 @@
 },
 "img": {
 "label": "横幅图片",
-"hint": "请提供一张至少 768 px宽、300 px高的横幅图片，用于展示此冒险。"
+"hint": "请提供一张至少 768 像素宽、300 像素高的横幅图片，用于展示此冒险。"
 },
 "caption": {
 "label": "横幅标题",
@@ -2766,7 +2770,239 @@
 "COMPENDIUM.Locked": "{title} [已锁定]",
 "COMPENDIUM.ToggleLocked": {
 "Option": "切换编辑锁定",
-"Title": "切换编辑锁定：{compendium}"
+"Title": "切换编辑锁定：{compendium}",
+"Warning": "你正试图解锁不属于此世界的合集以进行编辑。你在此合集包中所做的任何更改可能会在拥有它的系统或模组更新时丢失。你可能希望将其复制到您的世界中。你要继续吗？"
 },
-"COMBAT.CombatantUpdateNamed": "更新参战者：{name}"
+"COMBAT.CombatantUpdateNamed": "更新参战者：{name}",
+"CONTROLS": {
+"Shift": "Shift",
+"RightClickDuringDrag": "拖动时右键单击",
+"Control": "Control",
+"UnconstrainedMovement": "无拘束移动",
+"CutObjects": "分割 {count}} 个 {type} 对象。",
+"RightClick2": "双击右键"
+},
+"DOCUMENT": {
+"CardPlural": "卡牌",
+"CombatantGroup": "参战者群组",
+"CombatantGroups": "参战者群组",
+"JournalEntryCategory": "类别",
+"FIELDS": {
+"name.label": "名称",
+"type.label": "类型",
+"img.label": "图像路径",
+"description.label": "描述",
+"width.label": "宽",
+"height.label": "高",
+"hidden.label": "隐藏",
+"elevation.label": "高度",
+"rotation.label": "旋转",
+"sort": {
+"label": "排序方式",
+"hint": "配置此文档在其所属集合中的排序顺序。数字越小，排序越靠前。"
+},
+"x.label": "X",
+"y.label": "Y"
+},
+"JournalEntryCategories": "类别",
+"NewCount": "新 {type} ({count})"
+},
+"DRAWING.TABS": {
+"position": "位置",
+"lines": "线条",
+"fill": "填充",
+"text": "文本"
+},
+"DRAWING.FIELDS": {
+"sort.label": "排序"
+},
+"EFFECT.ChangePriority": "优先",
+"EFFECT.FIELDS": {
+"name.label": "效果名称",
+"img.label": "效果图标",
+"tint.label": "图标着色颜色",
+"disabled.label": "效果暂停",
+"origin.label": "效果来源",
+"transfer": {
+"label": "将效果应用于角色",
+"hint": "如果选中，此效果将应用于拥有此效果所属父项的任何角色。"
+},
+"statuses.label": "状态条件",
+"duration": {
+"seconds.label": "效果持续时间（秒）",
+"rounds.label": "轮",
+"turns.label": "回合",
+"startTime.label": "效果开始回合",
+"startRound.label": "轮",
+"startTurn.label": "回合",
+"combat.label": "遭遇战"
+},
+"description.label": "效果描述"
+},
+"EFFECT.TABS": {
+"changes": "修改",
+"duration": "持续时间",
+"details": "详情"
+},
+"ERROR": {
+"RESOLUTION": {
+"Window": "Foundry Virtual Tabletop 要求屏幕分辨率达到 {reqWidth} 像素 × {reqHeight} 像素或更高。当前您的显示器分辨率为 {curWidth} 像素 × {curHeight} 像素。为确保软件功能正常运行，请调整分辨率或更换显示设备。",
+"Screen": "Foundry Virtual Tabletop 要求屏幕可用尺寸至少为 {reqWidth} 像素 × {reqHeight} 像素。当前窗口的尺寸为 {curWidth} 像素 × {curHeight} 像素。若要确保软件功能正常运行，请调整窗口大小以满足最低要求。",
+"Scale": "Foundry Virtual Tabletop 要求屏幕可用尺寸至少为 {reqWidth} 像素 × {reqHeight} 像素。当前窗口的尺寸为 {curWidth} 像素 × {curHeight} 像素。由于你在操作系统或浏览器层面设置了缩放因子，导致窗口的有效尺寸被缩减。为确保软件功能正常运行，请调整窗口大小或降低浏览器的缩放比例。"
+},
+"RequiresGenerationReinstall": "Foundry Virtual Tabletop {version} 已正式发布，但由于此版本为新一代更新，无法通过 Foundry Virtual Tabletop 应用程序内部完成安装。用户需访问 <a href=\"https://foundryvtt.com/me/licenses\" target=\"_blank\">foundryvtt.com</a> 网站重新下载并安装软件以完成更新。",
+"RequiresElectronReinstall": "Foundry Virtual Tabletop {version} 已正式发布，但由于其集成了全新的 Electron 版本，因此无法通过 Foundry Virtual Tabletop 应用程序内部完成安装。用户需访问 <a href=\"https://foundryvtt.com/me/licenses\" target=\"_blank\">foundryvtt.com</a> 网站重新下载并安装软件以完成更新。",
+"RequiresFullReinstall": "Foundry Virtual Tabletop {version} 已正式发布，但由于需要更新核心依赖项，因此无法通过 Foundry Virtual Tabletop 应用程序内部完成安装。用户需访问 <a href=\"https://foundryvtt.com/me/licenses\" target=\"_blank\">foundryvtt.com</a> 网站重新下载并安装软件以完成更新。"
+},
+"FILES": {
+"DirectoryName": {
+"Label": "目录名称",
+"Placeholder": "我的文件夹"
+},
+"RemoveFavorite": "从收藏夹中移除文件夹",
+"DirectoryPathLabel": "目录路径",
+"TraverseBack": "回溯",
+"TABS": {
+"data": "用户数据",
+"public": "核心数据",
+"s3": "Amazon S3"
+}
+},
+"FONTS": {
+"WarnNoFamily": "你必须提供一个字体系列名称。",
+"Styles": {
+"Normal": "标准",
+"Italic": "斜体"
+},
+"WarnNoFile": "你必须提供字体的文件路径。"
+},
+"HOTBAR": {
+"LABEL": "动作栏",
+"MUTE": "静音",
+"UNMUTE": "取消静音",
+"MENU": "主菜单",
+"LOCK": "锁定快捷栏",
+"UNLOCK": "解锁快捷栏",
+"PAGE_NEXT": "下一页",
+"PAGE_PREV": "上一页",
+"CLEAR": "清空快捷栏",
+"CLEAR_CONFIRM": "是否确认清除快捷栏中所有已分配的宏设置？"
+},
+"JOURNAL.ImageOptions": "图像选项",
+"JOURNAL.EditPage": "编辑页面",
+"JOURNAL.ModeMultiple": "多页模式",
+"JOURNAL.ModeSingle": "单页模式",
+"JOURNAL.LockModeLocked": "内容已锁定。点击解锁。",
+"JOURNAL.LockModeUnlocked": "内容已解锁。点击锁定。",
+"JOURNAL.ConfigureCategoriesTitle": "{name} 类别",
+"JOURNAL.CategoryName": "类别名称",
+"JOURNAL.Uncategorized": "未分类",
+"JOURNALENTRYPAGE.VideoAutoplay": "自动播放视频",
+"JOURNALENTRYPAGE.VideoLoop": "循环视频",
+"JOURNALENTRYPAGE.VideoVolume": "视频音量",
+"KEYBINDINGS": {
+"Title": "控制配置",
+"BoundKey": "绑定键",
+"Cut": "切割对象",
+"Ruler": "切换距离标尺",
+"ACTIONS": {
+"AddBinding": "添加绑定",
+"CancelEdit": "取消编辑",
+"EditBinding": "编辑绑定",
+"SaveBinding": "保存绑定",
+"DeleteBinding": "删除绑定"
+},
+"RulerWaypoint": "放置标尺路径点"
+},
+"LIGHT.AnimationReactivePulse": "声控脉动",
+"LIGHT.AnimationDenseSmoke": "浓烟",
+"MACRO": {
+"FIELDS": {
+"command.label": "命令"
+}
+},
+"MODMANAGE.OptionalDependencies": "可选依赖项",
+"MODMANAGE.DependencyResolution": "依赖项解析",
+"NOTE.SECTIONS": {
+"CONTENT": "内容",
+"ICON": "图标",
+"LABEL": "标签",
+"POSITION": "位置"
+},
+"NOTE.FIELDS": {
+"entryId.label": "日志条目",
+"pageId.label": "页面",
+"text.label": "文本标签",
+"sort.label": "排序",
+"global": {
+"label": "全局可见",
+"hint": "允许拥有查看权限的玩家在地图的任何位置看到此地图注释。"
+},
+"texture": {
+"src.label": "条目图标",
+"tint.label": "图标着色"
+},
+"iconSize.label": "图标尺寸",
+"fontFamily.label": "字体系列",
+"fontSize.label": "字体大小",
+"textColor.label": "文本颜色",
+"textAnchor.label": "文本锚点"
+},
+"PLAYERS": {
+"LATENCY": "延迟",
+"FPS": "FPS"
+},
+"PLAYLIST.BulkImport": {
+"Button": "批量导入",
+"Title": "批量导入音效",
+"Hint": "请选择一个包含待导入音效文件的文件夹。",
+"Warning": "未从请求的 “{path}” 目录中导入有效的播放列表音效"
+},
+"PLAYLIST.FIELDS": {
+"name.label": "播放列表名称",
+"mode.label": "播放模式",
+"channel.label": "音频通道",
+"fade.label": "淡出持续时间",
+"sorting.label": "排序模式",
+"description.label": "播放列表描述"
+},
+"PLAYLIST.DefaultChannel": "播放列表音频通道",
+"PLAYLIST_SOUND.Update": "更新音轨",
+"PLAYLIST_SOUND.FIELDS": {
+"name.label": "音轨名称",
+"path.label": "音频源",
+"channel.label": "音频通道",
+"volume.label": "音量",
+"repeat.label": "重复",
+"fade.label": "淡出持续时间",
+"description.label": "音效描述"
+},
+"SCENE.Accessibility": "权限",
+"SCENE.AccessibilityGM": "仅GM",
+"SCENE.AccessibilityAll": "所有玩家",
+"SCENE.Activate": "激活",
+"SCENE.BackgroundScale": "背景图像缩放比例",
+"SCENE.BackgroundScaleHint": "按住 Shift 键并滚动鼠标滚轮，或按住 Shift 键同时使用向上箭头键和向下箭头键，可对背景图片的尺寸进行精确调整。",
+"SCENE.Configure": "配置",
+"SCENE.Dimensions": "场景尺寸",
+"SCENE.DimensionsHint": "在首次配置背景图像时，系统将自动调整场景尺寸以确保其与背景图像的尺寸保持一致。",
+"SCENE.DimensionChangeTitle": "更改场景尺寸？",
+"SCENE.DimensionChangeWarning": "你当前正在调整此场景的基本尺寸。如果该场景中已放置有对象，此项操作可能会导致这些对象相对于背景图像的位置出现偏移。",
+"SCENE.DimensionUnlinked": "当前场景尺寸处于未关联状态，修改其中一个尺寸时不会影响另一个尺寸。如需建立尺寸间的关联，请点击“关联”按钮。",
+"SCENE.DistortedDimensionsTitle": "场景尺寸参数异常",
+"SCENE.DistortedDimensionsWarning": "你所选择的新尺寸与原始尺寸的宽高比存在差异。是否需要系统自动重新调整已放置对象（例如指示物）的位置？请注意，此操作可能导致对象在视觉上出现一定程度的变形。",
+"SCENE.GenerateThumb": "生成缩略图",
+"SCENE.GenerateThumbNoCanvas": "“禁用游戏画布”设置处于激活状态时，无法生成场景缩略图。",
+"SCENE.GenerateThumbUploadDenied": "由于用户缺乏上传文件的权限，场景缩略图无法生成。",
+"SCENE.GenerateThumbProgress": "正在为场景 {name} 生成缩略图。",
+"SCENE.FIELDS": {
+"weather": {
+"hint": "声控脉动"
+}
+},
+"JOURNALENTRYPAGE.Category": "页面类别",
+"HUD.SelectMovementAction": "选择移动动作",
+"JOURNAL.ConfigureCategories": "配置类别",
+"SCENE.CaptureInitialViewPosition": "在场景配置表单中，将已捕获的画布位置设为初始视图。",
+"SCENE.DimensionLinked": "当前场景尺寸已关联，修改其中一个尺寸时，系统将自动调整另一个尺寸以保持纵横比不变。如需解除此关联，请点击“取消关联”按钮。"
 }
