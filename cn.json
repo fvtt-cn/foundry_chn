@@ -72,7 +72,7 @@
 "COMBAT.NoneActive": "在你目前查看的场景中没有战斗遭遇。",
 "COMBAT.NoneRemaining": "这次遭遇中没有剩下没有战败的参战者。",
 "COMBAT.NotStarted": "未开始",
-"COMBAT.Round": "战斗轮",
+"COMBAT.Round": "轮 {round}",
 "COMBAT.Rounds": "战斗轮",
 "COMBAT.RoundPrev": "上一轮",
 "COMBAT.RoundNext": "下一轮",
@@ -1094,7 +1094,7 @@
 "ADVENTURE.ExportSubmit": "构建冒险",
 "ADVENTURE.ExportDropZone": "从你的世界拖放内容以将内容填充到冒险中。",
 "ADVENTURE.ExportPackNoSystem": "你正在尝试将任务或物品导出到与系统无关的冒险中。 冒险合集包必须有一个系统字段，该字段与这些人物或物品所来自的系统相匹配。",
-"ADVENTURE.ExportPrimaryDocumentsOnly": "你只能添加世界中存在的主要文件",
+"ADVENTURE.ExportPrimaryDocumentsOnly": "你只能添加世界中存在的主要文件。",
 "ADVENTURE.CreateSuccess": "冒险“{name}”已成功创建！",
 "ADVENTURE.UpdateSuccess": "冒险“{name}”已成功更新！",
 "CONTROLS.CanvasPingAlert": "警告 Ping 画布",
@@ -1366,10 +1366,10 @@
 "spaces": "空间",
 "ADVENTURE.ImportAll": "导入全部",
 "ADVENTURE.ImportContent": "导入 {label}",
-"ADVENTURE.DocumentUpdate": "此文档将在冒险构建完成后更新",
-"ADVENTURE.DocumentAdd": "此文档将在冒险构建完成后被添加",
-"ADVENTURE.DocumentMissing": "此文档不在此世界中，并且在冒险构建完成后不会更新",
-"ADVENTURE.DocumentRemove": "此文档将在冒险构建完成后移除",
+"ADVENTURE.DocumentUpdate": "此文档将在冒险构建完成后更新。",
+"ADVENTURE.DocumentAdd": "此文档将在冒险构建完成后被添加。",
+"ADVENTURE.DocumentMissing": "此文档不在此世界中，并且在冒险构建完成后不会更新。",
+"ADVENTURE.DocumentRemove": "此文档将在冒险构建完成后移除。",
 "CHAT.JumpToBottom": "跳到底部",
 "COMPENDIUM.ClearFilters": "清除筛选",
 "COMPENDIUM.CannotViewWarning": "你没有足够的权限以查看此合集包。",
@@ -1815,6 +1815,15 @@
 "radius": "光照半径",
 "radiusHint": "配置从此光源发出的光的距离，其中亮光半径包含在暗光半径内。",
 "darknessAdvancedWarning": "高级配置选项仅支持非黑暗源。"
+},
+"SECTIONS": {
+"appearance": "光线外观",
+"placement": "光线布置"
+},
+"TABS": {
+"basic": "基础设置",
+"animation": "光线动画",
+"advanced": "升级设置"
 }
 },
 "AMBIENT_SOUND": {
@@ -1905,7 +1914,8 @@
 "ControlsMenu": "应用控件",
 "ToggleControls": "切换控件",
 "Close": "关闭窗口"
-}
+},
+"IMAGE_POPOUT.AltText": "一张特色图片：主题未知。"
 },
 "AUDIO": {
 "CHANNELS": {
@@ -2512,7 +2522,7 @@
 "BKG_WAVE": "背景波动",
 "RING_GRADIENT": "环渐变",
 "RING_PULSE": "环脉动",
-"INVISIBILITY": "光谱脉冲"
+"INVISIBILITY": "光谱脉动"
 },
 "SHEET": {
 "legend": "动态指示物环"
@@ -2547,6 +2557,216 @@
 "TEXTURE_DATA.FIT.height": "完整高度",
 "Information": "信息",
 "ADVENTURE": {
-"ImportHeaderOptions": "选项"
+"ImportHeaderOptions": "选项",
+"Importer": {
+"V1": "冒险导入（V1）",
+"V2": "冒险导入（V2）"
+},
+"FIELDS": {
+"name": {
+"label": "冒险名称",
+"hint": "为这次冒险选择一个名称，该名称在包含它的包中应是独一无二的。"
+},
+"img": {
+"label": "横幅图片",
+"hint": "请提供一张至少 768 px宽、300 px高的横幅图片，用于展示此冒险。"
+},
+"caption": {
+"label": "横幅标题",
+"hint": "提供一段文字说明，该说明将显示在横幅图片下方。此说明可以包含 HTML 格式或纯文本。"
+},
+"description": {
+"label": "冒险描述",
+"hint": "提供一份包含冒险概述和情节梗概的描述。"
 }
+},
+"TABS": {
+"summary": "摘要",
+"contents": "内容"
+},
+"ACTIONS": {
+"ClearSection": "清除部件",
+"RestoreSection": "恢复部件"
+}
+},
+"CALENDAR": {
+"GREGORIAN": {
+"January": "一月",
+"JanuaryAbbr": "Jan",
+"February": "二月",
+"FebruaryAbbr": "Feb",
+"March": "三月",
+"MarchAbbr": "Mar",
+"April": "四月",
+"AprilAbbr": "April",
+"May": "五月",
+"June": "六月",
+"JuneAbbr": "Jun",
+"July": "七月",
+"August": "八月",
+"AugustAbbr": "Aug",
+"September": "九月",
+"SeptemberAbbr": "Sep",
+"October": "十月",
+"OctoberAbbr": "Oct",
+"November": "十一月",
+"NovemberAbbr": "Nov",
+"December": "十二月",
+"DecemberAbbr": "Dec",
+"Monday": "周一",
+"MondayAbbr": "Mon",
+"TuesdayAbbr": "Tues",
+"Wednesday": "周三",
+"WednesdayAbbr": "Wed",
+"Thursday": "周四",
+"ThursdayAbbr": "Thu",
+"Friday": "周五",
+"FridayAbbr": "Fri",
+"Saturday": "周六",
+"SaturdayAbbr": "Sat",
+"Sunday": "周日",
+"Spring": "春季",
+"Summer": "夏季",
+"Fall": "秋季",
+"Winter": "冬季",
+"SundayAbbr": "Sun",
+"MayAbbr": "May",
+"JulyAbbr": "Jul",
+"Tuesday": "周二"
+}
+},
+"CARDS": {
+"FIELDS": {
+"img.label": "默认背景图片",
+"type.label": "牌堆类型"
+},
+"ACTIONS": {
+"Create": "创建卡牌",
+"Delete": "删除卡牌",
+"Deal": "发牌",
+"Draw": "抽牌",
+"Edit": "编辑卡牌",
+"NextFace": "下家",
+"Pass": "跳过",
+"PreviousFace": "上家",
+"Reset": "重置",
+"ResetDelete": "重置并删除",
+"Save": "保存",
+"Shuffle": "洗牌",
+"ToggleSortMode": "切换排序模式"
+},
+"TABS": {
+"details": "详情",
+"cards": "卡牌"
+}
+},
+"CARD": {
+"ACTIONS": {
+"AddFace": "添加卡面",
+"DeleteFace": {
+"Title": "删除卡面",
+"Warning": "删除此卡面将永久删除其在卡上的数据。"
+}
+},
+"Image": "卡牌图像",
+"TABS": {
+"details": "详情",
+"back": "背面",
+"faces": "正面"
+},
+"FIELDS": {
+"suit.label": "同花",
+"value.label": "点数",
+"drawn.label": "抽牌",
+"face.label": "正面",
+"faces": {
+"name.label": "正面名称",
+"img.label": "正面图像",
+"text.label": "正面文本"
+},
+"back": {
+"name.label": "背面名称",
+"text.label": "背面文本",
+"img.label": "背面名称"
+}
+}
+},
+"CHAT.Dismiss": "拒绝",
+"CHAT.EnterMessage": "输入消息",
+"COMBAT.ClearMovementHistories": "清除移动记录",
+"COMBAT.InitiativeScore": "先攻值",
+"COMBAT.CombatantClearMovementHistory": "清除移动历史",
+"COMBAT.CombatantMovementHistoryCleared": "已清除指示物移动历史：“{name}”。",
+"COMBAT.FIELDS": {
+"round.label": "轮",
+"turn.label": "回合"
+},
+"COMBAT.TURN_MARKERS": {
+"ANIMATIONS": {
+"SPIN": "旋转",
+"PULSE": "脉动",
+"SPIN_PULSE": "旋转脉动"
+}
+},
+"COMBAT.CONFIG": {
+"SHEET": {
+"TURN_MARKERS": "指示物回合标记"
+},
+"FIELDS": {
+"core.combatTrackerConfig": {
+"skipDefeated": {
+"hint": "自动跳过被标记为已战败的参战者。",
+"label": "跳过战败"
+},
+"resource": {
+"label": "跟进资源",
+"hint": "为每位参战者选定一项属性进行跟进。"
+},
+"turnMarker": {
+"enabled": {
+"label": "启用标记",
+"hint": "默认为所有指示物启用战斗回合标记。"
+},
+"src": {
+"label": "媒体资源",
+"hint": "默认用作指示物回合标记的图像或视频文件。"
+},
+"animation": {
+"label": "动画",
+"hint": "每个指示物回合的标记默认使用的动画类型。"
+},
+"disposition": {
+"label": "色调倾向",
+"hint": "根据标记物的状态为回合标记添加色调。"
+}
+}
+}
+}
+},
+"COMPENDIUM.Delete": {
+"Option": "删除合集",
+"Title": "删除合集：{compendium}",
+"Warning": "此合集将被永久删除且无法恢复。"
+},
+"COMPENDIUM.Duplicate": {
+"Option": "复制合集",
+"Title": "复制合集：{compendium}",
+"Label": "新合集标题",
+"Hint": "你可以将此合集复制至本地世界中，从而创建一份内容的本地副本，以便于对其进行安全编辑。",
+"Submit": "复制"
+},
+"COMPENDIUM.ImportAll": {
+"Option": "导入所有内容",
+"Title": "导入所有内容：{compendium}",
+"Submit": "导入",
+"Start": "正在将 {number} 个 {type} 文档和 {folderNumber} 个文件夹导入到 {folder} 文件夹中。请耐心等待。",
+"Hint": "将此合集包中的全部内容导入至新的或现有的文件夹中。请注意，导入大型合集包会对应用程序性能产生负面影响。",
+"Finish": "已成功将 {number} 份 {type} 文档和 {folderNumber} 个文件夹导入到 {folder} 文件夹中。"
+},
+"COMPENDIUM.Locked": "{title} [已锁定]",
+"COMPENDIUM.ToggleLocked": {
+"Option": "切换编辑锁定",
+"Title": "切换编辑锁定：{compendium}"
+},
+"COMBAT.CombatantUpdateNamed": "更新参战者：{name}"
 }
