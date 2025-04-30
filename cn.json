@@ -2083,7 +2083,7 @@
 "HeaderJoin": "加入游戏",
 "HeaderDetails": "游戏细节",
 "HeaderWorld": "世界描述",
-"NextSession": "下一次战局",
+"NextSession": "下一次游戏",
 "SelectUser": "选择用户",
 "UserKey": "用户访问密钥",
 "AuthAdmin": "你已被认证为一个服务器管理员用户。"
@@ -3307,5 +3307,59 @@
 "Marker": "回合标记"
 }
 },
-"SETTINGS.TokenAutoRotateL": "启用该功能后，在默认设置下，指示物将依据移动方向自动进行旋转。但无论如何设置此全局设置，单个指示物的“锁定旋转”属性仍会确保其图像不会发生视觉上的旋转。"
+"SETTINGS.TokenAutoRotateL": "启用该功能后，在默认设置下，指示物将依据移动方向自动进行旋转。但无论如何设置此全局设置，单个指示物的“锁定旋转”属性仍会确保其图像不会发生视觉上的旋转。",
+"WEBRTC": {
+"Volume": "音量",
+"WorldSettings": {
+"FIELDS": {
+"turn": {
+"url.label": "URL",
+"username.label": "用户名",
+"password.label": "访问密码"
+}
+}
+},
+"ClientSettings": {
+"FIELDS": {
+"voice": {
+"mode": {
+"hint": "选择你的语音在音/视频通话中激活的方式。"
+}
+},
+"dockPosition.label": "边栏位置",
+"nameplates.label": "姓名标识",
+"borderColors.label": "使用玩家边框颜色",
+"videoSrc": {
+"hint": "选择你想要用来捕获视频的设备（如有）。"
+},
+"audioSink": {
+"hint": "选择你想要用来播放音频的设备。"
+},
+"audioSrc": {
+"hint": "选择你想要用来捕获音频的设备（如有）。"
+}
+}
+}
+},
+"WORLD": {
+"Title": {
+"Update": "编辑世界：{world}",
+"Create": "创建世界"
+},
+"SubmitUpdate": "更新世界",
+"FIELDS": {
+"title.label": "世界标题",
+"id.label": "数据路径",
+"system.label": "游戏系统",
+"joinTheme.label": "加入页面主题风格",
+"resetKeys.label": "重置用户密码",
+"nextSession.label": "下一次游戏",
+"safeMode": {
+"label": "以安全模式启动",
+"hint": "禁用全部模组以及激活的场景，且停止播放所有音频"
+},
+"background.label": "背景图像",
+"description.label": "世界描述"
+}
+}
 }
