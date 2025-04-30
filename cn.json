@@ -2164,7 +2164,67 @@
 "enabled": {
 "label": "启用环"
 }
+},
+"texture": {
+"anchorX.label": "X",
+"anchorY.label": "Y",
+"tint.label": "着色色调"
+},
+"randomImg.label": "随机化图像",
+"shape": {
+"label": "形状",
+"hint": "指示物的形状。"
+},
+"alpha.label": "指示物不透明度",
+"sight": {
+"enabled": {
+"label": "启用视觉",
+"hint": "允许指示物看见视线内被照亮的区域。"
+},
+"range": {
+"label": "视野范围",
+"hint": "在没有任何光照时指示物能看到的距离。"
+},
+"angle": {
+"label": "视野角度",
+"hint": "锥形视野的角度（默认为 360）。"
+},
+"visionMode": {
+"label": "视觉模式",
+"hint": "给视觉添加效果，以代表特殊的感官（默认为基本视觉）。"
+},
+"color.label": "视野颜色",
+"attenuation": {
+"label": "衰减",
+"hint": "调整视野衰减的程度（默认为 0）。"
+},
+"brightness": {
+"label": "视野亮度",
+"hint": "调整视野内的亮度。亮度越高，角色看黑暗中的事物就越明显（默认为 0）。"
+},
+"saturation": {
+"label": "饱和度",
+"hint": "调整视野半径内背景的饱和度（默认为 0）。"
+},
+"contrast": {
+"label": "对比度",
+"hint": "调整视野半径内背景的对比度（默认为 0）。"
 }
+},
+"turnMarker": {
+"mode": {
+"label": "模式"
+},
+"animation": {
+"label": "动画"
+},
+"src": {
+"label": "媒体资源"
+}
+},
+"displayBars.label": "显示属性条",
+"bar1.attribute.label": "属性条 1 属性",
+"bar2.attribute.label": "属性条 2 属性"
 },
 "EULA": {
 "AgreeLabel": "我同意这些条款",
@@ -2221,10 +2281,10 @@
 "label": "指示物离开"
 },
 "tokenMoveIn": {
-"label": "指示物被移入"
+"label": "指示物移入"
 },
 "tokenMoveOut": {
-"label": "指示物被移出"
+"label": "指示物移出"
 },
 "tokenTurnStart": {
 "label": "指示物开始回合"
@@ -3480,6 +3540,16 @@
 "SIDEBAR.SETTINGS": {
 "LABELS": {
 "Build": "构建版本"
+},
+"ACTIONS": {
+"Tours": "导览指引",
+"ViewModules": "查看激活 MOD",
+"Keybindings": "操控设置",
+"Logout": "登出",
+"ManageModules": "管理模组",
+"Players": "玩家设置",
+"Support": "支持与问题",
+"Wiki": "社区百科"
 }
 },
 "WALL.SenseTypes.LIMITED": "限制",
@@ -3514,5 +3584,16 @@
 "WALL.DoorSounds.WoodCreaky": "木制，吱嘎声",
 "WALL.DoorSounds.WoodHeavy": "木制，沉重",
 "WALL.SenseTypes.NONE": "无",
-"WALL.DoorStates.OPEN": "打开"
+"WALL.DoorStates.OPEN": "打开",
+"SUPPORT": {
+"Dimensions": "{width} × {height}"
+},
+"WALL.FIELDS": {
+"ds.label": "门状态",
+"doorSound.label": "开关门声效",
+"threshold.attenuation": {
+"hint": "相对于观察者的距离和激活阈值，感知可以穿透这堵墙的距离是自适应的。仅适用于已定义阈值的情况。",
+"label": "接近阈值衰减"
+}
+}
 }
