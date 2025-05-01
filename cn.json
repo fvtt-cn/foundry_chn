@@ -202,7 +202,7 @@
 "CONTROLS.RulerWaypoint": "设置路径点",
 "CONTROLS.RulerMove": "按路径移动指示物",
 "CONTROLS.RulerWhile": "在以指示物为起点测量时",
-"CONTROLS.ObjectSheet": "打开对象对应的卡片",
+"CONTROLS.ObjectSheet": "打开对象对应的卡",
 "CONTROLS.ObjectHUD": "显示对象 HUD（如果可用）",
 "CONTROLS.ObjectConfig": "打开对象设置卡",
 "CONTROLS.ObjectDrag": "移动受控对象",
@@ -3384,7 +3384,7 @@
 },
 "applications": {
 "label": "应用",
-"hint": "请明确你是否倾向于窗口式用户界面应用程序（如角色卡）使用浅色主题或深色主题进行渲染。需要注意的是，部分表单可能不支持该偏好设置。"
+"hint": "请明确你是否倾向于窗口式用户界面应用程序（如角色卡）使用浅色主题或深色主题进行渲染。需要注意的是，部分卡可能不支持该偏好设置。"
 }
 },
 "uiScale": {
@@ -3452,7 +3452,7 @@
 "SCENE.View": "查看场景",
 "SCENE.GridPositionHint": "使用方向键来移动背景图像的偏移量。",
 "SCENE.InvalidDimension": "所提供的尺寸可能导致另一尺寸的值为非整数。建议尝试调整为其他数值，或解除尺寸间的关联设置。",
-"SETTINGS.TokenAutoRotateN": "自动指示物旋转",
+"SETTINGS.TokenAutoRotateN": "自动旋转指示物",
 "SETTINGS.PrototypeTokenOverrides": {
 "Name": "原型指示物覆盖",
 "Label": "配置原型覆盖",
@@ -3849,7 +3849,7 @@
 "PackageProtected": "受保护"
 },
 "SHEETS.ConfigureTitle": "{prefix}：卡配置",
-"SHEETS.ThemeHint": "某些主题不适用部分表。",
+"SHEETS.ThemeHint": "某些主题对部分卡不适用。",
 "TILE.Dimensions": "尺寸",
 "TILE.VideoOptions": "视频选项",
 "TILE.ACTIONS": {
