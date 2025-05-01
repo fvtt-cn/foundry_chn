@@ -3297,7 +3297,7 @@
 "OtherSettings": "其他设置",
 "FVTTConfig": "Foundry VTT 配置",
 "ServerConfig": "服务器配置",
-"ElectronApp": "电子应用"
+"ElectronApp": "Electron 应用程序"
 },
 "FIELDS": {
 "adminPassword": {
