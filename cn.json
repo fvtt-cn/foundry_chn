@@ -140,7 +140,7 @@
 "CONTROLS.WallSelect": "框选墙体",
 "CONTROLS.WallClone": "克隆墙体",
 "CONTROLS.WallClear": "清除墙体",
-"CONTROLS.GroupLighting": "光线控件",
+"CONTROLS.GroupLighting": "光源控件",
 "CONTROLS.LightDraw": "绘制光源",
 "CONTROLS.LightClear": "清除光源",
 "CONTROLS.LightReset": "重置战争迷雾",
@@ -493,7 +493,7 @@
 "SETUP.PackageDependenciesSuccess": "已成功安装 {title} 和其需要的 {number} 个依赖项。",
 "SETUP.UpdateWarningWillDisable": "该更新是 Foundry Virtual Tabletop 的新的主版本。安装此更新可能将禁用某些已安装的不兼容的模组。",
 "SETUP.UpdateButtonDownload": "下载更新 {display}",
-"SETUP.UpdateInfoAvailable": "Foundry Virtual Tabletop 版本 {display} 更新可用！",
+"SETUP.UpdateInfoAvailable": "Foundry Virtual Tabletop {display} 更新可用！",
 "SETUP.WorldMigrationRequiredTitle": "迁移世界数据",
 "SETUP.AdminAccess": "需要管理员权限",
 "SETUP.AdminLogout": "管理员登出",
@@ -547,8 +547,8 @@
 "PERMISSION.FilesUploadHint": "允许该用户组使用文件浏览器上传内容到服务器。",
 "PERMISSION.JournalCreate": "创建日志",
 "PERMISSION.JournalCreateHint": "允许用户组在日志侧边栏中创建新的日志条目。",
-"PERMISSION.MacroScript": "使用脚本宏和执行脚本区域行为",
-"PERMISSION.MacroScriptHint": "允许该用户组使用可访问 API 的 JavaScript 宏和执行脚本区域行为。",
+"PERMISSION.MacroScript": "调整脚本宏和执行脚本区域行为",
+"PERMISSION.MacroScriptHint": "允许该用户组使用可访问 Foundry API 的 JavaScript 宏，并在场景区域中执行脚本行为。",
 "PERMISSION.MessageWhisper": "私信",
 "PERMISSION.MessageWhisperHint": "允许该用户组使用聊天指令 /whisper 发送私信。",
 "PERMISSION.SettingsModify": "修改配置设定",
@@ -556,7 +556,7 @@
 "PERMISSION.ShowCursor": "显示鼠标光标",
 "PERMISSION.ShowCursorHint": "向其他在线用户显示玩家鼠标光标的位置。",
 "PERMISSION.ShowRuler": "显示标尺",
-"PERMISSION.ShowRulerHint": "使用标尺工具向其他连接的玩家显示测量的距离。",
+"PERMISSION.ShowRulerHint": "通过指示物及“测量距离”工具向其他已连接用户显示测量的距离。",
 "PERMISSION.TemplateCreate": "创建测量模板",
 "PERMISSION.TemplateCreateHint": "允许该用户组创建测量效果范围用的模板。",
 "PERMISSION.TokenCreate": "放置指示物",
@@ -1777,7 +1777,7 @@
 "SETUP.WorldLaunchMigrateCore": "执行核心迁移中",
 "SETUP.WorldLaunchMigrateSystem": "执行系统迁移中",
 "SETUP.AdminLogIn": "登入",
-"PERMISSION.CardsCreateHint": "允许具有此角色的用户在世界中创建新的卡片文档。",
+"PERMISSION.CardsCreateHint": "允许该用户组在世界中创建新的卡片文档。",
 "RULER.MovementNotAllowed": "不允许测量的移动路径",
 "RULER.MovementCollision": "尝试的运动与至少一堵墙相撞。",
 "SIDEBAR.SearchModeFull": "全文本搜索",
@@ -1817,13 +1817,13 @@
 "darknessAdvancedWarning": "高级配置选项仅支持非黑暗源。"
 },
 "SECTIONS": {
-"appearance": "光线外观",
-"placement": "光线布置"
+"appearance": "光源外观",
+"placement": "光源布置"
 },
 "TABS": {
 "basic": "基础设置",
-"animation": "光线动画",
-"advanced": "升级设置"
+"animation": "光源动画",
+"advanced": "高级选项"
 }
 },
 "AMBIENT_SOUND": {
@@ -1996,9 +1996,9 @@
 "hint": "提高动画速度将使动画播放得更快。",
 "label": "动画速度"
 },
-"label": "光照动画",
+"label": "光源动画",
 "type": {
-"label": "光照动画类型"
+"label": "光源动画类型"
 },
 "intensity": {
 "label": "动画强度",
@@ -2103,8 +2103,8 @@
 "OWNERSHIP.ShowGM": "显示 GM 用户",
 "PERMISSION.ManualRolls": "进行手动掷骰",
 "PERMISSION.PlaylistCreate": "创建与控制播放列表",
-"PERMISSION.PlaylistCreateHint": "允许具有此角色的用户在世界中创建新的播放列表、控制拥有的播放列表。",
-"PERMISSION.ManualRollsHint": "允许具有此角色的用户选择手动输入掷骰结果。",
+"PERMISSION.PlaylistCreateHint": "允许该用户组在世界中创建新的播放列表、控制拥有的播放列表。",
+"PERMISSION.ManualRollsHint": "允许该用户组选择手动输入掷骰结果。",
 "CONTROLS.RegionPerformance": "<em>性能提示：</em>每幅绘制都有自己的形状。小心不要将多个形状完全放在一起。不要组合简单的形状来创建复杂的形状，而是考虑使用区域多边形工具。",
 "SETTINGS.GridDiagonalsL": "配置如何在方形或六边形网格上测量对角线距离。括号中的数字定义每个选项下以网格空间为单位的对角线长度。",
 "COMPENDIUM.ART": {
@@ -2168,7 +2168,12 @@
 "texture": {
 "anchorX.label": "X",
 "anchorY.label": "Y",
-"tint.label": "着色色调"
+"tint.label": "着色色调",
+"src.label": "图像路径",
+"fit": {
+"label": "图像适配模式",
+"hint": "调整图像在指示物上的适配方式。"
+}
 },
 "randomImg.label": "随机化图像",
 "shape": {
@@ -2213,18 +2218,48 @@
 },
 "turnMarker": {
 "mode": {
-"label": "模式"
+"label": "模式",
+"hint": "选择“默认”以使用默认战斗设置，选择“禁用”以隐藏回合标记，或者选择“自定义”以设置独特的回合标记行为。"
 },
 "animation": {
-"label": "动画"
+"label": "动画",
+"hint": "为该指示物的战斗回合标记选择一种动画风格。"
 },
 "src": {
-"label": "媒体资源"
+"label": "媒体资源",
+"hint": "为该指示物的战斗回合标记选择一个图像或视频文件。"
+},
+"disposition": {
+"label": "色调倾向",
+"hint": "根据其状态给此指示物的战斗回合标记上色。"
 }
 },
 "displayBars.label": "显示属性条",
 "bar1.attribute.label": "属性条 1 属性",
-"bar2.attribute.label": "属性条 2 属性"
+"bar2.attribute.label": "属性条 2 属性",
+"name.label": "指示物名称",
+"sort.label": "排序",
+"movementAction.label": "移动动作",
+"actorId.label": "代表角色",
+"actorLink.label": "关联角色数据",
+"displayName.label": "显示名称",
+"appendNumber": {
+"hint": "在未关联的指示物名称后附加一个自动递增的数字。如 “地精 3”。",
+"label": "追加递增数字"
+},
+"prependAdjective": {
+"label": "添加随机形容词",
+"hint": "在未关联的指示物名称前加上一个随机形容词。如 “愤怒的哥布林”。"
+},
+"occludable.radius": {
+"label": "遮挡半径",
+"hint": "当此标记物位于采用径向遮挡的图块下方时，此数值用于调节在图块上切割出的孔洞尺寸，以确保标记物可透过该孔洞可见。"
+},
+"disposition.label": "指示物态度",
+"lockRotation": {
+"label": "锁定旋转",
+"hint": "禁止此指示物的旋转在画布中渲染显示。"
+}
 },
 "EULA": {
 "AgreeLabel": "我同意这些条款",
@@ -2401,7 +2436,7 @@
 "TABS": {
 "shapes": "形状",
 "behaviors": "行为",
-"identity": "识别"
+"identity": "本体"
 }
 },
 "SETUP.PreviewCompatibility": "预览兼容性",
@@ -2486,7 +2521,7 @@
 },
 "text": {
 "label": "文本",
-"hint": "触发行为时显示的文本。"
+"hint": "触发此行为时显示的文本。"
 },
 "visibility": {
 "label": "可见性",
@@ -2534,6 +2569,13 @@
 "disable": {
 "label": "禁用行为",
 "hint": "当某一事件发生时禁用的行为。"
+}
+}
+},
+"modifyMovementCost": {
+"FIELDS": {
+"difficulties": {
+"hint": "为每个行动指令设定移动力消耗系数。区域间的修正值将采用乘法运算进行叠加计算。"
 }
 }
 }
@@ -2605,6 +2647,11 @@
 "SAVE": "保存玩家配置",
 "RELEASE": "释放角色"
 }
+},
+"MESSAGES": {
+"BANNED": "用户 {user} 已被 <strong>封禁</strong>，无法进入世界。",
+"UNBANNED": "用户 {user} 已被<strong>解封</strong>。",
+"KICKED": "用户 {user} 已被 <strong>踢出</strong>世界。"
 }
 },
 "TOKEN.RING": {
@@ -2612,7 +2659,8 @@
 "BKG_WAVE": "背景波动",
 "RING_GRADIENT": "环渐变",
 "RING_PULSE": "环脉动",
-"INVISIBILITY": "光谱脉动"
+"INVISIBILITY": "光谱脉动",
+"COLOR_OVER_SUBJECT": "颜色覆盖指示物"
 },
 "SHEET": {
 "legend": "动态指示物环"
@@ -2864,7 +2912,7 @@
 "Shift": "Shift",
 "RightClickDuringDrag": "拖动时右键单击",
 "Control": "Control",
-"UnconstrainedMovement": "无拘束移动",
+"UnconstrainedMovement": "无限制移动",
 "CutObjects": "分割 {count}} 个 {type} 对象。",
 "RightClick2": "双击右键"
 },
@@ -3351,7 +3399,12 @@
 },
 "fade": {
 "opacity": {
-"label": "未激活不透明度"
+"label": "未激活不透明度",
+"hint": "非激活状态下用户界面元素的褪色不透明度。较低的数值表示更高的透明度。"
+},
+"speed": {
+"label": "淡出速度",
+"hint": "鼠标移入或移出界面元素区域时，其淡入或淡出的过渡速度。较低的数值表示更快的过渡效果。"
 }
 }
 },
@@ -3394,7 +3447,7 @@
 "LABEL": "场景导航栏"
 },
 "PERMISSION.QueryUser": "查看用户",
-"PERMISSION.QueryUserHint": "允许具有此角色的用户查看其他用户。",
+"PERMISSION.QueryUserHint": "允许该用户组查看其他用户。",
 "SCENE.GridConfigToolHint": "通过鼠标滚轮和方向键，或手动设置以下字段，以调整网格与背景图像的位置。",
 "SCENE.View": "查看场景",
 "SCENE.GridPositionHint": "使用方向键来移动背景图像的偏移量。",
@@ -3408,7 +3461,7 @@
 "Label": "重置默认设置",
 "Warning": "此操作将移除所有已配置的覆盖。"
 },
-"Disabled": "不启用",
+"Disabled": "禁用",
 "Submit": "保存覆盖",
 "TABS": {
 "AllTypes": {
@@ -3427,7 +3480,12 @@
 "turn": {
 "url.label": "URL",
 "username.label": "用户名",
-"password.label": "访问密码"
+"password.label": "访问密码",
+"type.label": "中继服务器"
+},
+"mode": {
+"label": "会议模式",
+"hint": "配置特定于集成音/视频 WebRTC 组件的设置。"
 }
 }
 },
@@ -3435,26 +3493,36 @@
 "FIELDS": {
 "voice": {
 "mode": {
-"hint": "选择你的语音在音/视频通话中激活的方式。"
+"hint": "选择你的语音在音/视频通话中激活的方式。",
+"label": "语音广播"
 }
 },
 "dockPosition.label": "边栏位置",
 "nameplates.label": "姓名标识",
 "borderColors.label": "使用玩家边框颜色",
 "videoSrc": {
-"hint": "选择你想要用来捕获视频的设备（如有）。"
+"hint": "选择你想要用来捕获视频的设备（如有）。",
+"label": "捕获设备"
 },
 "audioSink": {
-"hint": "选择你想要用来播放音频的设备。"
+"hint": "选择你想要用来播放音频的设备。",
+"label": "输出设备"
 },
 "audioSrc": {
-"hint": "选择你想要用来捕获音频的设备（如有）。"
+"hint": "选择你想要用来捕获音频的设备（如有）。",
+"label": "捕获设备"
 }
 }
 },
 "DevicesSubsections": {
 "Video": "视频",
 "Audio": "音频"
+},
+"TURNServerConfiguration": "自定义服务器配置",
+"TABS": {
+"general": "通常",
+"devices": "设备",
+"server": "服务器"
 }
 },
 "WORLD": {
@@ -3476,6 +3544,10 @@
 },
 "background.label": "背景图像",
 "description.label": "世界描述"
+},
+"JOIN_THEMES": {
+"default": "默认",
+"minimal": "最小化"
 }
 },
 "PACKAGE": {
@@ -3544,7 +3616,8 @@
 "Compatibility": {
 "Label": "兼容性",
 "Hint": "你可以声明此软件包仅与某范围中的 Foundry VTT 软件版本兼容。兼容性要求可以是特定的构建版本，如“13.339”；或更大范围的版本，如“13”。"
-}
+},
+"NewModuleTitle": "My New Module"
 },
 "PACKAGECONFIG": {
 "TABS": {
@@ -3583,7 +3656,8 @@
 "Compendium": "创建合集"
 },
 "SIDEBAR.COMPENDIUM.LABELS": {
-"Locked": "已锁定"
+"Locked": "已锁定",
+"Ownership": "非默认所有权"
 },
 "SIDEBAR.SETTINGS": {
 "LABELS": {
@@ -3674,7 +3748,19 @@
 "sound.label": "声音",
 "dir.label": "限制方向",
 "door.label": "门类型",
-"c.label": "墙体坐标"
+"c.label": "墙体坐标",
+"animation": {
+"strength": {
+"label": "动画强度",
+"hint": "一个介于 0 至 2 的乘数调整值，用于调节动画过程中门的移动幅度。例如，对于摆动门，较高的强度将导致更大的开启角度；而对于滑动门，较高的强度会使门滑动更远的距离。"
+},
+"direction.label": "打开方向",
+"double.label": "双开门",
+"duration.label": "动画持续时间（毫秒）",
+"flip.label": "翻转门纹理",
+"texture.label": "门纹理",
+"type.label": "动画类型"
+}
 },
 "TABLE": {
 "ACTIONS": {
@@ -3759,8 +3845,163 @@
 "BeginDownload": "开始下载",
 "PreviewCompatibilityHint": "使用下面的“预览兼容性”按钮，你可以检查你的所有世界、系统和模组是否支持 {version} 版本的FVTT。",
 "NewGenerationHint": "考虑在更新前对所有已安装的软件包进行快照，以防需要回滚。"
-}
+},
+"PackageProtected": "受保护"
 },
 "SHEETS.ConfigureTitle": "{prefix}：卡配置",
-"SHEETS.ThemeHint": "某些主题不适用部分表。"
+"SHEETS.ThemeHint": "某些主题不适用部分表。",
+"TILE.Dimensions": "尺寸",
+"TILE.VideoOptions": "视频选项",
+"TILE.ACTIONS": {
+"CREATE": "创建图块",
+"UPDATE": "更新图块"
+},
+"TILE.SECTIONS": {
+"position": "调整图块的位置和尺寸。",
+"overhead": "如果图块位于前景的顶部，则适用的其他属性。"
+},
+"TILE.TABS": {
+"position": "位置",
+"appearance": "外观",
+"overhead": "顶部"
+},
+"TILE.FIELDS": {
+"sort.label": "排序",
+"texture": {
+"src.label": "图块图像或视频",
+"scaleX.label": "水平",
+"scaleY.label": "垂直",
+"tint.label": "着色色调"
+},
+"alpha.label": "图块不透明度",
+"occlusion": {
+"mode.label": "遮挡模式",
+"alpha.label": "遮挡 Alpha"
+},
+"restrictions": {
+"light": {
+"label": "限制光线",
+"hint": "光源是否会因其相对于该图块高度的高度差异而受到遮挡？"
+},
+"weather": {
+"label": "限制天气",
+"hint": "天气效果是否会因其相对于该图块高度的高度差异而受到遮挡？"
+}
+},
+"video": {
+"loop.label": "循环视频",
+"autoplay.label": "自动播放视频",
+"volume.label": "视频音量"
+}
+},
+"TIME": {
+"Day": {
+"one": "天",
+"other": "天",
+"abbr": "d"
+},
+"Hour": {
+"one": "小时",
+"other": "小时",
+"abbr": "h"
+},
+"Millisecond": {
+"one": "毫秒",
+"other": "毫秒",
+"abbr": "ms"
+},
+"Minute": {
+"one": "分钟",
+"other": "分钟",
+"abbr": "m"
+},
+"Second": {
+"one": "秒",
+"other": "秒",
+"abbr": "s"
+},
+"Year": {
+"one": "年",
+"other": "年",
+"abbr": "y"
+}
+},
+"TOKEN.DeleteCombatantWarning": "你正在删除一个处于战斗中的指示物。此参战者将被永久删除。",
+"TOKEN.TABS": {
+"identity": "本体",
+"appearance": "外观",
+"vision": "视野",
+"light": "光照",
+"resources": "资源"
+},
+"TOKEN.SECTIONS": {
+"basic": "基础配置",
+"animation": "光源动画",
+"advanced": "高级选项"
+},
+"TOKEN.SHAPES.ELLIPSE.label": "椭圆",
+"TOKEN.SHAPES.ELLIPSE_1.label": "椭圆（变体 1）",
+"TOKEN.SHAPES.ELLIPSE_2.label": "椭圆（变体 2）",
+"TOKEN.SHAPES.TRAPEZOID.label": "梯形",
+"TOKEN.SHAPES.TRAPEZOID_2.label": "梯形（变体 2）",
+"TOKEN.SHAPES.RECTANGLE.label": "矩形",
+"TOKEN.SHAPES.RECTANGLE_1.label": "矩形（变体 1）",
+"TOKEN.SHAPES.RECTANGLE_2.label": "矩形（变体 2）",
+"TOKEN.TURNMARKER": {
+"SHEET": {
+"legend": "战斗回合标记"
+},
+"MODES": {
+"DISABLED": "禁用",
+"DEFAULT": "默认",
+"CUSTOM": "自定义"
+}
+},
+"TOKEN.MOVEMENT": {
+"ACTIONS": {
+"blink.label": "传送（闪现）",
+"burrow.label": "掘穴",
+"climb.label": "攀爬",
+"crawl.label": "匍匐",
+"displace.label": "传送（位移）",
+"jump.label": "跳跃",
+"fly.label": "飞行",
+"walk.label": "步行",
+"swim.label": "游泳"
+}
+},
+"TYPES": {
+"TableResult": {
+"document": "文档",
+"text": "文本"
+},
+"RegionBehavior": {
+"modifyMovementCost": "调整移动消耗"
+}
+},
+"TOURS": {
+"NavLabel": "旅行管理选项卡"
+},
+"USERS.DeleteName": "删除用户：{name}",
+"WALL.ANIMATION_TYPES": {
+"DESCEND": "下降",
+"SLIDE": "滑动",
+"SWING": "摆动",
+"SWIVEL": "旋转",
+"ASCEND": "上升"
+},
+"WALL.ANIMATION_DIRECTIONS": {
+"DEFAULT": "默认",
+"REVERSE": "反转"
+},
+"WALL.Title": "墙配置",
+"WALL.TitleMany": "墙配置 [多选]",
+"WALL.CoordinateRange": "（{p0X}, {p0Y}) 到 ({p1X}, {p1Y}）",
+"WALL.DoorAnimation": "门动画",
+"WALL.DoorConfiguration": "门配置",
+"WALL.NWalls": "[{n} 面墙]",
+"WALL.Restrictions": "墙限制",
+"WALL.Submit": "更新墙",
+"WALL.Instructions": "自定义此墙段限制移动或感知的方式。",
+"TOKEN.SHAPES.TRAPEZOID_1.label": "梯形（变体 1）"
 }
