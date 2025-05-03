@@ -3843,7 +3843,7 @@
 "Title": "发布说明：{release}",
 "FullList": "查看发布说明的<a href=\"{url}\" target=\"_blank\">全部内容</a>。",
 "BeginDownload": "开始下载",
-"PreviewCompatibilityHint": "使用下面的“预览兼容性”按钮，你可以检查你的所有世界、系统和模组是否支持 {version} 版本的FVTT。",
+"PreviewCompatibilityHint": "你可以使用下面的“预览兼容性”按钮检查所有世界、系统和模组是否支持 FVTT 的 {version} 版本。",
 "NewGenerationHint": "考虑在更新前对所有已安装的软件包进行快照，以防需要回滚。"
 },
 "PackageProtected": "受保护"
