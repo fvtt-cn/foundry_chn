@@ -2912,7 +2912,7 @@
 "Shift": "Shift",
 "RightClickDuringDrag": "拖动时右键单击",
 "Control": "Control",
-"UnconstrainedMovement": "无限制移动",
+"UnconstrainedMovement": "不限制移动",
 "CutObjects": "分割 {count}} 个 {type} 对象。",
 "RightClick2": "双击右键"
 },
