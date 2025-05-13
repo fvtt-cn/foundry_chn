@@ -988,7 +988,7 @@
 "SETUP.GettingStarted": "入门",
 "SETUP.SeeTutorial": "想要深入了解更多 Foundry Virtual Tabletop 的入门指南，你可以阅读我们的 <a href=\"https://fvtt-cn.gitee.io/\" target=\"_blank\" title=\"Knowledge Base\">FVTT-CN 中文社区站</a>中的<a href=\"https://fvtt-cn.gitee.io/tutorial/gm/\" target=\"_blank\" title=\"Gamemaster Tutorial\"> GM 指南</a>系列内容。",
 "SETUP.PackagesNoResults": "没有符合你搜索的 “{name}” 的 {type}。",
-"SETUP.UpdateHint": "你可以通过首选的软件更新频道来检查更新，将 Foundry Virtual Tabletop 更新到新版本。",
+"SETUP.UpdateHint": "You may update your Foundry Virtual Tabletop software to a new version by checking for update on your preferred Software Update Channel.",
 "SETUP.UpdatePrototype": "原型",
 "SETUP.UpdatePrototypeHint": "原型：用于预览尚未完成开发的实验性特性设计的发布版本。",
 "SETUP.UpdateDevelopment": "开发",
@@ -1006,7 +1006,7 @@
 "SETUP.UpdateNoInternetError": "Foundry Virtual Tabletop 的更新需要有效的网络连接。",
 "SETUP.UpdateWebsiteUnreachableError": "我们当前无法连接到 https://foundryvtt.com，请稍后重试。",
 "SETUP.UpdateWebsiteSlowWarning": "https://foundryvtt.com 当前似乎负载过重，我们建议稍后重试。",
-"SETUP.UpdateNoUpdateMode": "你无法更新此 Foundry Virtual Tabletop 实例，因为其是在 --noupdate 模式下启动的。",
+"SETUP.UpdateNoUpdateMode": "You are not allowed to update this instance of Foundry Virtual Tabletop because it was launched in --noupdate mode.",
 "SETUP.UpdateNoArchive": "没有可安装的更新档",
 "SETUP.UpdateLicenseInvalid": "你的 Foundry Virtual Tabletop 许可证密钥无效。",
 "PACKAGE.GetPackagesTimedOut": "检索软件包超时",
@@ -2253,11 +2253,11 @@
 },
 "occludable.radius": {
 "label": "遮挡半径",
-"hint": "当此标记物位于采用径向遮挡的图块下方时，此数值用于调节在图块上切割出的孔洞尺寸，以确保标记物可透过该孔洞可见。"
+"hint": "When this Token is below a Tile that uses radial occlusion, this value controls the size of the hole that is cut in the Tile to allow the Token to be seen through it."
 },
 "disposition.label": "指示物态度",
 "lockRotation": {
-"label": "锁定旋转",
+"label": "Lock Artwork Rotation",
 "hint": "禁止此指示物的旋转在画布中渲染显示。"
 }
 },
@@ -2344,6 +2344,15 @@
 },
 "behaviorActivated": {
 "label": "行为被激活"
+},
+"tokenAnimateIn": {
+"label": "Token Animates In"
+},
+"tokenAnimateOut": {
+"label": "Token Animates Out"
+},
+"tokenMoveWithin": {
+"label": "Token Moves Within"
 }
 },
 "FIELDS": {
@@ -2660,7 +2669,7 @@
 "RING_GRADIENT": "环渐变",
 "RING_PULSE": "环脉动",
 "INVISIBILITY": "光谱脉动",
-"COLOR_OVER_SUBJECT": "颜色覆盖指示物"
+"COLOR_OVER_SUBJECT": "Color Over Subject"
 },
 "SHEET": {
 "legend": "动态指示物环"
@@ -2723,8 +2732,8 @@
 "contents": "内容"
 },
 "ACTIONS": {
-"ClearSection": "清除部件",
-"RestoreSection": "恢复部件"
+"ClearSection": "Clear Section",
+"RestoreSection": "Restore Section"
 }
 },
 "CALENDAR": {
@@ -2874,7 +2883,7 @@
 "hint": "每个指示物回合的标记默认使用的动画类型。"
 },
 "disposition": {
-"label": "色调倾向",
+"label": "Disposition Tint",
 "hint": "根据标记物的状态为回合标记添加色调。"
 }
 }
@@ -2901,7 +2910,7 @@
 "Hint": "将此合集包中的全部内容导入至新的或现有的文件夹中。请注意，导入大型合集包会对应用程序性能产生负面影响。",
 "Finish": "已成功将 {number} 份 {type} 文档和 {folderNumber} 个文件夹导入到 {folder} 文件夹中。"
 },
-"COMPENDIUM.Locked": "{title} [已锁定]",
+"COMPENDIUM.Locked": "{title} [Locked]",
 "COMPENDIUM.ToggleLocked": {
 "Option": "切换编辑锁定",
 "Title": "切换编辑锁定：{compendium}",
@@ -2974,7 +2983,7 @@
 "description.label": "效果描述"
 },
 "EFFECT.TABS": {
-"changes": "修改",
+"changes": "Changes",
 "duration": "持续时间",
 "details": "详情"
 },
@@ -3466,7 +3475,7 @@
 "TABS": {
 "AllTypes": {
 "Hint": "这些覆盖设置适用于所有原型指示物，与其所属的父级角色类型无关。在后续选项卡中，可针对每种角色类型单独重新定义这些设置。若字段留空，则表示不启用覆盖功能。",
-"Label": "[所有类型]"
+"Label": "[All Types]"
 },
 "Basics": "基础",
 "Marker": "回合标记"
@@ -3481,7 +3490,7 @@
 "url.label": "URL",
 "username.label": "用户名",
 "password.label": "访问密码",
-"type.label": "中继服务器"
+"type.label": "Relay Server"
 },
 "mode": {
 "label": "会议模式",
@@ -3502,7 +3511,7 @@
 "borderColors.label": "使用玩家边框颜色",
 "videoSrc": {
 "hint": "选择你想要用来捕获视频的设备（如有）。",
-"label": "捕获设备"
+"label": "Capture Device"
 },
 "audioSink": {
 "hint": "选择你想要用来播放音频的设备。",
@@ -3510,7 +3519,7 @@
 },
 "audioSrc": {
 "hint": "选择你想要用来捕获音频的设备（如有）。",
-"label": "捕获设备"
+"label": "Capture Device"
 }
 }
 },
@@ -3547,7 +3556,7 @@
 },
 "JOIN_THEMES": {
 "default": "默认",
-"minimal": "最小化"
+"minimal": "Minimal"
 }
 },
 "PACKAGE": {
@@ -3751,14 +3760,14 @@
 "c.label": "墙体坐标",
 "animation": {
 "strength": {
-"label": "动画强度",
+"label": "Animation Strength",
 "hint": "一个介于 0 至 2 的乘数调整值，用于调节动画过程中门的移动幅度。例如，对于摆动门，较高的强度将导致更大的开启角度；而对于滑动门，较高的强度会使门滑动更远的距离。"
 },
 "direction.label": "打开方向",
 "double.label": "双开门",
 "duration.label": "动画持续时间（毫秒）",
-"flip.label": "翻转门纹理",
-"texture.label": "门纹理",
+"flip.label": "Flip Door Texture",
+"texture.label": "Door Texture",
 "type.label": "动画类型"
 }
 },
@@ -3863,7 +3872,7 @@
 "TILE.TABS": {
 "position": "位置",
 "appearance": "外观",
-"overhead": "顶部"
+"overhead": "Overhead"
 },
 "TILE.FIELDS": {
 "sort.label": "排序",
@@ -3986,22 +3995,22 @@
 "WALL.ANIMATION_TYPES": {
 "DESCEND": "下降",
 "SLIDE": "滑动",
-"SWING": "摆动",
+"SWING": "Swing",
 "SWIVEL": "旋转",
-"ASCEND": "上升"
+"ASCEND": "Ascend"
 },
 "WALL.ANIMATION_DIRECTIONS": {
 "DEFAULT": "默认",
-"REVERSE": "反转"
+"REVERSE": "Reversed"
 },
 "WALL.Title": "墙配置",
-"WALL.TitleMany": "墙配置 [多选]",
+"WALL.TitleMany": "Wall Configuration [Multiple]",
 "WALL.CoordinateRange": "（{p0X}, {p0Y}) 到 ({p1X}, {p1Y}）",
 "WALL.DoorAnimation": "门动画",
 "WALL.DoorConfiguration": "门配置",
-"WALL.NWalls": "[{n} 面墙]",
+"WALL.NWalls": "[{n} Walls]",
 "WALL.Restrictions": "墙限制",
 "WALL.Submit": "更新墙",
-"WALL.Instructions": "自定义此墙段限制移动或感知的方式。",
+"WALL.Instructions": "Customize how this wall segment restricts movement or senses.",
 "TOKEN.SHAPES.TRAPEZOID_1.label": "梯形（变体 1）"
 }
