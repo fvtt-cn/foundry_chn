@@ -988,7 +988,7 @@
 "SETUP.GettingStarted": "入门",
 "SETUP.SeeTutorial": "想要深入了解更多 Foundry Virtual Tabletop 的入门指南，你可以阅读我们的 <a href=\"https://fvtt-cn.gitee.io/\" target=\"_blank\" title=\"Knowledge Base\">FVTT-CN 中文社区站</a>中的<a href=\"https://fvtt-cn.gitee.io/tutorial/gm/\" target=\"_blank\" title=\"Gamemaster Tutorial\"> GM 指南</a>系列内容。",
 "SETUP.PackagesNoResults": "没有符合你搜索的 “{name}” 的 {type}。",
-"SETUP.UpdateHint": "You may update your Foundry Virtual Tabletop software to a new version by checking for update on your preferred Software Update Channel.",
+"SETUP.UpdateHint": "你可以通过首选的软件更新频道来检查更新，将 Foundry Virtual Tabletop 更新到新版本。",
 "SETUP.UpdatePrototype": "原型",
 "SETUP.UpdatePrototypeHint": "原型：用于预览尚未完成开发的实验性特性设计的发布版本。",
 "SETUP.UpdateDevelopment": "开发",
@@ -1006,7 +1006,7 @@
 "SETUP.UpdateNoInternetError": "Foundry Virtual Tabletop 的更新需要有效的网络连接。",
 "SETUP.UpdateWebsiteUnreachableError": "我们当前无法连接到 https://foundryvtt.com，请稍后重试。",
 "SETUP.UpdateWebsiteSlowWarning": "https://foundryvtt.com 当前似乎负载过重，我们建议稍后重试。",
-"SETUP.UpdateNoUpdateMode": "You are not allowed to update this instance of Foundry Virtual Tabletop because it was launched in --noupdate mode.",
+"SETUP.UpdateNoUpdateMode": "你无法更新此 Foundry Virtual Tabletop 实例，因为其是在 --noupdate 模式下启动的。",
 "SETUP.UpdateNoArchive": "没有可安装的更新档",
 "SETUP.UpdateLicenseInvalid": "你的 Foundry Virtual Tabletop 许可证密钥无效。",
 "PACKAGE.GetPackagesTimedOut": "检索软件包超时",
@@ -2983,7 +2983,7 @@
 "description.label": "效果描述"
 },
 "EFFECT.TABS": {
-"changes": "Changes",
+"changes": "修改",
 "duration": "持续时间",
 "details": "详情"
 },
