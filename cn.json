@@ -2253,11 +2253,11 @@
 },
 "occludable.radius": {
 "label": "遮挡半径",
-"hint": "When this Token is below a Tile that uses radial occlusion, this value controls the size of the hole that is cut in the Tile to allow the Token to be seen through it."
+"hint": "当此指示物位于使用径向遮挡的图块下方时，此值控制在图块中切割的孔的大小，以允许指示物能够被看见。"
 },
 "disposition.label": "指示物态度",
 "lockRotation": {
-"label": "Lock Artwork Rotation",
+"label": "锁定插图旋转",
 "hint": "禁止此指示物的旋转在画布中渲染显示。"
 }
 },
@@ -2346,13 +2346,13 @@
 "label": "行为被激活"
 },
 "tokenAnimateIn": {
-"label": "Token Animates In"
+"label": "指示物行动开始"
 },
 "tokenAnimateOut": {
-"label": "Token Animates Out"
+"label": "指示物行动结束"
 },
 "tokenMoveWithin": {
-"label": "Token Moves Within"
+"label": "指示物移动"
 }
 },
 "FIELDS": {
@@ -2669,7 +2669,7 @@
 "RING_GRADIENT": "环渐变",
 "RING_PULSE": "环脉动",
 "INVISIBILITY": "光谱脉动",
-"COLOR_OVER_SUBJECT": "Color Over Subject"
+"COLOR_OVER_SUBJECT": "主体颜色"
 },
 "SHEET": {
 "legend": "动态指示物环"
@@ -3490,7 +3490,7 @@
 "url.label": "URL",
 "username.label": "用户名",
 "password.label": "访问密码",
-"type.label": "Relay Server"
+"type.label": "中继服务器"
 },
 "mode": {
 "label": "会议模式",
@@ -3511,7 +3511,7 @@
 "borderColors.label": "使用玩家边框颜色",
 "videoSrc": {
 "hint": "选择你想要用来捕获视频的设备（如有）。",
-"label": "Capture Device"
+"label": "捕获设备（视频）"
 },
 "audioSink": {
 "hint": "选择你想要用来播放音频的设备。",
@@ -3519,7 +3519,7 @@
 },
 "audioSrc": {
 "hint": "选择你想要用来捕获音频的设备（如有）。",
-"label": "Capture Device"
+"label": "捕获设备（音频）"
 }
 }
 },
@@ -3556,7 +3556,7 @@
 },
 "JOIN_THEMES": {
 "default": "默认",
-"minimal": "Minimal"
+"minimal": "最少"
 }
 },
 "PACKAGE": {
@@ -3760,14 +3760,14 @@
 "c.label": "墙体坐标",
 "animation": {
 "strength": {
-"label": "Animation Strength",
+"label": "动画强度",
 "hint": "一个介于 0 至 2 的乘数调整值，用于调节动画过程中门的移动幅度。例如，对于摆动门，较高的强度将导致更大的开启角度；而对于滑动门，较高的强度会使门滑动更远的距离。"
 },
 "direction.label": "打开方向",
 "double.label": "双开门",
 "duration.label": "动画持续时间（毫秒）",
-"flip.label": "Flip Door Texture",
-"texture.label": "Door Texture",
+"flip.label": "平开门纹理",
+"texture.label": "门纹理",
 "type.label": "动画类型"
 }
 },
@@ -3995,22 +3995,22 @@
 "WALL.ANIMATION_TYPES": {
 "DESCEND": "下降",
 "SLIDE": "滑动",
-"SWING": "Swing",
+"SWING": "摆动",
 "SWIVEL": "旋转",
-"ASCEND": "Ascend"
+"ASCEND": "上升"
 },
 "WALL.ANIMATION_DIRECTIONS": {
 "DEFAULT": "默认",
-"REVERSE": "Reversed"
+"REVERSE": "反转"
 },
 "WALL.Title": "墙配置",
-"WALL.TitleMany": "Wall Configuration [Multiple]",
+"WALL.TitleMany": "墙配置 [Multiple]",
 "WALL.CoordinateRange": "（{p0X}, {p0Y}) 到 ({p1X}, {p1Y}）",
 "WALL.DoorAnimation": "门动画",
 "WALL.DoorConfiguration": "门配置",
 "WALL.NWalls": "[{n} Walls]",
 "WALL.Restrictions": "墙限制",
 "WALL.Submit": "更新墙",
-"WALL.Instructions": "Customize how this wall segment restricts movement or senses.",
+"WALL.Instructions": "自定义此墙体如何限制移动或感知。",
 "TOKEN.SHAPES.TRAPEZOID_1.label": "梯形（变体 1）"
 }
