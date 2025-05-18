@@ -255,7 +255,7 @@
 "EFFECT.MODE_CUSTOM": "自定义",
 "EFFECT.MODE_MULTIPLY": "乘",
 "EFFECT.MODE_ADD": "加",
-"EFFECT.MODE_DOWNGRADE": "降级",
+"EFFECT.MODE_DOWNGRADE": "回退",
 "EFFECT.MODE_UPGRADE": "升级",
 "EFFECT.MODE_OVERRIDE": "覆盖",
 "EFFECT.DurationTurns": "效果时长（回合）",
@@ -1652,7 +1652,7 @@
 "DOCUMENT.ActorDelta": "角色差",
 "DOCUMENT.ActorDeltas": "角色差",
 "MACRO.EmptySlot": "空槽位 {slot}",
-"MODMANAGE.UpstreamPackages": "有 {number} 个软件包需要此软件包处于活动状态。禁用此软件包也会禁用这些软件包。",
+"MODMANAGE.UpstreamPackages": "有 {number} 个软件包需要此软件包处于激活状态。禁用此软件包也会禁用这些软件包。",
 "PLAYERS.List": "玩家列表",
 "PLAYERS.PlayerPronouns": "玩家代词",
 "SETUP.UpdateNewGeneration": "需要手动安装",
@@ -3837,8 +3837,8 @@
 "texture.label": "填充纹理"
 },
 "SETUP": {
-"PackageRequiresDowngradeHint": "要安装此软件包，你必须将 Foundry VTT 降级到 {vmax} 版本。",
-"PackageRequiresDowngradeLabel": "需要降级",
+"PackageRequiresDowngradeHint": "要安装此软件包，你必须将 Foundry VTT 回退至 {vmax} 版本。",
+"PackageRequiresDowngradeLabel": "需要回退",
 "PackageRequiresUpgradeHint": "要安装此软件包，你必须将 Foundry VTT 升级到 {vmin} 版本。",
 "PackageRequiresUpgradeLabel": "需要升级",
 "ViewPackageWebsite": "查看软件包网站",
