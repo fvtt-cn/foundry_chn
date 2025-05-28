@@ -34,42 +34,18 @@ jobs:
       - name: Unflatten JSON
         shell: pwsh
         run: |
-          function Unflatten-Hashtable($flatObject) {
-              $result = @{}
-              foreach ($key in $flatObject.PSObject.Properties.Name) {
-                  $value = $flatObject.$key
-                  if ($key -match '\.') {
-                      $parts = $key -split '\.'
-                      $current = $result
-                      for ($i = 0; $i -lt $parts.Length - 1; $i++) {
-                          $part = $parts[$i]
-                          if (-not $current.ContainsKey($part)) {
-                              $current[$part] = @{}
-                          }
-                          $current = $current[$part]
-                      }
-                      $leaf = $parts[-1]
-                      $current[$leaf] = $value
-                  } else {
-                      if ($result.ContainsKey($key) -and $value -is [hashtable]) {
-                          foreach ($subkey in $value.Keys) {
-                              $result[$key][$subkey] = $value[$subkey]
-                          }
-                      } else {
-                          $result[$key] = $value
-                      }
-                  }
+          $json = Get-Content "cn.json" | ConvertFrom-Json -AsHashtable
+          $result = @{}
+          $json.GetEnumerator() | ForEach-Object {
+              $parts = $_.Key -split '\.'
+              $current = $result
+              for ($i = 0; $i -lt $parts.Length - 1; $i++) {
+                  if (-not $current[$parts[$i]]) { $current[$parts[$i]] = @{} }
+                  $current = $current[$parts[$i]]
               }
-              return $result
+              $current[$parts[-1]] = $_.Value
           }
-          $json = Get-Content cn.json | ConvertFrom-Json
-          Unflatten-Hashtable $json | ConvertTo-Json -Depth 100 | Set-Content cn.json
-
-      # Compress JSON files
-      - name: Minify JSON
-        uses: StefanEnsmann/Minify-JSON-Action@1.1.0
-        with:
-          input_file: cn.json
+          $result | ConvertTo-Json -Depth 100 -Compress | Set-Content "cn.json"
 
       # Create a zip file with all files required by the module to add to the release
       - name: Create Artifact
