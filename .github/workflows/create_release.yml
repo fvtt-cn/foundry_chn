@@ -7,7 +7,6 @@ on:
 env:
   ZIP_FILENAME: "foundry_chn"
   PACKAGE_CONTENT: "module.json cn.json"
-  PACKAGE_ID: "foundry_chn"
 
 jobs:
   build:
@@ -68,10 +67,8 @@ jobs:
 
       - name: Publish to Foundry VTT Repo
         id: publish_foundry_repo
-        if: ${{ env.PACKAGE_ID }}
         run: npx @ghost-fvtt/foundry-publish
         env:
           FVTT_MANIFEST_PATH: 'module.json'
-          FVTT_PACKAGE_ID: ${{ env.PACKAGE_ID }}
           FVTT_USERNAME: ${{ secrets.FVTT_USERNAME }}
           FVTT_PASSWORD: ${{ secrets.FVTT_PASSWORD }}
