@@ -2828,7 +2828,7 @@
 "SETUP.ForceUpdateHint": "选择强制更新选项将会覆盖你的当前软件，并将其重置为你选择的升级通道的最新版本。谨慎使用该选项。",
 "SETUP.GettingStarted": "入门",
 "SETUP.IncompatibleDep": "不兼容的依赖项：{dependencies}",
-"SETUP.IncompatibleSystems": "不兼容的系统：{系统}",
+"SETUP.IncompatibleSystems": "不兼容的系统：{systems}",
 "SETUP.InstallFailure": "安装失败：{message}。查看控制台（F12）以获取细节",
 "SETUP.InstallHint": "你可以输入其直链（清单文件链接）来安装任一软件包。",
 "SETUP.InstallModule": "安装模组",
