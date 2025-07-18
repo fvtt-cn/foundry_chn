@@ -433,9 +433,11 @@
       "drawn.label": "Drawn",
       "face.label": "Face",
       "faces": {
-        "name.label": "Face Name",
-        "img.label": "Face Image",
-        "text.label": "Face Text"
+        "element": {
+          "name.label": "Face Name",
+          "img.label": "Face Image",
+          "text.label": "Face Text"
+        }
       },
       "back": {
         "name.label": "Back Name",
@@ -610,7 +612,8 @@
   "COMPENDIUM.ToggleLocked": {
     "Option": "Toggle Edit Lock",
     "Title": "Toggle Edit Lock: {compendium}",
-    "Warning": "You are attempting to unlock for editing a compendium that does not belong to this World. Any changes you make in this compendium pack may be lost if the system or module which owns it is updated. You may wish to duplicate the compendium to your World instead. Do you wish to proceed?"
+    "Unlock": "Unlock",
+    "Warning": "You are attempting to unlock for editing a compendium that does not belong to this World. Any changes you make in this compendium pack may be lost if the System or Module which owns it is updated. You may wish to duplicate the compendium to your World instead. How do you wish to proceed?"
   },
   "COMPENDIUM.CannotViewWarning": "You do not have sufficient permission to view this Compendium pack.",
   "COMPENDIUM.OwnershipInheritBelow": "Inherit from below",
@@ -640,7 +643,6 @@
     "TargetSelect": "Select Targets",
     "TargetSelectP": "Target any Tokens that you can see.",
     "BasicMeasure": "Measure Distance",
-    "BasicMeasureWaypoints": "Place Waypoints",
     "GroupMeasure": "Measurement Controls",
     "MeasureType": "Template Type",
     "MeasureConfigHint": "Configure the placement and display of the measurement template.",
@@ -799,11 +801,8 @@
     "KeyPaste": "Paste Canvas Elements",
     "KeyUndo": "Undo Canvas Operation",
     "KeyHotbar": "Activate Hotbar Slot",
-    "RulerTitle": "Ruler Measurement",
-    "RulerMeasure": "Measure Distance with Ruler",
-    "RulerWaypoint": "Place Measurement Waypoint",
-    "RulerMove": "Move Token on Measured Path",
-    "RulerWhile": "while measuring from a Token",
+    "RulerPlaceWaypoint": "Place Ruler Waypoint",
+    "RulerRemoveWaypoint": "Remove Ruler Waypoint",
     "ObjectSheet": "Open Referenced Object Sheet",
     "ObjectHUD": "Display Object HUD (If Applicable)",
     "ObjectConfig": "Open Object Configuration Sheet",
@@ -815,6 +814,7 @@
     "MouseWheel": "Mouse-Wheel",
     "DragDrop": "Drag and Drop",
     "UnconstrainedMovement": "Unconstrained Movement",
+    "UnconstrainedMovementP": "When active, you can move Tokens through Walls and impassable terrain.",
     "TokenHeader": "Token Controls",
     "TokenPlaceHidden": "Place Hidden Token",
     "TokenTarget": "Set (non-Owned) Token as Target",
@@ -860,7 +860,8 @@
     "ObjectConfigured": "You cannot take this action while configuring another object."
   },
   "DICE": {
-    "ErrorNonNumeric": "The dice roll formula {formula} did not produce a numeric outcome.",
+    "ErrorNonNumeric": "The dice roll formula \"{formula}\" did not produce a numeric outcome.",
+    "ErrorNotParsable": "The dice roll formula \"{formula}\" is not a string.",
     "ManualRoll": "Manual Roll",
     "RollResolution": "Roll Resolution",
     "SubmitRoll": "Submit Roll",
@@ -1031,8 +1032,8 @@
   "EFFECT.MODE_OVERRIDE": "Override",
   "EFFECT.TransferLegacy": "Transfer Effect to Actor",
   "EFFECT.TransferHintLegacy": "If checked, this Effect will be copied to the Actor when this Effect's parent Item is created on an Actor, and deleted if that Item is ever removed.",
-  "EFFECT.DurationTurns": "Effect Duration (Turns)",
-  "EFFECT.StartTurns": "Effect Start Turn",
+  "EFFECT.DurationTurns": "Effect Duration (Combat)",
+  "EFFECT.StartTurns": "Effect Start",
   "EFFECT.ChangeKey": "Attribute Key",
   "EFFECT.ChangeMode": "Change Mode",
   "EFFECT.ChangeValue": "Value",
@@ -1116,9 +1117,9 @@
     "RequiresGenerationReinstall": "Foundry Virtual Tabletop Version {version} is now available but cannot be installed from within the Foundry Virtual Tabletop application because it is a new generation update which must be installed manually by re-installing the software from the <a href=\"https://foundryvtt.com/me/licenses\" target=\"_blank\">foundryvtt.com</a> website.",
     "RequiresElectronReinstall": "Foundry Virtual Tabletop Version {version} is now available but cannot be installed from within the Foundry Virtual Tabletop application because it includes a new Electron version which can only be installed manually by re-installing the software from the <a href=\"https://foundryvtt.com/me/licenses\" target=\"_blank\">foundryvtt.com</a> website.",
     "RESOLUTION": {
-      "Window": "Foundry Virtual Tabletop requires a screen resolution of {reqWidth}px by {reqHeight}px or greater. Your display has a resolution of {curWidth}px by {curHeight}px. You must increase your resolution or use a different display device, or else some features of the software will not work properly.",
-      "Scale": "Foundry Virtual Tabletop requires a usable screen dimensions of {reqWidth}px by {reqHeight}px or greater. The dimensions of this window are {curWidth}px by {curHeight}px. You currently have a zoom factor applied either at the operating system or browser level, which is reducing the effective size of your window. You must enlarge the size of your window or reduce the zoom factor applied to your browser, or else some features of the software will not work properly.",
-      "Screen": "Foundry Virtual Tabletop requires usable screen dimensions of {reqWidth}px by {reqHeight}px or greater. The current dimensions of this window are {curWidth}px by {curHeight}. You must enlarge the size of your window, or else some features of the software will not work properly."
+      "Screen": "Foundry Virtual Tabletop requires a screen resolution of {reqWidth}px by {reqHeight}px or greater. Your display has a resolution of {curWidth}px by {curHeight}px. You must increase your resolution or use a different display device, or else some features of the software will not work properly.",
+      "Scale": "Foundry Virtual Tabletop requires a usable window dimensions of {reqWidth}px by {reqHeight}px or greater. The current dimensions of this window are {curWidth}px by {curHeight}px. You currently have a zoom factor applied either at the operating system or browser level, which is reducing the effective size of your window. You must enlarge the size of your window or reduce the zoom factor applied to your browser, or else some features of the software will not work properly.",
+      "Window": "Foundry Virtual Tabletop requires usable window dimensions of {reqWidth}px by {reqHeight}px or greater. The current dimensions of this window are {curWidth}px by {curHeight}px. You must enlarge the size of your window, or else some features of the software will not work properly."
     }
   },
   "WARNING.GridConfigNoBG": "You are using the grid configuration tool for a scene with no background image. This is not currently recommended and may produce unpredictable results.",
@@ -1215,10 +1216,10 @@
     }
   },
   "FILES": {
-    "CreateDirectory": "Create Directory",
+    "CreateDirectory": "Create Folder",
     "CreateSubfolder": "Create Subfolder",
     "DirectoryName": {
-      "Label": "Directory Name",
+      "Label": "Folder Name",
       "Placeholder": "my-folder"
     },
     "TogglePrivacy": "Toggle Privacy Mode",
@@ -1230,24 +1231,25 @@
     "FavoritesLabel": "Favorites",
     "AddFavorite": "Add Current Folder to Favorites",
     "RemoveFavorite": "Remove Folder from Favorites",
-    "DirectoryPathLabel": "Directory Path",
+    "DirectoryPathLabel": "Folder Path",
     "FilterLabel": "Filter Results",
     "S3Label": "S3 Bucket",
     "Selected": "Selected",
     "SelectFile": "Select File",
-    "SelectFolder": "Select Directory",
+    "SelectFolder": "Select Folder",
     "TileSize": "Asset Grid Size",
     "TileSizeHint": "Specify the pixel grid size of source tile artwork so it will be automatically resized when placed onto your active Scene.",
     "TraverseBack": "Traverse Back",
     "NoResults": "No matching results found in this location.",
     "Upload": "Upload",
+    "CannotUpload": "Uploads to this folder are prohibited because content here may be overwritten during updates. Upload to your \"assets\" folder or another allowed location instead.",
     "Search": "Search",
     "ErrorTooLarge": "The file you have attempted to upload is too large for your proxy server to handle.",
     "ErrorSomethingWrong": "Something went wrong with your file upload request.",
-    "WarnUploadModules": "You have uploaded files into a module or system directory. This is generally <strong>unsafe</strong> because updates to the system or module will delete your files.",
+    "WarnUploadModules": "You have uploaded files into a module or system folder. This is generally <strong>unsafe</strong> because updates to the system or module will delete your files.",
     "AlreadyFavorited": "{path} is already in your favorites.",
     "TitleAny": "File Browser",
-    "TitleFolder": "Directory Browser",
+    "TitleFolder": "Folder Browser",
     "TitleFont": "Font Browser",
     "TitleImageVideo": "Image or Video Browser",
     "TitleImage": "Image Browser",
@@ -1359,6 +1361,7 @@
   "JOURNAL.ConfigureCategoriesTitle": "{name} Categories",
   "JOURNAL.CategoryName": "Category name",
   "JOURNAL.Uncategorized": "Uncategorized",
+  "JOURNAL.UnnamedCategory": "<Unnamed Category>",
   "JOURNALENTRYPAGE.DefaultPageSheet": "Default {page} Page Sheet",
   "JOURNALENTRYPAGE.Format": "Format",
   "JOURNALENTRYPAGE.Page": "Page",
@@ -1959,6 +1962,11 @@
       "yes": "Allow Sharing",
       "no": "Decline Sharing"
     },
+    "ChangePassword": {
+      "label": "Change Password",
+      "hint": "Enter the existing administrator password.",
+      "title": "Enter Existing Password"
+    },
     "SECTIONS": {
       "FVTTConfig": "Foundry VTT Configuration",
       "ServerConfig": "Server Configuration",
@@ -1990,9 +1998,10 @@
         "label": "Default Language",
         "hint": "You may choose a default language for the application by choosing a module which provides the core translation files for that language."
       },
+      "upnp.label": "Enable UPnP",
       "port": {
         "label": "Port",
-        "hint": "You may choose which port Foundry Virtual Tabletop uses for TCP connection traffic and enable or disable Universal Plug and Play (UPnP)."
+        "hint": "Choose which port Foundry Virtual Tabletop uses for TCP connection traffic and enable or disable Universal Plug and Play (UPnP)."
       },
       "compressStatic": {
         "label": "Compress Static Files",
@@ -2012,12 +2021,12 @@
       },
       "sslCert": {
         "label": "Certificate",
-        "hint": "You may run the server using secure socket layer (SSL) encryption by providing paths to certificate and key files. Paths are absolute or relative to the Config subdirectory in user data."
+        "hint": "You may run the server using secure socket layer (SSL) encryption by providing paths to certificate and key files. Paths are absolute or relative to the Config subfolder in user data."
       },
       "sslKey.label": "Key",
       "awsConfig": {
         "label": "AWS Configuration Path",
-        "hint": "You may provide an AWS configuration file for S3 integration. The path is absolute or relative to the Config subdirectory of user data."
+        "hint": "You may provide an AWS configuration file for S3 integration. The path is absolute or relative to the Config subfolder of user data."
       },
       "fullscreen": {
         "label": "Full-Screen Mode",
@@ -2123,6 +2132,8 @@
   "SETTINGS.GridDiagonalsAlternating1": "Alternating (1/2/1)",
   "SETTINGS.GridDiagonalsAlternating2": "Alternating (2/1/2)",
   "SETTINGS.GridDiagonalsIllegal": "Illegal (∞)",
+  "SETTINGS.UniversalKeybindingsN": "Universal Keybindings (experimental)",
+  "SETTINGS.UniversalKeybindingsL": "Match shortcuts by the character you type instead of the physical key position. Improves support for AZERTY, QWERTZ, Kana and other layouts. This is an experimental feature. A reload is required.",
   "SETTINGS.UI": {
     "MENU": {
       "name": "User Interface Configuration",
@@ -2364,18 +2375,21 @@
     "UpdateWarningWillDisable": "This update is a new major version of the Foundry Virtual Tabletop software. Installing this update will require some installed modules which may not yet be compatible to be disabled.",
     "UpdateButtonDownload": "Download Update {display}",
     "UpdateInfoAvailable": "An update to Foundry Virtual Tabletop {display} is available!",
-    "UpdateNoUpdateMode": "You are not allowed to update this instance of Foundry Virtual Tabletop because it was launched in --noupdate mode.",
     "UpdateNotAvailable": "No software update is currently available on the requested update channel.",
     "UpdateNoArchive": "No update archive exists to install",
     "UpdateLicenseInvalid": "Your Foundry Virtual Tabletop license key is not valid.",
     "UpdatedPackages": "Package Update Log",
+    "NoUpdateMode": {
+      "Label": "Updates Disabled",
+      "Hint": "You are not allowed to update this instance of Foundry Virtual Tabletop because it was launched in --noupdate mode."
+    },
     "Package": "Package",
     "VersionChange": "Version Change",
     "WorldMigrationRequiredTitle": "World Data Migration",
     "WorldCoreMigrationRequired": "<p>Launching the World <strong>{world}</strong> will migrate its data model from an older core software version (<code>{oldVersion}</code>) to the currently installed <strong>{newVersion}</strong>.</p>",
     "WorldSystemMigrationRequired": "<p>This World was last launched with an older system version (<code>{oldVersion}</code>) than the currently installed system version <strong>{newVersion}</strong> and may require a system migration.</p>",
     "WorldMigrationSystemUnavailable": "<p>The installed version of the <strong>{system}</strong> (<code>{systemVersion}</code>) game system is not verified as compatible with this software version. Successful migration cannot be guaranteed.</p>",
-    "WorldMigrationDisableModules": "<p>Be sure to update your game system and installed modules before migrating your World. As part of this migration to a new software generation all modules will be disabled. You may re-enable them after the migration is complete.</p>",
+    "WorldMigrationDisableModules": "<p>Be sure to update your game system and installed modules before migrating your World. As part of this migration to a new software generation all modules and active scenes will be disabled and any playing audio will be stopped. You may re-enable these modules after the migration is complete.</p>",
     "WorldMigrationBackupPrompt": "<p><strong>It is not possible to reverse this process</strong>. It is recommended to back up your World data before proceeding. You will need a backup in order to restore to the prior version.</p>",
     "WorldMigrationCreateBackup": "Create a backup before migrating?",
     "WorldMigrationBegin": "Begin Migration",
@@ -2496,12 +2510,22 @@
         "World": "This world's system was last verified for core software version {verified}"
       }
     },
+    "INSTALL_PACKAGE": {
+      "ManifestIncompatible": {
+        "Title": "Compatibility Warning",
+        "Warning": [
+          "The {packageType} at the provided URL is not compatible with the current version of Foundry Virtual Tabletop.",
+          "Are you sure you wish to proceed with the installation?"
+        ]
+      },
+      "ManifestWrongPackageType": "The provided URL does not appear to point to a {packageType}."
+    },
     "UPDATE_NOTES": {
       "Title": "Release Notes: {release}",
       "FullList": "See the <a href=\"{url}\" target=\"_blank\">full list</a> of Release Notes.",
       "BeginDownload": "Begin Download",
       "NewGenerationHint": "Consider taking a snapshot of all installed packages before updating in case you need to roll-back.",
-      "PreviewCompatibilityHint": "Using the 'preview compatibility' button below, you can check if all your Worlds, Systems, and Modules are supported in Foundry Virtual Tabletop Version {version}."
+      "PreviewCompatibilityHint": "Using the \"Preview Compatibility\" button below, you can check if all your Worlds, Systems, and Modules are supported in Foundry Virtual Tabletop Version {version}."
     }
   },
   "THEME.foundry": "Foundry Virtual Tabletop",
@@ -2606,22 +2630,26 @@
         "hint": "A website URL where more details about this package can be discovered."
       },
       "authors": {
-        "name.label": "Author Name",
-        "discord.label": "Discord Username",
-        "email.label": "Email Address",
-        "url.label": "Website URL"
+        "element": {
+          "name.label": "Author Name",
+          "discord.label": "Discord Username",
+          "email.label": "Email Address",
+          "url.label": "Website URL"
+        }
       },
       "packs": {
-        "name": {
-          "label": "Name",
-          "hint": "A unique alphanumeric string with no special characters that identifies the compendium pack.",
-          "disabledHint": "You cannot change this compendium pack name because it already exists."
-        },
-        "label.label": "Label",
-        "type.label": "Document Type",
-        "system": {
-          "label": "Required System",
-          "hint": "Actor, Item, or Adventure compendium packs (which contain Actors or Items) must declare which specific game system they are designed for."
+        "element": {
+          "name": {
+            "label": "Name",
+            "hint": "A unique alphanumeric string with no special characters that identifies the compendium pack.",
+            "disabledHint": "You cannot change this compendium pack name because it already exists."
+          },
+          "label.label": "Label",
+          "type.label": "Document Type",
+          "system": {
+            "label": "Required System",
+            "hint": "Actor, Item, or Adventure compendium packs (which contain Actors or Items) must declare which specific game system they are designed for."
+          }
         }
       },
       "compatibility": {
