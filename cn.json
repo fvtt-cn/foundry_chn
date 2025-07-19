@@ -251,7 +251,7 @@
 "base": {
 "FIELDS": {
 "events": {
-"hint": "此行为订阅的事件。",
+"hint": "此行为触发的事件。",
 "label": "事件"
 },
 "once": {
@@ -260,7 +260,7 @@
 }
 },
 "SECTIONS": {
-"events": "订阅事件"
+"events": "触发事件"
 }
 },
 "displayScrollingText": {
