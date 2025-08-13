@@ -469,113 +469,145 @@
   "CHAT.JumpToBottom": "Jump to Bottom",
   "CHAT.PrivateRollContent": "{user} privately rolled some dice",
   "CHAT.UnknownUser": "Unknown User",
-  "COMBAT.NavLabel": "Combat Encounters Navigation",
-  "COMBAT.Begin": "Begin Combat",
-  "COMBAT.Create": "Create Encounter",
-  "COMBAT.Delete": "Delete Encounter",
-  "COMBAT.Encounter": "Encounter",
-  "COMBAT.EncounterPrevious": "Activate Previous Encounter",
-  "COMBAT.EncounterNext": "Activate Next Encounter",
-  "COMBAT.End": "End Combat",
-  "COMBAT.InitiativeRoll": "Roll Initiative",
-  "COMBAT.InitiativeReset": "Reset Initiative",
-  "COMBAT.ClearMovementHistories": "Clear Movement Histories",
-  "COMBAT.InitiativeScore": "Initiative Score",
-  "COMBAT.EndTitle": "End Combat Encounter?",
-  "COMBAT.EndConfirmation": "End this combat encounter and empty the turn tracker?",
-  "COMBAT.Linked": "Linked to scene, click to unlink",
-  "COMBAT.None": "No Encounter",
-  "COMBAT.NoneActive": "There is no Combat Encounter in your currently viewed Scene.",
-  "COMBAT.NoneRemaining": "There are no Combatants remaining in this Encounter which are not defeated.",
-  "COMBAT.NotStarted": "Not Started",
-  "COMBAT.PanToCombatant": "Pan to Combatant",
-  "COMBAT.PingCombatant": "Ping Combatant",
-  "COMBAT.WarnNonVisibleToken": "This combatant is not visible to you.",
-  "COMBAT.Round": "Round {round}",
-  "COMBAT.Rounds": "Rounds",
-  "COMBAT.RoundPrev": "Previous Round",
-  "COMBAT.RoundNext": "Next Round",
-  "COMBAT.RollNPC": "Roll NPCs",
-  "COMBAT.RollAll": "Roll All",
-  "COMBAT.RollsInitiative": "{name} rolls for Initiative!",
-  "COMBAT.Settings": "Combat Tracker Settings",
-  "COMBAT.SettingsSave": "Save Tracker Settings",
-  "COMBAT.SidebarTitle": "Combat Tracker",
-  "COMBAT.Sounds.Epic": "Epic",
-  "COMBAT.Sounds.MC": "Fight Commentator",
-  "COMBAT.ToggleVis": "Toggle Visibility",
-  "COMBAT.ToggleDead": "Mark Defeated",
-  "COMBAT.Turn": "Turn",
-  "COMBAT.Turns": "Turns",
-  "COMBAT.TurnEnd": "End Turn",
-  "COMBAT.TurnNext": "Next Turn",
-  "COMBAT.TurnPrev": "Previous Turn",
-  "COMBAT.UnknownCombatant": "Unknown Combatant",
-  "COMBAT.Unlinked": "Unlinked combat, click to link to scene",
-  "COMBAT.CannotLinkToScene": "You cannot link the Combat to a Scene that doesn't contain all its Combatants.",
-  "COMBAT.CombatantActor": "Represented Actor",
-  "COMBAT.CombatantCreate": "Create Combatant",
-  "COMBAT.CombatantDefeated": "Defeated",
-  "COMBAT.CombatantHidden": "Hidden",
-  "COMBAT.CombatantImage": "Thumbnail Image",
-  "COMBAT.CombatantInitiative": "Initiative Value",
-  "COMBAT.CombatantStatus": "Status",
-  "COMBAT.CombatantUpdate": "Update Combatant",
-  "COMBAT.CombatantUpdateNamed": "Update Combatant: {name}",
-  "COMBAT.CombatantName": "Displayed Name",
-  "COMBAT.CombatantRemove": "Remove Combatant",
-  "COMBAT.CombatantClear": "Clear Initiative",
-  "COMBAT.CombatantReroll": "Re-roll Initiative",
-  "COMBAT.CombatantClearMovementHistory": "Clear Movement History",
-  "COMBAT.CombatantMovementHistoryCleared": "Cleared movement history for Token \"{name}\".",
-  "COMBAT.CombatantToken": "Represented Token",
-  "COMBAT.CombatantScene": "Combatant Scene",
-  "COMBAT.CombatantNotInScene": "The Combatant {name} is not present in your currently viewed Scene",
-  "COMBAT.FIELDS": {
-    "round.label": "Round",
-    "turn.label": "Turn"
-  },
-  "COMBAT.TURN_MARKERS": {
-    "ANIMATIONS": {
-      "SPIN": "Spin",
-      "SPIN_PULSE": "Spin Pulse",
-      "PULSE": "Pulse"
-    }
-  },
-  "COMBAT.CONFIG": {
-    "SHEET": {
-      "TURN_MARKERS": "Token Turn Markers"
+  "COMBAT": {
+    "NavLabel": "Combat Encounters Navigation",
+    "Begin": "Begin Encounter",
+    "Create": "Create Encounter",
+    "Delete": "Delete Encounter",
+    "Encounter": "Encounter",
+    "EncounterPrevious": "Activate Previous Encounter",
+    "EncounterNext": "Activate Next Encounter",
+    "End": "End Encounter",
+    "InitiativeRoll": "Roll Initiative",
+    "InitiativeReset": "Reset Initiative",
+    "ClearMovementHistories": "Clear Movement Histories",
+    "InitiativeScore": "Initiative Score",
+    "EndTitle": "End Encounter?",
+    "EndConfirmation": "End this encounter and empty the turn tracker?",
+    "None": "No Encounter",
+    "NoneActive": "There is no active Encounter in your currently viewed Scene.",
+    "NoneRemaining": "There are no participants remaining in this Encounter that are not defeated.",
+    "NotStarted": "Not Started",
+    "PanToCombatant": "Pan to Combatant",
+    "PingCombatant": "Ping Token",
+    "WarnNonVisibleToken": "This combatant is not visible to you.",
+    "Round": "Round {round}",
+    "Rounds": "Rounds",
+    "RoundPrev": "Previous Round",
+    "RoundNext": "Next Round",
+    "RollNPC": "Roll NPCs",
+    "RollAll": "Roll All",
+    "RollsInitiative": "{name} rolls for Initiative!",
+    "Settings": "Encounter Tracker Settings",
+    "SettingsSave": "Save Tracker Settings",
+    "SidebarTitle": "Encounter Tracker",
+    "Sounds": {
+      "Epic": "Epic",
+      "MC": "Fight Commentator"
+    },
+    "ToggleVis": "Toggle Visibility",
+    "ToggleDead": "Mark Defeated",
+    "Turn": "Turn",
+    "Turns": "Turns",
+    "TurnEnd": "End Turn",
+    "TurnNext": "Next Turn",
+    "TurnPrev": "Previous Turn",
+    "UnknownCombatant": "Unknown Participant",
+    "CannotLinkToScene": "You cannot link the Combat to a Scene that doesn't contain all its Combatants.",
+    "CombatantActor": "Represented Actor",
+    "CombatantCreate": "Create Combatant",
+    "CombatantDefeated": "Defeated",
+    "CombatantHidden": "Hidden",
+    "CombatantImage": "Thumbnail Image",
+    "CombatantInitiative": "Initiative Value",
+    "CombatantStatus": "Participant Status",
+    "CombatantUpdate": "Update Participant",
+    "CombatantUpdateNamed": "Update Combatant: {name}",
+    "CombatantName": "Displayed Name",
+    "CombatantRemove": "Remove Participant",
+    "CombatantClear": "Clear Initiative",
+    "CombatantReroll": "Re-roll Initiative",
+    "CombatantClearMovementHistory": "Clear Movement History",
+    "CombatantMovementHistoryCleared": "Cleared movement history for Token \"{name}\".",
+    "CombatantToken": "Represented Token",
+    "CombatantScene": "Combatant Scene",
+    "CombatantNotInScene": "The participant {name} is not present in your currently viewed scene.",
+    "ACTIONS": {
+      "LinkToScene": "Link to Viewed Scene",
+      "UnlinkFromScene": "Unlink from Scene"
+    },
+    "DURATION": {
+      "ROUNDS": {
+        "one": "Round",
+        "two": "Rounds",
+        "few": "Rounds",
+        "many": "Rounds",
+        "other": "Rounds"
+      },
+      "TURNS": {
+        "one": "Turn",
+        "two": "Turns",
+        "few": "Turns",
+        "many": "Turns",
+        "other": "Turns"
+      },
+      "None": "None"
     },
     "FIELDS": {
-      "core.combatTrackerConfig": {
-        "skipDefeated": {
-          "label": "Skip Defeated",
-          "hint": "Automatically bypass combatants marked as defeated."
-        },
-        "resource": {
-          "label": "Tracked Resource",
-          "hint": "Choose an attribute to track for each combatant."
-        },
-        "turnMarker": {
-          "enabled": {
-            "label": "Enable Markers",
-            "hint": "Enable combat turn markers by default for all Tokens."
+      "round": {
+        "label": "Round"
+      },
+      "turn": {
+        "label": "Turn"
+      }
+    },
+    "TURN_MARKERS": {
+      "ANIMATIONS": {
+        "SPIN": "Spin",
+        "SPIN_PULSE": "Spin Pulse",
+        "PULSE": "Pulse"
+      }
+    },
+    "CONFIG": {
+      "SHEET": {
+        "TURN_MARKERS": "Token Turn Markers"
+      },
+      "FIELDS": {
+        "core.combatTrackerConfig": {
+          "skipDefeated": {
+            "label": "Skip Defeated",
+            "hint": "Automatically bypass combatants marked as defeated."
           },
-          "src": {
-            "label": "Media Source",
-            "hint": "An image or video file to use by default as a Token turn marker."
+          "resource": {
+            "label": "Tracked Resource",
+            "hint": "Choose an attribute to track for each combatant."
           },
-          "animation": {
-            "label": "Animation",
-            "hint": "The animation type to use by default for each Token turn marker."
-          },
-          "disposition": {
-            "label": "Disposition Tint",
-            "hint": "Apply a tint to the turn marker based on the Token disposition."
+          "turnMarker": {
+            "enabled": {
+              "label": "Enable Markers",
+              "hint": "Enable combat turn markers by default for all Tokens."
+            },
+            "src": {
+              "label": "Media Source",
+              "hint": "An image or video file to use by default as a Token turn marker."
+            },
+            "animation": {
+              "label": "Animation",
+              "hint": "The animation type to use by default for each Token turn marker."
+            },
+            "disposition": {
+              "label": "Disposition Tint",
+              "hint": "Apply a tint to the turn marker based on the Token disposition."
+            }
           }
         }
       }
-    }
+    },
+    "PingInvisibleToken": "You can't see this participant's token.",
+    "ResourceHint": "Choose an attribute to track for each participant.",
+    "SkipDefeatedHint": "Automatically bypass participants marked as defeated?",
+    "TargetedBy": "Targeted by {list}",
+    "ToggleTargeting": "Toggle Targeting"
   },
   "COMPENDIUM.Name": "Compendium Name",
   "COMPENDIUM.Create": "Create Compendium",
@@ -606,6 +638,10 @@
   },
   "COMPENDIUM.ImportEntry": "Import Entry",
   "COMPENDIUM.Locked": "{title} [Locked]",
+  "COMPENDIUM.Migration": {
+    "Begin": "Beginning migration for Compendium pack {collection}, please be patient.",
+    "Complete": "Successfully migrated Compendium pack {collection}."
+  },
   "COMPENDIUM.SidebarTitle": "Compendium Packs",
   "COMPENDIUM.Type": "Document Type",
   "COMPENDIUM.TypeHint": "Each Compendium pack contains a specific type of Document.",
@@ -1309,6 +1345,7 @@
     "UNLOCK": "Unlock Hotbar",
     "PAGE_NEXT": "Next Page",
     "PAGE_PREV": "Previous Page",
+    "EMPTY": "Empty Slot",
     "CLEAR": "Clear Hotbar",
     "CLEAR_CONFIRM": "Clear all assigned Macros from your hotbar?"
   },
