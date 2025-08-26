@@ -517,6 +517,14 @@
 "CHAT.Title": "聊天记录",
 "CHAT.To": "对",
 "CHAT.UnknownUser": "未知用户",
+"COMBAT": {
+"DURATION": {
+"None": "无",
+"TURNS": {
+"other": "回合"
+}
+}
+},
 "COMBAT.Begin": "开始遭遇",
 "COMBAT.CONFIG": {
 "FIELDS": {
