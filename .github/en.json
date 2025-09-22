@@ -1457,6 +1457,7 @@
     "Paste": "Paste Objects",
     "Target": "Target Token",
     "Ruler": "Toggle Distance Ruler",
+    "UnconstrainedMovement": "Toggle Unconstrained Movement",
     "SendToBack": "Send Objects to the Back",
     "BringToFront": "Bring Objects to the Front",
     "ToggleCharacterSheet": "Toggle Character Sheet",
