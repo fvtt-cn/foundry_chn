@@ -409,6 +409,11 @@
 "drawn.label": "抽牌",
 "face.label": "正面",
 "faces": {
+"element": {
+"img.label": "卡面图像",
+"name.label": "卡面名称",
+"text.label": "卡面文本"
+},
 "img.label": "正面图像",
 "name.label": "正面名称",
 "text.label": "正面文本"
@@ -518,12 +523,32 @@
 "CHAT.To": "对",
 "CHAT.UnknownUser": "未知用户",
 "COMBAT": {
+"ACTIONS": {
+"LinkToScene": "链接至当前查看场景",
+"UnlinkFromScene": "从场景解除链接"
+},
 "DURATION": {
 "None": "无",
+"ROUNDS": {
+"few": "轮",
+"many": "轮",
+"one": "轮",
+"other": "轮",
+"two": "轮"
+},
 "TURNS": {
-"other": "回合"
+"few": "回合",
+"many": "回合",
+"one": "回合",
+"other": "回合",
+"two": "回合"
 }
-}
+},
+"PingInvisibleToken": "你无法查看此参战者的指示物。",
+"ResourceHint": "为每位参展者选择一个要跟进的属性。",
+"SkipDefeatedHint": "自动跳过被标记为战败的参战者？",
+"TargetedBy": "目标为 {list}",
+"ToggleTargeting": "切换目标"
 },
 "COMBAT.Begin": "开始遭遇",
 "COMBAT.CONFIG": {
@@ -544,7 +569,7 @@
 },
 "disposition": {
 "hint": "根据标记物的状态为回合标记添加色调。",
-"label": "Disposition Tint"
+"label": "色调倾向"
 },
 "enabled": {
 "hint": "默认为所有指示物启用战斗回合标记。",
@@ -576,7 +601,7 @@
 "COMBAT.CombatantNotInScene": "参战者 {name} 未存在于你当前所见的场景内。",
 "COMBAT.CombatantRemove": "移除参战者",
 "COMBAT.CombatantReroll": "重掷先攻",
-"COMBAT.CombatantScene": "解说员场景",
+"COMBAT.CombatantScene": "战斗场景",
 "COMBAT.CombatantStatus": "参战者状态",
 "COMBAT.CombatantToken": "链接指示物",
 "COMBAT.CombatantUpdate": "更新参战者",
@@ -676,6 +701,10 @@
 },
 "COMPENDIUM.ImportEntry": "导入条目",
 "COMPENDIUM.Locked": "{title} [锁定]",
+"COMPENDIUM.Migration": {
+"Begin": "正在为合集包 {collection} 开始迁移，请耐心等待。",
+"Complete": "成功迁移合集包 {collection}。"
+},
 "COMPENDIUM.Name": "合集名",
 "COMPENDIUM.OwnershipInheritBelow": "从下继承",
 "COMPENDIUM.OwnershipReset": "重置为默认",
@@ -683,7 +712,8 @@
 "COMPENDIUM.ToggleLocked": {
 "Option": "切换编辑锁定",
 "Title": "切换编辑锁定：{compendium}",
-"Warning": "你正试图解锁不属于此世界的合集以进行编辑。你在此合集包中所做的任何更改可能会在拥有它的系统或模组更新时丢失。你可能希望将其复制到您的世界中。你要继续吗？"
+"Unlock": "解锁",
+"Warning": "你正试图解锁不属于此世界的合集以进行编辑。你在此合集包中所做的任何更改可能会在拥有它的系统或模组更新时丢失。你可能希望将其复制到您的世界中。你希望如何进行？"
 },
 "COMPENDIUM.Type": "条目类型",
 "COMPENDIUM.TypeHint": "每个合集包含一个特定的条目类型。",
@@ -692,8 +722,11 @@
 "CutObjects": "分割 {count}} 个 {type} 对象。",
 "RightClick2": "双击右键",
 "RightClickDuringDrag": "拖动时右键单击",
+"RulerPlaceWaypoint": "放置标尺路径点",
+"RulerRemoveWaypoint": "移除标尺路径点",
 "Shift": "Shift",
-"UnconstrainedMovement": "不限制移动"
+"UnconstrainedMovement": "无限制移动",
+"UnconstrainedMovementP": "激活时，你可以移动指示物穿过墙壁和不可通行的地形。"
 },
 "CONTROLS.Alt": "alt",
 "CONTROLS.AltClick": "{alt} + 单击",
@@ -933,12 +966,15 @@
 "DETECTION.SeeInvisibility": "隐形可见",
 "DETECTION.SenseAll": "感知全部",
 "DETECTION.SenseInvisibility": "感知隐形",
+"DICE": {
+"ErrorNotParsable": "掷骰公式 “{formula}” 不是一个字符串。"
+},
 "DICE.CONFIG": {
 "Hint": "配置如何执行掷骰。",
 "Label": "配置骰子",
 "Title": "骰子配置"
 },
-"DICE.ErrorNonNumeric": "掷骰公式 {formula} 未产生结果数值。",
+"DICE.ErrorNonNumeric": "掷骰公式 “{formula}” 未产生结果数值。",
 "DICE.FULFILLMENT": {
 "Default": "Foundry VTT 数字掷骰",
 "Manual": "手动输入",
@@ -1178,7 +1214,7 @@
 "EFFECT.ChangeMode": "改变方式",
 "EFFECT.ChangePriority": "优先",
 "EFFECT.ChangeValue": "数值",
-"EFFECT.DurationTurns": "效果时长（回合）",
+"EFFECT.DurationTurns": "效果时长（战斗）",
 "EFFECT.FIELDS": {
 "description.label": "效果描述",
 "disabled.label": "效果暂停",
@@ -1207,7 +1243,7 @@
 "EFFECT.MODE_MULTIPLY": "乘",
 "EFFECT.MODE_OVERRIDE": "覆盖",
 "EFFECT.MODE_UPGRADE": "升级",
-"EFFECT.StartTurns": "效果起始轮数",
+"EFFECT.StartTurns": "效果起始",
 "EFFECT.StatusAsleep": "睡眠",
 "EFFECT.StatusBleeding": "失血",
 "EFFECT.StatusBlessed": "祝福",
@@ -1265,9 +1301,9 @@
 },
 "ERROR": {
 "RESOLUTION": {
-"Scale": "Foundry Virtual Tabletop 要求屏幕可用尺寸至少为 {reqWidth} 像素 × {reqHeight} 像素。当前窗口的尺寸为 {curWidth} 像素 × {curHeight} 像素。由于你在操作系统或浏览器层面设置了缩放因子，导致窗口的有效尺寸被缩减。为确保软件功能正常运行，请调整窗口大小或降低浏览器的缩放比例。",
-"Screen": "Foundry Virtual Tabletop 要求屏幕可用尺寸至少为 {reqWidth} 像素 × {reqHeight} 像素。当前窗口的尺寸为 {curWidth} 像素 × {curHeight} 像素。若要确保软件功能正常运行，请调整窗口大小以满足最低要求。",
-"Window": "Foundry Virtual Tabletop 要求屏幕分辨率达到 {reqWidth} 像素 × {reqHeight} 像素或更高。当前您的显示器分辨率为 {curWidth} 像素 × {curHeight} 像素。为确保软件功能正常运行，请调整分辨率或更换显示设备。"
+"Scale": "Foundry Virtual Tabletop 要求可用窗口尺寸至少为 {reqWidth} 像素 × {reqHeight} 像素。当前窗口的尺寸为 {curWidth} 像素 × {curHeight} 像素。由于你在操作系统或浏览器层面设置了缩放因子，导致窗口的有效尺寸被缩减。为确保软件功能正常运行，请调整窗口大小或降低浏览器的缩放比例。",
+"Screen": "Foundry Virtual Tabletop 要求屏幕分辨率至少为 {reqWidth} 像素 × {reqHeight} 像素。你的显示器分辨率为 {curWidth} 像素 × {curHeight} 像素。若要确保软件功能正常运行，必须提高分辨率或使用不同的显示设备。",
+"Window": "Foundry Virtual Tabletop 要求屏幕可用尺寸至少为 {reqWidth} 像素 × {reqHeight} 像素。当前窗口的尺寸为 {curWidth} 像素 × {curHeight} 像素。若要确保软件功能正常运行，请调整窗口大小以满足最低要求。"
 },
 "RequiresElectronReinstall": "Foundry Virtual Tabletop {version} 已正式发布，但由于其集成了全新的 Electron 版本，因此无法通过 Foundry Virtual Tabletop 应用程序内部完成安装。用户需访问 <a href=\"https://foundryvtt.com/me/licenses\" target=\"_blank\">foundryvtt.com</a> 网站重新下载并安装软件以完成更新。",
 "RequiresFullReinstall": "Foundry Virtual Tabletop {version} 已正式发布，但由于需要更新核心依赖项，因此无法通过 Foundry Virtual Tabletop 应用程序内部完成安装。用户需访问 <a href=\"https://foundryvtt.com/me/licenses\" target=\"_blank\">foundryvtt.com</a> 网站重新下载并安装软件以完成更新。",
@@ -1298,11 +1334,12 @@
 "Errors": "错误",
 "Expand": "展开",
 "FILES": {
+"CannotUpload": "禁止向此文件夹上传文件，因为更新过程中此处内容可能会被覆盖。请将文件上传至你的“assets”文件夹或其他允许的位置。",
 "DirectoryName": {
-"Label": "目录名称",
+"Label": "文件夹名称",
 "Placeholder": "我的文件夹"
 },
-"DirectoryPathLabel": "目录路径",
+"DirectoryPathLabel": "文件夹路径",
 "RemoveFavorite": "从收藏夹中移除文件夹",
 "TABS": {
 "data": "用户数据",
@@ -1330,13 +1367,13 @@
 "FILES.S3Label": "S3 文件桶",
 "FILES.Search": "搜索",
 "FILES.SelectFile": "选择文件",
-"FILES.SelectFolder": "选择目录",
+"FILES.SelectFolder": "选择文件夹",
 "FILES.Selected": "已选择",
 "FILES.TileSize": "素材网格尺寸",
 "FILES.TileSizeHint": "指定源图块图像的像素网格大小，以便在放置到激活的场景中时将自动调整其大小。",
 "FILES.TitleAny": "文件浏览器",
 "FILES.TitleAudio": "音频浏览器",
-"FILES.TitleFolder": "目录浏览器",
+"FILES.TitleFolder": "文件夹浏览器",
 "FILES.TitleFont": "字体浏览器",
 "FILES.TitleGraphics": "3D 浏览器",
 "FILES.TitleImage": "图像浏览器",
@@ -1345,7 +1382,7 @@
 "FILES.TitleVideo": "视频浏览器",
 "FILES.TogglePrivacy": "切换公开模式",
 "FILES.Upload": "上传",
-"FILES.WarnUploadModules": "文件已上传到模组或系统目录中。 这通常是<strong>不安全</strong>的，因为更新系统或模组时将会删除你上传的文件。",
+"FILES.WarnUploadModules": "文件已上传到模组或系统文件夹中。 这通常是<strong>不安全</strong>的，因为更新系统或模组时将会删除你上传的文件。",
 "FOLDER.Clear": "移出文件夹",
 "FOLDER.Collapse": "折叠全部文件夹",
 "FOLDER.CreateTable": "创建随机表",
@@ -1422,6 +1459,7 @@
 "HOTBAR": {
 "CLEAR": "清空快捷栏",
 "CLEAR_CONFIRM": "是否确认清除快捷栏中所有已分配的宏设置？",
+"EMPTY": "空槽",
 "LABEL": "动作栏",
 "LOCK": "锁定快捷栏",
 "MENU": "主菜单",
@@ -1509,6 +1547,7 @@
 "JOURNAL.ShowTo": "展示给",
 "JOURNAL.Submit": "保存条目",
 "JOURNAL.Uncategorized": "未分类",
+"JOURNAL.UnnamedCategory": "<Unnamed Category>",
 "JOURNAL.ViewCollapse": "折叠侧边栏",
 "JOURNAL.ViewExpand": "展开侧边栏",
 "JOURNAL.ViewMultiple": "连续浏览多个页面",
@@ -1554,7 +1593,8 @@
 "Cut": "切割对象",
 "Ruler": "切换距离标尺",
 "RulerWaypoint": "放置标尺路径点",
-"Title": "控制配置"
+"Title": "控制配置",
+"UnconstrainedMovement": "切换无限制移动"
 },
 "KEYBINDINGS.ActionCategories": "动作列表",
 "KEYBINDINGS.ActionFilter": "动作筛选",
@@ -1855,6 +1895,12 @@
 "FIELDS": {
 "authors": {
 "discord.label": "Discord 用户名",
+"element": {
+"discord.label": "Discord 用户名",
+"email.label": "电子邮箱地址",
+"name.label": "作者名称",
+"url.label": "网站 URL"
+},
 "email.label": "邮箱地址",
 "name.label": "作者名称",
 "url.label": "网站 URL"
@@ -1874,6 +1920,19 @@
 "label": "软件包标识符"
 },
 "packs": {
+"element": {
+"label.label": "标签",
+"name": {
+"disabledHint": "你无法更改此合集包名称，因为该名称已存在。",
+"hint": "用于标识合集包的唯一字母数字字符串，不含特殊字符。",
+"label": "名称"
+},
+"system": {
+"hint": "角色、物品或冒险合集包（其中包含角色或物品）必须声明其具体是为哪个游戏系统设计的。",
+"label": "需求系统"
+},
+"type.label": "文件类型"
+},
 "label.label": "标签",
 "name": {
 "disabledHint": "你不能更改为此合集包名称，因为其已存在。",
@@ -2466,13 +2525,18 @@
 "LABEL": "场景导航栏"
 },
 "SERVER_SETTINGS": {
+"ChangePassword": {
+"hint": "请输入当前管理员密码。",
+"label": "更改密码",
+"title": "请输入当前密码"
+},
 "FIELDS": {
 "adminPassword": {
 "hint": "管理员密码用于保护对 Foundry Virtual Tabletop 的此设置页面和配置区的访问。强烈建议为你的服务器设置管理员密码。",
 "label": "管理员密码"
 },
 "awsConfig": {
-"hint": "你可以提供一个用于集成 S3 的 AWS 配置文件。该路径可以是绝对路径，或者是用户数据目录中 Config 子目录的相对路径。",
+"hint": "你可以提供一个用于集成 S3 的 AWS 配置文件。该路径可以是绝对路径，或者是用户数据目录中 Config 子文件夹的相对路径。",
 "label": "AWS 配置文件路径"
 },
 "compressSocket": {
@@ -2508,11 +2572,11 @@
 "label": "默认语言"
 },
 "port": {
-"hint": "你可以选择 Foundry Virtual Tabletop 用于 TCP 连接通信的端口，并启用或禁用通用即插即用（UPnP）。",
+"hint": "选择 Foundry Virtual Tabletop 用于 TCP 连接通信的端口，并启用或禁用通用即插即用（UPnP）。",
 "label": "端口"
 },
 "sslCert": {
-"hint": "你可以提供证书和密钥文件的路径来使用安全套接字层（SSL）加密来运行服务器。该路径可以是绝对路径，或者是用户数据目录中 Config 子目录的相对路径。",
+"hint": "你可以提供证书和密钥文件的路径来使用安全套接字层（SSL）加密来运行服务器。该路径可以是绝对路径，或者是用户数据目录中 Config 子文件夹的相对路径。",
 "label": "证书"
 },
 "sslKey.label": "密钥",
@@ -2520,6 +2584,7 @@
 "hint": "允许与我们共享使用数据，以帮助我们改善 Foundry Virtual Tabletop。 收集的数据种类记录于我们的<a href=\"https://foundryvtt.com/article/privacy-policy/\" target=\"_blank\">隐私政策</a>，并不包含任何可识别到个人的信息，也不会与任何第三方分享。分享使用数据有助于我们回答“哪些 Foundry Virtual Tabletop 软件版本的使用率最高”、“哪些游戏系统的使用率最高”以及“哪些模组版本的安装频率最高”等问题。我们利用这些数据帮助我们改进软件兼容性，提供更好的客户支持，并与我们的社区分享聚合见解。如果禁用此选项，则不会共享任何数据。",
 "label": "允许分享使用数据"
 },
+"upnp.label": "启用 UPnP",
 "world": {
 "hint": "你可以选择在软件启动时自动启动一个可用的世界。",
 "label": "默认世界"
@@ -2697,11 +2762,27 @@
 "name": "用户界面配置"
 }
 },
+"SETTINGS.UniversalKeybindingsL": "根据输入的字符而非物理键位匹配快捷键。增强了对AZERTY、QWERTZ、假名及其他键盘布局的支持。此为实验性功能，需重新加载生效。",
+"SETTINGS.UniversalKeybindingsN": "通用快捷键（实验性）",
 "SETTINGS.Update": "更新软件",
 "SETUP": {
 "COMPAT": {
 "Previewing": "正在加载预览",
 "Title": "预览兼容性：{release}"
+},
+"INSTALL_PACKAGE": {
+"ManifestIncompatible": {
+"Title": "兼容性警告",
+"Warning": [
+"所提供的URL中的 {packageType} 与当前版本的 Foundry Virtual Tabletop 不兼容。",
+"你确定要继续安装吗？"
+]
+},
+"ManifestWrongPackageType": "所提供的URL似乎并未指向一个 {packageType}。"
+},
+"NoUpdateMode": {
+"Hint": "你无法更新此Foundry Virtual Tabletop 的实例，因为其启动时启用了--noupdate模式。",
+"Label": "更新已禁用"
 },
 "PackageProtected": "受保护",
 "PackageRequiresDowngradeHint": "要安装此软件包，你必须将 Foundry VTT 回退至 {vmax} 版本。",
@@ -2965,7 +3046,7 @@
 "SETUP.UpdateNewGeneration": "需要手动安装",
 "SETUP.UpdateNoArchive": "没有可安装的更新档",
 "SETUP.UpdateNoInternetError": "Foundry Virtual Tabletop 的更新需要有效的网络连接。",
-"SETUP.UpdateNoUpdateMode": "你无法更新此 Foundry Virtual Tabletop 实例，因为其是在 --noupdate 模式下启动的。",
+"SETUP.UpdateNoUpdateMode": "此 Foundry Virtual Tabletop 实例正在 Docker 容器中运行。如需更新，请拉取新的 Docker 镜像并重启容器。",
 "SETUP.UpdateNotAvailable": "在请求的更新通道中没有当前可用的软件更新。",
 "SETUP.UpdatePerformIfAvailable": "进行更新（如果可用）",
 "SETUP.UpdatePrototype": "原型",
@@ -3005,7 +3086,7 @@
 "SETUP.WorldMigrationBackupPrompt": "<p><strong>该过程不可撤销。</strong>建议你在进行迁移前备份你的世界数据，恢复到先前的版本需要有备份数据。</p>",
 "SETUP.WorldMigrationBegin": "开始迁移",
 "SETUP.WorldMigrationCreateBackup": "在迁移前创建备份？",
-"SETUP.WorldMigrationDisableModules": "<p>请在迁移你的世界前先更新游戏系统和模组。作为向新版软件迁移的一部分，所有模组都将会被禁用。你可以在迁移后重新手动开启这些模组。</p>",
+"SETUP.WorldMigrationDisableModules": "<p>在迁移你的世界之前，请务必更新你的游戏系统及已安装的模组。此次迁移至新版软件的过程中，所有模块及激活场景将被禁用，正在播放的音频也将中断。迁移完成后，你可以重新启用这些模组。</p>",
 "SETUP.WorldMigrationInProcess": "你的世界数据正在迁移以与 {version} 兼容。这需要一些时间。请保持耐心，不要关闭软件。",
 "SETUP.WorldMigrationRequiredTitle": "迁移世界数据",
 "SETUP.WorldMigrationSystemUnavailable": "<p>无法确定游戏系统 <strong>{system}</strong> （<code>{systemVersion}</code>）现版本是否与软件版本兼容，迁移可能会失败。</p>",
