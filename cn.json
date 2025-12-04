@@ -1,8 +1,8 @@
 {
 "ADVENTURE": {
 "ACTIONS": {
-"ClearSection": "Clear Section",
-"RestoreSection": "Restore Section"
+"ClearSection": "清除段落",
+"RestoreSection": "重置段落"
 },
 "FIELDS": {
 "caption": {
