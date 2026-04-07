@@ -23,6 +23,7 @@
 }
 },
 "ImportHeaderOptions": "选项",
+"ImportLoading": "正在加载冒险数据……",
 "Importer": {
 "V1": "冒险导入（V1）",
 "V2": "冒险导入（V2）"
@@ -61,6 +62,10 @@
 "FIELDS": {
 "elevation": {
 "label": "高度"
+},
+"name": {
+"hint": "一个可选的名称，用于帮助识别此光源。",
+"label": "名称"
 },
 "rotation": {
 "label": "旋转角"
@@ -142,6 +147,10 @@
 "hint": "切换是否暂时禁用此声音源。",
 "label": "隐藏"
 },
+"name": {
+"hint": "一个可选的名称，用于帮助识别此声音。",
+"label": "名称"
+},
 "path": {
 "hint": "配置环境音以使指示物在其半径内移动时播放音频文件。",
 "label": "源文件路径"
@@ -175,7 +184,18 @@
 },
 "APP.NavigateBackConfirm": "你确定想要退出 Foundry Virtual Tabletop 游戏吗？",
 "APPLICATION": {
+"ACTIONS": {
+"Attach": "重新附属窗口",
+"Close": "关闭",
+"Collapse": "折叠",
+"CopyUuid": "复制文档 UUID",
+"DeleteDocument": "删除文档",
+"Detach": "分离窗口",
+"Expand": "展开",
+"ImportDocument": "导入"
+},
 "IMAGE_POPOUT.AltText": "一张特色图片：主题未知。",
+"NavigateBackConfirm": "你确定要退出 Foundry Virtual Tabletop 游戏吗？",
 "TOOLS": {
 "Close": "关闭窗口",
 "ControlsMenu": "应用控件",
@@ -499,6 +519,16 @@
 "CARDS.PassWarnNoTargets": "没有可以向其递交的手牌或牌堆。",
 "CARDS.ResetConfirm": "你确定要重置 {name} 吗？将回收所有已发出的卡牌。",
 "CARDS.ReturnConfirm": "你确定吗？{name} 中的所有卡牌将会返回它们原本的牌组中。",
+"CHAT": {
+"MODES": {
+"blind": "GM 不可见",
+"gm": "仅限游戏管理员",
+"ic": "对角色公开",
+"public": "对玩家公开",
+"self": "仅自己"
+},
+"SendMessage": "发送消息"
+},
 "CHAT.Chat": "聊天",
 "CHAT.Clear": "清除记录",
 "CHAT.ConcealMessage": "改为非公开",
@@ -658,6 +688,52 @@
 "COMBAT.UnknownCombatant": "未知参战者",
 "COMBAT.Unlinked": "未链接的战斗，点击链接至场景",
 "COMBAT.WarnNonVisibleToken": "该参战者对你不可见。",
+"COMBATANT": {
+"ACTIONS": {
+"Clear": "清除先攻",
+"ClearMovementHistory": "清除移动历史",
+"Create": "创造参战者",
+"Remove": "移除参战者",
+"Reroll": "重掷先攻",
+"Update": "更新参战者"
+},
+"FIELDS": {
+"actorId.label": "代表角色",
+"defeated.label": "战败",
+"hidden.label": "隐藏",
+"img.label": "缩略图",
+"initiative.label": "先攻值",
+"name.label": "显示名称",
+"tokenId.label": "代表指示物"
+},
+"MovementHistoryCleared": "已清除指示物“{name}”的移动历史。",
+"PanTo": "转向参战者",
+"Ping": "标记指示物",
+"Status": "参战人员状况",
+"ToggleDead": "标记战败者",
+"ToggleVis": "切换可见性",
+"Unknown": "未知参战者",
+"UpdateNamed": "更新参战者：{name}",
+"WarnNonVisibleToken": "该参战者对你不可见。"
+},
+"COMMON": {
+"AreYouSure": "你确定吗？",
+"Cancel": "取消",
+"Confirm": "确认",
+"Default": "默认",
+"Delete": "删除",
+"Invalid": "无效",
+"No": "否",
+"None": "无",
+"Preview": "预览",
+"Unknown": "未知",
+"Warning": "警告",
+"Yes": "是"
+},
+"COMPENDIUM": {
+"CopyId": "复制合集包 ID",
+"IdCopiedClipboard": "合集包 ID “{id}” 已复制到剪贴板。"
+},
 "COMPENDIUM.ART": {
 "CONFIG": {
 "Hint": "使用箭头调整美术资源的优先级。当一个角色有多个美术资源时，将使用优先级最高的艺术资源。",
@@ -726,7 +802,10 @@
 "RulerRemoveWaypoint": "移除标尺路径点",
 "Shift": "Shift",
 "UnconstrainedMovement": "无限制移动",
-"UnconstrainedMovementP": "激活时，你可以移动指示物穿过墙壁和不可通行的地形。"
+"UnconstrainedMovementP": "激活时，你可以移动指示物穿过墙壁和不可通行的地形。",
+"WallDoor": "门",
+"WallSolid": "实体墙",
+"WallSolidBlocks": "移动、视觉和听觉"
 },
 "CONTROLS.Alt": "alt",
 "CONTROLS.AltClick": "{alt} + 单击",
@@ -2613,7 +2692,7 @@
 },
 "SETTINGS.AnimLightL": "允许播放光源动画。禁用该项可以在低端设备上改善性能。",
 "SETTINGS.AnimLightN": "光源动画",
-"SETTINGS.AnimVisionL": "在指示物移动的动画过程当中，同步动态改变指示物的视野以及光线。禁用该项可以在低端设备上改善性能。",
+"SETTINGS.AnimVisionL": "在指示物移动的动画过程当中，同步动态改变指示物的视野、光源及附属区域。禁用该项可以在低端设备上改善性能。",
 "SETTINGS.AnimVisionN": "指示物视野动画",
 "SETTINGS.CBubL": "启用后，当以角色进行发言或者发送表情时，消息将会以气泡框的形式显示在指示物上方。",
 "SETTINGS.CBubN": "聊天气泡",
