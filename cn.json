@@ -2798,7 +2798,7 @@
 "SCENE.DistortedDimensionsWarning": "你所选择的新尺寸与原始尺寸的宽高比存在差异。是否需要系统自动重新调整已放置对象（例如指示物）的位置？请注意，此操作可能导致对象在视觉上出现一定程度的变形。",
 "SCENE.Environment.Base": "基础环境",
 "SCENE.Environment.Dark": "黑暗环境",
-"SCENE.Environment.DarkHint": "其作用类似于基础环境设置，但会随着场景暗度趋近于 1 时生效。",
+"SCENE.Environment.DarkHint": "其作用类似于基础环境设置，但会随着场景暗度级别趋近于 1 时生效。",
 "SCENE.Environment.Reset": "重置为默认选项",
 "SCENE.FIELDS": {
 "background": {
@@ -2857,6 +2857,11 @@
 }
 },
 "fog": {
+"MODES": {
+"DISABLED": "无",
+"INDIVIDUAL": "个人",
+"SHARED": "共享"
+},
 "colors": {
 "explored": {
 "hint": "应用于场景中所有已探索但不在当前视野范围内的区域的颜色。",
@@ -2870,6 +2875,10 @@
 "exploration": {
 "hint": "若启用该设置，系统将针对每位用户单独跟进战争迷雾过程，并在场景探索期间将相关数据存储至数据库中。反之，若未启用此设置，则战争迷雾功能将被禁用，且指示物的可见范围仅限于当前视野内。",
 "label": "战争迷雾"
+},
+"mode": {
+"hint": "控制战争迷雾模式：“无”禁用探索（指示物只能看到当前视野）；“个人”为每个用户单独追踪探索进度；“共享”使用由所有用户共同贡献的单一探索状态。",
+"label": "探索模式"
 },
 "overlay": {
 "hint": "在场景中未探索的部分上层渲染可选的战争迷雾图像。",
@@ -2887,6 +2896,7 @@
 "grid": {
 "alpha.label": "网格不透明度",
 "color.label": "网格颜色",
+"distance.hint": "此场景中每个网格空间所代表的距离，以适合游戏系统的单位来表示。",
 "distance.label": "距离",
 "size": {
 "hint": "单个网格单元的像素尺寸。可通过网格配置工具对其进行可视化调节。",
@@ -2898,6 +2908,10 @@
 "units.label": "单位"
 },
 "initial.scale.label": "缩放",
+"initialLevel": {
+"hint": "当场景首次激活时，或用户加入游戏时场景处于激活状态，具有此层级可见性的用户将被分配至该层级。",
+"label": "初始层级"
+},
 "journal": {
 "hint": "一个关联的日志条目，为GM提供关于此场景的注释。",
 "label": "日志条目"
@@ -2924,15 +2938,33 @@
 "hint": "此场景处于激活状态时，音频播放列表中将播放的特定音效。",
 "label": "播放列表音效"
 },
+"shiftX.hint": "应用于场景可播放区域的偏移量，默认情况下该区域位于画布中心。",
+"shiftX.label": "X 轴偏移量",
+"shiftY.label": "Y 轴偏移量",
 "tokenVision": {
 "hint": "在此场景中仅限受控指示物的视野范围内内容可见。若禁用，则整个场景均可见。",
 "label": "指示物视野"
+},
+"transition": {
+"activeOnly": {
+"hint": "仅当场景被激活或加入游戏后处于激活状态时，才播放该过渡动画。",
+"label": "仅限激活"
+},
+"duration": {
+"hint": "过渡动画的持续时间（以毫秒为单位）。",
+"label": "持续时间"
+},
+"type": {
+"hint": "当查看场景时所播放的过渡动画类型。",
+"label": "过渡类型"
+}
 },
 "weather": {
 "hint": "显示该场景内的天气效果。",
 "label": "天气效果"
 }
 },
+"SCENE.FogModeChangeMessage": "迷雾探索模式已更改。这将重新加载迷雾探索并重置视野。",
 "SCENE.FogOfWar": "战争迷雾",
 "SCENE.GenerateThumb": "生成缩略图",
 "SCENE.GenerateThumbNoCanvas": "“禁用游戏画布”设置处于激活状态时，无法生成场景缩略图。",
@@ -2966,8 +2998,11 @@
 "SCENE.InvalidDimension": "所提供的尺寸可能导致另一尺寸的值为非整数。建议尝试调整为其他数值，或解除尺寸间的关联设置。",
 "SCENE.Loading": "正在加载 {name}",
 "SCENE.Notes": "场景说明",
+"SCENE.Perception": "感知",
 "SCENE.Pixels": "像素",
 "SCENE.Preload": "预加载场景",
+"SCENE.Presentation": "介绍",
+"SCENE.Properties": "场景属性",
 "SCENE.ShiftBG": "偏移背景",
 "SCENE.TABS": {
 "AMBIENCE": {
@@ -2977,12 +3012,98 @@
 "SHEET": {
 "ambience": "环境",
 "basics": "基础",
+"environment": "环境",
 "grid": "网格",
-"lighting": "光照"
+"levels": "层级",
+"lighting": "光照",
+"misc": "其他",
+"visibility": "可见性"
 }
 },
 "SCENE.ToggleNav": "切换导航栏",
+"SCENE.Transition": {
+"Animation": "过渡动画",
+"Config": "配置",
+"Preview": "预览",
+"Types": {
+"crosshatch": "网格淡化",
+"dots": "点",
+"fade": "淡出",
+"glitch": "故障",
+"hole": "孔洞",
+"holeSwirl": "孔洞漩涡",
+"hologram": "全息",
+"morph": "变形",
+"swirl": "旋动",
+"waterDrop": "水滴",
+"waves": "波纹",
+"whiteNoise": "白噪",
+"wind": "风吹"
+}
+},
 "SCENE.View": "查看场景",
+"SCENE_LEVEL": {
+"Actions": {
+"Add": {
+"hint": "场景支持多个垂直层级。添加新层级可将此场景转换为多层级场景。",
+"label": "添加层级"
+},
+"Down": "下降一层",
+"Edit": "编辑层级",
+"Remove": "移除层级",
+"Up": "上升一层",
+"View": "查看层级"
+},
+"FIELDS": {
+"background": {
+"alphaThreshold": {
+"hint": "背景纹理中 alpha 值低于此阈值的像素不会对光照或天气条件产生限制作用。",
+"label": "Alpha阈值"
+},
+"color.label": "颜色",
+"label": "背景",
+"src.label": "纹理",
+"tint.label": "色调"
+},
+"elevation": {
+"bottom.label": "背景高度",
+"label": "高度范围",
+"top.label": "前景高度"
+},
+"fog": {
+"label": "迷雾探索",
+"src.label": "未探索纹理",
+"tint.label": "纹理着色"
+},
+"foreground": {
+"alphaThreshold.label": "Alpha阈值",
+"label": "前景",
+"src.label": "纹理",
+"tint.label": "色调"
+},
+"textures": {
+"anchor": "锚点",
+"anchorX.label": "X",
+"anchorY.label": "Y",
+"fit.label": "适配模式",
+"label": "定位",
+"offset": "偏移",
+"offsetX.label": "X",
+"offsetY.label": "Y",
+"rotation.label": "旋转",
+"scale": "比例",
+"scaleX.label": "X",
+"scaleY.label": "Y"
+},
+"visibility": {
+"label": "层级可见性",
+"levels": {
+"hint": "配置从当前层级完全或部分可见的其他层级的集合。",
+"label": "可见层级"
+}
+}
+}
+},
 "SCENE_NAVIGATION": {
 "COLLAPSE": "折叠导航栏",
 "EXPAND": "扩展导航栏",
@@ -3047,6 +3168,10 @@
 "telemetry": {
 "hint": "允许与我们共享使用数据，以帮助我们改善 Foundry Virtual Tabletop。 收集的数据种类记录于我们的<a href=\"https://foundryvtt.com/article/privacy-policy/\" target=\"_blank\">隐私政策</a>，并不包含任何可识别到个人的信息，也不会与任何第三方分享。分享使用数据有助于我们回答“哪些 Foundry Virtual Tabletop 软件版本的使用率最高”、“哪些游戏系统的使用率最高”以及“哪些模组版本的安装频率最高”等问题。我们利用这些数据帮助我们改进软件兼容性，提供更好的客户支持，并与我们的社区分享聚合见解。如果禁用此选项，则不会共享任何数据。",
 "label": "允许分享使用数据"
+},
+"unixSocket": {
+"hint": "可以输入一个 Unix 域 socket 的文件路径，而非端口号。如果同时输入了端口和套接字，那么将使用 socket 路径。",
+"label": "Unix Socket"
 },
 "upnp.label": "启用 UPnP",
 "world": {
@@ -3173,6 +3298,9 @@
 "SETTINGS.TokenDragPreviewL": "启用后，左键拖拽指示物时会实时预览其视野和光照。此项默认禁用，因为其会促使令人讨厌的超游行为发生。",
 "SETTINGS.TokenDragPreviewN": "指示物拖拽视野",
 "SETTINGS.UI": {
+"ACTIONS": {
+"Reset": "重置"
+},
 "FIELDS": {
 "chatNotifications": {
 "cards": "聊天卡片",
@@ -3244,6 +3372,7 @@
 },
 "ManifestWrongPackageType": "所提供的URL似乎并未指向一个 {packageType}。"
 },
+"Install": "安装",
 "NoUpdateMode": {
 "Hint": "你无法更新此Foundry Virtual Tabletop 的实例，因为其启动时启用了--noupdate模式。",
 "Label": "更新已禁用"
@@ -3253,6 +3382,7 @@
 "PackageRequiresDowngradeLabel": "需要回退",
 "PackageRequiresUpgradeHint": "要安装此软件包，你必须将 Foundry VTT 升级到 {vmin} 版本。",
 "PackageRequiresUpgradeLabel": "需要升级",
+"Software": "软件",
 "UPDATE_NOTES": {
 "BeginDownload": "开始下载",
 "FullList": "查看发布说明的<a href=\"{url}\" target=\"_blank\">全部内容</a>。",
@@ -3261,6 +3391,17 @@
 "Title": "发布说明：{release}"
 },
 "ViewPackageWebsite": "查看软件包网站",
+"WorldBlank": "空白世界",
+"WorldCancelConfirm": "若现在返回设置，你在此处所做的所有更改将会丢失。",
+"WorldContinue": "继续",
+"WorldCreateCancel": "取消世界创建",
+"WorldCreateDependencyFail": "由于未安装所需的依赖项，无法创建世界。",
+"WorldCreateNoSystem": "在继续之前，你必须为世界选择一个游戏系统。",
+"WorldCreateNoTitle": "在继续之前，你必须为这个世界输入一个名称。",
+"WorldCreateSuccess": "创建成功，正在启动中...",
+"WorldCreating": "创建世界中……",
+"WorldFilterAdventures": "筛选冒险",
+"WorldFilterSystems": "筛选系统",
 "WorldLaunchCleanWorld": "清理世界数据",
 "WorldLaunchExtractDemo": "提取 Demo 数据"
 },
