@@ -185,7 +185,7 @@
 "APP.NavigateBackConfirm": "你确定想要退出 Foundry Virtual Tabletop 游戏吗？",
 "APPLICATION": {
 "ACTIONS": {
-"Attach": "重新附属窗口",
+"Attach": "还原窗口",
 "Close": "关闭",
 "Collapse": "折叠",
 "CopyUuid": "复制文档 UUID",
@@ -794,16 +794,30 @@
 "COMPENDIUM.Type": "条目类型",
 "COMPENDIUM.TypeHint": "每个合集包含一个特定的条目类型。",
 "CONTROLS": {
+"ClearAllOwned": "清除所有拥有的对象",
+"ClearAllOwnedHint": "是否永久删除你所拥有的全部已查看的 type} 对象？",
 "Control": "Control",
 "CutObjects": "分割 {count}} 个 {type} 对象。",
+"DeleteLockedObjects": "删除锁定的对象",
+"LightSelect": "选择光源",
+"Palette": "调色板",
+"RegionCircle": "绘制圆形",
+"RegionCone": "绘制锥形",
+"RegionEmanation": "绘制光环",
+"RegionLine": "绘制线形",
+"RegionRing": "绘制环形",
+"RegionTemplateMode": "测量模板模式",
+"RegionTemplateModeP": "当此功能启用时，系统将忽略调色板设置，且所绘制的每个形状均会创建独立的区域。形状无法被添加至既有区域中。",
 "RightClick2": "双击右键",
 "RightClickDuringDrag": "拖动时右键单击",
 "RulerPlaceWaypoint": "放置标尺路径点",
 "RulerRemoveWaypoint": "移除标尺路径点",
 "Shift": "Shift",
+"SoundSelect": "选择环境音",
 "UnconstrainedMovement": "无限制移动",
 "UnconstrainedMovementP": "激活时，你可以移动指示物穿过墙壁和不可通行的地形。",
 "WallDoor": "门",
+"WallDoorBlocks": "除非开启，否则无法移动、视物和听觉",
 "WallSolid": "实体墙",
 "WallSolidBlocks": "移动、视觉和听觉"
 },
@@ -1046,7 +1060,13 @@
 "DETECTION.SenseAll": "感知全部",
 "DETECTION.SenseInvisibility": "感知隐形",
 "DICE": {
-"ErrorNotParsable": "掷骰公式 “{formula}” 不是一个字符串。"
+"CONFIG": {
+"DefaultMethod": "默认方式"
+},
+"ErrorNotParsable": "掷骰公式 “{formula}” 不是一个字符串。",
+"FULFILLMENT": {
+"UseDefault": "使用默认"
+}
 },
 "DICE.CONFIG": {
 "Hint": "配置如何执行掷骰。",
@@ -1069,11 +1089,17 @@
 "CombatantGroup": "参战者群组",
 "CombatantGroups": "参战者群组",
 "FIELDS": {
+"author.label": "作者",
 "description.label": "描述",
 "elevation.label": "高度",
+"folder.label": "文件夹",
 "height.label": "高",
 "hidden.label": "隐藏",
 "img.label": "图像路径",
+"levels": {
+"hint": "选择适用包含的层级。未作选择则对全部层级应用包含。",
+"label": "层级"
+},
 "name.label": "名称",
 "rotation.label": "旋转",
 "sort": {
@@ -1087,7 +1113,12 @@
 },
 "JournalEntryCategories": "类别",
 "JournalEntryCategory": "类别",
-"NewCount": "新 {type} ({count})"
+"Level": "层级",
+"Levels": "层级",
+"NewCount": "新 {type} ({count})",
+"Replace": "替换 {type}",
+"ReplaceWarning": "此集合中已存在一个具有 ID <code>{id}</code> 的文档 {link}。你希望替换它还是创建一个副本？",
+"Sheet": "卡"
 },
 "DOCUMENT.ActiveEffect": "动态效果",
 "DOCUMENT.ActiveEffects": "动态效果",
@@ -1167,6 +1198,48 @@
 "DOCUMENT.Users": "用户",
 "DOCUMENT.Wall": "墙",
 "DOCUMENT.Walls": "墙",
+"DRAWING": {
+"ACTIONS": {
+"resetDefaults": "重置默认值",
+"submitCreate": "创建绘图",
+"submitUpdate": "更新绘图"
+},
+"FIELDS": {
+"bezierFactor": {
+"hint": "对于手动绘图，平滑度控制样条曲线的平滑程度。",
+"label": "平滑度"
+},
+"fillAlpha.label": "填充不透明度",
+"fillColor.label": "填充颜色",
+"fillType.label": "填充类型",
+"fontFamily.label": "字体名称",
+"fontSize.label": "字体大小",
+"interface": {
+"hint": "代表“对象”的一张图会呈现在主画布组中，并受光照和战争迷雾探索的影响。传达“信息”的一张图会呈现在界面组中，除非被隐藏，否则对所有玩家可见。",
+"label": "绘图功能"
+},
+"name": {
+"hint": "一个可选的名称，用于帮助识别此绘图。",
+"label": "名称"
+},
+"shape": {
+"height.label": "高",
+"width.label": "宽"
+},
+"strokeAlpha.label": "线条不透明度",
+"strokeColor.label": "线条颜色",
+"strokeWidth.label": "线条宽度",
+"text.label": "文本标签",
+"textAlpha.label": "文本不透明度",
+"textColor.label": "文本颜色",
+"texture.label": "填充纹理"
+},
+"FILL_TYPES": {
+"none": "无",
+"pattern": "图案",
+"solid": "纯色"
+}
+},
 "DRAWING.ConfigDefaultTitle": "默认绘制配置",
 "DRAWING.FIELDS": {
 "sort.label": "排序"
@@ -1221,6 +1294,32 @@
 "Distance": "距离",
 "Documentation": "文档",
 "Duplicate": "复制",
+"EDITOR": {
+"Custom": "自定义",
+"Font": {
+"Color": {
+"Label": "字体颜色",
+"Set": "设置字体颜色",
+"Title": "颜色"
+},
+"Size": {
+"Huge": "巨大",
+"Invalid": "初始字体大小",
+"Label": "字体大小",
+"Large": "大号",
+"Normal": "正常",
+"Placeholder": "12 pt",
+"Set": "设置字体大小",
+"Small": "小号",
+"Title": "大小"
+},
+"Title": "字体"
+},
+"HTML": "HTML",
+"ImageCaption": "说明",
+"Insert": "嵌入",
+"Lists": "列表"
+},
 "EDITOR.Alignment": "对齐",
 "EDITOR.AlignmentCenter": "居中对齐",
 "EDITOR.AlignmentJustify": "两边对齐",
@@ -1289,6 +1388,128 @@
 "EDITOR.Underline": "下划线",
 "EDITOR.UploadComplete": "上传完成。",
 "EDITOR.UploadingFile": "上传图像文件。",
+"EFFECT": {
+"CHANGES": {
+"PHASES": {
+"final": {
+"hint": "在衍生数据计算完毕后",
+"label": "最终"
+},
+"initial": {
+"hint": "在基础数据属性初始化之后，但在衍生数据准备就绪前",
+"label": "初始"
+}
+},
+"TYPES": {
+"add": "加",
+"custom": "自定义",
+"downgrade": "降级",
+"multiply": "乘",
+"override": "覆盖",
+"subtract": "减",
+"upgrade": "升级"
+}
+},
+"DURATION": {
+"EXPIRY_EVENTS": {
+"combatEnd": "战斗结束",
+"combatStart": "战斗开始",
+"roundEnd": "轮结束",
+"roundStart": "轮开始",
+"turnEnd": "回合结束",
+"turnStart": "回合开始"
+},
+"Header": "效应持续时间",
+"Label": "持续时间",
+"MaxOneWarning": "若持续时间以 {units} 表示，其值将被视为不大于 1。",
+"ROUNDS": {
+"few": "{rounds} 轮",
+"many": "{rounds} 轮",
+"one": "1 轮",
+"other": "{rounds} 轮",
+"two": "2 轮"
+},
+"ROUNDS_AGO": {
+"few": "{rounds} 轮前",
+"many": "{rounds} 轮前",
+"one": "1 轮前",
+"other": "{rounds} 轮前",
+"two": "2 轮前"
+},
+"TURNS": {
+"few": "{turns} 回合",
+"many": "{turns} 回合",
+"one": "1 回合",
+"other": "{turns} 回合",
+"two": "2 回合"
+},
+"TURNS_AGO": {
+"few": "{turns} 回合前",
+"many": "{turns} 回合前",
+"one": "1 回合前",
+"other": "{turns} 回合前",
+"two": "2 回合前"
+},
+"UNITS": {
+"GROUPS": {
+"combat": "战斗",
+"time": "时间"
+},
+"combats": "战斗遭遇",
+"days": "日",
+"hours": "小时",
+"minutes": "分钟",
+"months": "月",
+"rounds": "轮",
+"seconds": "秒",
+"turns": "回合",
+"weeks": "周",
+"years": "年"
+}
+},
+"FIELDS": {
+"changes": {
+"element": {
+"key.label": "属性键",
+"phase": {
+"hint": "在数据准备阶段或在其他事件中应用变更的节点。",
+"label": "阶段"
+},
+"priority.label": "优先级",
+"type.label": "类型",
+"value.label": "数值"
+}
+},
+"duration": {
+"expiry.label": "终止事件",
+"units.label": "持续时间单位",
+"value.label": "持续时间值"
+},
+"showIcon": {
+"hint": "当该效果处于激活状态时，是否应在用户界面中显示其对应的图标？",
+"label": "展示图标？"
+},
+"start": {
+"combatant.label": "参战者",
+"initiative.label": "先攻",
+"round.label": "轮",
+"time.label": "开始时间",
+"turn.label": "回合"
+}
+},
+"SHOW_ICON": {
+"always": "总是",
+"conditional": "若为临时效果",
+"never": "从不"
+},
+"START": {
+"Combat": "轮 {round}，回合 {turn}",
+"Combatant": "{combatant}（先攻骰：{initiative）",
+"Header": "效果开始",
+"NoInitiative": "未掷骰",
+"Time": "开始时间"
+}
+},
 "EFFECT.ChangeKey": "属性名",
 "EFFECT.ChangeMode": "改变方式",
 "EFFECT.ChangePriority": "优先",
@@ -1373,12 +1594,20 @@
 },
 "TAGS": {
 "Add": "添加标签",
+"AddGridOffset": "添加网格偏移量",
 "ErrorBlank": "HTMLStringTagsElement 中的标签不能为空。",
+"ErrorInvalidGridOffset2D": "二维网格偏移量必须有两个整数坐标，这两个坐标之间用点“.”分隔。",
+"ErrorInvalidGridOffset3D": "三维网格偏移量必须具有三个整数坐标，这些坐标之间用点“.”分隔。",
 "ErrorNonUnique": "标签“{tag}”已设置。",
-"Remove": "移除标签"
+"Remove": "移除标签",
+"RemoveGridOffset": "移除网格偏移量"
 }
 },
 "ERROR": {
+"DETACHED": {
+"PopupBlocked": "无法分离应用程序。你可能启用了弹出窗口阻止程序。",
+"TimedOut": "在分离应用程序窗口时操作超时。你可能启用了弹出窗口阻止程序。"
+},
 "RESOLUTION": {
 "Scale": "Foundry Virtual Tabletop 要求可用窗口尺寸至少为 {reqWidth} 像素 × {reqHeight} 像素。当前窗口的尺寸为 {curWidth} 像素 × {curHeight} 像素。由于你在操作系统或浏览器层面设置了缩放因子，导致窗口的有效尺寸被缩减。为确保软件功能正常运行，请调整窗口大小或降低浏览器的缩放比例。",
 "Screen": "Foundry Virtual Tabletop 要求屏幕分辨率至少为 {reqWidth} 像素 × {reqHeight} 像素。你的显示器分辨率为 {curWidth} 像素 × {curHeight} 像素。若要确保软件功能正常运行，必须提高分辨率或使用不同的显示设备。",
@@ -1536,19 +1765,37 @@
 "GridSpaces": "网格间距",
 "GridUnits": "网格单位",
 "HOTBAR": {
+"ACTIONS": {
+"Clear": "清除快捷栏",
+"Lock": "锁定快捷栏",
+"Menu": "主菜单",
+"Mute": "静音音量",
+"PageNext": "下一页",
+"PagePrev": "前一页",
+"Unlock": "解锁快捷栏",
+"Unmute": "取消静音"
+},
 "CLEAR": "清空快捷栏",
 "CLEAR_CONFIRM": "是否确认清除快捷栏中所有已分配的宏设置？",
+"ClearConfirm": "要从你的快捷栏中清除全部已分配的宏吗？",
 "EMPTY": "空槽",
+"Empty": "空槽",
 "LABEL": "动作栏",
 "LOCK": "锁定快捷栏",
+"Label": "动作栏",
 "MENU": "主菜单",
 "MUTE": "静音",
 "PAGE_NEXT": "下一页",
 "PAGE_PREV": "上一页",
+"ToggleSheet": "显示 {document}",
 "UNLOCK": "解锁快捷栏",
 "UNMUTE": "取消静音"
 },
 "HTMLDocumentTagsElement.PLACEHOLDER": "输入 UUID 或删除 {type}",
+"HUD": {
+"ChangeLevel": "切换层级",
+"ToFrontOrBack": "置顶 / 置底"
+},
 "HUD.AssignStatusEffects": "切换状态效果",
 "HUD.Elevation": "高度",
 "HUD.OpenConfig": "打开配置",
@@ -1595,6 +1842,18 @@
 "JOIN.ErrorInvalidPassword": "为 {user} 输入的密码无效！",
 "JOIN.ErrorUserDoesNotExist": "请求的用户 “{user}” 不存在！",
 "JOIN.LoginSuccess": "已成功登录 {user}，加入游戏中！",
+"JOURNAL": {
+"FIELDS": {
+"name": {
+"label": "条目标题"
+}
+},
+"SHOW": {
+"all": "所有",
+"authorized": "授权的",
+"selected": "已选的"
+}
+},
 "JOURNAL.ActionShow": "展示给玩家",
 "JOURNAL.ActionShowSuccess": "已向 {which} 玩家展示了 {title} 的内容。",
 "JOURNAL.AddPage": "增加一页",
@@ -1631,6 +1890,29 @@
 "JOURNAL.ViewExpand": "展开侧边栏",
 "JOURNAL.ViewMultiple": "连续浏览多个页面",
 "JOURNAL.ViewSingle": "浏览单个页面",
+"JOURNALENTRYPAGE": {
+"FIELDS": {
+"category.label": "页面类别",
+"image": {
+"caption.label": "图像说明"
+},
+"name.label": "页面名称",
+"src.label": "文件路径",
+"text": {
+"format.label": "格式"
+},
+"title": {
+"level.label": "标题级别",
+"show.label": "显示页面标题"
+},
+"video": {
+"autoplay.label": "自动播放视频",
+"controls.label": "展示视频控制",
+"loop.label": "循环视频",
+"volume.label": "视频音量"
+}
+}
+},
 "JOURNALENTRYPAGE.Category": "页面类别",
 "JOURNALENTRYPAGE.DefaultPageSheet": "默认 {page} 页码",
 "JOURNALENTRYPAGE.Format": "格式",
@@ -1668,8 +1950,18 @@
 "EditBinding": "编辑绑定",
 "SaveBinding": "保存绑定"
 },
+"Ascend": "垂直上升",
 "BoundKey": "绑定键",
 "Cut": "切割对象",
+"Descend": "垂直下降",
+"MoveDown": "向下移动",
+"MoveDownLeft": "向左下移动",
+"MoveDownRight": "向右下移动",
+"MoveLeft": "向左移动",
+"MoveRight": "向右移动",
+"MoveUp": "向上移动",
+"MoveUpLeft": "向左上移动",
+"MoveUpRight": "向右上移动",
 "Ruler": "切换距离标尺",
 "RulerWaypoint": "放置标尺路径点",
 "Title": "控制配置",
@@ -1720,6 +2012,60 @@
 "KEYBINDINGS.Uneditable": "不可编辑的绑定",
 "KEYBINDINGS.ZoomIn": "垂直上升或放大画布",
 "KEYBINDINGS.ZoomOut": "垂直下降或缩小画布",
+"LIGHT": {
+"ANIMATION": {
+"BewitchingWave": "扭曲波",
+"BlackHole": "黑洞",
+"Chroma": "色度",
+"DenseSmoke": "浓烟",
+"Emanation": "神秘纹",
+"EnergyField": "能量场",
+"FairyLight": "彩灯",
+"Flame": "火把",
+"Fog": "迷雾",
+"ForceGrid": "力场格",
+"GhostLight": "幽光",
+"HexaDome": "六角穹顶纹",
+"LightDome": "穹顶纹",
+"MagicalGloom": "魔法幽暗",
+"Pulse": "脉动",
+"RadialRainbow": "放射彩虹",
+"ReactivePulse": "声控脉动",
+"Revolving": "旋转光效",
+"RoilingMass": "搅动质",
+"Siren": "警报灯效",
+"SmokePatch": "雾斑",
+"StarLight": "星光",
+"Sunburst": "日照纹",
+"SwirlingRainbow": "扭曲彩虹",
+"Torch": "闪烁光",
+"Vortex": "涡流",
+"Wave": "脉冲波"
+},
+"COLORATION": {
+"AdaptiveAttenuation": "自适应衰减",
+"AdaptiveLuminance": "自适应亮度",
+"ColorBurn": "颜色加深",
+"ExternalBurn": "外部颜色加深",
+"ExternalHalo": "外部光晕",
+"HighAbsorption": "高吸收",
+"InternalBurn": "内部颜色加深",
+"InternalHalo": "内部光晕",
+"InvertAbsorption": "反向吸收",
+"Legacy": "传统着色",
+"LowAbsorption": "低吸收",
+"NaturalAttenuation": "自然衰减",
+"NaturalLight": "自然光"
+},
+"FIELDS": {
+"animation": {
+"type": {
+"any": "任意",
+"none": "无动画"
+}
+}
+}
+},
 "LIGHT.AdaptiveLuminance": "自适应亮度",
 "LIGHT.AnimationBewitchingWave": "扭曲波",
 "LIGHT.AnimationBlackHole": "黑洞",
@@ -1859,10 +2205,32 @@
 "MACRO.Remove": "移除宏",
 "MACRO.Save": "保存宏",
 "MACRO.UnlockBar": "解锁热键栏",
+"MEASUREMENT": {
+"ABBR": {
+"Pixels": "px"
+},
+"Angle": "角度",
+"Coordinates": "坐标",
+"Degrees": "度数",
+"Direction": "方向",
+"Distance": "距离",
+"GridSpaces": "网格间距",
+"GridUnits": "网格单位",
+"Height": "高",
+"Pixels": "像素",
+"Ratio": "比率",
+"Scale": "比例",
+"Width": "宽"
+},
+"MENU.Close": "关闭主菜单",
 "MENU.Logout": "登出",
 "MENU.NavLabel": "主菜单",
 "MENU.Players": "玩家设置",
 "MENU.Reload": "重新加载",
+"MODMANAGE": {
+"Activate": "激活",
+"Deactivate": "禁用"
+},
 "MODMANAGE.Bugs": "错误/问题报告",
 "MODMANAGE.DeactivateAll": "禁用全部模组",
 "MODMANAGE.DepDisable": "下列依赖项将变为未使用的状态，可以禁用：",
@@ -2411,10 +2779,15 @@
 "Dark": "黑暗环境",
 "ResetEnvironment": "重置为默认选项"
 },
+"SCENE.Audio": "音频",
 "SCENE.BackgroundScale": "背景图像缩放比例",
 "SCENE.BackgroundScaleHint": "按住 Shift 键并滚动鼠标滚轮，或按住 Shift 键同时使用向上箭头键和向下箭头键，可对背景图片的尺寸进行精确调整。",
 "SCENE.CaptureInitialViewPosition": "在场景配置表单中，将已捕获的画布位置设为初始视图。",
 "SCENE.Configure": "配置",
+"SCENE.CurrentLevel": "当前层级",
+"SCENE.Darkness": "黑暗",
+"SCENE.Details": "详情",
+"SCENE.DeterminingDimensions": "确定场景尺寸。",
 "SCENE.DimensionChangeTitle": "更改场景尺寸？",
 "SCENE.DimensionChangeWarning": "你当前正在调整此场景的基本尺寸。如果该场景中已放置有对象，此项操作可能会导致这些对象相对于背景图像的位置出现偏移。",
 "SCENE.DimensionLinked": "当前场景尺寸已关联，修改其中一个尺寸时，系统将自动调整另一个尺寸以保持纵横比不变。如需解除此关联，请点击“取消关联”按钮。",
@@ -2423,6 +2796,10 @@
 "SCENE.DimensionsHint": "在首次配置背景图像时，系统将自动调整场景尺寸以确保其与背景图像的尺寸保持一致。",
 "SCENE.DistortedDimensionsTitle": "场景尺寸参数异常",
 "SCENE.DistortedDimensionsWarning": "你所选择的新尺寸与原始尺寸的宽高比存在差异。是否需要系统自动重新调整已放置对象（例如指示物）的位置？请注意，此操作可能导致对象在视觉上出现一定程度的变形。",
+"SCENE.Environment.Base": "基础环境",
+"SCENE.Environment.Dark": "黑暗环境",
+"SCENE.Environment.DarkHint": "其作用类似于基础环境设置，但会随着场景暗度趋近于 1 时生效。",
+"SCENE.Environment.Reset": "重置为默认选项",
 "SCENE.FIELDS": {
 "background": {
 "offsetX.label": "水平",
@@ -2556,11 +2933,15 @@
 "label": "天气效果"
 }
 },
+"SCENE.FogOfWar": "战争迷雾",
 "SCENE.GenerateThumb": "生成缩略图",
 "SCENE.GenerateThumbNoCanvas": "“禁用游戏画布”设置处于激活状态时，无法生成场景缩略图。",
 "SCENE.GenerateThumbProgress": "正在为场景 {name} 生成缩略图。",
 "SCENE.GenerateThumbSuccess": "正在为场景 {name} 生成缩略图图像。",
 "SCENE.GenerateThumbUploadDenied": "由于用户缺乏上传文件的权限，场景缩略图无法生成。",
+"SCENE.GlobalIllumination": "全局光照",
+"SCENE.GridAppearance": "外观",
+"SCENE.GridAppearanceHint": "配置网格线的外观。",
 "SCENE.GridConfigTool": "网格配置工具",
 "SCENE.GridConfigToolHint": "通过鼠标滚轮和方向键，或手动设置以下字段，以调整网格与背景图像的位置。",
 "SCENE.GridGridless": "无网格",
@@ -2568,6 +2949,8 @@
 "SCENE.GridHexEvenR": "六边格行 - 偶数",
 "SCENE.GridHexOddQ": "六边格列 - 奇数",
 "SCENE.GridHexOddR": "六边格行 - 奇数",
+"SCENE.GridMeasurement": "尺寸",
+"SCENE.GridMechanics": "机制",
 "SCENE.GridPosition": "背景图像偏移",
 "SCENE.GridPositionHint": "使用方向键来移动背景图像的偏移量。",
 "SCENE.GridReset": "重置更改",
@@ -2575,6 +2958,8 @@
 "SCENE.GridScale": "网格比例",
 "SCENE.GridSizeError": "此次调整操作将导致网格尺寸低于最小限制 50 像素。如需调整至该尺寸，建议先切换至无网格模式，并在完成调整后重新配置新的网格参数。",
 "SCENE.GridSquare": "方格",
+"SCENE.InheritedField": "该字段值当前继承自“{level}”层级；点击此处直接编辑。",
+"SCENE.InitialLevel": "初始层级",
 "SCENE.InitialView": "初始视图位置",
 "SCENE.InitialViewButton": "捕获当前视图",
 "SCENE.InitialViewHint": "指定一个默认的摄像机位置，该位置将在首次查看此场景时呈现。",
