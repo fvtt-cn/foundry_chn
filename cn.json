@@ -3373,6 +3373,8 @@
 "ManifestWrongPackageType": "所提供的URL似乎并未指向一个 {packageType}。"
 },
 "Install": "安装",
+"InstallDependenciesSuccess": "依赖项安装成功",
+"InstallingDependencies": "安装依赖项",
 "NoUpdateMode": {
 "Hint": "你无法更新此Foundry Virtual Tabletop 的实例，因为其启动时启用了--noupdate模式。",
 "Label": "更新已禁用"
