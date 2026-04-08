@@ -268,6 +268,14 @@
 }
 }
 },
+"applyActiveEffect": {
+"FIELDS": {
+"effects": {
+"hint": "应用于该区域内指示物的效果。",
+"label": "效果"
+}
+}
+},
 "base": {
 "FIELDS": {
 "events": {
@@ -281,6 +289,35 @@
 },
 "SECTIONS": {
 "events": "触发事件"
+}
+},
+"changeLevel": {
+"Confirm": "是否要将 {token} 转移至 {level} ？",
+"ConfirmSelect": "选择你想要 {token} 转移至的层级。",
+"Move": "移动",
+"MoveDown": "向下移动",
+"MoveUp": "向上移动"
+},
+"defineSurface": {
+"FIELDS": {
+"exposure": {
+"hint": "向位于该抬升表面下方或外部的观察者，部分显示其可见区域。显示区域的大小取决于观察者与表面边界的夹角；夹角越大，显示的区域就越小。此选项适用于屋顶、阳台或其他悬空平台。",
+"label": "显示抬升表面"
+},
+"light.label": "限制光照和黑暗",
+"move.label": "限制移动",
+"occlusion": {
+"hint": "当可遮挡指示物位于地面之下时，遮挡模式设置为“地面”的方块，以及处于相同高度或更高高度的任何前景或背景层级纹理，都将被遮挡。",
+"label": "遮挡"
+},
+"placement.label": "放置",
+"sight.label": "限制视觉",
+"sound.label": "限制声音"
+},
+"PLACEMENTS": {
+"both.label": "底部和顶部",
+"bottom.label": "底部",
+"top.label": "顶部"
 }
 },
 "displayScrollingText": {
@@ -340,14 +377,39 @@
 "teleportToken": {
 "Confirm": "你想传送 {token} 吗？",
 "ConfirmGM": "你想将 {token} 传送到 {scene} 中的 {region} 吗？",
+"ConfirmRevealed": "是否将 {token} 转移至 {scene} 中的 {region}？",
 "FIELDS": {
 "choice": {
-"hint": "允许移动指示物的用户选择是否传送它。",
+"hint": "允许移动指示物的用户选择是否传送它。若配置了多个目标区域，当此传送器被发现或用户为GM时，允许用户选择目标区域。",
 "label": "允许选择"
 },
 "destination": {
 "hint": "指示物移入区域后将被传送到的目标区域。",
 "label": "目的地"
+},
+"destinations": {
+"hint": "指示物被移入此区域后转移至的目的区域。如果配置了多个目的区域，除非允许选择且此传送器已显示或移动指示物的用户为 DM，否则将随机选择其中一个。",
+"label": "目的地"
+},
+"dialog.revealed": {
+"hint": "若目标已显示或用户为GM，则在确认对话框中显示此文本。{token} 会被替换为指示物的名称；{region} 会被替换为目标区域的名称（除非该传送器有多个目标）；{scene} 会被替换为目标场景的名称（除非该传送器有目标位于不同场景中）。",
+"label": "对话框（显示）"
+},
+"dialog.unrevealed": {
+"hint": "若目标未显示且用户不为 GM，则在确认对话框中显示此文本。{token} 会被替换为指示物的名称。",
+"label": "对话框（未显示）"
+},
+"placement": {
+"hint": "选择指示物在目标区域内的放置位置。",
+"label": "放置"
+},
+"revealed": {
+"hint": "向所有人显示此传送器的目的地。",
+"label": "显示"
+},
+"snap": {
+"hint": "点击指示物转移的目的地位置。",
+"label": "对齐"
 }
 }
 },
@@ -800,14 +862,14 @@
 "CutObjects": "分割 {count}} 个 {type} 对象。",
 "DeleteLockedObjects": "删除锁定的对象",
 "LightSelect": "选择光源",
-"Palette": "调色板",
+"Palette": "控制板",
 "RegionCircle": "绘制圆形",
 "RegionCone": "绘制锥形",
 "RegionEmanation": "绘制光环",
 "RegionLine": "绘制线形",
 "RegionRing": "绘制环形",
 "RegionTemplateMode": "测量模板模式",
-"RegionTemplateModeP": "当此功能启用时，系统将忽略调色板设置，且所绘制的每个形状均会创建独立的区域。形状无法被添加至既有区域中。",
+"RegionTemplateModeP": "当此功能启用时，系统将忽略控制板设置，且所绘制的每个形状均会创建独立的区域。形状无法被添加至既有区域中。",
 "RightClick2": "双击右键",
 "RightClickDuringDrag": "拖动时右键单击",
 "RulerPlaceWaypoint": "放置标尺路径点",
@@ -961,7 +1023,7 @@
 "CONTROLS.MiddleClick": "单击鼠标滚轮",
 "CONTROLS.MouseControls": "鼠标控件",
 "CONTROLS.MouseWheel": "鼠标滚轮",
-"CONTROLS.NavLabel": "画布控制调色板",
+"CONTROLS.NavLabel": "画布控制控制板",
 "CONTROLS.NoteClear": "清除笔记",
 "CONTROLS.NoteSelect": "选择笔记",
 "CONTROLS.NoteToggle": "开关地图笔记显示",
@@ -1836,7 +1898,8 @@
 "HeaderWorld": "世界描述",
 "NextSession": "下一次游戏",
 "SelectUser": "选择用户",
-"UserKey": "用户访问密钥"
+"UserKey": "用户访问密钥",
+"WorldPendingSetup": "当前世界尚未准备就绪。请等待 GM 登录并完成配置后再尝试加入。"
 },
 "JOIN.ErrorBanned": "{user} 没有权限访问此世界！",
 "JOIN.ErrorInvalidPassword": "为 {user} 输入的密码无效！",
@@ -2339,6 +2402,7 @@
 "Label": "兼容性"
 },
 "ConfigTitle": "模组：{module}",
+"Description": "描述",
 "FIELDS": {
 "authors": {
 "discord.label": "Discord 用户名",
@@ -2406,6 +2470,13 @@
 }
 },
 "NewModuleTitle": "My New Module",
+"RESULT": {
+"Error": "错误",
+"Information": "信息",
+"Label": "结果",
+"Update": "更新",
+"Warning": "警告"
+},
 "TABS": {
 "authors": "作者",
 "basics": "基础细节",
@@ -2510,7 +2581,10 @@
 "PERMISSION.PlaylistCreateHint": "允许该用户组在世界中创建新的播放列表、控制拥有的播放列表。",
 "PERMISSION.QueryUser": "查看用户",
 "PERMISSION.QueryUserHint": "允许该用户组查看其他用户。",
+"PERMISSION.RegionCreate": "创建区域",
+"PERMISSION.RegionCreateHint": "允许该用户组创建区域。",
 "PERMISSION.Reset": "默认值",
+"PERMISSION.Setting": "权限",
 "PERMISSION.SettingsModify": "修改配置设定",
 "PERMISSION.SettingsModifyHint": "允许该用户组修改游戏设定和激活/关闭模组。",
 "PERMISSION.ShowCursor": "显示鼠标光标",
@@ -2530,6 +2604,13 @@
 "PERMISSION.WallDoors": "开/关门",
 "PERMISSION.WallDoorsHint": "允许该用户组与墙壁层上放置的门进行交互。",
 "PERMISSION.WarningNoCreate": "你没有足够的权限来创建 {document}。",
+"PLACEABLE_PALETTE": {
+"Apply": "应用",
+"CloneSettings": "克隆",
+"MultipleValues": "<Multiple Values>",
+"Selected": "{document} 控制板 [{count}]",
+"Title": "{document} 控制板"
+},
 "PLAYERS": {
 "FPS": "FPS",
 "LATENCY": "延迟"
@@ -2645,6 +2726,9 @@
 "behaviorViewed": {
 "label": "行为可见"
 },
+"regionAnimation": {
+"label": "区域动画状态已更改"
+},
 "regionBoundary": {
 "label": "区域边界更改后"
 },
@@ -2683,13 +2767,24 @@
 }
 },
 "FIELDS": {
+"attachment": {
+"token": {
+"hint": "该区域所附着的指示物。当此指示物移动时，该区域也会随之移动。",
+"label": "吸附指示物"
+}
+},
 "behaviors": {
 "hint": "区域的行为。",
 "label": "行为"
 },
 "color": {
 "hint": "颜色应用于能被看见的区域。",
-"label": "颜色"
+"label": "颜色",
+"placeholder": "随机颜色"
+},
+"displayMeasurements": {
+"hint": "配置是否显示该区域的测量参数。",
+"label": "显示测量值"
 },
 "elevation": {
 "bottom": {
@@ -2703,6 +2798,18 @@
 "label": "顶部"
 }
 },
+"highlightMode": {
+"hint": "配置高亮显示选项：可选择突出显示区域的实际形状或其覆盖的网格空间。",
+"label": "高亮模式"
+},
+"restriction": {
+"enabled": {
+"hint": "配置此区域的形状是否受墙体限制。",
+"label": "受限制"
+},
+"priority.label": "优先级阈值",
+"type.label": "受……限制"
+},
 "shapes": {
 "hint": "区域的形状。",
 "label": "形状"
@@ -2710,6 +2817,14 @@
 "visibility": {
 "hint": "配置区域的可见性。",
 "label": "可见性"
+}
+},
+"HIGHLIGHT_MODES": {
+"coverage": {
+"label": "覆盖的网格空间"
+},
+"shapes": {
+"label": "实际形状"
 }
 },
 "LEGEND": {
@@ -2727,9 +2842,25 @@
 },
 "NOTIFICATIONS": {
 "ControlWalls": "控制一组墙壁来确定你想要的形状的边。",
+"CopiedShape": "复制区域形状。",
+"CutShape": "裁剪区域形状。",
 "DrawingMultipleRegionsControlled": "绘制形状时必须仅控制一个区域或不控制任何区域！",
 "EmptyEnclosedArea": "被控制的墙包围的区域是空的！确保外墙形成闭环并且端点与端点相连。",
-"NoControlledWalls": "你没有控制任何墙！"
+"NoControlledWalls": "你没有控制任何墙！",
+"PastedShape": "粘贴区域形状。",
+"PastedShapeWithoutControlledRegion": "你当前未选中可粘贴该形状的区域。",
+"PlacedRegionNotAttachedToToken": "放置的区域必须吸附于指示物。",
+"PlacedRegionRotationNotAllowed": "禁止对已放置区域的形状进行旋转。"
+},
+"RESTRICTION_TYPES": {
+"darkness.label": "优先级 > 阈值的阻暗墙与光源",
+"light.label": "优先级 ≥ 阈值的阻光墙与黑暗源",
+"move.label": "阻移动墙",
+"sight.label": "优先级 ≥ 阈值的阻视墙与黑暗源",
+"sound.label": "隔音墙"
+},
+"SECTIONS": {
+"restriction": "墙体限制"
 },
 "SHAPES": {
 "circle": "圆形",
@@ -2742,9 +2873,16 @@
 },
 "Shape": "形状",
 "TABS": {
+"appearance": "外观",
 "behaviors": "行为",
 "identity": "本体",
+"placement": "放置",
 "shapes": "形状"
+},
+"TOOLTIPS": {
+"CannotChangeLevelsIfAttached": "该区域必须与所吸附的指示物处于同一层级。",
+"CannotEnableRestriction": "此区域无法受限制，因为它包含在多个层级中。",
+"CannotSelectMultipleLevelsIfRestricted": "此区域在受限制时不能包含在多个层级中。"
 },
 "VISIBILITY": {
 "ALWAYS": {
@@ -2755,6 +2893,12 @@
 },
 "LAYER": {
 "label": "仅在区域层显示"
+},
+"LAYER_UNLOCKED": {
+"label": "仅在解锁状态下适用于区域层"
+},
+"OBSERVER": {
+"label": "始终对观察者可见"
 }
 }
 },
@@ -3358,6 +3502,16 @@
 "SETTINGS.UniversalKeybindingsN": "通用快捷键（实验性）",
 "SETTINGS.Update": "更新软件",
 "SETUP": {
+"ACTIONS": {
+"Configure": "配置",
+"Logout": "登出",
+"Update": "更新",
+"Warnings": "警告"
+},
+"BACKUPS": {
+"DeleteSelected": "删除已选",
+"SelectAll": "全选"
+},
 "COMPAT": {
 "Previewing": "正在加载预览",
 "Title": "预览兼容性：{release}"
@@ -3372,6 +3526,7 @@
 },
 "ManifestWrongPackageType": "所提供的URL似乎并未指向一个 {packageType}。"
 },
+"ImportingAdventure": "导入冒险",
 "Install": "安装",
 "InstallDependenciesSuccess": "依赖项安装成功",
 "InstallingDependencies": "安装依赖项",
@@ -3384,6 +3539,9 @@
 "PackageRequiresDowngradeLabel": "需要回退",
 "PackageRequiresUpgradeHint": "要安装此软件包，你必须将 Foundry VTT 升级到 {vmin} 版本。",
 "PackageRequiresUpgradeLabel": "需要升级",
+"PackageUpdateCoreUnknown": "有适用于 {title} 的更新版本，但由于需要未知的核心软件版本 {vmin}，该更新可能无法安装。",
+"QuickstartFailure": "模组“{title}”的快速启动失败：{message}。更多详细信息请查看控制台（F12）。",
+"RequireCoreUnknown": "需要未知版本",
 "Software": "软件",
 "UPDATE_NOTES": {
 "BeginDownload": "开始下载",
