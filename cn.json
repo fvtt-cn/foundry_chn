@@ -4636,7 +4636,8 @@
 "TOKEN.WarningNoActor": "此指示物引用的角色已不再存在于此游戏世界中。",
 "TOKEN.WarningNoVision": "该场景中没有你的指示物，因此你无法看到该区域。",
 "TOURS": {
-"NavLabel": "旅行管理选项卡"
+"NavLabel": "导览管理选项卡",
+"Title": "导览管理"
 },
 "TOURS.AllTours": "全部导览",
 "TOURS.Completed": "已完成",
@@ -4669,7 +4670,8 @@
 "modifyMovementCost": "修改区域内指示物的移动消耗。",
 "pauseGame": "当一名玩家将指示物移动进入该区域时，暂停游戏。",
 "suppressWeather": "屏蔽区域内的天气效果。",
-"teleportToken": "将移动进入区域内的指示物转移至另一个区域。"
+"teleportToken": "将移动进入区域内的指示物转移至另一个区域。",
+"toggleBehavior": "当订阅的事件之一发生时，启用或禁用其他区域行为。"
 }
 },
 "RegionBehavior": {
@@ -4756,10 +4758,14 @@
 "USERS.DeleteGMWarning": "你将要删除一个 GM 用户！",
 "USERS.DeleteName": "删除用户：{name}",
 "USERS.DeleteWarning": "此用户将从此游戏世界中被永久删除。",
+"USERS.FirstLaunch": "保存并继续",
 "USERS.KeyShow": "显示访问密码",
 "USERS.Launch": "启动游戏",
+"USERS.LoginAs": "以用户身份登录",
+"USERS.LoginAsGMRequired": "你必须是 GM 才能以其他用户身份登录。",
 "USERS.ManageTitle": "用户管理",
 "USERS.NoGMError": "你必须为你的世界配置至少一个 GM 用户。",
+"USERS.PasswordWarning": "强烈建议为 GM 账户设置密码。",
 "USERS.Role": "用户组",
 "USERS.UpdateSuccess": "已成功更新游戏用户，正在回到游戏世界。",
 "USERS.UserName": "用户名",
