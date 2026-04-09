@@ -378,6 +378,9 @@
 "Confirm": "你想传送 {token} 吗？",
 "ConfirmGM": "你想将 {token} 传送到 {scene} 中的 {region} 吗？",
 "ConfirmRevealed": "是否将 {token} 转移至 {scene} 中的 {region}？",
+"ConfirmSelectDifferentScene": "选择你想将 {token} 转移至的目的地。",
+"ConfirmSelectOption": "{region} 在 {scene} 中",
+"ConfirmSelectSameScene": "在 {scene} 中选择要将 {token} 转移至的目的地。",
 "FIELDS": {
 "choice": {
 "hint": "允许移动指示物的用户选择是否传送它。若配置了多个目标区域，当此传送器被发现或用户为GM时，允许用户选择目标区域。",
@@ -412,12 +415,18 @@
 "label": "对齐"
 },
 "transition.duration": {
+"hint": "过渡动画的持续时间（以毫秒为单位）。",
 "label": "过渡持续时间"
 },
 "transition.type": {
 "hint": "当指示物被转移时所播放的过渡动画类型。",
 "label": "过渡类型"
 }
+},
+"PLACEMENTS": {
+"center.label": "居中对齐",
+"random.label": "随机",
+"relative.label": "关系"
 }
 },
 "toggleBehavior": {
@@ -1525,7 +1534,7 @@
 "time": "时间"
 },
 "combats": "战斗遭遇",
-"days": "日",
+"days": "天",
 "hours": "小时",
 "minutes": "分钟",
 "months": "月",
@@ -2776,8 +2785,8 @@
 "FIELDS": {
 "attachment": {
 "token": {
-"hint": "该区域所附着的指示物。当此指示物移动时，该区域也会随之移动。",
-"label": "吸附指示物"
+"hint": "该区域所关联的指示物。当此指示物移动时，该区域也会随之移动。",
+"label": "关联指示物"
 }
 },
 "behaviors": {
@@ -2856,7 +2865,7 @@
 "NoControlledWalls": "你没有控制任何墙！",
 "PastedShape": "粘贴区域形状。",
 "PastedShapeWithoutControlledRegion": "你当前未选中可粘贴该形状的区域。",
-"PlacedRegionNotAttachedToToken": "放置的区域必须吸附于指示物。",
+"PlacedRegionNotAttachedToToken": "放置的区域必须关联指示物。",
 "PlacedRegionRotationNotAllowed": "禁止对已放置区域的形状进行旋转。"
 },
 "RESTRICTION_TYPES": {
@@ -2887,7 +2896,7 @@
 "shapes": "形状"
 },
 "TOOLTIPS": {
-"CannotChangeLevelsIfAttached": "该区域必须与所吸附的指示物处于同一层级。",
+"CannotChangeLevelsIfAttached": "该区域必须与所关联的指示物处于同一层级。",
 "CannotEnableRestriction": "此区域无法受限制，因为它包含在多个层级中。",
 "CannotSelectMultipleLevelsIfRestricted": "此区域在受限制时不能包含在多个层级中。"
 },
@@ -3881,6 +3890,7 @@
 "SHEETS.ThisSheet": "该卡",
 "SHEETS.TypeSheetHint": "设置用于此文档类型的默认卡模板（仅限 GM）。",
 "SIDEBAR.ACTIONS.CREATE": {
+"ActiveEffect": "创建主动效果",
 "Actor": "创建角色",
 "Adventure": "创建冒险",
 "Cards": "创建牌堆",
@@ -3910,6 +3920,58 @@
 "SIDEBAR.Import": "导入数据",
 "SIDEBAR.JumpPin": "跳到标记",
 "SIDEBAR.NavLabel": "边栏",
+"SIDEBAR.PLACEABLES": {
+"ACTIONS": {
+"ChangeLevel": "切换层级",
+"Clear": "清除",
+"Configure": "配置",
+"Create": "创建 {name}",
+"Delete": "删除",
+"Hidden": "隐藏",
+"Hide": "隐藏",
+"InLevel": "包含于层级",
+"Lock": "锁定",
+"Locked": "已锁定",
+"NotInLevel": "未包含于层级",
+"Show": "展示",
+"Unlock": "解锁",
+"Unlocked": "已解锁",
+"Visible": "可见"
+},
+"Categories": {
+"NoAuthor": "无创建者",
+"NoLevel": "无层级"
+},
+"Filter": {
+"ACTIONS": {
+"Clear": "清除"
+},
+"Bottom": "底部",
+"Level": "按层级筛选",
+"Title": "高级筛选",
+"Tooltip": "高级筛选。右键单击以清除。",
+"Top": "顶部"
+},
+"Meta": {
+"empty": "空的",
+"hidden": "对玩家隐藏",
+"locked": "已锁定",
+"visible": "对部分玩家可见"
+},
+"Search": {
+"placeholder": "筛选 {name}"
+},
+"WALLS": {
+"door": "门",
+"ethereal": "以太墙体",
+"filterByCategory": "按类别筛选",
+"invisible": "隐形墙体",
+"normal": "正常墙体",
+"secret": "密门",
+"terrain": "地形墙体",
+"window": "窗户"
+}
+},
 "SIDEBAR.SETTINGS": {
 "ACTIONS": {
 "Configure": "配置设定",
@@ -3942,6 +4004,7 @@
 "SIDEBAR.SortModeManual": "手动序",
 "SIDEBAR.TabCompendium": "合集包",
 "SIDEBAR.TabJournal": "日志条目",
+"SIDEBAR.TabPlaceables": "可放置",
 "SIDEBAR.TabSettings": "游戏设定",
 "SIDEBAR.TabTables": "随机表",
 "SIDEBAR.TokenArt": "查看指示物插图",
@@ -3958,6 +4021,7 @@
 },
 "SUPPORT": {
 "Dimensions": "{width} × {height}",
+"Errors": "错误",
 "NoClientIssues": "未发现客户端问题。",
 "NoDocumentIssues": "未发现文档问题。",
 "NoModuleIssues": "未发现模组问题。",
@@ -3972,7 +4036,8 @@
 "one": "1 个不可用的{document}文档",
 "other": "{count} 个不可用的{document}文档"
 },
-"Viewport": "视口尺寸"
+"Viewport": "视口尺寸",
+"Warnings": "警告"
 },
 "SUPPORT.ActiveModules": "启用模组",
 "SUPPORT.BugReporting": "如果你想要报告错误，请使用<a href=\"https://foundryvtt.com/contact-us?category=bug\" target=\"_blank\" rel=\"nofollow\">联系我们页面</a>中的“错误报告”选项。",
@@ -4099,15 +4164,29 @@
 "CREATE": "创建图块",
 "UPDATE": "更新图块"
 },
+"TILE.Anchor": "图块创建者",
 "TILE.ConfigTitle": "图块设置",
 "TILE.Dimensions": "尺寸",
 "TILE.FIELDS": {
+"OCCLUSION_MODES": {
+"FADE.label": "淡出",
+"NONE.label": "无",
+"RADIAL.label": "辐射",
+"SURFACE.label": "地面",
+"VISION.label": "视野"
+},
 "alpha.label": "图块不透明度",
+"name": {
+"hint": "一个可选的名称，用于帮助识别此图块。",
+"label": "名称"
+},
 "occlusion": {
 "alpha.label": "遮挡 Alpha",
-"mode.label": "遮挡模式"
+"mode.label": "遮挡模式",
+"modes.label": "遮挡模式"
 },
 "restrictions": {
+"label": "限制",
 "light": {
 "hint": "光源是否会因其相对于该图块高度的高度差异而受到遮挡？",
 "label": "限制光线"
@@ -4119,6 +4198,10 @@
 },
 "sort.label": "排序",
 "texture": {
+"alphaThreshold": {
+"hint": "图块图像中Alpha值低于此阈值的像素将不会阻挡光线或天气效果，并且不会触发悬停淡化效果。",
+"label": "Alpha阈值"
+},
 "scaleX.label": "水平",
 "scaleY.label": "垂直",
 "src.label": "图块图像或视频",
@@ -4134,6 +4217,7 @@
 "TILE.OcclusionModeNone": "无（总是可见）",
 "TILE.OcclusionModeRadial": "辐射（围绕指示物）",
 "TILE.OcclusionModeRoof": "屋顶（禁用视线与光线）",
+"TILE.OcclusionModeSurface": "地面",
 "TILE.OcclusionModeVision": "视觉（指示物视觉）",
 "TILE.SECTIONS": {
 "overhead": "如果图块位于前景的顶部，则适用的其他属性。",
@@ -4144,39 +4228,58 @@
 "TILE.TABS": {
 "appearance": "外观",
 "overhead": "顶部",
-"position": "位置"
+"position": "位置",
+"video": "视频"
 },
 "TILE.VideoOptions": "视频选项",
 "TIME": {
 "Day": {
 "abbr": "d",
+"few": "天",
+"many": "天",
 "one": "天",
-"other": "天"
+"other": "天",
+"two": "天"
 },
 "Hour": {
 "abbr": "h",
+"few": "小时",
+"many": "小时",
 "one": "小时",
-"other": "小时"
+"other": "小时",
+"two": "小时"
 },
 "Millisecond": {
 "abbr": "ms",
+"few": "毫秒",
+"many": "毫秒",
 "one": "毫秒",
-"other": "毫秒"
+"other": "毫秒",
+"two": "毫秒"
 },
 "Minute": {
 "abbr": "m",
+"few": "分钟",
+"many": "分钟",
 "one": "分钟",
-"other": "分钟"
+"other": "分钟",
+"two": "分钟"
 },
 "Second": {
 "abbr": "s",
+"few": "秒",
+"many": "秒",
 "one": "秒",
-"other": "秒"
+"other": "秒",
+"two": "秒"
 },
 "Year": {
 "abbr": "y",
+"few": "年",
+"many": "年",
 "one": "年",
-"other": "年"
+"other": "年",
+"two": "年"
 }
 },
 "TIME.Now": "现在",
@@ -4279,6 +4382,7 @@
 "TOKEN.Adjectives.vindictive": "报复的",
 "TOKEN.Adjectives.worried": "担心的",
 "TOKEN.Adjectives.zen": "禅心的",
+"TOKEN.Anchor": "锚点",
 "TOKEN.AnchorHint": "默认锚点 (0.5, 0.5) 是指示物图像的中心。",
 "TOKEN.Assign": "分配指示物",
 "TOKEN.AssignSuccess": "已更新{name}的指示物模板配置",
@@ -4295,10 +4399,12 @@
 "TOKEN.DISPOSITION.HOSTILE": "敌对",
 "TOKEN.DISPOSITION.NEUTRAL": "中立",
 "TOKEN.DISPOSITION.SECRET": "未知",
+"TOKEN.DeleteAttachedRegionWarning": "你正在删除一个已关联区域的指示物。其关联的区域将被永久删除。",
 "TOKEN.DeleteCombatantWarning": "你正在删除一个处于战斗中的指示物。此参战者将被永久删除。",
 "TOKEN.DetectionAdd": "添加感知模式",
 "TOKEN.DetectionEnabled": "启用",
 "TOKEN.DetectionMode": "感知模式",
+"TOKEN.DetectionOverride": "覆盖检测模式",
 "TOKEN.DetectionRange": "距离",
 "TOKEN.DetectionRemove": "移除感知模式",
 "TOKEN.Dimensions": "尺寸",
@@ -4312,9 +4418,12 @@
 },
 "bar1.attribute.label": "属性条 1 属性",
 "bar2.attribute.label": "属性条 2 属性",
+"depth.label": "Z 轴尺寸",
 "displayBars.label": "显示属性条",
 "displayName.label": "显示名称",
 "disposition.label": "指示物态度",
+"height.label": "Y 轴尺寸",
+"level.label": "层级",
 "lockRotation": {
 "hint": "禁止此指示物的旋转在画布中渲染显示。",
 "label": "锁定插图旋转"
@@ -4425,7 +4534,8 @@
 "hint": "为该指示物的战斗回合标记选择一个图像或视频文件。",
 "label": "媒体资源"
 }
-}
+},
+"width.label": "X 轴尺寸"
 },
 "TOKEN.ImageAlts": "角色替代指示物",
 "TOKEN.MOVEMENT": {
@@ -4439,11 +4549,26 @@
 "jump.label": "跳跃",
 "swim.label": "游泳",
 "walk.label": "步行"
+},
+"NOTIFICATIONS": {
+"PLAN": {
+"DirectViolation": "你无法在规划移动时放置路径点。",
+"MaxCostViolation": "规划的移动路径已超出最大允许消耗。",
+"MaxDistanceViolation": "规划的移动路径已超出最大允许距离。",
+"MinCostViolation": "规划的移动路径未达到最低要求消耗。",
+"MinDistanceViolation": "规划的移动路径未达到最低要求距离。"
+}
 }
 },
 "TOKEN.Mirror": "镜像",
 "TOKEN.MirrorX": "水平",
 "TOKEN.MirrorY": "垂直",
+"TOKEN.NOTIFICATIONS": {
+"PlacedTokenRotationNotAllowed": "你不允许旋转已放置的指示物。"
+},
+"TOKEN.PROTOTYPE": {
+"OverridesWarning": "此字段由原型指示物覆盖定义，无法直接编辑。"
+},
 "TOKEN.RING": {
 "EFFECTS": {
 "BKG_WAVE": "背景波动",
@@ -4488,6 +4613,7 @@
 "TOKEN.SightHeaderBasic": "基本设置",
 "TOKEN.SightHeaderDetection": "感知模式",
 "TOKEN.SightNavLabel": "视觉配置栏",
+"TOKEN.Size": "尺寸",
 "TOKEN.TABS": {
 "appearance": "外观",
 "identity": "本体",
@@ -4531,7 +4657,25 @@
 "TOURS.TourFilter": "导览筛选",
 "TOURS.TourName": "导览名称",
 "TYPES": {
+"HINTS": {
 "RegionBehavior": {
+"adjustDarknessLevel": "在该区域内覆盖、提亮或降低场景的暗度级别。",
+"applyActiveEffect": "当指示物处于该区域内时，对其施加主动效果。",
+"changeLevel": "允许移动进入该区域的指示物转移至该区域关联的另一层级。",
+"defineSurface": "划定一个能够限制光照、移动、视线和声音的地面。",
+"displayScrollingText": "当指示物触发订阅的事件之一时，在其上方显示滚动文本。",
+"executeMacro": "当令牌触发订阅的事件之一时执行一个宏。",
+"executeScript": "当订阅的事件之一发生时，执行脚本。",
+"modifyMovementCost": "修改区域内指示物的移动消耗。",
+"pauseGame": "当一名玩家将指示物移动进入该区域时，暂停游戏。",
+"suppressWeather": "屏蔽区域内的天气效果。",
+"teleportToken": "将移动进入区域内的指示物转移至另一个区域。"
+}
+},
+"RegionBehavior": {
+"applyActiveEffect": "应用主动效果",
+"changeLevel": "切换层级",
+"defineSurface": "划定地面",
 "modifyMovementCost": "调整移动消耗"
 },
 "TableResult": {
@@ -4667,7 +4811,7 @@
 "WALL.DoorSounds.WoodCreaky": "木制，吱嘎声",
 "WALL.DoorSounds.WoodHeavy": "木制，沉重",
 "WALL.DoorStates.CLOSED": "关闭",
-"WALL.DoorStates.LOCKED": "上锁",
+"WALL.DoorStates.LOCKED": "已锁定",
 "WALL.DoorStates.OPEN": "打开",
 "WALL.DoorTypes.DOOR": "门",
 "WALL.DoorTypes.NONE": "无",
