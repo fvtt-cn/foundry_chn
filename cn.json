@@ -410,6 +410,13 @@
 "snap": {
 "hint": "点击指示物转移的目的地位置。",
 "label": "对齐"
+},
+"transition.duration": {
+"label": "过渡持续时间"
+},
+"transition.type": {
+"hint": "当指示物被转移时所播放的过渡动画类型。",
+"label": "过渡类型"
 }
 }
 },
