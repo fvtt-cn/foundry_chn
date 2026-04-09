@@ -3190,7 +3190,7 @@
 "dots": "点",
 "fade": "淡出",
 "glitch": "故障",
-"hole": "孔洞",
+"hole": "空洞",
 "holeSwirl": "孔洞漩涡",
 "hologram": "全息",
 "morph": "变形",
@@ -3875,6 +3875,126 @@
 "SETUP.WorldUnavailable": "不可用",
 "SETUP.Worlds": "游戏世界",
 "SETUP.YouMustInstallASystem": "你必须在建立新的世界前安装一个系统",
+"SHAPE": {
+"ACTIONS": {
+"createFromWalls": "从受控墙体创建形状",
+"edit": "编辑形状",
+"fillHole": "填充空洞",
+"makeHole": "创建空洞",
+"moveDown": "向下移动形状",
+"moveUp": "向上移动形状",
+"remove": "移除形状",
+"removeAll": "移除所有形状"
+},
+"NOTIFICATIONS": {
+"ControlWalls": "控制一组用于确定所需形状边界的墙体。",
+"DrawingMultipleObjectsControlled": "绘制形状时，你必须控制或配置一个或零个 {type}！",
+"EmptyEnclosedArea": "受控墙体所围合的区域为空。请确保外部墙体构成闭环且端点间相互连接。",
+"NoControlledWalls": "你未控制任何墙体！"
+},
+"TYPES": {
+"base": {
+"FIELDS": {
+"gridBased": {
+"hint": "基于网格的形状符合网格的度量标准。",
+"label": "基于网格"
+},
+"hole.label": "是否为孔",
+"rotation.label": "旋转",
+"type.label": "类型",
+"x.label": "X 轴原点",
+"y.label": "Y 轴原点"
+},
+"origin.label": "原点"
+},
+"circle": {
+"FIELDS": {
+"radius.label": "半径"
+},
+"name": "圆形"
+},
+"cone": {
+"CURVATURES": {
+"flat.label": "平面",
+"round.label": "圆形",
+"semicircle.label": "半圆"
+},
+"FIELDS": {
+"angle.label": "角度",
+"curvature.label": "弯曲度",
+"radius.label": "半径"
+},
+"name": "锥形"
+},
+"ellipse": {
+"FIELDS": {
+"radiusX.label": "X 轴半径",
+"radiusY.label": "Y 轴半径"
+},
+"name": "椭圆"
+},
+"emanation": {
+"FIELDS": {
+"base.label": "基础",
+"radius.label": "半径"
+},
+"name": "光环"
+},
+"grid": {
+"FIELDS": {
+"offsets.label": "网格偏移",
+"origin.label": "原点"
+},
+"name": "网格间距"
+},
+"line": {
+"FIELDS": {
+"length.label": "长",
+"width.label": "宽"
+},
+"name": "线形"
+},
+"polygon": {
+"FIELDS": {
+"origin.label": "原点",
+"points.label": "点"
+},
+"name": "多边形"
+},
+"rectangle": {
+"FIELDS": {
+"anchorX.label": "X 锚点",
+"anchorY.label": "Y 锚点",
+"height.label": "Y 轴尺寸",
+"width.label": "X 轴尺寸"
+},
+"anchor.label": "锚点",
+"name": "矩形"
+},
+"ring": {
+"FIELDS": {
+"innerWidth.label": "内宽",
+"outerWidth.label": "外宽",
+"radius.label": "半径"
+},
+"name": "环形"
+},
+"token": {
+"FIELDS": {
+"height.label": "高",
+"shape.label": "形状",
+"width.label": "宽",
+"x.label": "X",
+"y.label": "Y"
+},
+"name": "指示物",
+"position.label": "位置",
+"size.label": "尺寸"
+}
+},
+"label": "形状",
+"labelPlural": "形状"
+},
 "SHEETS.ConfigureSheet": "配置卡",
 "SHEETS.ConfigureTitle": "{prefix}：卡配置",
 "SHEETS.CopyUuid": "复制文档 UUID",
@@ -4803,6 +4923,8 @@
 "WALL.DoorSounds.Industrial": "工业",
 "WALL.DoorSounds.IndustrialCreaky": "工业，吱嘎响",
 "WALL.DoorSounds.Jail": "监牢",
+"WALL.DoorSounds.JailCreaky": "监狱，嘎吱作响",
+"WALL.DoorSounds.JailHeavy": "监狱，沉重",
 "WALL.DoorSounds.MagicDoor": "魔法门",
 "WALL.DoorSounds.MagicWall": "魔法墙",
 "WALL.DoorSounds.Metal": "金属",
