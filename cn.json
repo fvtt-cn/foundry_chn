@@ -632,6 +632,8 @@
 "CHAT.UnknownUser": "未知用户",
 "COMBAT": {
 "ACTIONS": {
+"EditName": "编辑名称",
+"EditNameTitle": "编辑战斗遭遇名称",
 "LinkToScene": "链接至当前查看场景",
 "UnlinkFromScene": "从场景解除链接"
 },
@@ -652,13 +654,19 @@
 "two": "回合"
 }
 },
+"FIELDS": {
+"name": {
+"hint": "为这次战斗遭遇提供一个简短的名称，以便于对其进行识别。",
+"label": "战斗名称"
+}
+},
 "PingInvisibleToken": "你无法查看此参战者的指示物。",
 "ResourceHint": "为每位参展者选择一个要跟进的属性。",
 "SkipDefeatedHint": "自动跳过被标记为战败的参战者？",
 "TargetedBy": "目标为 {list}",
 "ToggleTargeting": "切换目标"
 },
-"COMBAT.Begin": "开始遭遇",
+"COMBAT.Begin": "开始战斗",
 "COMBAT.CONFIG": {
 "FIELDS": {
 "core.combatTrackerConfig": {
@@ -694,7 +702,7 @@
 "TURN_MARKERS": "指示物回合标记"
 }
 },
-"COMBAT.CannotLinkToScene": "如果场景中没有包含所有参战者，则无法将战斗连接到该场景。",
+"COMBAT.CannotLinkToScene": "如果场景中没有包含所有参战者，则无法将战斗遭遇连接到该场景。",
 "COMBAT.ClearMovementHistories": "清除移动记录",
 "COMBAT.CombatantActor": "代表角色",
 "COMBAT.CombatantClear": "清空先攻",
@@ -717,11 +725,11 @@
 "COMBAT.Create": "创建战斗遭遇",
 "COMBAT.Delete": "删除战斗遭遇",
 "COMBAT.Encounter": "战斗遭遇",
-"COMBAT.EncounterNext": "激活下个遭遇",
-"COMBAT.EncounterPrevious": "激活上个遭遇",
-"COMBAT.End": "结束遭遇",
-"COMBAT.EndConfirmation": "结束遭遇并清空回合追踪器？",
-"COMBAT.EndTitle": "结束遭遇？",
+"COMBAT.EncounterNext": "激活下个战斗",
+"COMBAT.EncounterPrevious": "激活上个战斗",
+"COMBAT.End": "结束战斗",
+"COMBAT.EndConfirmation": "结束战斗并清空回合追踪器？",
+"COMBAT.EndTitle": "结束战斗",
 "COMBAT.FIELDS": {
 "round.label": "轮",
 "turn.label": "回合"
@@ -731,9 +739,9 @@
 "COMBAT.InitiativeScore": "先攻值",
 "COMBAT.Linked": "已链接至场景，点击解除链接",
 "COMBAT.NavLabel": "战斗遭遇导航栏",
-"COMBAT.None": "无遭遇",
+"COMBAT.None": "无战斗",
 "COMBAT.NoneActive": "在你目前查看的场景中没有激活遭遇。",
-"COMBAT.NoneRemaining": "这次遭遇中已无未战败的参战者。",
+"COMBAT.NoneRemaining": "这次战斗遭遇中已无未战败的参战者。",
 "COMBAT.NotStarted": "未开始",
 "COMBAT.PanToCombatant": "平移到参战者",
 "COMBAT.PingCombatant": "Ping 指示物",
@@ -744,9 +752,9 @@
 "COMBAT.RoundNext": "下一轮",
 "COMBAT.RoundPrev": "上一轮",
 "COMBAT.Rounds": "战斗轮",
-"COMBAT.Settings": "遭遇板设置",
+"COMBAT.Settings": "战斗跟进器设置",
 "COMBAT.SettingsSave": "保存战斗板设置",
-"COMBAT.SidebarTitle": "遭遇板",
+"COMBAT.SidebarTitle": "战斗跟进器",
 "COMBAT.Sounds.Epic": "史诗风格",
 "COMBAT.Sounds.MC": "战斗播报",
 "COMBAT.TURN_MARKERS": {
@@ -784,13 +792,17 @@
 "name.label": "显示名称",
 "tokenId.label": "代表指示物"
 },
+"Hide": "隐藏",
+"MarkDefeated": "标记战败",
 "MovementHistoryCleared": "已清除指示物“{name}”的移动历史。",
 "PanTo": "转向参战者",
 "Ping": "标记指示物",
+"Show": "展示",
 "Status": "参战人员状况",
 "ToggleDead": "标记战败者",
 "ToggleVis": "切换可见性",
 "Unknown": "未知参战者",
+"UnmarkDefeated": "取消标记战败",
 "UpdateNamed": "更新参战者：{name}",
 "WarnNonVisibleToken": "该参战者对你不可见。"
 },
@@ -810,7 +822,10 @@
 },
 "COMPENDIUM": {
 "CopyId": "复制合集包 ID",
-"IdCopiedClipboard": "合集包 ID “{id}” 已复制到剪贴板。"
+"IdCopiedClipboard": "合集包 ID “{id}” 已复制到剪贴板。",
+"ToggleLocked": {
+"Lock": "锁定"
+}
 },
 "COMPENDIUM.ART": {
 "CONFIG": {
@@ -831,7 +846,7 @@
 "COMPENDIUM.Create": "创建合集",
 "COMPENDIUM.CreateHint": "在当前世界中新建一个合集。",
 "COMPENDIUM.Delete": {
-"Option": "删除合集",
+"Option": "删除",
 "Title": "删除合集：{compendium}",
 "Warning": "此合集将被永久删除且无法恢复。"
 },
@@ -839,7 +854,7 @@
 "COMPENDIUM.Duplicate": {
 "Hint": "你可以将此合集复制至本地世界中，从而创建一份内容的本地副本，以便于对其进行安全编辑。",
 "Label": "新合集标题",
-"Option": "复制合集",
+"Option": "复制",
 "Submit": "复制",
 "Title": "复制合集：{compendium}"
 },
@@ -1872,14 +1887,22 @@
 "HTMLDocumentTagsElement.PLACEHOLDER": "输入 UUID 或删除 {type}",
 "HUD": {
 "ChangeLevel": "切换层级",
-"ToFrontOrBack": "置顶 / 置底"
+"EnterCombat": "进入战斗",
+"ExitCombat": "离开战斗",
+"Hide": "隐藏",
+"Lock": "展示",
+"Show": "展示",
+"Target": "目标",
+"ToFrontOrBack": "向前/向后",
+"Unlock": "解锁",
+"Untarget": "取消目标"
 },
 "HUD.AssignStatusEffects": "切换状态效果",
 "HUD.Elevation": "高度",
 "HUD.OpenConfig": "打开配置",
 "HUD.SelectMovementAction": "选择移动动作",
-"HUD.TilePause": "暂停图块视频",
-"HUD.TilePlay": "播放图块视频",
+"HUD.TilePause": "暂停视频",
+"HUD.TilePlay": "播放视频",
 "HUD.ToBack": "移至后方",
 "HUD.ToFront": "移至前方",
 "HUD.ToggleCombatState": "切换战斗状态",
@@ -2674,6 +2697,7 @@
 "PLAYLIST.Play": "播放列表",
 "PLAYLIST.SortAlphabetical": "字母序",
 "PLAYLIST.SortManual": "手调序",
+"PLAYLIST.SoundAdd": "添加音效",
 "PLAYLIST.SoundCreate": "创建音效",
 "PLAYLIST.SoundDelete": "删除音效",
 "PLAYLIST.SoundEdit": "编辑音效",
@@ -2693,6 +2717,7 @@
 "PLAYLIST.VolAmbient": "环境",
 "PLAYLIST.VolInterface": "界面",
 "PLAYLIST.VolPlaylist": "播放列表",
+"PLAYLIST_SOUND.Create": "创建音效",
 "PLAYLIST_SOUND.FIELDS": {
 "channel.label": "音频通道",
 "description.label": "音效描述",
@@ -2702,7 +2727,7 @@
 "repeat.label": "重复",
 "volume.label": "音量"
 },
-"PLAYLIST_SOUND.Update": "更新音轨",
+"PLAYLIST_SOUND.Update": "更新音效",
 "Packs": "包",
 "Path": "路径",
 "Permissions": "权限",
@@ -3201,19 +3226,21 @@
 "wind": "风吹"
 }
 },
-"SCENE.View": "查看场景",
+"SCENE.View": "查看",
 "SCENE_LEVEL": {
 "Actions": {
 "Add": {
 "hint": "场景支持多个垂直层级。添加新层级可将此场景转换为多层级场景。",
 "label": "添加层级"
 },
+"Delete": "删除层级",
 "Down": "下降一层",
 "Edit": "编辑层级",
 "Remove": "移除层级",
 "Up": "上升一层",
-"View": "查看层级"
+"View": "查看"
 },
+"CannotDeleteOnlyLevel": "你无法删除此场景中的唯一层级。",
 "FIELDS": {
 "background": {
 "alphaThreshold": {
@@ -3369,7 +3396,7 @@
 "SETTINGS.CBubPL": "当显示聊天气泡框时，自动将视角平移到正在发言的指示物。",
 "SETTINGS.CBubPN": "聚焦发言",
 "SETTINGS.CombatConfigH": "战斗和追踪器相关设置。",
-"SETTINGS.CombatConfigL": "配置战斗追踪器",
+"SETTINGS.CombatConfigL": "战斗跟进器",
 "SETTINGS.CombatConfigN": "战斗追踪器",
 "SETTINGS.CombatThemeL": "在战斗开始、即将轮到你的回合、你的回合开始时会响起的一些音效。",
 "SETTINGS.CombatThemeN": "战斗音效",
