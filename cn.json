@@ -722,7 +722,7 @@
 "COMBAT.CombatantToken": "链接指示物",
 "COMBAT.CombatantUpdate": "更新参战者",
 "COMBAT.CombatantUpdateNamed": "更新参战者：{name}",
-"COMBAT.Create": "创建战斗遭遇",
+"COMBAT.Create": "创建战斗",
 "COMBAT.Delete": "删除战斗遭遇",
 "COMBAT.Encounter": "战斗遭遇",
 "COMBAT.EncounterNext": "激活下个战斗",
@@ -2645,6 +2645,7 @@
 "PERMISSION.WarningNoCreate": "你没有足够的权限来创建 {document}。",
 "PLACEABLE_PALETTE": {
 "Apply": "应用",
+"CannotApplyToLocked": "你不能将调色板应用于锁定的对象。",
 "CloneSettings": "克隆",
 "MultipleValues": "<Multiple Values>",
 "Selected": "{document} 控制板 [{count}]",
