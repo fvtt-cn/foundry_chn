@@ -294,6 +294,11 @@
 "changeLevel": {
 "Confirm": "是否要将 {token} 转移至 {level} ？",
 "ConfirmSelect": "选择你想要 {token} 转移至的层级。",
+"FIELDS": {
+"movementActions": {
+"label": "允许移动动作"
+}
+},
 "Move": "移动",
 "MoveDown": "向下移动",
 "MoveUp": "向上移动"
@@ -2739,6 +2744,7 @@
 "Previous": "上一个",
 "REGION": {
 "ACTIONS": {
+"behaviorAdd": "添加行为",
 "behaviorCreate": "创建行为",
 "behaviorDelete": "删除行为",
 "behaviorDisable": "禁用行为",
@@ -2838,6 +2844,10 @@
 "top": {
 "hint": "高度范围的上限。",
 "label": "顶部"
+},
+"topInclusive": {
+"hint": "顶部是否在高度范围内？",
+"label": "包含顶部"
 }
 },
 "highlightMode": {
