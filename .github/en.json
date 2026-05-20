@@ -386,21 +386,19 @@
   },
   "COMBAT": {
     "NavLabel": "Combat Encounters Navigation",
-    "Begin": "Begin Encounter",
-    "Create": "Create Encounter",
-    "Delete": "Delete Encounter",
-    "Encounter": "Encounter",
-    "EncounterPrevious": "Activate Previous Encounter",
-    "EncounterNext": "Activate Next Encounter",
-    "End": "End Encounter",
+    "Begin": "Start Combat",
+    "Create": "Create Combat",
+    "EncounterPrevious": "Activate Previous Combat",
+    "EncounterNext": "Activate Next Combat",
+    "End": "End Combat",
     "InitiativeRoll": "Roll Initiative",
     "InitiativeReset": "Reset Initiative",
     "ClearMovementHistories": "Clear Movement Histories",
-    "EndTitle": "End Encounter?",
-    "EndConfirmation": "End this encounter and empty the turn tracker?",
-    "None": "No Encounter",
+    "EndTitle": "End Combat",
+    "EndConfirmation": "End this combat and empty the turn tracker?",
+    "None": "No Combat",
     "NoneActive": "There is no active Combat Encounter in your currently viewed Scene.",
-    "NoneRemaining": "There are no Combatants remaining in this Encounter that are not defeated.",
+    "NoneRemaining": "There are no Combatants remaining in this Combat Encounter that are not defeated.",
     "NotStarted": "Not Started",
     "Round": "Round {round}",
     "Rounds": "Rounds",
@@ -409,9 +407,9 @@
     "RollNPC": "Roll NPCs",
     "RollAll": "Roll All",
     "RollsInitiative": "{name} rolls for Initiative!",
-    "Settings": "Encounter Tracker Settings",
+    "Settings": "Combat Tracker Settings",
     "SettingsSave": "Save Tracker Settings",
-    "SidebarTitle": "Encounter Tracker",
+    "SidebarTitle": "Combat Tracker",
     "Sounds": {
       "Epic": "Epic",
       "MC": "Fight Commentator"
@@ -421,12 +419,18 @@
     "TurnEnd": "End Turn",
     "TurnNext": "Next Turn",
     "TurnPrev": "Previous Turn",
-    "CannotLinkToScene": "You cannot link the Combat to a Scene that doesn't contain all its Combatants.",
+    "CannotLinkToScene": "You cannot link the Combat Encounter to a Scene that doesn't contain all its Combatants.",
     "ACTIONS": {
+      "EditName": "Edit Name",
+      "EditNameTitle": "Edit Combat Encounter Name",
       "LinkToScene": "Link to Viewed Scene",
       "UnlinkFromScene": "Unlink from Scene"
     },
     "FIELDS": {
+      "name": {
+        "label": "Combat Name",
+        "hint": "Provide a short name for this Combat Encounter which helps to identify it."
+      },
       "round": {
         "label": "Round"
       },
@@ -483,8 +487,10 @@
     "Unknown": "Unknown Combatant",
     "PanTo": "Pan to Combatant",
     "Ping": "Ping Token",
-    "ToggleVis": "Toggle Visibility",
-    "ToggleDead": "Mark Defeated",
+    "Hide": "Hide",
+    "Show": "Show",
+    "MarkDefeated": "Mark Defeated",
+    "UnmarkDefeated": "Unmark Defeated",
     "MovementHistoryCleared": "Cleared movement history for Token \"{name}\".",
     "WarnNonVisibleToken": "This Combatant is not visible to you.",
     "FIELDS": {
@@ -526,13 +532,13 @@
     "FilterDocuments": "Filter Documents by Type",
     "ClearFilters": "Clear Filters",
     "Delete": {
-      "Option": "Delete Compendium",
+      "Option": "Delete",
       "Title": "Delete Compendium: {compendium}",
       "Warning": "This Compendium Pack will be permanently deleted and cannot be recovered."
     },
     "DeleteEntry": "Delete Entry",
     "Duplicate": {
-      "Option": "Duplicate Compendium",
+      "Option": "Duplicate",
       "Title": "Duplicate Compendium: {compendium}",
       "Label": "New Compendium Title",
       "Hint": "You may duplicate this compendium into your World to have a local copy of its content which is safe to edit.",
@@ -557,8 +563,8 @@
     "Type": "Document Type",
     "TypeHint": "Each Compendium pack contains a specific type of Document.",
     "ToggleLocked": {
-      "Option": "Toggle Edit Lock",
       "Title": "Toggle Edit Lock: {compendium}",
+      "Lock": "Lock",
       "Unlock": "Unlock",
       "Warning": "You are attempting to unlock for editing a compendium that does not belong to this World. Any changes you make in this compendium pack may be lost if the System or Module which owns it is updated. You may wish to duplicate the compendium to your World instead. How do you wish to proceed?"
     },
@@ -1432,13 +1438,17 @@
     "OpenConfig": "Open Configuration",
     "AssignStatusEffects": "Assign Status Effects",
     "SelectMovementAction": "Select Movement Action",
-    "ToggleTargetState": "Toggle Target State",
-    "ToggleCombatState": "Toggle Combat State",
-    "ToggleVis": "Toggle Visibility State",
-    "ToggleLock": "Toggle Locked State",
-    "ToFrontOrBack": "Bring to Front / Send to Back",
-    "TilePlay": "Play Tile Video",
-    "TilePause": "Pause Tile Video",
+    "Target": "Target",
+    "Untarget": "Untarget",
+    "EnterCombat": "Enter Combat",
+    "ExitCombat": "Exit Combat",
+    "Hide": "Hide",
+    "Show": "Show",
+    "Lock": "Lock",
+    "Unlock": "Unlock",
+    "ToFrontOrBack": "To Front/Back",
+    "TilePlay": "Play Video",
+    "TilePause": "Pause Video",
     "WarningEffectNoActor": "You cannot assign status effects to a Token which has no associated Actor."
   },
   "HTMLDocumentTagsElement.PLACEHOLDER": "Enter UUID or Drop {type}",
@@ -1854,8 +1864,6 @@
     "LATENCY": "Latency",
     "FPS": "FPS"
   },
-  "PLAYLIST.Delete": "Delete Playlist",
-  "PLAYLIST.Edit": "Edit Playlist",
   "PLAYLIST.DefaultChannel": "Playlist Audio Channel",
   "PLAYLIST.CurrentlyPlaying": "Currently Playing",
   "PLAYLIST.ModeDisabled": "Soundboard Only",
@@ -1872,7 +1880,7 @@
   "PLAYLIST.Update": "Update Playlist",
   "PLAYLIST.SortAlphabetical": "Alphabetical",
   "PLAYLIST.SortManual": "Manual",
-  "PLAYLIST.SoundCreate": "Create Sound",
+  "PLAYLIST.SoundAdd": "Add Sound",
   "PLAYLIST.SoundEdit": "Edit Sound",
   "PLAYLIST.SoundDelete": "Delete Sound",
   "PLAYLIST.SoundLoop": "Loop Sound",
@@ -1902,7 +1910,8 @@
     "CONTROLS": "User Volume Controls",
     "TOOLTIP": "Volume: {volume}%"
   },
-  "PLAYLIST_SOUND.Update": "Update Track",
+  "PLAYLIST_SOUND.Create": "Create Sound",
+  "PLAYLIST_SOUND.Update": "Update Sound",
   "PLAYLIST_SOUND.FIELDS": {
     "name.label": "Track Name",
     "path.label": "Audio Source",
@@ -1920,7 +1929,6 @@
   "SCENE.BackgroundScale": "Scene Scale",
   "SCENE.BackgroundScaleHint": "Use SHIFT+Mousewheel or SHIFT+Up Arrow and SHIFT+Down Arrow to adjust the scene scale.",
   "SCENE.CaptureInitialViewPosition": "Captured canvas position as initial view in the Scene configuration form.",
-  "SCENE.Configure": "Configure",
   "SCENE.CurrentLevel": "Current Level",
   "SCENE.Darkness": "Darkness",
   "SCENE.Details": "Details",
@@ -1973,7 +1981,7 @@
   "SCENE.Preload": "Preload Scene",
   "SCENE.Presentation": "Presentation",
   "SCENE.Properties": "Scene Properties",
-  "SCENE.View": "View Scene",
+  "SCENE.View": "View",
   "SCENE.ShiftBG": "Shift",
   "SCENE.ToggleNav": "Toggle Navigation",
   "SCENE.FogModeChangeMessage": "Fog exploration mode has changed. This will reload fog exploration and reset vision.",
@@ -2162,14 +2170,12 @@
   "SCENE_LEVEL": {
     "Actions": {
       "Add": {
-        "hint": "Scenes support more than one vertical level. Add a new level to convert this scene into a multi-level scene.",
+        "hint": "Scenes support more than one vertical level. Add a new Level to convert this Scene into a multi-level scene.",
         "label": "Add Level"
       },
-      "Down": "Down one level",
-      "Edit": "Edit level",
-      "Remove": "Remove level",
-      "Up": "Up one level",
-      "View": "View level"
+      "Edit": "Edit Level",
+      "Delete": "Delete Level",
+      "View": "View"
     },
     "FIELDS": {
       "background": {
@@ -2219,7 +2225,8 @@
           "hint": "Configure the set of other Levels which are fully or partially visible from this one."
         }
       }
-    }
+    },
+    "CannotDeleteOnlyLevel": "You cannot delete the only Level in this Scene."
   },
   "SCENE_NAVIGATION": {
     "COLLAPSE": "Collapse Navigation",
@@ -2325,7 +2332,7 @@
       }
     }
   },
-  "SETTINGS.CombatConfigL": "Encounter Tracker",
+  "SETTINGS.CombatConfigL": "Combat Tracker",
   "SETTINGS.CombatConfigH": "Combat and Tracker related settings.",
   "SETTINGS.CombatThemeN": "Combat Theme",
   "SETTINGS.CombatThemeL": "The set of Sounds that will play when Combat begins, when your turn is next, and when it is your turn.",
@@ -3153,6 +3160,7 @@
   "PERMISSION.WarningNoCreate": "You do not have sufficient permission to create a {document}.",
   "PLACEABLE_PALETTE": {
     "Apply": "Apply",
+    "CannotApplyToLocked": "You cannot apply the palette to locked objects.",
     "CloneSettings": "Clone",
     "MultipleValues": "<Multiple Values>",
     "Selected": "{document} Palette [{count}]",
@@ -3188,6 +3196,10 @@
         "top": {
           "label": "Top",
           "hint": "The top of the elevation range."
+        },
+        "topInclusive": {
+          "label": "Top Inclusive",
+          "hint": "Is the top included in the elevation range?"
         }
       },
       "attachment": {
@@ -3225,7 +3237,7 @@
       "create": "Create Region",
       "update": "Update Region",
       "delete": "Delete Region",
-      "behaviorCreate": "Create Behavior",
+      "behaviorAdd": "Add Behavior",
       "behaviorEdit": "Edit Behavior",
       "behaviorDelete": "Delete Behavior",
       "behaviorEnable": "Enable Behavior",
@@ -3415,11 +3427,21 @@
         }
       },
       "changeLevel": {
+        "FIELDS": {
+          "movementActions": {
+            "label": "Allowed Movement Actions",
+            "hint": "Defines which movement actions the Token can use to change the Level. If no actions are selected, all movement actions are allowed."
+          }
+        },
+        "Level": "Destination Level",
+        "MovementAction": "Movement Action",
         "Confirm": "Do you want to move {token} to {level}?",
         "ConfirmSelect": "Select the level you want to move {token} to.",
+        "ConfirmDisabled": "{token} cannot be moved to another level from their current position.",
         "Move": "Move",
         "MoveDown": "Move Down",
-        "MoveUp": "Move Up"
+        "MoveUp": "Move Up",
+        "DoNotMove": "Don't Move"
       },
       "defineSurface": {
         "FIELDS": {
@@ -3430,7 +3452,7 @@
           "sound.label": "Restricts Sound",
           "occlusion": {
             "label": "Occlusion",
-            "hint": "When an occludable Token is beneath the surface, Tiles with occlusion mode set to SURFACE, and any foreground or background Level textures at the same elevation or higher, will be occluded."
+            "hint": "When a controlled or detected Token is below a surface, Tiles using the \"Surface\" occlusion mode fade if they are at or above that surface, as do background and foreground textures. For surfaces at the top of a three-dimensional Region, fading only applies if the Token is also at or above the Region's bottom elevation. Hovering over the Region or pressing the \"Highlight Objects\" keybinding also triggers this effect."
           },
           "exposure": {
             "label": "Reveal Elevated Surface",
@@ -3542,10 +3564,13 @@
           "relative.label": "Relative"
         },
         "Confirm": "Do you want to teleport {token}?",
+        "ConfirmDisabled": "{token} cannot be teleported from their current position.",
         "ConfirmRevealed": "Do you want to teleport {token} to {region} in {scene}?",
         "ConfirmSelectSameScene": "Select the destination in {scene} you want to teleport {token} to.",
         "ConfirmSelectDifferentScene": "Select the destination you want to teleport {token} to.",
-        "ConfirmSelectOption": "{region} in {scene}"
+        "ConfirmSelectOption": "{region} in {scene}",
+        "Teleport": "Teleport",
+        "DoNotTeleport": "Don't Teleport"
       },
       "toggleBehavior": {
         "FIELDS": {
@@ -3570,7 +3595,7 @@
   "SIDEBAR.TabJournal": "Journal",
   "SIDEBAR.TabCompendium": "Compendium Packs",
   "SIDEBAR.TabPlaceables": "Placeables",
-  "SIDEBAR.TabSettings": "Game Settings",
+  "SIDEBAR.TabSettings": "Settings",
   "SIDEBAR.TabTables": "Rollable Tables",
   "SIDEBAR.TokenArt": "View Token Artwork",
   "SIDEBAR.SearchModeName": "Search by Name only",
@@ -3582,6 +3607,7 @@
   "SIDEBAR.CollapseToggle": "Collapse or Expand",
   "SIDEBAR.Delete": "Delete",
   "SIDEBAR.DeleteWarning": "This {type} will be permanently deleted and cannot be recovered.",
+  "SIDEBAR.DeleteManyWarning": "{count} {type} will be permanently deleted and cannot be recovered.",
   "SIDEBAR.Duplicate": "Duplicate",
   "SIDEBAR.Edit": "Edit",
   "SIDEBAR.Export": "Export Data",
@@ -3612,9 +3638,6 @@
     "ACTIONS": {
       "ChangeLevel": "Change Level",
       "Clear": "Clear",
-      "Configure": "Configure",
-      "Create": "Create {name}",
-      "Delete": "Delete",
       "Hidden": "Hidden",
       "Hide": "Hide",
       "InLevel": "Included in Level",
@@ -3657,7 +3680,8 @@
       "normal": "Normal Walls",
       "secret": "Secret Doors",
       "terrain": "Terrain Walls",
-      "window": "Windows"
+      "window": "Windows",
+      "blank": "Blank Walls"
     }
   },
   "SIDEBAR.SETTINGS": {
@@ -3909,12 +3933,15 @@
   "TOKEN.AssignSuccess": "Updated prototype Token configuration for {name}",
   "TOKEN.BarAttributes": "Attribute Bars",
   "TOKEN.BarValues": "Single Values",
-  "TOKEN.DeleteCombatantWarning": "You are deleting a Token that is in Combat. Its Combatant will be permanently deleted.",
+  "TOKEN.DeleteCombatantWarning": "You are deleting a Token that is in combat. Its Combatant will be permanently deleted.",
   "TOKEN.DeleteAttachedRegionWarning": "You are deleting a Token that has a Region attached to it. Its attached Region(s) will be permanently deleted.",
   "TOKEN.Size": "Size",
   "TOKEN.Anchor": "Anchor",
   "TOKEN.AnchorHint": "The default anchor (0.5, 0.5) is the center of the Token image.",
   "TOKEN.ImageAlts": "Alternate Actor Tokens",
+  "TOKEN.ImageCycleNext": "Next Token Image",
+  "TOKEN.ImageCyclePrev": "Previous Token Image",
+  "TOKEN.ImagePreview": "Token Image Preview",
   "TOKEN.Mirror": "Mirror Image",
   "TOKEN.MirrorX": "Horizontally",
   "TOKEN.MirrorY": "Vertically",
@@ -4644,7 +4671,7 @@
           "hole.label": "Is Hole",
           "gridBased": {
             "label": "Is Grid-Based",
-            "hint": "A grid-based shape is conforming to the grid's metric."
+            "hint": "A grid-based shape follows the grid's distance rules, as defined by the Grid Diagonals game setting."
           },
           "x.label": "X-Origin",
           "y.label": "Y-Origin",
