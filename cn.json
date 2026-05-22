@@ -386,11 +386,13 @@
 },
 "teleportToken": {
 "Confirm": "你想传送 {token} 吗？",
+"ConfirmDisabled": "{token} 无法从其当前位置进行传送。",
 "ConfirmGM": "你想将 {token} 传送到 {scene} 中的 {region} 吗？",
 "ConfirmRevealed": "是否将 {token} 转移至 {scene} 中的 {region}？",
 "ConfirmSelectDifferentScene": "选择你想将 {token} 转移至的目的地。",
 "ConfirmSelectOption": "{region} 在 {scene} 中",
 "ConfirmSelectSameScene": "在 {scene} 中选择要将 {token} 转移至的目的地。",
+"DoNotTeleport": "不许传送",
 "FIELDS": {
 "choice": {
 "hint": "允许移动指示物的用户选择是否传送它。若配置了多个目标区域，当此传送器被发现或用户为GM时，允许用户选择目标区域。",
@@ -437,7 +439,8 @@
 "center.label": "居中对齐",
 "random.label": "随机",
 "relative.label": "关系"
-}
+},
+"Teleport": "传送"
 },
 "toggleBehavior": {
 "FIELDS": {
@@ -3939,7 +3942,7 @@
 "base": {
 "FIELDS": {
 "gridBased": {
-"hint": "基于网格的形状符合网格的度量标准。",
+"hint": "基于网格的形状会遵循由网格对角线游戏设置所定义的网格距离规则。",
 "label": "基于网格"
 },
 "hole.label": "是否为孔",
@@ -4074,6 +4077,7 @@
 "SIDEBAR.CollapseToggle": "展开/折叠",
 "SIDEBAR.Create": "创建 {type}",
 "SIDEBAR.Delete": "删除",
+"SIDEBAR.DeleteManyWarning": "{count} {type} 将被永久删除，且无法恢复。",
 "SIDEBAR.DeleteWarning": "此 {type} 将被永久删除并无法恢复。",
 "SIDEBAR.DirectoryTitle": "{type} 目录",
 "SIDEBAR.Documentation": "Foundry VTT 文档",
@@ -4125,6 +4129,7 @@
 "placeholder": "筛选 {name}"
 },
 "WALLS": {
+"blank": "空白墙体",
 "door": "门",
 "ethereal": "以太墙体",
 "filterByCategory": "按类别筛选",
@@ -4701,6 +4706,9 @@
 "width.label": "X 轴尺寸"
 },
 "TOKEN.ImageAlts": "角色替代指示物",
+"TOKEN.ImageCycleNext": "下一个指示物图像",
+"TOKEN.ImageCyclePrev": "上一个指示物图像",
+"TOKEN.ImagePreview": "指示物图像预览",
 "TOKEN.MOVEMENT": {
 "ACTIONS": {
 "blink.label": "传送（闪现）",
