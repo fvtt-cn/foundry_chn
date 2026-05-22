@@ -293,15 +293,20 @@
 },
 "changeLevel": {
 "Confirm": "是否要将 {token} 转移至 {level} ？",
+"ConfirmDisabled": "{token} 无法从其当前位置移动到其他层级。",
 "ConfirmSelect": "选择你想要 {token} 转移至的层级。",
+"DoNotMove": "不许移动",
 "FIELDS": {
 "movementActions": {
+"hint": "定义指示物可用于更改层级的移动动作。若未选择任何动作，则允许使用所有移动动作。",
 "label": "允许移动动作"
 }
 },
+"Level": "目标层级",
 "Move": "移动",
 "MoveDown": "向下移动",
-"MoveUp": "向上移动"
+"MoveUp": "向上移动",
+"MovementAction": "移动动作"
 },
 "defineSurface": {
 "FIELDS": {
@@ -312,7 +317,7 @@
 "light.label": "限制光照和黑暗",
 "move.label": "限制移动",
 "occlusion": {
-"hint": "当可遮挡指示物位于地面之下时，遮挡模式设置为“地面”的方块，以及处于相同高度或更高高度的任何前景或背景层级纹理，都将被遮挡。",
+"hint": "当一个受控制或检测到的指示物位于某个表面之下时，使用“表面”遮挡模式的图块如果位于该表面之上或与其持平，就会逐渐变暗，背景和前景纹理也会如此。对于位于三维区域顶部的表面，只有当指示物也位于该区域底部的高度之上时，才会出现这种渐暗效果。将鼠标悬停在该区域上或按下“强调对象”快捷键也会触发此效果。",
 "label": "遮挡"
 },
 "placement.label": "放置",
@@ -4163,7 +4168,7 @@
 "SIDEBAR.TabCompendium": "合集包",
 "SIDEBAR.TabJournal": "日志条目",
 "SIDEBAR.TabPlaceables": "可放置",
-"SIDEBAR.TabSettings": "游戏设定",
+"SIDEBAR.TabSettings": "设定",
 "SIDEBAR.TabTables": "随机表",
 "SIDEBAR.TokenArt": "查看指示物插图",
 "SIDEBAR.Wiki": "Foundry VTT 社区百科",
@@ -4330,7 +4335,7 @@
 "FADE.label": "淡出",
 "NONE.label": "无",
 "RADIAL.label": "辐射",
-"SURFACE.label": "地面",
+"SURFACE.label": "表面",
 "VISION.label": "视野"
 },
 "alpha.label": "图块不透明度",
@@ -4375,7 +4380,7 @@
 "TILE.OcclusionModeNone": "无（总是可见）",
 "TILE.OcclusionModeRadial": "辐射（围绕指示物）",
 "TILE.OcclusionModeRoof": "屋顶（禁用视线与光线）",
-"TILE.OcclusionModeSurface": "地面",
+"TILE.OcclusionModeSurface": "表面",
 "TILE.OcclusionModeVision": "视觉（指示物视觉）",
 "TILE.SECTIONS": {
 "overhead": "如果图块位于前景的顶部，则适用的其他属性。",
@@ -4821,7 +4826,7 @@
 "adjustDarknessLevel": "在该区域内覆盖、提亮或降低场景的暗度级别。",
 "applyActiveEffect": "当指示物处于该区域内时，对其施加主动效果。",
 "changeLevel": "允许移动进入该区域的指示物转移至该区域关联的另一层级。",
-"defineSurface": "划定一个能够限制光照、移动、视线和声音的地面。",
+"defineSurface": "划定一个能够限制光照、移动、视线和声音的墙壁。",
 "displayScrollingText": "当指示物触发订阅的事件之一时，在其上方显示滚动文本。",
 "executeMacro": "当令牌触发订阅的事件之一时执行一个宏。",
 "executeScript": "当订阅的事件之一发生时，执行脚本。",
@@ -4835,7 +4840,7 @@
 "RegionBehavior": {
 "applyActiveEffect": "应用主动效果",
 "changeLevel": "切换层级",
-"defineSurface": "划定地面",
+"defineSurface": "划定表面",
 "modifyMovementCost": "调整移动消耗"
 },
 "TableResult": {
