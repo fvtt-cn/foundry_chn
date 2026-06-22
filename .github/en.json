@@ -1,5 +1,4 @@
 {
-  "Foundry Virtual Tabletop": "Foundry Virtual Tabletop",
   "ADVENTURE": {
     "ImportSubmit": "Import Adventure",
     "ImportProgress": "Importing",
@@ -517,6 +516,7 @@
     "Confirm": "Confirm",
     "Default": "Default",
     "Delete": "Delete",
+    "FoundryVirtualTabletop": "Foundry Virtual Tabletop",
     "Invalid": "Invalid",
     "No": "No",
     "None": "None",
@@ -553,6 +553,10 @@
       "Start": "Importing {number} {type} Documents and {folderNumber} Folders into the {folder} folder. Please be patient.",
       "Finish": "Successfully imported {number} {type} Documents and {folderNumber} Folders into the {folder} folder."
     },
+    "ImportFolder": {
+      "InvalidDocument": "You may not import a {type} Document into the folders collection of the {collection} Compendium.",
+      "InvalidDocuments": "You can only import Folder documents into the folders collection of the {collection} Compendium."
+    },
     "ImportEntry": "Import Entry",
     "Locked": "{title} [Locked]",
     "Migration": {
@@ -569,6 +573,8 @@
       "Warning": "You are attempting to unlock for editing a compendium that does not belong to this World. Any changes you make in this compendium pack may be lost if the System or Module which owns it is updated. You may wish to duplicate the compendium to your World instead. How do you wish to proceed?"
     },
     "CannotViewWarning": "You do not have sufficient permission to view this Compendium pack.",
+    "ModifyLocked": "You cannot modify content in this Compendium pack because it is locked.",
+    "ModifyPermissionDenied": "You do not have permission to modify this Compendium pack.",
     "OwnershipInheritBelow": "Inherit from below",
     "OwnershipReset": "Reset to Default",
     "ART": {
@@ -1370,6 +1376,7 @@
     "TitleImageVideo": "Image or Video Browser",
     "TitleImage": "Image Browser",
     "TitleVideo": "Video Browser",
+    "TitleTexture": "Texture Browser",
     "TitleAudio": "Audio Browser",
     "TitleText": "Document Browser",
     "TitleGraphics": "3D Browser",
@@ -1775,7 +1782,10 @@
   "MODMANAGE": {
     "Bugs": "Bug or Issue Reports",
     "DeactivateAll": "Deactivate All Modules",
-    "Readme": "Module Documentation",
+    "Readme": "Documentation",
+    "Author": "Author",
+    "Authors": "Authors",
+    "URL": "URL",
     "Title": "Module Management",
     "Instructions": "Use this form to configure which Modules are active within your current World. Submitting changes to active modules will cause the current session to reload.",
     "View": "The Modules listed below are currently active within this World.",
@@ -1890,6 +1900,7 @@
   "PLAYLIST.SoundPreload": "Preload Sound",
   "PLAYLIST.SoundResume": "Resume Sound",
   "PLAYLIST.SoundStop": "Sound Stop",
+  "PLAYLIST.Preload": "Preload Sounds",
   "PLAYLIST.BulkImport": {
     "Title": "Bulk Import Sounds",
     "Hint": "Select a folder containing the sounds to be imported.",
@@ -1978,13 +1989,14 @@
   "SCENE.Loading": "Loading {name}",
   "SCENE.Notes": "Scene Notes",
   "SCENE.Perception": "Perception",
-  "SCENE.Preload": "Preload Scene",
+  "SCENE.Preload": "Preload",
   "SCENE.Presentation": "Presentation",
   "SCENE.Properties": "Scene Properties",
   "SCENE.View": "View",
   "SCENE.ShiftBG": "Shift",
+  "SCENE.PullEveryone": "Pull Everyone",
   "SCENE.ToggleNav": "Toggle Navigation",
-  "SCENE.FogModeChangeMessage": "Fog exploration mode has changed. This will reload fog exploration and reset vision.",
+  "SCENE.FogModeChangeMessage": "Fog of War mode has changed. This will reload fog exploration and reset vision.",
   "SCENE.Transition": {
     "Animation": "Transition Animation",
     "Preview": "Preview",
@@ -2076,8 +2088,8 @@
         "hint": "Controls Fog of War mode: \"None\" disables exploration (tokens only see what they currently can), \"Individual\" tracks exploration separately for each user, and \"Shared\" uses a single exploration state contributed to by all users."
       },
       "overlay": {
-        "label": "Exploration Image",
-        "hint": "An optional fog of war image to be drawn above unexplored parts of the scene."
+        "label": "Unexplored Image",
+        "hint": "An optional Fog of War image to be drawn above unexplored parts of the Scene. If Unexplored Color is configured, the image is drawn on top of it."
       },
       "colors": {
         "explored": {
@@ -2174,8 +2186,7 @@
         "label": "Add Level"
       },
       "Edit": "Edit Level",
-      "Delete": "Delete Level",
-      "View": "View"
+      "Delete": "Delete Level"
     },
     "FIELDS": {
       "background": {
@@ -2200,9 +2211,8 @@
         "alphaThreshold.label": "Alpha Threshold"
       },
       "fog": {
-        "label": "Fog Exploration",
-        "src.label": "Unexplored Texture",
-        "tint.label": "Texture Tint"
+        "label": "Fog of War",
+        "src.label": "Unexplored Image"
       },
       "textures": {
         "label": "Positioning",
@@ -3163,8 +3173,8 @@
     "CannotApplyToLocked": "You cannot apply the palette to locked objects.",
     "CloneSettings": "Clone",
     "MultipleValues": "<Multiple Values>",
-    "Selected": "{document} Palette [{count}]",
-    "Title": "{document} Palette"
+    "Selected": "{document} Palette: Edit [{count}]",
+    "Title": "{document} Palette: Preset"
   },
   "REGION": {
     "TABS": {
@@ -3457,6 +3467,10 @@
           "exposure": {
             "label": "Reveal Elevated Surface",
             "hint": "Partially reveal the visible area of this elevated surface to observers below and outside of it. The revealed area depends on the angle between the observer and the surface boundary, this area decreases as the angle becomes steeper. This option is useful for roofs, balconies, or other overhead platforms."
+          },
+          "culling": {
+            "label": "Cull Tokens",
+            "hint": "Hide uncontrolled Tokens outside the currently viewed Level in the GM view or when Token Vision is disabled. Surfaces in the background hide Tokens below them, while surfaces in the foreground hide Tokens on or above them."
           }
         },
         "PLACEMENTS": {
@@ -3667,7 +3681,8 @@
       "Title": "Advanced Filter",
       "Level": "Filter by Level",
       "Tooltip": "Advanced Filters. Right-click to clear.",
-      "Top": "Top"
+      "Top": "Top",
+      "Viewed": "Viewed Only"
     },
     "Search": {
       "placeholder": "Filter {name}"
@@ -3755,7 +3770,9 @@
     "AnimateSettingHint": "Display a roulette-style animation when drawing from a Roll Table.",
     "DrawFlavor": "Draws a result from the {name} table",
     "DrawFlavorPlural": "Draws {number} results from the {name} table",
+    "DrawMaximumIterations": "Failed to draw an available entry from Table {name}, maximum iteration reached.",
     "NoAvailableResults": "There are no available results which can be drawn from this table.",
+    "NoPossibleResults": "No results can possibly be drawn from this table and formula.",
     "Result": "Result",
     "ResultDescription": "Result Description",
     "SHEETS": {
@@ -3942,6 +3959,7 @@
   "TOKEN.ImageCycleNext": "Next Token Image",
   "TOKEN.ImageCyclePrev": "Previous Token Image",
   "TOKEN.ImagePreview": "Token Image Preview",
+  "TOKEN.ImagePathOverridden": "This image is overridden by the Dynamic Token Ring subject texture.",
   "TOKEN.Mirror": "Mirror Image",
   "TOKEN.MirrorX": "Horizontally",
   "TOKEN.MirrorY": "Vertically",
@@ -3977,6 +3995,7 @@
     "depth.label": "Z-Size",
     "level.label": "Level",
     "movementAction.label": "Movement Action",
+    "movementAction.hint": "When Default is selected, the movement action is automatically determined for this Token.",
     "actorId.label": "Represented Actor",
     "actorLink.label": "Link Actor Data",
     "displayName.label": "Display Name",
