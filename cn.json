@@ -310,6 +310,10 @@
 },
 "defineSurface": {
 "FIELDS": {
+"culling": {
+"hint": "在GM视图中，或当指示物视野被禁用时，将当前未受控的指示物隐藏在所查看的层级之外。背景中的表面会隐藏其下方的指示物，而前景中的表面则会隐藏其上方或正上方的指示物。",
+"label": "选择性指示物"
+},
 "exposure": {
 "hint": "向位于该抬升表面下方或外部的观察者，部分显示其可见区域。显示区域的大小取决于观察者与表面边界的夹角；夹角越大，显示的区域就越小。此选项适用于屋顶、阳台或其他悬空平台。",
 "label": "显示抬升表面"
@@ -825,6 +829,7 @@
 "Confirm": "确认",
 "Default": "默认",
 "Delete": "删除",
+"FoundryVirtualTabletop": "Foundry Virtual Tabletop",
 "Invalid": "无效",
 "No": "否",
 "None": "无",
@@ -836,6 +841,12 @@
 "COMPENDIUM": {
 "CopyId": "复制合集包 ID",
 "IdCopiedClipboard": "合集包 ID “{id}” 已复制到剪贴板。",
+"ImportFolder": {
+"InvalidDocument": "你可能无法将 {type} 文档导入 {collection} 合集包的文件夹合集中。",
+"InvalidDocuments": "你只能将文件夹文档导入到 {collection} 合集包中的文件夹集合中。"
+},
+"ModifyLocked": "你无法修改该合集包中的内容，因为该合集包已被锁定。",
+"ModifyPermissionDenied": "你没有权限修改该合集包。",
 "ToggleLocked": {
 "Lock": "锁定"
 }
@@ -1291,8 +1302,8 @@
 "DOCUMENT.Settings": "设定",
 "DOCUMENT.SheetPermissionWarn": "你没有查看此 {document} 卡的权限。",
 "DOCUMENT.SkipCreate": "跳过创建",
-"DOCUMENT.TableResult": "表格结果",
-"DOCUMENT.TableResults": "表格结果",
+"DOCUMENT.TableResult": "随机表结果",
+"DOCUMENT.TableResults": "随机表结果",
 "DOCUMENT.Tile": "图块",
 "DOCUMENT.Tiles": "图块",
 "DOCUMENT.Token": "指示物",
@@ -1760,6 +1771,7 @@
 "public": "核心数据",
 "s3": "Amazon S3"
 },
+"TitleTexture": "纹理浏览器",
 "TraverseBack": "回溯"
 },
 "FILES.AddFavorite": "将当前文件夹添加到收藏夹",
@@ -2344,7 +2356,10 @@
 "MENU.Reload": "重新加载",
 "MODMANAGE": {
 "Activate": "激活",
-"Deactivate": "禁用"
+"Author": "作者",
+"Authors": "作者",
+"Deactivate": "禁用",
+"URL": "URL"
 },
 "MODMANAGE.Bugs": "错误/问题报告",
 "MODMANAGE.DeactivateAll": "禁用全部模组",
@@ -2365,7 +2380,7 @@
 "MODMANAGE.NavLabel": "模组管理导航栏",
 "MODMANAGE.None": "当前世界中暂无激活的模组。",
 "MODMANAGE.OptionalDependencies": "可选依赖项",
-"MODMANAGE.Readme": "模组文档",
+"MODMANAGE.Readme": "文档",
 "MODMANAGE.RecommendedDependencies": "推荐依赖项",
 "MODMANAGE.RequiredDepError": "无法禁用此模组，因为以下内容需要它：{dependents}",
 "MODMANAGE.RequiredDependencies": "必需依赖项",
@@ -2661,8 +2676,8 @@
 "CannotApplyToLocked": "你不能将调色板应用于锁定的对象。",
 "CloneSettings": "克隆",
 "MultipleValues": "<Multiple Values>",
-"Selected": "{document} 控制板 [{count}]",
-"Title": "{document} 控制板"
+"Selected": "{document} 控制板：编辑 [{count}]",
+"Title": "{document} 控制板：预设"
 },
 "PLAYERS": {
 "FPS": "FPS",
@@ -2709,6 +2724,7 @@
 "PLAYLIST.PinToBottom": "置底",
 "PLAYLIST.PinToTop": "置顶",
 "PLAYLIST.Play": "播放列表",
+"PLAYLIST.Preload": "预加载音效",
 "PLAYLIST.SortAlphabetical": "字母序",
 "PLAYLIST.SortManual": "手调序",
 "PLAYLIST.SoundAdd": "添加音效",
@@ -3085,8 +3101,8 @@
 "label": "探索模式"
 },
 "overlay": {
-"hint": "在场景中未探索的部分上层渲染可选的战争迷雾图像。",
-"label": "战争迷雾图像"
+"hint": "在场景中未探索的部分上层渲染可选的战争迷雾图像。如果配置了未探索颜色，该图像将绘制在其之上。",
+"label": "未探索图像"
 }
 },
 "foreground": {
@@ -3168,7 +3184,7 @@
 "label": "天气效果"
 }
 },
-"SCENE.FogModeChangeMessage": "迷雾探索模式已更改。这将重新加载迷雾探索并重置视野。",
+"SCENE.FogModeChangeMessage": "战争迷雾模式已更改。这将重新加载迷雾探索并重置视野。",
 "SCENE.FogOfWar": "战争迷雾",
 "SCENE.GenerateThumb": "生成缩略图",
 "SCENE.GenerateThumbNoCanvas": "“禁用游戏画布”设置处于激活状态时，无法生成场景缩略图。",
@@ -3204,9 +3220,10 @@
 "SCENE.Notes": "场景说明",
 "SCENE.Perception": "感知",
 "SCENE.Pixels": "像素",
-"SCENE.Preload": "预加载场景",
+"SCENE.Preload": "预加载",
 "SCENE.Presentation": "介绍",
 "SCENE.Properties": "场景属性",
+"SCENE.PullEveryone": "拖拽所有人",
 "SCENE.ShiftBG": "偏移背景",
 "SCENE.TABS": {
 "AMBIENCE": {
@@ -3277,8 +3294,8 @@
 "top.label": "前景高度"
 },
 "fog": {
-"label": "迷雾探索",
-"src.label": "未探索纹理",
+"label": "战争迷雾",
+"src.label": "未探索图像",
 "tint.label": "纹理着色"
 },
 "foreground": {
@@ -4117,7 +4134,8 @@
 "Level": "按层级筛选",
 "Title": "高级筛选",
 "Tooltip": "高级筛选。右键单击以清除。",
-"Top": "顶部"
+"Top": "顶部",
+"Viewed": "仅限查看"
 },
 "Meta": {
 "empty": "空的",
@@ -4256,12 +4274,14 @@
 "Submit": "更新随机表",
 "ToggleDrawn": "切换获取状态"
 },
+"DrawMaximumIterations": "无法从随机表 {name} 中获取可用条目，已达到最大迭代次数。",
 "FIELDS": {
 "description.label": "随机表描述",
 "displayRoll.label": "聊天框显示掷骰公式",
 "formula.label": "掷骰公式",
 "replacement.label": "重复抽取"
 },
+"NoPossibleResults": "无法从该随机表或公式中获得结果。",
 "SHEETS": {
 "Config": "配置随机表",
 "View": "查看随机表"
@@ -4596,6 +4616,7 @@
 "hint": "禁止此指示物的旋转在画布中渲染显示。",
 "label": "锁定插图旋转"
 },
+"movementAction.hint": "当选择默认时，该指示物的移动动作将自动确定。",
 "movementAction.label": "移动动作",
 "name.label": "指示物名称",
 "occludable.radius": {
@@ -4708,6 +4729,7 @@
 "TOKEN.ImageAlts": "角色替代指示物",
 "TOKEN.ImageCycleNext": "下一个指示物图像",
 "TOKEN.ImageCyclePrev": "上一个指示物图像",
+"TOKEN.ImagePathOverridden": "该图像将被动态指示物环主题纹理覆盖。",
 "TOKEN.ImagePreview": "指示物图像预览",
 "TOKEN.MOVEMENT": {
 "ACTIONS": {
