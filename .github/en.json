@@ -579,7 +579,8 @@
     "OwnershipReset": "Reset to Default",
     "ART": {
       "CONFIG": {
-        "Hint": "Use the arrows to adjust the priority of the art sources. When a single Actor has art provided by multiple sources, the one with the highest priority will be used.",
+        "Hint": "Use the arrows to adjust the priority of the art sources. When a single Document has art provided by multiple sources, the one with the highest priority will be used.",
+        "Items": "Items",
         "Portraits": "Portraits",
         "PriorityDecrease": "Decrease Priority",
         "PriorityIncrease": "Increase Priority",
@@ -1053,6 +1054,7 @@
     "StatusUpgrade": "Empowered",
     "Submit": "Submit Changes",
     "CHANGES": {
+      "Unregistered": "A change type of \"{type}\" is not registered.",
       "PHASES": {
         "initial": {
           "label": "Initial",
