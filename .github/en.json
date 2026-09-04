@@ -1197,7 +1197,7 @@
     "NoWebGL": "Your browser does not currently support WebGL rendering which is required by Foundry Virtual Tabletop. Ensure that you have hardware rendering and WebGL enabled in your browser.",
     "NoWebGL2": "Your browser does not currently support WebGL Version 2 rendering which is essential for Foundry Virtual Tabletop to work properly. Errors or abnormal graphical behavior may occur.",
     "BackgroundTextureSize": "You are using a Scene background texture with dimensions {width}px by {height}px. One or both of these dimensions exceeds the maximum texture size of {max}px supported by your device.",
-    "InvalidAdminKey": "The provided server administrator password is invalid. If you have forgotten your configured password you will need to manually delete the <strong>Config/admin.txt</strong> file from your user data location.",
+    "InvalidAdminCredentials": "The provided server administrator username or password is invalid. If you have forgotten your configured credentials, you will need to manually delete the <strong>Config/admin.txt</strong> file from your user data location.",
     "LoadPackages": "The request to browse existing packages failed to connect with the Foundry server. Make sure your application allows outbound connections.",
     "NoTargetUsersForWhisper": "No target users exist for this whisper. Check your spelling or try \"/w [User Name]\" instead.",
     "CantWhisper": "You do not have permission to send whispered chat messages to other users.",
@@ -1418,6 +1418,7 @@
   "INVITATIONS.Copied": "Game invitation link copied to clipboard",
   "INVITATIONS.Instructions": "Share the below invitation links with users who you wish to have join your game. The local invitation link is for users on your local network while the internet link connects via internet on the configured port.",
   "INVITATIONS.Internet": "Internet",
+  "INVITATIONS.InternetV6": "Internet (IPv6)",
   "INVITATIONS.Local": "Local Network",
   "INVITATIONS.Title": "Game Invitation Links",
   "INVITATIONS.OpenConnection": "Your connection appears to be open",
@@ -2243,7 +2244,12 @@
   "SCENE_NAVIGATION": {
     "COLLAPSE": "Collapse Navigation",
     "EXPAND": "Expand Navigation",
-    "LABEL": "Scene Navigation"
+    "LABEL": "Scene Navigation",
+    "SCENE": {
+      "Viewing": "Viewing",
+      "Active": "Active",
+      "Hidden": "Hidden"
+    }
   },
   "GRID.STYLES": {
     "SolidLines": "Solid Lines",
@@ -2280,6 +2286,10 @@
       "OtherSettings": "Other Settings"
     },
     "FIELDS": {
+      "adminUsername": {
+        "label": "Administrator Username",
+        "hint": "An administrator username is used to protect access to this Setup and Configuration area of Foundry Virtual Tabletop. Configuring an administrator username is optional but encouraged."
+      },
       "adminPassword": {
         "label": "Administrator Password",
         "hint": "An administrator password is used to protect access to this Setup and Configuration area of Foundry Virtual Tabletop. It is strongly encouraged to set an administrator password for your server."
@@ -2482,6 +2492,10 @@
           "hint": "Specify whether you prefer user interface elements to render using a light theme or a dark theme."
         }
       },
+      "chatBackground": {
+        "hint": "Display the chat log with a background rather than having chat cards overlay the canvas.",
+        "label": "Chat Background"
+      },
       "chatNotifications": {
         "label": "Chat Notifications",
         "hint": "Choose whether notifications of new chat messages appear as full chat cards, or only as a pip on the chat tab.",
@@ -2583,14 +2597,16 @@
     "FavoritePackage": "Favorite",
     "Verified": "Package is verified for this version of Foundry",
     "ErrorTimeout": "The request to {url} timed out after {timeout}s",
+    "GoBack": "Go Back",
+    "ShuttingDown": {
+      "Confirm": "Are you sure you want to shut down the server?",
+      "Title": "Shutting Down",
+      "Message": "The server is shutting down. It will need to be restarted to access again.",
+      "Unavailable": "The server is not yet available. Verify that it has been restarted, or try again in a few seconds."
+    },
     "WarningsTitle": "Package Warnings",
     "WarningsNone": "You have no warnings!",
     "WarningsManage": "Manage Package",
-    "ManifestUpdate": "Updated version available at new installation URL",
-    "ManifestUpdateAvailable": "A newer version of \"{package}\" is available at a different installation URL. This happens when the package hosting location or the author has changed.",
-    "PriorManifestUrl": "Prior Manifest URL (Version {version})",
-    "UpdatedManifestUrl": "Updated Manifest URL (Version {version})",
-    "SwapToTheUpdatedManifest": "Would you like to switch to the new manifest URL? (this is recommended)",
     "CurrentVersion": "Current Version",
     "ForceUpdate": "Force Update?",
     "DependencyNotInstalled": "This dependency is not installed",
@@ -2620,12 +2636,15 @@
     "PackageInstalled": "Installed",
     "PackageNotOwned": "Not Owned",
     "PackageName": "Package Name",
+    "PackageOwnershipUnknown": "Ownership Unknown",
+    "PackageOwnershipUnknownHint": "Your package entitlements could not be retrieved from foundryvtt.com, so it is not known whether you own this package.",
     "PackageProtected": "Protected",
     "PackageRequiresDowngradeHint": "You must downgrade to Foundry VTT version {vmax} in order to install this package.",
     "PackageRequiresDowngradeLabel": "Requires Downgrade",
     "PackageRequiresUpgradeHint": "You must upgrade to Foundry VTT version {vmin} in order to install this package.",
     "PackageRequiresUpgradeLabel": "Requires Upgrade",
     "PackageVisAll": "All Packages",
+    "PackageVisOwned": "Owned Packages",
     "PackageVisInst": "Installed",
     "PackageVisUnin": "Not Installed",
     "PackageVisCompatible": "Compatible",
@@ -2702,8 +2721,8 @@
     "UpdateCompleteAuto": "Update completed successfully. Restarting Foundry VTT application.",
     "UpdateNoInternetError": "Foundry Virtual Tabletop requires an active internet connection to update.",
     "UpdateWebsiteUnreachableError": "We cannot reach https://foundryvtt.com at this time, please try again later.",
+    "UpdateRequestRefusedError": "https://foundryvtt.com refused this update request. This is not a problem with your license key. Please try again later.",
     "UpdateWebsiteSlowWarning": "https://foundryvtt.com appears to be under heavy load at this time, we recommend you try again later.",
-    "UpdateWarningWillDisable": "This update is a new major version of the Foundry Virtual Tabletop software. Installing this update will require some installed modules which may not yet be compatible to be disabled.",
     "UpdateButtonDownload": "Download Update {display}",
     "UpdateInfoAvailable": "An update to Foundry Virtual Tabletop {display} is available!",
     "UpdateNotAvailable": "No software update is currently available on the requested update channel.",
@@ -2727,7 +2746,7 @@
     "WorldMigrationInProcess": "Your World data is being migrated to be compatible with {version}. This may take some time. Please remain patient and do not close the software.",
     "AdminAccess": "Administrator Access Required",
     "AdminPasswordPrompt": "There is not currently an active game on this server. In order to access the setup menu you must provide the server administrator password.",
-    "AdminPasswordForgot": "If you have forgotten the administrator password, the server administrator can reset it by <a href='https://foundryvtt.com/article/reset-admin-password/' target='_blank'>following these instructions</a>.",
+    "AdminCredentialsForgot": "If you have forgotten the administrator username or password, the server administrator can reset it by <a href=\"https://foundryvtt.com/article/reset-admin-password/\" target=\"_blank\">following these instructions</a>.",
     "AdminLogIn": "Log In",
     "AdminLogout": "Admin Log Out",
     "UPNPLabel": "Enable UPnP",
@@ -2738,10 +2757,14 @@
       "Configure": "Configure",
       "Logout": "Log Out",
       "Update": "Update",
-      "Warnings": "Warnings"
+      "Warnings": "Warnings",
+      "ShutDownServer": "Shut Down"
     },
     "BACKUPS": {
       "Backup": "Backup",
+      "BackupBeforeRestore": "Back Up Current State",
+      "BackupBeforeRestoreHint": "Take a backup of the package as it is now, so that this restoration can itself be rolled back.",
+      "BackupBeforeRestoreNote": "Automatic Pre-Restore Backup",
       "BackingUp": "Backup In Progress",
       "BulkActions": "Bulk Actions",
       "Extracting": "Extracting Backup",
@@ -2789,7 +2812,8 @@
       "Restoring": "Backup Restoration In Progress",
       "RestoreLatest": "Restore Latest",
       "RestoreLatestBackup": "Restore Latest Backup",
-      "RestoreBackupWarning": "Restoring a backup will erase the current state of the package. This action cannot be reversed. Do you want to continue?",
+      "RestoreBackupWarning": "Restoring a backup will erase the current state of the package. Unless you choose to back up by checking the box below, this action cannot be reversed. Do you want to continue?",
+      "RestoreBackupWarningNoBackups": "Restoring a backup will erase the current state of the package. This action cannot be reversed. Do you want to continue?",
       "RestoreBackupTitle": "Restoring backup for {title}",
       "RestoreBackupFailure": "Failed to restore backup for {title}. See the console (F12) for details.",
       "RestoreBackupComplete": "Successfully restored {title} with backup taken on {date}",
@@ -2859,6 +2883,20 @@
       },
       "ManifestWrongPackageType": "The provided URL does not appear to point to a {packageType}."
     },
+    "PROVIDER_FILTER": {
+      "Label": "Providers",
+      "Placeholder": "Search Providers"
+    },
+    "SYSTEM_FILTER": {
+      "Label": "Systems",
+      "Systems": "Requires System",
+      "RequiresN": "{count} Systems",
+      "MODES": {
+        "installed": "Available for Installed Systems",
+        "none": "No Restriction",
+        "specific": "Requires Specific System"
+      }
+    },
     "UPDATE_NOTES": {
       "Title": "Release Notes: {release}",
       "FullList": "See the <a href=\"{url}\" target=\"_blank\">full list</a> of Release Notes.",
@@ -2884,6 +2922,30 @@
     "Compatibility": {
       "Label": "Compatibility",
       "Hint": "You may optionally indicate that this package is compatible only with a range of Foundry Virtual Tabletop software versions. Compatibility can be declared for a specific build version like \"13.339\" or for a broad generation like \"13\"."
+    },
+    "TAGS": {
+      "adventures": "Adventures",
+      "ai-content": "Contains AI Content",
+      "ai-tools": "AI Tools",
+      "analytics": "Analytics and Tracking",
+      "archived": "Archived",
+      "audio": "Audio Improvements",
+      "automation": "Automation Enhancers",
+      "chat": "Chat Log and Messaging",
+      "combat": "Combat Enhancements",
+      "content": "Content Packs",
+      "dice": "Dice Rolling",
+      "importer": "Content Importers",
+      "integration": "External Integrations",
+      "journal": "Journals and Notes",
+      "overhaul": "Overhauls or Feature Suites",
+      "paid-features": "Contains Paid Features",
+      "patches": "Patches or Bug Fixes",
+      "sheets": "Actor and Item Sheets",
+      "tools": "Tools and Controls",
+      "translation": "Translation and Localization",
+      "visuals": "Visual Effects",
+      "zero-ai": "Contains Zero AI"
     },
     "TagJavaScript": "JavaScript",
     "TagCSS": "CSS",
@@ -3028,7 +3090,7 @@
     "UserKey": "User Password",
     "AuthAdmin": "You are authenticated as a server administrator user.",
     "ErrorMustSelectUser": "You must select a User in order to log in.",
-    "ErrorUserDoesNotExist": "The requested User, \"{user}\", does not exist!",
+    "ErrorUserDoesNotExist": "The requested User, \"{user}\", does not exist.",
     "ErrorInvalidPassword": "Invalid password provided for {user}!",
     "ErrorBanned": "{user} does not have permission to access this World!",
     "LoginSuccess": "Login as {user} successful, joining game!",
@@ -3359,7 +3421,6 @@
     },
     "NOTIFICATIONS": {
       "PlacedRegionRotationNotAllowed": "You are not allowed to rotate the shape of the placed Region.",
-      "PlacedRegionNotAttachedToToken": "The placed Region must be attached to a Token.",
       "CopiedShape": "Copied Region shape.",
       "CutShape": "Cut Region shape.",
       "PastedShape": "Pasted Region shape.",
