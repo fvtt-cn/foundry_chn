@@ -1,0 +1,30 @@
+name: Validate Localization
+
+on:
+  push:
+    paths:
+      - 'cn.json'
+      - 'scripts/**'
+      - '.github/workflows/**'
+  pull_request:
+    paths:
+      - 'cn.json'
+      - 'scripts/**'
+      - '.github/workflows/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Test localization build
+        run: python -m unittest discover -s scripts -p "test_*.py" -v
+      - name: Validate source without modifying it
+        run: python scripts/build_language.py cn.json

@@ -8,6 +8,9 @@ env:
   ZIP_FILENAME: "foundry_chn"
   PACKAGE_CONTENT: "module.json cn.json"
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,22 +32,16 @@ jobs:
           download: https://github.com/${{github.repository}}/releases/download/${{github.event.release.tag_name}}/${{env.ZIP_FILENAME}}.zip
           changelog: https://github.com/${{github.repository}}/releases/tag/${{github.event.release.tag_name}}
 
-      # Unflatten JSON files
-      - name: Unflatten JSON
-        shell: pwsh
-        run: |
-          $json = Get-Content "cn.json" | ConvertFrom-Json -AsHashtable
-          $result = @{}
-          $json.GetEnumerator() | ForEach-Object {
-              $parts = $_.Key -split '\.'
-              $current = $result
-              for ($i = 0; $i -lt $parts.Length - 1; $i++) {
-                  if (-not $current[$parts[$i]]) { $current[$parts[$i]] = @{} }
-                  $current = $current[$parts[$i]]
-              }
-              $current[$parts[-1]] = $_.Value
-          }
-          $result | ConvertTo-Json -Depth 100 -Compress | Set-Content "cn.json"
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Test localization build
+        run: python -m unittest discover -s scripts -p "test_*.py" -v
+
+      - name: Build and validate localization
+        run: python scripts/build_language.py cn.json cn.json
 
       # Create a zip file with all files required by the module to add to the release
       - name: Create Artifact
