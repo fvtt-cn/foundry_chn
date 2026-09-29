@@ -922,6 +922,7 @@
 "ART": {
 "CONFIG": {
 "Hint": "使用箭头调整美术资源的优先级。当一个角色有多个美术资源时，将使用优先级最高的艺术资源。",
+"Items": "",
 "Portraits": "立绘",
 "PriorityDecrease": "降低优先级",
 "PriorityIncrease": "提高优先级",
@@ -1654,7 +1655,8 @@
 "override": "覆盖",
 "subtract": "减",
 "upgrade": "升级"
-}
+},
+"Unregistered": ""
 },
 "ChangeKey": "属性名",
 "ChangeMode": "改变方式",
@@ -1906,6 +1908,7 @@
 "TimedOut": "在分离应用程序窗口时操作超时。你可能启用了弹出窗口阻止程序。"
 },
 "ElectronVersion": "你正使用旧版本的 Foundry Virtual Tabletop Electron 客户端。为获得最佳性能，我们建议重新下载所需版本的 Foundry Virtual Tabletop，并完全重装软件。",
+"InvalidAdminCredentials": "",
 "InvalidAdminKey": "你输入的管理员密码有误。如果你忘记了配置的密码，则需要从用户数据所在位置手动删除 <strong>Config/admin.txt</strong> 文件。",
 "LoadPackages": "浏览现有软件包的请求未能与 Foundry 服务器连接。请确保你的应用程序允许出站连接。",
 "NoHardwareAcceleration": "你的浏览器没有启用硬件加速功能。这将严重影响 Foundry Virtual Tabletop 的性能并引起图形错误和异常。请确保在你的浏览器设置中启用该功能。",
@@ -2143,6 +2146,7 @@
 "Title": "邀请链接",
 "UnknownConnection": "我们无法确认你的连接状态"
 },
+"INVITATIONS.InternetV6": "",
 "ITEM": {
 "ViewArt": "查看物品插图"
 },
@@ -2852,6 +2856,30 @@
 "basics": "基础细节",
 "packs": "合集包",
 "relationships": "关系"
+},
+"TAGS": {
+"adventures": "",
+"ai-content": "",
+"ai-tools": "",
+"analytics": "",
+"archived": "",
+"audio": "",
+"automation": "",
+"chat": "",
+"combat": "",
+"content": "",
+"dice": "",
+"importer": "",
+"integration": "",
+"journal": "",
+"overhaul": "",
+"paid-features": "",
+"patches": "",
+"sheets": "",
+"tools": "",
+"translation": "",
+"visuals": "",
+"zero-ai": ""
 },
 "TagCSS": "CSS",
 "TagCompendium": "合集",
@@ -3735,7 +3763,12 @@
 "SCENE_NAVIGATION": {
 "COLLAPSE": "折叠导航栏",
 "EXPAND": "扩展导航栏",
-"LABEL": "场景导航栏"
+"LABEL": "场景导航栏",
+"SCENE": {
+"Active": "",
+"Hidden": "",
+"Viewing": ""
+}
 },
 "SERVER_SETTINGS": {
 "ChangePassword": {
@@ -3747,6 +3780,10 @@
 "adminPassword": {
 "hint": "管理员密码用于保护对 Foundry Virtual Tabletop 的此设置页面和配置区的访问。强烈建议为你的服务器设置管理员密码。",
 "label": "管理员密码"
+},
+"adminUsername": {
+"hint": "",
+"label": ""
 },
 "awsConfig": {
 "hint": "你可以提供一个用于集成 S3 的 AWS 配置文件。该路径可以是绝对路径，或者是用户数据目录中 Config 子文件夹的相对路径。",
@@ -3991,14 +4028,24 @@
 "UniversalKeybindingsN": "通用快捷键（实验性）",
 "Update": "更新软件"
 },
+"SETTINGS.UI": {
+"FIELDS": {
+"chatBackground": {
+"hint": "",
+"label": ""
+}
+}
+},
 "SETUP": {
 "ACTIONS": {
 "Configure": "配置",
 "Logout": "登出",
+"ShutDownServer": "",
 "Update": "更新",
 "Warnings": "警告"
 },
 "AdminAccess": "需要管理员权限",
+"AdminCredentialsForgot": "",
 "AdminLogIn": "登入",
 "AdminLogout": "管理员登出",
 "AdminPasswordForgot": "如果你忘记了管理员密码，服务器管理员可以根据<a href='https://foundryvtt.com/article/reset-admin-password/' target='_blank'>这篇指南</a>进行重置。",
@@ -4006,6 +4053,9 @@
 "BACKUPS": {
 "BackingUp": "备份进行中",
 "Backup": "备份",
+"BackupBeforeRestore": "",
+"BackupBeforeRestoreHint": "",
+"BackupBeforeRestoreNote": "",
 "BulkActions": "批量操作",
 "CannotDeleteInSnapshot": "不能单独删除作为快照一部分的备份。",
 "CannotRestoreUnusable": "该备份无法恢复，因为这会导致软件包无法使用。",
@@ -4058,6 +4108,7 @@
 "RestoreBackupFailure": "无法恢复 {title} 备份。详细信息请参见控制台（F12）。",
 "RestoreBackupTitle": "恢复 {title} 备份中",
 "RestoreBackupWarning": "恢复备份会擦除软件包当前的状态。此操作无法撤回。你想继续吗？",
+"RestoreBackupWarningNoBackups": "",
 "RestoreLatest": "恢复到最新",
 "RestoreLatestBackup": "恢复最新的备份",
 "RestoreSnapshotComplete": "成功使用 {date} 的快照恢复了 {title}。",
@@ -4132,6 +4183,7 @@
 "ForceUpdate": "强制更新？",
 "ForceUpdateHint": "选择强制更新选项将会覆盖你的当前软件，并将其重置为你选择的升级通道的最新版本。谨慎使用该选项。",
 "GettingStarted": "入门",
+"GoBack": "",
 "INSTALL_PACKAGE": {
 "ManifestIncompatible": {
 "Title": "兼容性警告",
@@ -4174,6 +4226,10 @@
 },
 "NoWorldsMessage": "现在，你已经有了提供游戏规则的游戏系统，接下来你需要创建一个世界。无论是单次游戏，还是整个战役，游戏世界包含了所有用于游戏的角色、表格、日志和地图。",
 "NueWorldDescription": "<p>想要了解更多关于设定世界的信息，请浏览 <a href='https://foundryvtt.com/article/game-worlds/' target='_blank'>世界</a> 文档。</p>",
+"PROVIDER_FILTER": {
+"Label": "",
+"Placeholder": ""
+},
 "Package": "软件包",
 "PackageCategories": "软件包类别",
 "PackageDeleteConfirm": "你确定想要删除 {type} “{title}” 吗？",
@@ -4203,6 +4259,8 @@
 "PackageName": "软件包名",
 "PackageNotOwned": "未拥有",
 "PackageOptionalDependencies": "软件包有如下可选的依赖，安装后可以增加软件包的功能：",
+"PackageOwnershipUnknown": "",
+"PackageOwnershipUnknownHint": "",
 "PackageProgressCleanup": "软件包清理",
 "PackageProgressComplete": "软件包安装完成",
 "PackageProgressDownload": "正在下载软件包",
@@ -4228,6 +4286,7 @@
 "PackageVisCompatible": "兼容",
 "PackageVisIncompatible": "不兼容",
 "PackageVisInst": "已安装",
+"PackageVisOwned": "",
 "PackageVisUnin": "未安装",
 "PackageVisUnverified": "未验证",
 "PackagesLoading": "正在加载可用软件包",
@@ -4248,9 +4307,25 @@
 "RequireSystem": "需要 {system} 系统",
 "RequireUpdate": "需要更新",
 "RequiredPackageNote": "该软件包需要此依赖项以生效。",
+"SYSTEM_FILTER": {
+"Label": "",
+"MODES": {
+"installed": "",
+"none": "",
+"specific": ""
+},
+"RequiresN": "",
+"Systems": ""
+},
 "SaveConfiguration": "保存配置",
 "SeeTutorial": "想要深入了解更多 Foundry Virtual Tabletop 的入门指南，你可以阅读我们的 <a href=\"https://fvtt-cn.gitee.io/\" target=\"_blank\" title=\"Knowledge Base\">FVTT-CN 中文社区站</a>中的<a href=\"https://fvtt-cn.gitee.io/tutorial/gm/\" target=\"_blank\" title=\"Gamemaster Tutorial\"> GM 指南</a>系列内容。",
 "SettingsHeader": "软件设置",
+"ShuttingDown": {
+"Confirm": "",
+"Message": "",
+"Title": "",
+"Unavailable": ""
+},
 "Software": "软件",
 "SwapToTheUpdatedManifest": "是否要切换至新的清单文件链接？（推荐）",
 "SystemFilter": "筛选系统",
@@ -4301,6 +4376,7 @@
 "UpdatePerformIfAvailable": "进行更新（如果可用）",
 "UpdatePrototype": "原型",
 "UpdatePrototypeHint": "原型：用于预览尚未完成开发的实验性特性设计的发布版本。",
+"UpdateRequestRefusedError": "",
 "UpdateStable": "稳定",
 "UpdateStableHint": "稳定：已经经过了严谨的测试，推荐在进行的游戏中使用的发布版本。",
 "UpdateSuccess": "更新成功",
