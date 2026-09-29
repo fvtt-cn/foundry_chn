@@ -1431,6 +1431,7 @@
     "Empty": "Empty Slot",
     "ToggleSheet": "Display {document}",
     "ClearConfirm": "Clear all assigned Macros from your hotbar?",
+    "IsLocked": "You cannot take this action while the hotbar is locked.",
     "ACTIONS": {
       "Clear": "Clear Hotbar",
       "Mute": "Mute Volume",
@@ -2267,6 +2268,16 @@
       "warning": "Modifying these configuration options will require you to restart your server in order for them to take effect. Do you wish to continue?",
       "restart": "Foundry Virtual Tabletop application configuration settings have been changed. You must restart your server for the changes to take effect."
     },
+    "SSL": {
+      "Content": {
+        "Warning": "A self-signed certificate is a convenient way to add SSL encryption to your Foundry Virtual Tabletop instance and will allow you to benefit from modern browser APIs, however browsers do not implicitly trust self-signed certificates and will display a prominent warning message when you or other players attempt to connect to your instance.",
+        "Ignore": "This warning is safe to ignore, and the connection will still be encrypted.",
+        "DoNotShare": "Take care that you do not share your generated <code>fvtt-key.pem</code> file with anyone.",
+        "Continue": "Would you like to proceed?"
+      },
+      "Title": "Generate Self-Signed Certificate",
+      "Tooltip": "Automatically (re-)generate SSL certificates & keys."
+    },
     "SSLCert": "SSL Certificate",
     "Telemetry": {
       "request1": "If you provide your permission, Foundry Virtual Tabletop will share a small amount of anonymous usage data with the foundryvtt.com website that allows our team to better understand how Foundry VTT is being used and helps us to improve the software.",
@@ -2670,6 +2681,8 @@
     "PackageDependenciesCouldInstallSingular": "A dependency can be automatically installed.",
     "PackageDependenciesCouldInstallPlural": "{number} dependencies can be automatically installed.",
     "PackageDependenciesDecline": "You have chosen not to install the required dependency packages for {title}. You will need to install them manually.",
+    "PackageDependenciesUnavailable": "This world cannot be created because the following required dependencies are not available to install:",
+    "PackageDependencyUnlisted": "This package is unlisted.",
     "PackageDependenciesSuccess": "Successfully installed {title} and {number} dependencies.",
     "PackageUpdateCoreUpdateNeeded": "An update is available for {title} but cannot be installed because it requires the core software to be updated to at least {vmin}. You are currently using version {vcur}.",
     "PackageUpdateCoreUnstable": "An update is available for {title} but it may not be installed because it requires a core software version {vmin} which is not yet stable.",
@@ -3088,7 +3101,8 @@
     "NextSession": "Next Session",
     "SelectUser": "Select User",
     "UserKey": "User Password",
-    "AuthAdmin": "You are authenticated as a server administrator user.",
+    "AuthAdmin": "You are authenticated as a server administrator.",
+    "AuthRequired": "You will be required to authenticate as a server administrator.",
     "ErrorMustSelectUser": "You must select a User in order to log in.",
     "ErrorUserDoesNotExist": "The requested User, \"{user}\", does not exist.",
     "ErrorInvalidPassword": "Invalid password provided for {user}!",
