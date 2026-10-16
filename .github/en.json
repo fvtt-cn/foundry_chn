@@ -64,6 +64,10 @@
         "hint": "An optional name to help identify the light source.",
         "label": "Name"
       },
+      "hidden": {
+        "label": "Hidden",
+        "hint": "Temporarily disable this light source."
+      },
       "rotation": {
         "label": "Rotation Angle"
       },
@@ -942,6 +946,10 @@
       "width.label": "Width",
       "height.label": "Height",
       "hidden.label": "Hidden",
+      "locked": {
+        "label": "Locked",
+        "hint": "Prevent canvas manipulation and edits via the palette."
+      },
       "elevation.label": "Elevation",
       "rotation.label": "Rotation",
       "sort": {
@@ -983,6 +991,10 @@
       "bezierFactor": {
         "label": "Smoothing Factor",
         "hint": "For freehand drawing, the smoothing factor controls the amount of spline smoothing."
+      },
+      "hidden": {
+        "label": "Hidden",
+        "hint": "Hide this Drawing from every player except its author."
       },
       "fillAlpha.label": "Fill Opacity",
       "fillColor.label": "Fill Color",
@@ -1366,7 +1378,7 @@
     "TraverseBack": "Traverse Back",
     "NoResults": "No matching results found in this location.",
     "Upload": "Upload",
-    "CannotUpload": "Uploads to this folder are prohibited because content here may be overwritten during updates. Upload to your \"assets\" folder or another allowed location instead.",
+    "CannotUpload": "Uploads to this folder are prohibited. Upload to your \"assets\" folder or another allowed location instead.",
     "Search": "Search",
     "ErrorTooLarge": "The file you have attempted to upload is too large for your proxy server to handle.",
     "ErrorSomethingWrong": "Something went wrong with your file upload request.",
@@ -1414,6 +1426,7 @@
   "GAME.ReturnSetup": "Return to Setup",
   "GAME.ReturnSetupActiveUser": "There is one other User currently active in this World and will be disconnected. Do you wish to proceed?",
   "GAME.ReturnSetupActiveUsers": "There are {number} other Users currently active in this World and will be disconnected. Do you wish to proceed?",
+  "GAME.WorldShuttingDown": "The game world is shutting down and you will be returned to the server homepage.",
   "INFO.SceneViewCanvasDisabled": "The Scene \"{name}\" is now viewed but is not displayed because the game Canvas is disabled.",
   "INVITATIONS.Copied": "Game invitation link copied to clipboard",
   "INVITATIONS.Instructions": "Share the below invitation links with users who you wish to have join your game. The local invitation link is for users on your local network while the internet link connects via internet on the configured port.",
@@ -2270,13 +2283,30 @@
     },
     "SSL": {
       "Content": {
-        "Warning": "A self-signed certificate is a convenient way to add SSL encryption to your Foundry Virtual Tabletop instance and will allow you to benefit from modern browser APIs, however browsers do not implicitly trust self-signed certificates and will display a prominent warning message when you or other players attempt to connect to your instance.",
-        "Ignore": "This warning is safe to ignore, and the connection will still be encrypted.",
-        "DoNotShare": "Take care that you do not share your generated <code>fvtt-key.pem</code> file with anyone.",
-        "Continue": "Would you like to proceed?"
+        "Attempt": "Foundry Virtual Tabletop will first attempt to obtain a certificate from the Let's Encrypt 3rd party service. Browsers trust these certificates automatically so they are the preferred method for enabling SSL on your server. Obtaining these certificates requires that your instance is publicly reachable on port 80 which may not be possible in some circumstances.",
+        "Fallback": "If a trusted certificate cannot be obtained, a self-signed certificate will be issued instead. This still encrypts the connection and still enables modern browser APIs, but browsers do not implicitly trust these certificates and will display a prominent warning for you and your players. This warning is safe to ignore.",
+        "DoNotShare": "Take care that you do not share the generated private key file (ends with <code>-key.pem</code>) in your Config folder with anyone.",
+        "Terms": "Requesting a certificate from Let's Encrypt requires that you agree to their <a href=\"https://letsencrypt.org/repository/\">Subscriber Agreement</a>. Would you like to proceed?"
       },
-      "Title": "Generate Self-Signed Certificate",
-      "Tooltip": "Automatically (re-)generate SSL certificates & keys."
+      "ERRORS": {
+        "CertificateGenerationFailed": "Certificate generation failed, consult your server logs for more details.",
+        "CouldNotBind": "Unable to answer the certificate authority's challenge because the request to bind to port 80 was rejected.",
+        "NoCandidates": "Unable to discover any candidate addresses for certificate generation.",
+        "NoChallenge": "Let's Encrypt did not offer an http-01 challenge for the provided address.",
+        "PortUnreachable": "Port 80 is not reachable publicly.",
+        "ProxySSL": "This instance does not require an SSL certificate as it is already behind a reverse proxy that handles SSL."
+      },
+      "RenewalFailed": "Failed to renew the managed SSL certificate: {error}",
+      "RenewalFailedInGame": "Failed to renew the managed SSL certificate. This will likely not cause any immediate issue, but you will need to Return to Setup at your convenience and attempt to generate a new certificate, or contact whoever manages your Foundry Virtual Tabletop instance.",
+      "SelfSigned": "A certificate from Let's Encrypt could not be obtained, so a self-signed certificate was issued instead: {error}",
+      "Title": "Automatically Generate Certificate",
+      "Tooltip": "Automatically (re-)generate SSL certificates & keys.",
+      "Trusted": "A trusted certificate was obtained and will be renewed automatically. Save your settings and restart the server to apply it.",
+      "Unlock": {
+        "Title": "Stop Automatic Renewal",
+        "Tooltip": "Stop managing this certificate automatically.",
+        "Warning": "Foundry Virtual Tabletop currently manages this certificate and automatically renews it before it expires. If you continue, the certificate will be deleted and automatic renewal will stop, allowing you to manually manage your SSL certificates. Would you like to proceed?"
+      }
     },
     "SSLCert": "SSL Certificate",
     "Telemetry": {
@@ -2352,7 +2382,7 @@
       },
       "sslCert": {
         "label": "Certificate",
-        "hint": "You may run the server using secure socket layer (SSL) encryption by providing paths to certificate and key files. Paths are absolute or relative to the Config subfolder in user data."
+        "hint": "Secure socket layer (SSL) must be configured in order to use certain modern browser features such as WebRTC (for audio & video features), or WebBluetooth (for bluetooth dice features). You may generate your own certificate and key file to enable SSL, or you can have one created for you automatically. Paths are absolute or relative to the Config subfolder in user data. See the <a href=\"https://foundryvtt.com/article/ssl/\" target=\"_blank\">SSL Certificates</a> article for more details."
       },
       "sslKey.label": "Key",
       "awsConfig": {
@@ -2538,7 +2568,7 @@
     "Modules": "Add-on Modules",
     "Systems": "Game Systems",
     "GettingStarted": "Getting Started",
-    "NoSystemsMessage": "In order to create your first World, you must first install a <a class=\"system-install\" data-query=\"\" title=\"Game System\">Game System</a>. Please take some time to browse available systems and choose one to install. If you do not know which system you want, or your preferred system is unavailable, we recommend that you install the <a class=\"system-install\" data-query=\"Simple Worldbuilding\" title=\"Simple Worldbuilding\">Simple Worldbuilding</a> system. ",
+    "NoSystemsMessage": "In order to create your first World, you must first install a <a class=\"system-install\" data-query=\"\" title=\"Game System\">Game System</a>. Please take some time to browse available systems and choose one to install.",
     "NoWorldsMessage": "Now that you have a Game System providing you rules on how to play, you'll want to create a World. Game worlds are spaces that contain all of the characters, sheets, journals and maps used to play a game, whether it's a one-shot or a full campaign.",
     "NueWorldDescription": "<p>For more info on setting up Worlds, check out the <a href='https://foundryvtt.com/article/game-worlds/' target='_blank'>World</a> documentation.</p>",
     "SeeTutorial": "For a more in-depth guide to getting started with Foundry Virtual Tabletop, you can reference the <a href=\"https://foundryvtt.com/article/tutorial/\" target=\"_blank\" title=\"Gamemaster Tutorial\">Gamemaster Tutorial</a> series in our <a href=\"https://foundryvtt.com/kb/\" target=\"_blank\" title=\"Knowledge Base\">Knowledge Base</a>.",
@@ -2830,6 +2860,7 @@
       "RestoreBackupTitle": "Restoring backup for {title}",
       "RestoreBackupFailure": "Failed to restore backup for {title}. See the console (F12) for details.",
       "RestoreBackupComplete": "Successfully restored {title} with backup taken on {date}",
+      "RestoreBackupConfirmCodeInvalid": "You must enter the exact code to confirm the backup restoration request.",
       "RestoringSnapshot": "Restoring Snapshot",
       "RestoreSnapshotFailure": "Failed to restore snapshot. See the console (F12) for details.",
       "RestoreSnapshotComplete": "Successfully restored snapshot taken on {date}.",
@@ -2837,6 +2868,7 @@
       "RestoreSnapshotWarning": "Restoring a snapshot resets the state of your Foundry VTT installation back to the state at which the snapshot was taken. All versions and world states will be rolled back. This process cannot be undone.",
       "RestoreSnapshotUnchangedPackages": "<strong>1</strong> package was added after the snapshot was taken and will remain unchanged after the snapshot is restored.",
       "RestoreSnapshotUnchangedPackagesPl": "<strong>{count}</strong> packages were added after the snapshot was taken and will remain unchanged after the snapshot is restored.",
+      "RestoreSnapshotConfirmCodeInvalid": "You must enter the exact code to confirm the snapshot restoration request.",
       "SelectAll": "Select All",
       "Snapshot": "Snapshot",
       "TakeBackup": "Take Backup",
@@ -3312,6 +3344,14 @@
         "label": "Visibility",
         "hint": "Configure the visibility of the Region."
       },
+      "hidden": {
+        "label": "Hidden",
+        "hint": "Hide the Region from players and deactivate its behaviors."
+      },
+      "locked": {
+        "label": "Locked",
+        "hint": "Prevent canvas interactions and palette edits, and hide the Region when visibility is set to show only unlocked Regions."
+      },
       "highlightMode": {
         "label": "Highlight Mode",
         "hint": "Configure whether to highlight the true shapes or the grid spaces covered by the Region."
@@ -3754,6 +3794,9 @@
       "ACTIONS": {
         "Clear": "Clear"
       },
+      "Any": "Any",
+      "Yes": "Yes",
+      "No": "No",
       "Bottom": "Bottom",
       "Title": "Advanced Filter",
       "Level": "Filter by Level",
@@ -3897,7 +3940,8 @@
       "img.label": "Result Icon",
       "documentUuid.label": "Referenced Document",
       "weight.label": "Weight",
-      "range.label": "Range"
+      "range.label": "Range",
+      "description.label": "Description"
     }
   },
   "TILE.ConfigTitle": "Tile Configuration",
@@ -3926,6 +3970,10 @@
     "video": "Video"
   },
   "TILE.FIELDS": {
+    "hidden": {
+      "label": "Hidden",
+      "hint": "Hide this Tile from players."
+    },
     "sort.label": "Sort",
     "texture": {
       "src.label": "Tile Image or Video",
@@ -4066,6 +4114,14 @@
   },
   "TOKEN.FIELDS": {
     "name.label": "Token Name",
+    "hidden": {
+      "label": "Hidden",
+      "hint": "Hide this Token from players."
+    },
+    "locked": {
+      "label": "Locked",
+      "hint": "Prevent this Token from being moved on the canvas."
+    },
     "sort.label": "Sort",
     "width.label": "X-Size",
     "height.label": "Y-Size",
